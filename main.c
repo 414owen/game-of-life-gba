@@ -1,27 +1,24 @@
-#define rgb(r, g, b) ((r) + (g << 5) + (b << 10))
+//
+// second.c
+// Cleaner version of 'first.c'
+//
+// (20060211 - 20060922, cearn)
 
-#define WIDTH 240
+#include "toolbox.h"
 
-#define HEIGHT 160
+void vid_vsync(void) {
+    while(REG_VCOUNT >= 160);   // wait till VDraw
+    while(REG_VCOUNT < 160);    // wait till VBlank
+}
 
-#define VRAM_ADDR ((unsigned short *)(0x6000000))
+int AgbMain(void) {
+	REG_DISPCNT = DCNT_MODE3 | DCNT_BG2;
 
-#define DISPCNT	(*(volatile unsigned long *)(0x4000000))
+	m3_plot( 120, 80, RGB15(31, 0, 0) );	// or CLR_RED
+	m3_plot( 136, 80, RGB15( 0,31, 0) );	// or CLR_LIME
+	m3_plot( 120, 96, RGB15( 0, 0,31) );	// or CLR_BLUE
 
-unsigned short *lcd = (unsigned short *)(VRAM_ADDR);
+	while(1);
 
-int main() {
-	
-	/* LCD MODE 3 with BG 2 ON */
-	
-	DISPCNT = 0x403;
-	
-	/* Re-draw the LCD background manually. It will be completely green. */
-	
-	for (unsigned x = 0; x < WIDTH; x++) {
-		
-		for (unsigned y = 0; y < HEIGHT; y ++) lcd[x + (y * WIDTH)] = rgb(0, 31, 0);
-		
-	}
-	
+	return 0;
 }

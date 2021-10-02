@@ -77,7 +77,7 @@
 @ linked in with your project so do not enable c++ support
 @ unless you plan to use it.
 
-.equ __CPPSupport, 1
+@ .equ __CPPSupport, 1
 
 @ Comment out the following line to disable interrupt support
 @ in your code and to save some space in this file.
