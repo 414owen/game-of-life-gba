@@ -1,0 +1,4 @@
+*.gba
+*.out
+.direnv
+*.sav
