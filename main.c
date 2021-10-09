@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include "include/boards_compressed.h"
-#include "include/defs.h"
+#include "boards_compressed.h"
+#include "defs.h"
 
 #define WIDTH 30
 #define HEIGHT 20
@@ -121,13 +121,8 @@ static void setBoard(const starter *starter) {
     for (int x = 0; x < starter->width; x++) {
       int ind = x + y * starter->width;
       set_cell(start_x + x, start_y + y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
-      // set_cell(x, y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
     }
   }
-
-  // set_cell(0,0, true);
-  // set_cell(1,1, true);
-  // set_cell(2,2, true);
 }
 
 int AgbMain(void) {

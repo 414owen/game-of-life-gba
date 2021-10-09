@@ -1,5 +1,7 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS := -Wall -O2 $(ARCH) -mtune=arm7tdmi
+CFLAGS := -Wall -O3 $(ARCH) -mtune=arm7tdmi -flto
+# CFLAGS = -Wall -O3 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude
+CFLAGS = -Wall -O3 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
@@ -19,12 +21,13 @@ lib/%.o: src/%.s
 
 src/boards_compressed.c: misc/compress_boards.c
 	mkdir -p build
-	gcc -Wall -g -O1 misc/compress_boards.c src/boards.c -o build/generate_compressed_builds
+	gcc -Wall -O1 -Iinclude misc/compress_boards.c src/boards.c -o build/generate_compressed_builds
 	./build/generate_compressed_builds
 
 clean:
 	rm -f *.gba lib/*.o *.out *.elf *.sav
 	rm -rf build
+	rm -f src/boards_compressed.c
 
 a.gba: a.out
 	$(OBJCOPY) -O binary a.out a.gba

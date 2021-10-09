@@ -1,4 +1,4 @@
-#include "../include/boards.h"
+#include "boards.h"
 
 // TODO compress these
 const board glider = {

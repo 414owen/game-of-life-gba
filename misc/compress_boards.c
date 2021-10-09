@@ -1,6 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+#include "boards.h"
+
 #define STRINGIFY2(X) #X
 #define STRINGIFY(X) STRINGIFY2(X)
 
@@ -8,8 +10,6 @@
 
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 #define MAX(x, y) ((x) > (y) ? (x) : (y))
-
-#include "../include/boards.h"
 
 typedef struct {
   char *name;
@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
   FILE *c = fopen("src/boards_compressed.c", "w");
 
   fputs("", c);
-  fprintf(c, "#include \"../include/boards_compressed.h\"\n\n"
+  fprintf(c, "#include \"boards_compressed.h\"\n\n"
         "const int num_starters = %lu;\n", static_len(boards));
 
   for (int b = 0; b < static_len(boards); b++) {
