@@ -124,6 +124,7 @@ static void setBoard(const starter *starter) {
       set_cell(start_x + x, start_y + y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
     }
   }
+  swap_boards();
 }
 
 void interruptHandler();
@@ -152,8 +153,10 @@ void register_vblank_isr() {
 extern void halt(void);
 
 int AgbMain(void) {
-  setBoard(&starters[0]);
-  swap_boards();
+
+  int board_ind = 0;
+
+  setBoard(&starters[board_ind]);
 
   // screen entry 0,0 to tile 1
   se_mat[SCREENBLOCK_NUM][19][29] = 1;
@@ -173,6 +176,14 @@ int AgbMain(void) {
     swap_boards();
     if (key_hit(KEY_L)) delay++;
     if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
+    if (key_hit(KEY_UP)) {
+      board_ind = (board_ind + 1) % num_starters;
+      setBoard(&starters[board_ind]);
+    }
+    if (key_hit(KEY_DOWN)) {
+      board_ind = (board_ind + num_starters - 1) % num_starters;
+      setBoard(&starters[board_ind]);
+    }
     for (int i = 0; i < delay; i++) {
       register_vblank_isr();
       halt();

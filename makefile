@@ -1,5 +1,5 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS := -g -O2 ${CFLAGS} -Wall -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude -flto
+CFLAGS := -g -O2 -Wall -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude -flto ${CFLAGS} 
 LDFLAGS = -nostartfiles -Tlnkscript
 DEBUG ?= false
 
