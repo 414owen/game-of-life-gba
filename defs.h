@@ -28,9 +28,17 @@ typedef volatile s64 vs64;
 
 typedef u16 COLOR;
 
+// typedef struct {
+//   // Each element is an index into the pallete, 8bpp each
+//   u32 data[16];
+// } TILE8;
+
 typedef struct {
   // Each element is an index into the pallete, 8bpp each
-  u32 data[16];
+  union {
+    u8  bytes[8][8];
+    u32 data[16];
+  };
 } TILE8;
 
 typedef TILE8  CHARBLOCK8[256];

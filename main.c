@@ -39,28 +39,14 @@ static COLOR RGB15(int red, int green, int blue) {
   return red + (green<<5) + (blue<<10);
 }
 
-static TILE8 u8s_to_tile(u8 pixels[8][8]) {
+static TILE8 make_flat_tile(u8 pallette_ind) {
   TILE8 res;
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
-      int byte_ind = i + MUL8(j);
-      int u32_ind = DIV4(byte_ind);
-      int u32_shift = MUL8(MOD4(byte_ind));
-      u8 byte = pixels[i][j];
-      res.data[u32_ind] |= byte << u32_shift;
+      res.bytes[i][j] = pallette_ind;
     }
   }
   return res;
-}
-
-static TILE8 make_flat_tile(u8 pallette_ind) {
-  u8 res[8][8];
-  for (int i = 0; i < 8; i++) {
-    for (int j = 0; j < 8; j++) {
-      res[i][j] = pallette_ind;
-    }
-  }
-  return u8s_to_tile(res);
 }
 
 static void vid_vsync(void) {
@@ -94,9 +80,6 @@ static void update_cell(int x, int y) {
   } else {
     set_cell(x, y, neighbors == 3);
   }
-  // set_cell(x, y, get_cell(x, y));
-  // if(!get_cell(x, y)) set_cell(x, y, neighbors == 3);
-  // if (neighbors == 1) set_cell(x, y, true);
 }
 
 static void swap_boards(void) {
