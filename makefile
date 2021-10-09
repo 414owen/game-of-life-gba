@@ -1,7 +1,5 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS := -Wall -O3 $(ARCH) -mtune=arm7tdmi -flto
-# CFLAGS = -Wall -O3 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude
-CFLAGS = -Wall -O3 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude
+CFLAGS = -Wall -O2 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude -flto
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
