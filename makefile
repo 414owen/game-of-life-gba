@@ -1,16 +1,19 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS := -Wall -O0 $(ARCH) -mtune=arm7tdmi
+CFLAGS := -Wall -O2 $(ARCH) -mtune=arm7tdmi
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
-a.out: main.c crt0.o
-	$(CC) $(CFLAGS) $(LDFLAGS) crt0.o main.c
+a.out: main.c crt0.o font.o boards.o
+	$(CC) $(CFLAGS) $(LDFLAGS) crt0.o font.o boards.o main.c
 
 test: a.out
 	mgba -3 a.out
 
-# input.o: input.c
-# 	$(CC) -c -o $@ $< $(CFLAGS)
+font.o: font.c
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+boards.o: boards.c
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 crt0.o : crt0.s
 	$(AS) -o $@ $< $(ASFLAGS)

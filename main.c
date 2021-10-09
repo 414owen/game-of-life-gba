@@ -1,5 +1,7 @@
 #include <stdbool.h>
+#include "boards.h"
 #include "defs.h"
+#include <string.h>
 
 /*
  *  char blocks        screen blocks
@@ -25,16 +27,15 @@
 #define ON_TILE 1
 #define OFF_TILE 0
 
-#define WIDTH 30
-#define HEIGHT 20
+static board boards[2];
 
 // Create a 15bit BGR color.
 // TODO test can we use | instead of +?
-static inline COLOR RGB15(int red, int green, int blue) {
+static COLOR RGB15(int red, int green, int blue) {
   return red + (green<<5) + (blue<<10);
 }
 
-static inline TILE8 u8s_to_tile(u8 pixels[8][8]) {
+static TILE8 u8s_to_tile(u8 pixels[8][8]) {
   TILE8 res;
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
@@ -47,7 +48,7 @@ static inline TILE8 u8s_to_tile(u8 pixels[8][8]) {
   return res;
 }
 
-static inline TILE8 make_flat_tile(u8 pallette_ind) {
+static TILE8 make_flat_tile(u8 pallette_ind) {
   u8 res[8][8];
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
@@ -57,80 +58,33 @@ static inline TILE8 make_flat_tile(u8 pallette_ind) {
   return u8s_to_tile(res);
 }
 
-static inline void vid_vsync(void) {
+static void vid_vsync(void) {
   while(REG_VCOUNT >= 160);   // wait till VDraw
   while(REG_VCOUNT < 160);    // wait till VBlank
 }
 
-char *test = "DEBUGGING HERE";
 int board_ind = 0;
 int other_board_ind = 1;
-bool boards[2][HEIGHT][WIDTH] = {
-  {
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-  },
-  {
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-  },
-};
 
 // write to board, read from other
-static inline void set_cell(int x, int y, bool on) {
+static void set_cell(int x, int y, bool on) {
   boards[other_board_ind][y][x] = on;
 }
 
-static inline bool get_cell(int x, int y) {
+static bool get_cell(int x, int y) {
   return boards[board_ind][y][x];
 }
 
-static inline void update_cell(int x, int y) {
-  int neighbors = -1;
+static void update_cell(int x, int y) {
+  int neighbors = 0;
   for (int j = -1; j <= 1; j++) {
     for (int i = -1; i <= 1; i++) {
-      // neighbors += get_cell((x + i) % WIDTH, (y + j) % HEIGHT) ? 1 : 0;
-      neighbors += get_cell(x + i, y + j) ? 1 : 0;
+      neighbors += get_cell((x + i + WIDTH) % WIDTH, (y + j + HEIGHT) % HEIGHT) ? 1 : 0;
     }
   }
 
   if (get_cell(x, y)) {
+    neighbors--;
     set_cell(x, y, neighbors == 2 || neighbors == 3);
   } else {
     set_cell(x, y, neighbors == 3);
@@ -140,13 +94,13 @@ static inline void update_cell(int x, int y) {
   // if (neighbors == 1) set_cell(x, y, true);
 }
 
-static inline void swap_boards(void) {
+static void swap_boards(void) {
   int tmp = board_ind;
   board_ind = other_board_ind;
   other_board_ind = tmp;
 }
 
-static inline void display(void) {
+static void display(void) {
   for (int j = 0; j < HEIGHT; j++) {
     for (int i = 0; i < WIDTH; i++) {
       se_mat[SCREENBLOCK_NUM][j][i] = get_cell(i, j) ? ON_TILE : OFF_TILE;
@@ -154,7 +108,7 @@ static inline void display(void) {
   }
 }
 
-static inline void update(void) {
+static void update(void) {
   for (int j = 0; j < HEIGHT; j++) {
     for (int i = 0; i < WIDTH; i++) {
       update_cell(i, j);
@@ -164,7 +118,13 @@ static inline void update(void) {
   display();
 }
 
+static void setBoard(const bool state[HEIGHT][WIDTH]) {
+  memcpy(boards[0], state, sizeof(bool) * WIDTH * HEIGHT);
+}
+
 int AgbMain(void) {
+  setBoard(glider);
+
   // screen entry 0,0 to tile 1
   se_mat[SCREENBLOCK_NUM][19][29] = 1;
 
@@ -177,10 +137,8 @@ int AgbMain(void) {
 
   display();
   while (true) {
-    for (volatile int i = 0; i < 100000; i++) {}
     update();
-    display();
-    // while(true);
+    for (int i = 0; i < 6; i++) vid_vsync();
   }
 
   return 0;
