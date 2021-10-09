@@ -1,5 +1,5 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS := -Wall -O2 $(ARCH) -mtune=arm7tdmi
+CFLAGS := -Wall -O0 $(ARCH) -mtune=arm7tdmi
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
@@ -19,7 +19,7 @@ clean:
 	rm -f *.gba *.o *.out *.elf *.sav
 
 a.gba : a.out
-	$(PREFIX)-objcopy -O binary a.out a.gba
+	$(OBJCOPY) -O binary a.out a.gba
 
 game.gba: a.gba
 	./ht.pl -n "Game of Life" -clo game.gba a.gba

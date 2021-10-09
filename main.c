@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include "defs.h"
 
 /*
@@ -21,17 +22,17 @@
 #define CHARBLOCK_NUM 1
 #define SCREENBLOCK_NUM 0
 
+#define ON_TILE 1
+#define OFF_TILE 0
+
+#define WIDTH 30
+#define HEIGHT 20
+
 // Create a 15bit BGR color.
 // TODO test can we use | instead of +?
 static inline COLOR RGB15(int red, int green, int blue) {
   return red + (green<<5) + (blue<<10);
 }
-
-// static inline void set_palette_ind(int charblock, int tile, int x, int y, int ind) {
-//   // clear ind
-//   int u32_ind = x + y * 8;
-//   tile8_mem[charblock][tile].data[u32_ind % 4] &= ~(0xffff << ((u32_ind % 4) * 8));
-// }
 
 static inline TILE8 u8s_to_tile(u8 pixels[8][8]) {
   TILE8 res;
@@ -46,49 +47,141 @@ static inline TILE8 u8s_to_tile(u8 pixels[8][8]) {
   return res;
 }
 
-u8 white_tile[8][8] = {
-  { 0, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
-  { 1, 1, 1, 1, 1, 1, 1, 1 },
+static inline TILE8 make_flat_tile(u8 pallette_ind) {
+  u8 res[8][8];
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      res[i][j] = pallette_ind;
+    }
+  }
+  return u8s_to_tile(res);
+}
+
+static inline void vid_vsync(void) {
+  while(REG_VCOUNT >= 160);   // wait till VDraw
+  while(REG_VCOUNT < 160);    // wait till VBlank
+}
+
+char *test = "DEBUGGING HERE";
+int board_ind = 0;
+int other_board_ind = 1;
+bool boards[2][HEIGHT][WIDTH] = {
+  {
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+  },
+  {
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+  },
 };
+
+// write to board, read from other
+static inline void set_cell(int x, int y, bool on) {
+  boards[other_board_ind][y][x] = on;
+}
+
+static inline bool get_cell(int x, int y) {
+  return boards[board_ind][y][x];
+}
+
+static inline void update_cell(int x, int y) {
+  int neighbors = -1;
+  for (int j = -1; j <= 1; j++) {
+    for (int i = -1; i <= 1; i++) {
+      // neighbors += get_cell((x + i) % WIDTH, (y + j) % HEIGHT) ? 1 : 0;
+      neighbors += get_cell(x + i, y + j) ? 1 : 0;
+    }
+  }
+
+  if (get_cell(x, y)) {
+    set_cell(x, y, neighbors == 2 || neighbors == 3);
+  } else {
+    set_cell(x, y, neighbors == 3);
+  }
+  // set_cell(x, y, get_cell(x, y));
+  // if(!get_cell(x, y)) set_cell(x, y, neighbors == 3);
+  // if (neighbors == 1) set_cell(x, y, true);
+}
+
+static inline void swap_boards(void) {
+  int tmp = board_ind;
+  board_ind = other_board_ind;
+  other_board_ind = tmp;
+}
+
+static inline void display(void) {
+  for (int j = 0; j < HEIGHT; j++) {
+    for (int i = 0; i < WIDTH; i++) {
+      se_mat[SCREENBLOCK_NUM][j][i] = get_cell(i, j) ? ON_TILE : OFF_TILE;
+    }
+  }
+}
+
+static inline void update(void) {
+  for (int j = 0; j < HEIGHT; j++) {
+    for (int i = 0; i < WIDTH; i++) {
+      update_cell(i, j);
+    }
+  }
+  swap_boards();
+  display();
+}
 
 int AgbMain(void) {
   // screen entry 0,0 to tile 1
-  // se_mat[SCREENBLOCK_NUM][0][0] = 1;
+  se_mat[SCREENBLOCK_NUM][19][29] = 1;
 
-  // CHARBLOCK tile x y = palette index 1
-  for (int i = 0; i < 8; i++) {
-    for (int j = 0; j < 8; j++) {
-      // tile8_mem[0][1].data[i][i] = 1;
-    }
-  }
-  tile8_mem[CHARBLOCK_NUM][0] = u8s_to_tile(white_tile);
-  // set_palette_ind(CHARBLOCK_NUM, 0, 0, 0, 1);
-  // tile8_mem[CHARBLOCK_NUM][0].data[0] = 0;
+  // create a flat tile for 'on' cells
+  tile8_mem[CHARBLOCK_NUM][1] = make_flat_tile(1);
 
-  // tile8_mem[CHARBLOCK_NUM][0].data[0][1] = 1;
-  // tile8_mem[0][0].data[0][2] = 1;
-  // tile8_mem[0][0].data[0][3] = 1;
-
-
-  pal_bg_mem[0] = RGB15(0, 0, 0);
-  pal_bg_mem[1] = RGB15(24, 24, 24);
-
+  pal_bg_mem[1] = RGB15(31, 31, 31);
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  for (int i = 0; ; i = (i + 1) % 8) {
-    // tile8_mem[CHARBLOCK_NUM][0].data[i][i] = 0;
-    // tile8_mem[CHARBLOCK_NUM][0].data[(i+1)%8][(i+1)%8] = 1;
-    for (int j = 0; j < 100000; j++) {}
+  display();
+  while (true) {
+    for (volatile int i = 0; i < 100000; i++) {}
+    update();
+    display();
+    // while(true);
   }
 
-
-  while (1) {}
   return 0;
 }
