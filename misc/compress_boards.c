@@ -25,13 +25,11 @@ board_conf boards[] = {
 
 int main(int argc, char **argv) {
 
-  bool byte_divides_board = (WIDTH * HEIGHT) % 8 == 0;
-
   FILE *c = fopen("src/boards_compressed.c", "w");
 
   fputs("", c);
   fprintf(c, "#include \"../include/boards_compressed.h\"\n\n"
-        "const int num_boards = %lu;\n", static_len(boards));
+        "const int num_starters = %lu;\n", static_len(boards));
 
   for (int b = 0; b < static_len(boards); b++) {
     printf("Processing board %s\n", boards[b].name);
@@ -51,14 +49,14 @@ int main(int argc, char **argv) {
       }
     }
 
-    int width = MAX(0, max_x - min_x) + 1;
-    int height = MAX(0, max_y - min_y) + 1;
+    int width = MAX(0, 1 + max_x - min_x);
+    int height = MAX(0, 1 + max_y - min_y);
     boards[b].width = width;
     boards[b].height = height;
 
     fprintf(c, "const u8 %s_data[%d] = {",
       boards[b].name,
-      width * height + (width * height % 8 == 0) ? 0 : 1);
+      width * height / 8 + ((width * height % 8 == 0) ? 0 : 1));
 
     unsigned char byte = 0;
     for (int y = 0; y < height; y++) {
@@ -66,14 +64,15 @@ int main(int argc, char **argv) {
         int i = y * width + x;
         printf("\r%d/%d", i + 1, width * height);
         fflush(stdout);
-        byte |= (*(boards[b].board))[min_y + y][min_x + x] << (7 - (i % 8));
+        byte |= (*(boards[b].board))[min_y + y][min_x + x] << (i % 8);
         if (i % 8 == 7) {
           fprintf(c, "0x%hhx,", byte);
           byte = 0;
         }
-        if (i + 1 == width * height) break;
       }
     }
+
+    bool byte_divides_board = (width * height) % 8 == 0;
     if (!byte_divides_board) fprintf(c, "0x%hhx,", byte);
     fputs("};\n", c);
 
@@ -81,7 +80,7 @@ int main(int argc, char **argv) {
     puts("");
   }
 
-  fputs("const board boards[] = {\n", c);
+  fputs("const starter starters[] = {\n", c);
 
   for (int b = 0; b < static_len(boards); b++) {
     fprintf(c, "  {.name = \"%s\", .width = %d, .height = %d, .data = %s_data},\n",

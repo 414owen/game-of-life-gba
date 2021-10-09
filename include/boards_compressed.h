@@ -2,12 +2,12 @@
 
 #include "defs.h"
 
-typedef struct board {
+typedef struct {
   const char *name;
   const unsigned int width;
   const unsigned int height;
   const u8 *data;
-};
+} starter;
 
-extern const boards[];
-extern const int num_boards;
+extern const starter starters[];
+extern const int num_starters;

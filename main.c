@@ -1,8 +1,11 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include "include/boards.h"
+#include "include/boards_compressed.h"
 #include "include/defs.h"
+
+#define WIDTH 30
+#define HEIGHT 20
 
 /*
  *  char blocks        screen blocks
@@ -31,6 +34,8 @@
 #define MOD4(n) (n & 3)
 #define MUL8(n) (n << 3)
 #define DIV4(n) (n >> 2)
+
+typedef bool board[HEIGHT][WIDTH];
 
 static board boards[2];
 
@@ -105,12 +110,29 @@ static void update(void) {
   }
 }
 
-static void setBoard(const bool state[HEIGHT][WIDTH]) {
-  memcpy(boards[0], state, sizeof(bool) * WIDTH * HEIGHT);
+static void setBoard(const starter *starter) {
+  board_ind = 0;
+  other_board_ind = 1;
+  memset(boards[0], 0, sizeof(bool) * WIDTH * HEIGHT);
+  memset(boards[1], 0, sizeof(bool) * WIDTH * HEIGHT);
+  int start_x = (WIDTH - starter->width) / 2;
+  int start_y = (HEIGHT - starter->height) / 2;
+  for (int y = 0; y < starter->height; y++) {
+    for (int x = 0; x < starter->width; x++) {
+      int ind = x + y * starter->width;
+      set_cell(start_x + x, start_y + y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
+      // set_cell(x, y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
+    }
+  }
+
+  // set_cell(0,0, true);
+  // set_cell(1,1, true);
+  // set_cell(2,2, true);
 }
 
 int AgbMain(void) {
-  setBoard(glider);
+  setBoard(&starters[0]);
+  swap_boards();
 
   // screen entry 0,0 to tile 1
   se_mat[SCREENBLOCK_NUM][19][29] = 1;
