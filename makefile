@@ -1,28 +1,16 @@
-CFLAGS = -mcpu=arm7tdmi
+ARCH := -mcpu=arm7tdmi
+CFLAGS := -Wall -O2 $(ARCH) -mtune=arm7tdmi
+ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
-SOURCES=$(wildcard *.c)
-OBJS=$(patsubst %.c, %.o, $(SOURCES)) crt0.o
-
-# link step: .o -> .elf
-game.elf : $(OBJS)
-	$(LD) -o $@ $^ $(LDFLAGS)
-
-crt0.o : crt0.s
-	$(AS) -o $@ $< $(CFLAGS)
-
-# compile step .c -> .o
-%.o : %.c
-	$(CC) -c -o $@ $< $(CFLAGS)
+a.out: main.c crt0.o
+	$(CC) $(CFLAGS) $(LDFLAGS) crt0.o main.c
 
 clean:
 	rm -f *.gba *.o *.out *.elf *.sav
 
-a.gba : game.elf
-	$(PREFIX)-objcopy -O binary game.elf a.gba
+a.gba : a.out
+	$(PREFIX)-objcopy -O binary a.out a.gba
 
 game.gba: a.gba
 	./ht.pl -n "Game of Life" -clo game.gba a.gba
-
-a.out: main.c
-	$(PREFIX)-gcc crt0.s main.c
