@@ -1,5 +1,6 @@
-#include "boards.h"
+#include "../include/boards.h"
 
+// TODO compress these
 const board glider = {
   {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
   {1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},

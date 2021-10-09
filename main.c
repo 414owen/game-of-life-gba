@@ -1,7 +1,8 @@
 #include <stdbool.h>
-#include "boards.h"
-#include "defs.h"
 #include <string.h>
+
+#include "include/boards.h"
+#include "include/defs.h"
 
 /*
  *  char blocks        screen blocks

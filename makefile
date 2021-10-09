@@ -3,23 +3,20 @@ CFLAGS := -Wall -O2 $(ARCH) -mtune=arm7tdmi
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
-a.out: main.c crt0.o font.o boards.o
-	$(CC) $(CFLAGS) $(LDFLAGS) crt0.o font.o boards.o main.c
+a.out: main.c lib/crt0.o lib/font.o lib/boards.o
+	$(CC) $(CFLAGS) $(LDFLAGS) lib/*.o main.c
 
 test: a.out
 	mgba -3 a.out
 
-font.o: font.c
+lib/%.o: src/%.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-boards.o: boards.c
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-crt0.o : crt0.s
+lib/%.o : src/%.s
 	$(AS) -o $@ $< $(ASFLAGS)
 
 clean:
-	rm -f *.gba *.o *.out *.elf *.sav
+	rm -f *.gba lib/*.o *.out *.elf *.sav
 
 a.gba : a.out
 	$(OBJCOPY) -O binary a.out a.gba

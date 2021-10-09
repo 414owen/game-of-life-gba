@@ -96,4 +96,5 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define tile8_mem  ((CHARBLOCK8*)MEM_VRAM)
 
 #define pal_bg_mem		((COLOR*)MEM_PAL)
+
 #endif // defs_h_INCLUDED
