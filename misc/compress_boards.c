@@ -19,8 +19,18 @@ typedef struct {
 } board_conf;
 
 board_conf boards[] = {
-  { .name = "loafer", .board = &loafer },
-  { .name = "glider", .board = &glider },
+  {
+    .name = "loafer",
+    .board = &loafer,
+    .width = sizeof(loafer[0]) / sizeof(loafer[0][0]),
+    .height = sizeof(loafer) / sizeof(loafer[0]),
+  },
+  {
+    .name = "glider",
+    .board = &glider,
+    .width = sizeof(glider[0]) / sizeof(glider[0][0]),
+    .height = sizeof(glider) / sizeof(glider[0]),
+  },
 };
 
 int main(int argc, char **argv) {
@@ -34,12 +44,12 @@ int main(int argc, char **argv) {
   for (int b = 0; b < static_len(boards); b++) {
     printf("Processing board %s\n", boards[b].name);
 
-    int min_x = WIDTH;
+    int min_x = boards[b].width;
     int max_x = 0;
-    int min_y = HEIGHT;
+    int min_y = boards[b].height;
     int max_y = 0;
-    for (int y = 0; y < HEIGHT; y++) {
-      for (int x = 0; x < WIDTH; x++) {
+    for (int y = 0; y < boards[b].height; y++) {
+      for (int x = 0; x < boards[b].width; x++) {
         if ((*(boards[b].board))[y][x]) {
           min_x = MIN(min_x, x);
           min_y = MIN(min_y, y);
