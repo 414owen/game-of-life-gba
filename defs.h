@@ -1,6 +1,8 @@
 #ifndef defs_h_INCLUDED
 #define defs_h_INCLUDED
 
+#define BIT(n) (1 << n)
+
 #define SCREEN_WIDTH = 240
 #define SCREEN_HEIGHT = 160
 
@@ -27,13 +29,16 @@ typedef volatile s64 vs64;
 typedef u16 COLOR;
 
 typedef struct {
-  // Each element is 8 indices into the pallete, 4bpp each
-  u32 data[8];
-} TILE4;
+  // Each element is an index into the pallete, 8bpp each
+  u32 data[16];
+} TILE8;
 
-// A charblock is 16 tileblocks
-typedef TILE4 CHARBLOCK[512];
+typedef TILE8  CHARBLOCK8[256];
 
+// {15-12} - color palette index, for 1 pallette @ 256 colors, this is disabled
+// {11}    - vertical flip
+// {10}    - horizontal flip
+// {9-0}   - tile index
 typedef u16 SCR_ENTRY;
 typedef SCR_ENTRY SCREENLINE[32];
 typedef SCR_ENTRY SCREENMAT[32][32];
@@ -44,6 +49,7 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define MEM_PAL         0x05000000  // Pallette
 #define MEM_VRAM        0x06000000  // BG and OBJ data
 #define MEM_OAM         0x07000000  // Object Attribute Memory
+#define MEM_PAL_BG      (MEM_PAL)   // Background palette address
 
 #define REG_DISPCNT   *(vu32*)(MEM_IO+0x0000)  // Display control
 #define REG_DISPSTAT  *(vu16*)(MEM_IO+0x0004)  // Display interupt status
@@ -67,4 +73,19 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define REG_BG2CNT  *(vu16*)(MEM_IO+0x000C)  // Bg2 control
 #define REG_BG3CNT  *(vu16*)(MEM_IO+0x000E)  // Bg3 control
 
+// #define BG_8BITCOL (BIT(7))
+#define BG_8BITCOL 0x0080
+// 0-31
+#define BG_SCRNUM(n) (n << 8)
+#define BG_BASENUM(n) (n << 2)
+
+// Screenblock as matrices
+// se_mat[s][y][x] = screenblock s, entry (x,y) ( SCR_ENTRY )
+#define se_mat ((SCREENMAT*)MEM_VRAM)
+
+// Charblocks, 8bpp tiles.
+// tile8_mem[y][x] = block y, tile x   ( TILE )
+#define tile8_mem  ((CHARBLOCK8*)MEM_VRAM)
+
+#define pal_bg_mem		((COLOR*)MEM_PAL)
 #endif // defs_h_INCLUDED
