@@ -4,7 +4,7 @@
 
 ```
 $ nix-shell
-$ make
+$ make game.gba
 $ mgba game.gba
 ```
 
