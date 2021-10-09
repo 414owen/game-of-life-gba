@@ -114,8 +114,6 @@ static void update(void) {
       update_cell(i, j);
     }
   }
-  swap_boards();
-  display();
 }
 
 static void setBoard(const bool state[HEIGHT][WIDTH]) {
@@ -135,9 +133,10 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  display();
   while (true) {
+    display();
     update();
+    swap_boards();
     for (int i = 0; i < 6; i++) vid_vsync();
   }
 
