@@ -3,7 +3,7 @@ CFLAGS = -Wall -O2 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) 
 ASFLAGS := $(ARCH)
 LDFLAGS = -nostartfiles -Tlnkscript
 
-GBA_LIBS = lib/crt0.o lib/font.o lib/boards_compressed.o
+GBA_LIBS = lib/crt0.o lib/font.o lib/boards_compressed.o lib/input.o
 
 a.out: main.c $(GBA_LIBS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(GBA_LIBS) main.c

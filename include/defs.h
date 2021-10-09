@@ -1,6 +1,9 @@
 #ifndef defs_h_INCLUDED
 #define defs_h_INCLUDED
 
+#define MIN(x, y) ((x) < (y) ? (x) : (y))
+#define MAX(x, y) ((x) > (y) ? (x) : (y))
+
 #define BIT(n) (1 << n)
 
 #define SCREEN_WIDTH = 240
@@ -95,6 +98,19 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 // tile8_mem[y][x] = block y, tile x   ( TILE )
 #define tile8_mem  ((CHARBLOCK8*)MEM_VRAM)
 
-#define pal_bg_mem		((COLOR*)MEM_PAL)
+#define pal_bg_mem ((COLOR*)MEM_PAL)
+
+#define KEY_MASK   0x03FF
+#define KEY_A      0x0001 // Button A
+#define KEY_B      0x0002 // Button B
+#define KEY_SELECT 0x0004 // Select button
+#define KEY_START  0x0008 // Start button
+#define KEY_RIGHT  0x0010 // Right D-pad
+#define KEY_LEFT   0x0020 // Left D-pad
+#define KEY_UP     0x0040 // Up D-pad
+#define KEY_DOWN   0x0080 // Down D-pad
+#define KEY_R      0x0100 // Shoulder R
+#define KEY_L      0x0200 // Shoulder L
+
 
 #endif // defs_h_INCLUDED

@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "boards_compressed.h"
+#include "input.h"
 #include "defs.h"
 
 #define WIDTH 30
@@ -139,11 +140,15 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
+  int delay = 6;
   do {
+    key_poll();
     display();
     update();
     swap_boards();
-    for (int i = 0; i < 6; i++) vid_vsync();
+    if (key_hit(KEY_L)) delay++;
+    if (key_hit(KEY_R)) delay = MAX(delay - 1, 0);
+    for (int i = 0; i < delay; i++) vid_vsync();
   } while(true);
 
   return 0;
