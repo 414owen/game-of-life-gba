@@ -8,6 +8,9 @@
 #define WIDTH 30
 #define HEIGHT 20
 
+// max 255, as we have 256 pallette entries
+#define TAIL_FRAMES 255
+
 /*
  *  char blocks        screen blocks
  * |-----------|       |-----------|
@@ -28,9 +31,6 @@
 
 #define CHARBLOCK_NUM 1
 #define SCREENBLOCK_NUM 0
-
-#define ON_TILE 0
-#define OFF_TILE 31
 
 #define MOD4(n) (n & 3)
 #define MUL8(n) (n << 3)
@@ -56,11 +56,6 @@ static TILE8 make_flat_tile(u8 pallette_ind) {
   return res;
 }
 
-static void vid_vsync(void) {
-  while(REG_VCOUNT >= 160);   // wait till VDraw
-  while(REG_VCOUNT < 160);    // wait till VBlank
-}
-
 int board_ind = 0;
 int other_board_ind = 1;
 
@@ -77,7 +72,7 @@ static void update_cell(int x, int y) {
   int neighbors = 0;
   for (int j = -1; j <= 1; j++) {
     for (int i = -1; i <= 1; i++) {
-      neighbors += get_cell((x + i + WIDTH) % WIDTH, (y + j + HEIGHT) % HEIGHT) == ON_TILE ? 1 : 0;
+      neighbors += get_cell((x + i + WIDTH) % WIDTH, (y + j + HEIGHT) % HEIGHT) == 0 ? 1 : 0;
     }
   }
 
@@ -92,7 +87,16 @@ static void update_cell(int x, int y) {
     }
   } else {
     if (neighbors == 3) set_cell(x, y, 0);
-    else set_cell(x, y, MIN(last + 1, 31));
+    else set_cell(x, y, last);
+  }
+}
+
+static void update_cell_tail(int x, int y) {
+  int last = get_cell(x, y);
+  if (last == 0) {
+    set_cell(x, y, 0);
+  } else {
+    set_cell(x, y, MIN(last + 1, TAIL_FRAMES));
   }
 }
 
@@ -111,9 +115,17 @@ static void display(void) {
 }
 
 static void update(void) {
-  for (int j = 0; j < HEIGHT; j++) {
-    for (int i = 0; i < WIDTH; i++) {
-      update_cell(i, j);
+  for (int y = 0; y < HEIGHT; y++) {
+    for (int x = 0; x < WIDTH; x++) {
+      update_cell(x, y);
+    }
+  }
+}
+
+static void update_tail_frames(void) {
+  for (int y = 0; y < HEIGHT; y++) {
+    for (int x = 0; x < WIDTH; x++) {
+      update_cell_tail(x, y);
     }
   }
 }
@@ -126,7 +138,7 @@ static void setBoard(const starter *starter) {
   for (int n = 0; n < 2; n++) {
     for (int y = 0; y < HEIGHT; y++) {
       for (int x = 0; x < WIDTH; x++) {
-        boards[n][y][x] = OFF_TILE;
+        boards[n][y][x] = TAIL_FRAMES;
       }
     }
   }
@@ -135,7 +147,7 @@ static void setBoard(const starter *starter) {
   for (int y = 0; y < starter->height; y++) {
     for (int x = 0; x < starter->width; x++) {
       int ind = x + y * starter->width;
-      set_cell(start_x + x, start_y + y, ((starter->data[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : 31);
+      set_cell(start_x + x, start_y + y, ((starter->data[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
     }
   }
   swap_boards();
@@ -176,9 +188,12 @@ int AgbMain(void) {
   // se_mat[SCREENBLOCK_NUM][19][29] = 31;
 
   // create a flat tile for 'on' cells
-  for (int i = 0; i < 32; i++) {
-    int chan = 16 - i / 2;
-    pal_bg_mem[i] = RGB15(chan, chan, chan);
+  for (int i = 0; i <= TAIL_FRAMES; i++) {
+    int chan = 31 / 2 - 31 * i / TAIL_FRAMES / 2;
+    int r = abs((i + 100 / 2 % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
+    int g = abs(((i / 2 + TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
+    int b = abs(((i / TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
+    pal_bg_mem[TAIL_FRAMES - i] = RGB15(r / 3,g / 3,b / 3);
     tile8_mem[CHARBLOCK_NUM][i] = make_flat_tile(i);
   }
 
@@ -188,21 +203,23 @@ int AgbMain(void) {
 
   int delay = 6;
   while (1) {
-    key_poll();
-    display();
     update();
     swap_boards();
-    if (key_hit(KEY_L)) delay++;
-    if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
-    if (key_hit(KEY_UP)) {
-      board_ind = (board_ind + 1) % num_starters;
-      setBoard(&starters[board_ind]);
-    }
-    if (key_hit(KEY_DOWN)) {
-      board_ind = (board_ind + num_starters - 1) % num_starters;
-      setBoard(&starters[board_ind]);
-    }
     for (int i = 0; i < delay; i++) {
+      key_poll();
+      if (key_hit(KEY_L)) delay++;
+      if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
+      if (key_hit(KEY_UP)) {
+        board_ind = (board_ind + 1) % num_starters;
+        setBoard(&starters[board_ind]);
+      }
+      if (key_hit(KEY_DOWN)) {
+        board_ind = (board_ind + num_starters - 1) % num_starters;
+        setBoard(&starters[board_ind]);
+      }
+      display();
+      update_tail_frames();
+      swap_boards();
       register_vblank_isr();
       halt();
     }
