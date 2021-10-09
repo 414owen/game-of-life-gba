@@ -27,6 +27,10 @@
 #define ON_TILE 1
 #define OFF_TILE 0
 
+#define MOD4(n) (n & 3)
+#define MUL8(n) (n << 3)
+#define DIV4(n) (n >> 2)
+
 static board boards[2];
 
 // Create a 15bit BGR color.
@@ -39,8 +43,9 @@ static TILE8 u8s_to_tile(u8 pixels[8][8]) {
   TILE8 res;
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
-      int u32_ind = (i + (j << 3)) >> 2;
-      int u32_shift = ((i + (j << 3)) & 3) << 3;
+      int byte_ind = i + MUL8(j);
+      int u32_ind = DIV4(byte_ind);
+      int u32_shift = MUL8(MOD4(byte_ind));
       u8 byte = pixels[i][j];
       res.data[u32_ind] |= byte << u32_shift;
     }
@@ -133,12 +138,12 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  while (true) {
+  do {
     display();
     update();
     swap_boards();
     for (int i = 0; i < 6; i++) vid_vsync();
-  }
+  } while(true);
 
   return 0;
 }
