@@ -6,6 +6,9 @@
 
 #define BIT(n) (1 << n)
 
+#define ARM __attribute__((__target__("arm")))
+#define THUMB __attribute__((__target__("thumb")))
+
 #define SCREEN_WIDTH = 240
 #define SCREEN_HEIGHT = 160
 
@@ -31,10 +34,7 @@ typedef volatile s64 vs64;
 
 typedef u16 COLOR;
 
-// typedef struct {
-//   // Each element is an index into the pallete, 8bpp each
-//   u32 data[16];
-// } TILE8;
+typedef void (*fnptr)(void);
 
 typedef struct {
   // Each element is an index into the pallete, 8bpp each
@@ -83,6 +83,33 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define REG_BG1CNT  *(vu16*)(MEM_IO+0x000A)  // Bg1 control
 #define REG_BG2CNT  *(vu16*)(MEM_IO+0x000C)  // Bg2 control
 #define REG_BG3CNT  *(vu16*)(MEM_IO+0x000E)  // Bg3 control
+
+//REG_INTERRUPT this memory address is where the interrupt function pointer will be stored
+#define REG_INTERRUPT *(fnptr*)(0x03007FFC)
+//REG_IFBIOS this is the BIOS register address that needs to be set to inform the bios
+//that any interrupts it was expecting have been dealt with.
+#define REG_IFBIOS (*(v_u16*)(0x3007FF8))
+
+#define REG_IME (*(v_u16*)(0x4000208)) // Master interrupt controller 0 off 1 on
+#define REG_IE  (*(v_u16*)(0x4000200)) // Interrupts that are registered or Interrupts Expected
+#define REG_IF  (*(v_u16*)(0x4000202)) // IF is the interrupt Fired,
+
+//Defines for Interrupts
+//There are 14 Interrupts that we can register with REG_IE
+#define INT_VBLANK 0x0001
+#define INT_HBLANK 0x0002
+#define INT_VCOUNT 0x0004
+#define INT_TIMER0 0x0008
+#define INT_TIMER1 0x0010
+#define INT_TIMER2 0x0020
+#define INT_TIMER3 0x0040
+#define INT_COM    0x0080
+#define INT_DMA0   0x0100
+#define INT_DMA1   0x0200
+#define INT_DMA2   0x0400
+#define INT_DMA3   0x0800
+#define INT_BUTTON 0x1000
+#define INT_CART   0x2000
 
 // #define BG_8BITCOL (BIT(7))
 #define BG_8BITCOL 0x0080
