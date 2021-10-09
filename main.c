@@ -29,14 +29,14 @@
 #define CHARBLOCK_NUM 1
 #define SCREENBLOCK_NUM 0
 
-#define ON_TILE 1
-#define OFF_TILE 0
+#define ON_TILE 0
+#define OFF_TILE 31
 
 #define MOD4(n) (n & 3)
 #define MUL8(n) (n << 3)
 #define DIV4(n) (n >> 2)
 
-typedef bool board[HEIGHT][WIDTH];
+typedef int board[HEIGHT][WIDTH];
 
 static board boards[2];
 
@@ -65,11 +65,11 @@ int board_ind = 0;
 int other_board_ind = 1;
 
 // write to board, read from other
-static void set_cell(int x, int y, bool on) {
-  boards[other_board_ind][y][x] = on;
+static void set_cell(int x, int y, int frames_since_alive) {
+  boards[other_board_ind][y][x] = frames_since_alive;
 }
 
-static bool get_cell(int x, int y) {
+static int get_cell(int x, int y) {
   return boards[board_ind][y][x];
 }
 
@@ -77,15 +77,22 @@ static void update_cell(int x, int y) {
   int neighbors = 0;
   for (int j = -1; j <= 1; j++) {
     for (int i = -1; i <= 1; i++) {
-      neighbors += get_cell((x + i + WIDTH) % WIDTH, (y + j + HEIGHT) % HEIGHT) ? 1 : 0;
+      neighbors += get_cell((x + i + WIDTH) % WIDTH, (y + j + HEIGHT) % HEIGHT) == ON_TILE ? 1 : 0;
     }
   }
 
-  if (get_cell(x, y)) {
+  // always have to set every cell, even if unchanged
+  int last = get_cell(x, y);
+  if (last == 0) {
     neighbors--;
-    set_cell(x, y, neighbors == 2 || neighbors == 3);
+    if (neighbors == 2 || neighbors == 3) {
+      set_cell(x, y, 0);
+    } else {
+      set_cell(x, y, 1);
+    }
   } else {
-    set_cell(x, y, neighbors == 3);
+    if (neighbors == 3) set_cell(x, y, 0);
+    else set_cell(x, y, MIN(last + 1, 31));
   }
 }
 
@@ -98,7 +105,7 @@ static void swap_boards(void) {
 static void display(void) {
   for (int j = 0; j < HEIGHT; j++) {
     for (int i = 0; i < WIDTH; i++) {
-      se_mat[SCREENBLOCK_NUM][j][i] = get_cell(i, j) ? ON_TILE : OFF_TILE;
+      se_mat[SCREENBLOCK_NUM][j][i] = get_cell(i, j);
     }
   }
 }
@@ -114,14 +121,21 @@ static void update(void) {
 static void setBoard(const starter *starter) {
   board_ind = 0;
   other_board_ind = 1;
-  memset(boards[0], 0, sizeof(bool) * WIDTH * HEIGHT);
-  memset(boards[1], 0, sizeof(bool) * WIDTH * HEIGHT);
+
+  // could be flattened into one loop
+  for (int n = 0; n < 2; n++) {
+    for (int y = 0; y < HEIGHT; y++) {
+      for (int x = 0; x < WIDTH; x++) {
+        boards[n][y][x] = OFF_TILE;
+      }
+    }
+  }
   int start_x = (WIDTH - starter->width) / 2;
   int start_y = (HEIGHT - starter->height) / 2;
   for (int y = 0; y < starter->height; y++) {
     for (int x = 0; x < starter->width; x++) {
       int ind = x + y * starter->width;
-      set_cell(start_x + x, start_y + y, (starter->data[ind / 8] & (1 << (ind % 8))) > 0);
+      set_cell(start_x + x, start_y + y, ((starter->data[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : 31);
     }
   }
   swap_boards();
@@ -159,12 +173,16 @@ int AgbMain(void) {
   setBoard(&starters[board_ind]);
 
   // screen entry 0,0 to tile 1
-  se_mat[SCREENBLOCK_NUM][19][29] = 1;
+  // se_mat[SCREENBLOCK_NUM][19][29] = 31;
 
   // create a flat tile for 'on' cells
-  tile8_mem[CHARBLOCK_NUM][1] = make_flat_tile(1);
+  for (int i = 0; i < 32; i++) {
+    int chan = 16 - i / 2;
+    pal_bg_mem[i] = RGB15(chan, chan, chan);
+    tile8_mem[CHARBLOCK_NUM][i] = make_flat_tile(i);
+  }
 
-  pal_bg_mem[1] = RGB15(31, 31, 31);
+  pal_bg_mem[0] = RGB15(31, 10, 10);
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
