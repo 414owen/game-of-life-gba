@@ -165,8 +165,6 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  register_vblank_isr();
-
   int delay = 6;
   while (1) {
     key_poll();
@@ -175,9 +173,10 @@ int AgbMain(void) {
     swap_boards();
     if (key_hit(KEY_L)) delay++;
     if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
-    // for (int i = 0; i < 500; i++) vid_vsync();
-    // vblank_intr_wait();
-    halt();
+    for (int i = 0; i < delay; i++) {
+      register_vblank_isr();
+      halt();
+    }
   }
 
   return 0;

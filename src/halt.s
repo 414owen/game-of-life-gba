@@ -1,5 +1,5 @@
 	.text;
-	.arm;
+	.thumb_func;
 	.align 2;
 	.global halt;
 	.type halt STT_FUNC;
