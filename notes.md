@@ -1,0 +1,1 @@
+* Memory is little-endian
