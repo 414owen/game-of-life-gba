@@ -18,19 +18,17 @@ typedef struct {
   int height;
 } board_conf;
 
+
+#define mkBoard(m_name) { \
+    .name = "" #m_name, \
+    .board = &m_name, \
+    .width = sizeof(m_name[0]) / sizeof(m_name[0][0]), \
+    .height = sizeof(m_name) / sizeof(m_name[0]), \
+  }
+
 board_conf boards[] = {
-  {
-    .name = "loafer",
-    .board = &loafer,
-    .width = sizeof(loafer[0]) / sizeof(loafer[0][0]),
-    .height = sizeof(loafer) / sizeof(loafer[0]),
-  },
-  {
-    .name = "glider",
-    .board = &glider,
-    .width = sizeof(glider[0]) / sizeof(glider[0][0]),
-    .height = sizeof(glider) / sizeof(glider[0]),
-  },
+  mkBoard(loafer),
+  mkBoard(glider),
 };
 
 int main(int argc, char **argv) {
