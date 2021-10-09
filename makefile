@@ -12,9 +12,11 @@ test: a.out
 	mgba -3 a.out
 
 lib/%.o: src/%.c
+	mkdir -p lib
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 lib/%.o: src/%.s
+	mkdir -p lib
 	$(AS) -o $@ $< $(ASFLAGS)
 
 src/boards_compressed.c: misc/compress_boards.c
@@ -23,7 +25,7 @@ src/boards_compressed.c: misc/compress_boards.c
 	./build/generate_compressed_builds
 
 clean:
-	rm -f *.gba lib/*.o *.out *.elf *.sav
+	rm -rf *.gba lib *.out *.elf *.sav
 	rm -rf build
 	rm -f src/boards_compressed.c
 
