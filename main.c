@@ -27,9 +27,39 @@ static inline COLOR RGB15(int red, int green, int blue) {
   return red + (green<<5) + (blue<<10);
 }
 
+// static inline void set_palette_ind(int charblock, int tile, int x, int y, int ind) {
+//   // clear ind
+//   int u32_ind = x + y * 8;
+//   tile8_mem[charblock][tile].data[u32_ind % 4] &= ~(0xffff << ((u32_ind % 4) * 8));
+// }
+
+static inline TILE8 u8s_to_tile(u8 pixels[8][8]) {
+  TILE8 res;
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      int u32_ind = (i + (j << 3)) >> 2;
+      int u32_shift = ((i + (j << 3)) & 3) << 3;
+      u8 byte = pixels[i][j];
+      res.data[u32_ind] |= byte << u32_shift;
+    }
+  }
+  return res;
+}
+
+u8 white_tile[8][8] = {
+  { 0, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+  { 1, 1, 1, 1, 1, 1, 1, 1 },
+};
+
 int AgbMain(void) {
   // screen entry 0,0 to tile 1
-  se_mat[SCREENBLOCK_NUM][0][0] = 1;
+  // se_mat[SCREENBLOCK_NUM][0][0] = 1;
 
   // CHARBLOCK tile x y = palette index 1
   for (int i = 0; i < 8; i++) {
@@ -37,10 +67,9 @@ int AgbMain(void) {
       // tile8_mem[0][1].data[i][i] = 1;
     }
   }
-  // u8 *test = &tile8_mem[CHARBLOCK_NUM][0];
-  // test[0] = (u8) 1;
-  tile8_mem[CHARBLOCK_NUM][0].data[1] = 0x01010101;
-  tile8_mem[CHARBLOCK_NUM][0].data[0] = 0x01010101;
+  tile8_mem[CHARBLOCK_NUM][0] = u8s_to_tile(white_tile);
+  // set_palette_ind(CHARBLOCK_NUM, 0, 0, 0, 1);
+  // tile8_mem[CHARBLOCK_NUM][0].data[0] = 0;
 
   // tile8_mem[CHARBLOCK_NUM][0].data[0][1] = 1;
   // tile8_mem[0][0].data[0][2] = 1;
