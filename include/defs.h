@@ -6,6 +6,13 @@
 
 #define BIT(n) (1 << n)
 
+#define EWRAM_DATA __attribute__((section(".ewram")))
+#define IWRAM_DATA __attribute__((section(".iwram")))
+#define  EWRAM_BSS __attribute__((section(".sbss")))
+
+#define EWRAM_CODE __attribute__((section(".ewram"), long_call))
+#define IWRAM_CODE __attribute__((section(".iwram"), long_call))
+
 #define ARM __attribute__((__target__("arm")))
 #define THUMB __attribute__((__target__("thumb")))
 
@@ -88,11 +95,11 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define REG_INTERRUPT *(fnptr*)(0x03007FFC)
 //REG_IFBIOS this is the BIOS register address that needs to be set to inform the bios
 //that any interrupts it was expecting have been dealt with.
-#define REG_IFBIOS (*(v_u16*)(0x3007FF8))
+#define REG_IFBIOS (*(vu16*)(0x3007FF8))
 
-#define REG_IME (*(v_u16*)(0x4000208)) // Master interrupt controller 0 off 1 on
-#define REG_IE  (*(v_u16*)(0x4000200)) // Interrupts that are registered or Interrupts Expected
-#define REG_IF  (*(v_u16*)(0x4000202)) // IF is the interrupt Fired,
+#define REG_IME (*(vu16*)(0x4000208)) // Master interrupt controller 0 off 1 on
+#define REG_IE  (*(vu16*)(0x4000200)) // Interrupts that are registered or Interrupts Expected
+#define REG_IF  (*(vu16*)(0x4000202)) // IF is the interrupt Fired,
 
 //Defines for Interrupts
 //There are 14 Interrupts that we can register with REG_IE
@@ -110,6 +117,11 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define INT_DMA3   0x0800
 #define INT_BUTTON 0x1000
 #define INT_CART   0x2000
+
+//create pointer to video memory
+#define DSTAT_VBL_IRQ 0x0008
+#define DSTAT_VHB_IRQ 0x0010
+#define DSTAT_VCT_IRQ 0x0020
 
 // #define BG_8BITCOL (BIT(7))
 #define BG_8BITCOL 0x0080
@@ -138,6 +150,5 @@ typedef SCR_ENTRY SCREENBLOCK[1024];
 #define KEY_DOWN   0x0080 // Down D-pad
 #define KEY_R      0x0100 // Shoulder R
 #define KEY_L      0x0200 // Shoulder L
-
 
 #endif // defs_h_INCLUDED

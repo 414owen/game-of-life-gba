@@ -1,9 +1,9 @@
 ARCH := -mcpu=arm7tdmi
-CFLAGS = -Wall -O2 -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude -flto
-ASFLAGS := $(ARCH)
+CFLAGS := -g -O2 ${CFLAGS} -Wall -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -faggressive-loop-optimizations -mlong-calls -Iinclude -flto
 LDFLAGS = -nostartfiles -Tlnkscript
+DEBUG ?= false
 
-GBA_LIBS = lib/crt0.o lib/font.o lib/boards_compressed.o lib/input.o
+GBA_LIBS = lib/crt0.o lib/font.o lib/boards_compressed.o lib/input.o lib/halt.o
 
 a.out: main.c $(GBA_LIBS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(GBA_LIBS) main.c

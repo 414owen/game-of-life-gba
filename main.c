@@ -126,6 +126,31 @@ static void setBoard(const starter *starter) {
   }
 }
 
+void interruptHandler();
+
+// This is the function that will be called by the CPU when an interrupt is triggered
+void interruptHandler() {
+	REG_IF = INT_VBLANK;
+	REG_IFBIOS |= INT_VBLANK;
+}
+
+// This is the declaration for the function we will call to trigger the VBLANK interrupt wait
+void vblank_intr_wait() {
+  // 0x5 is VBlankIntrWait in the function table.
+  asm volatile("swi 0x02");
+}
+
+// This is the function that we wil call to register that we want a VBLANK Interrupt
+void register_vblank_isr() {
+	REG_IME = 0x00;
+	REG_INTERRUPT = (fnptr)interruptHandler;
+	REG_DISPSTAT |= DSTAT_VBL_IRQ;
+	REG_IE |= INT_VBLANK;
+	REG_IME = 1;
+}
+
+extern void halt(void);
+
 int AgbMain(void) {
   setBoard(&starters[0]);
   swap_boards();
@@ -140,16 +165,20 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
+  register_vblank_isr();
+
   int delay = 6;
-  do {
+  while (1) {
     key_poll();
     display();
     update();
     swap_boards();
     if (key_hit(KEY_L)) delay++;
-    if (key_hit(KEY_R)) delay = MAX(delay - 1, 0);
-    for (int i = 0; i < delay; i++) vid_vsync();
-  } while(true);
+    if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
+    // for (int i = 0; i < 500; i++) vid_vsync();
+    // vblank_intr_wait();
+    halt();
+  }
 
   return 0;
 }
