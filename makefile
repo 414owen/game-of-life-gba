@@ -52,5 +52,5 @@ clean:
 a.gba: a.out
 	$(OBJCOPY) -O binary a.out a.gba
 
-game.gba: a.gba
-	./ht.pl -n "Game of Life" -clo game.gba a.gba
+life.gba: a.gba
+	./ht.pl -n "Game of Life" -clo life.gba a.gba

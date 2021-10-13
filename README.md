@@ -7,7 +7,7 @@
 ```
 $ # one-step to get a full cross-compilation toolchain!
 $ nix-shell
-$ make game.gba
+$ make life.gba
 ```
 
 ## Running
