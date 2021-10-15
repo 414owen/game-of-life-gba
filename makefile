@@ -1,6 +1,6 @@
 ARCH := -mcpu=arm7tdmi
 WARNS := -Wall -pedantic
-CFLAGS := -O2 -Wall -pedantic -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -mlong-calls -flto ${CFLAGS}
+CFLAGS := -O2 -Wall -fdiagnostics-show-option -march=armv4t -Wno-switch -Wno-multichar -ffast-math $(ARCH) -mtune=arm7tdmi -marm -mlong-calls -flto ${CFLAGS}
 LDFLAGS = -nostartfiles -Tlnkscript
 DEBUG ?= false
 

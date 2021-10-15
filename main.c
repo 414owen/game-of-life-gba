@@ -13,7 +13,7 @@
 #define HEIGHT 20
 
 // max 255, as we have 256 pallette entries
-#define TAIL_FRAMES 31
+#define TAIL_FRAMES 100
 
 /*
  *  char blocks        screen blocks
@@ -52,6 +52,18 @@ typedef struct {
 // TODO test can we use | instead of +?
 static COLOR RGB15(int red, int green, int blue) {
   return red + (green<<5) + (blue<<10);
+}
+
+static int r(COLOR c) {
+  return c & 0b11111;
+}
+
+static int g(COLOR c) {
+  return (c >> 5) & 0b11111;
+}
+
+static int b(COLOR c) {
+  return (c >> 10) & 0b11111;
 }
 
 static TILE8 make_flat_tile(u8 pallette_ind) {
@@ -238,6 +250,41 @@ static void vsync(void) {
   halt();
 }
 
+static COLOR percColor(COLOR c, int perc) {
+  int rc = r(c);
+  int gc = g(c);
+  int bc = b(c);
+  return RGB15(rc * perc / 100, gc * perc / 100, bc * perc / 100);
+}
+
+static COLOR addCols(COLOR a, COLOR b) {
+  return a + b;
+}
+
+static void span_pallette(COLOR a, COLOR b, int startPerc, int endPerc) {
+  int percRange = endPerc - startPerc;
+  int startFrame = startPerc * TAIL_FRAMES / 100;
+  int endFrame = endPerc * TAIL_FRAMES / 100;
+  int nFrames = endFrame - startFrame;
+  for (int frame = 0; frame < nFrames; frame++) {
+    int percB = 100 * frame / nFrames;
+    pal_bg_mem[startFrame + frame] = addCols(percColor(a, 100 - percB), percColor(b, percB));
+  }
+}
+
+static void set_pallette_keyframes(int num, COLOR *colors, int *percentages) {
+  // flat tiles tile for cell trails
+  if (num == 2) {
+    span_pallette(colors[0], colors[1], 0, 100);
+    return;
+  }
+  span_pallette(colors[0], colors[1], 0, percentages[0]);
+  for (int i = 0; i < num - 3; i++) {
+    span_pallette(colors[i+1], colors[i+2], percentages[i], percentages[i+1]);
+  }
+  span_pallette(colors[num - 2], colors[num - 1], percentages[num - 3], 100);
+}
+
 int AgbMain(void) {
 
   const int num_starters = rle_rule_amt + packed_rule_amt;
@@ -250,14 +297,15 @@ int AgbMain(void) {
     }
   }
 
-  // create a flat tile for 'on' cells
+  #define NUM_COLORS 4
+  COLOR colors[NUM_COLORS] = {RGB15(30,30,10), RGB15(23,6,10), RGB15(0,0,30), RGB15(0, 0, 0)};
+  int percentages[NUM_COLORS - 2] = {50, 90};
+  set_pallette_keyframes(NUM_COLORS, colors, percentages);
+
   for (int i = 0; i <= TAIL_FRAMES; i++) {
-    int r = abs((i + 100 / 2 % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
-    int g = abs(((i / 2 + TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
-    int b = abs(((i / TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
-    pal_bg_mem[TAIL_FRAMES - i] = RGB15(r / 3,g / 3,b / 3);
     tile8_mem[CHARBLOCK_NUM][i] = make_flat_tile(i);
   }
+
 
   pal_bg_mem[0] = RGB15(31, 10, 10);
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
