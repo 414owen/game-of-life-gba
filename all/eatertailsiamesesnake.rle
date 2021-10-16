@@ -1,0 +1,6 @@
+#N Eater tail siamese snake
+#O Unknown
+#C https://conwaylife.com/wiki/Eater_tail_siamese_snake
+#C https://conwaylife.com/patterns/eatertailsiamesesnake.rle
+x = 4, y = 7, rule = B3/S23
+2b2o$bobo$bo$2o$o$bo$2o!

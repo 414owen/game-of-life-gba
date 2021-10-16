@@ -1,0 +1,10 @@
+#N lx73.rle
+#O David Buckingham
+#C https://conwaylife.com/wiki/Lx73
+#C https://www.conwaylife.com/patterns/lx73.rle
+x = 37, y = 33, rule = B3/S23
+5b2o$6bo2b2o$6bobobo3b2o$7bo7bo$15b3o$9bo$8bobo$9bo$6b3o13b2o$6bo16bo
+8b2o$23bob2o5bo$2o20b2obobo5bo$bo25bo4b2o$bobo22b2ob2o$2b2o20b2obobob
+5o$23bobobo8bo$22b2ob2ob4o3b2o$22bo3bo5bo$22bo7b2o$22bo7b2o$22bo3bo5bo
+$2bo19b2ob2ob4o3b2o$2bobo18bobobo8bo$2b3o19b2obobob5o$4bo21b2ob2o$27bo
+4b2o$22b2obobo5bo$23bob2o5bo$23bo8b2o$16b2o4b2o$16bo$17b3o$19bo!

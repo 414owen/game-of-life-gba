@@ -1,0 +1,17 @@
+#N Newshuttle
+#O David Buckingham
+#C The first known period-28 oscillator
+#C Discovered in 1973
+#C https://www.conwaylife.com/wiki/Newshuttle
+x = 51, y = 51, rule = B3/S23
+26b2o$20bo3bo2bo2bo$18b3o3b3o3b3o$8b2o7bo15bo7b2o$9bo7b2o5b3o5b2o7bo$
+9bobo11bo3bo11bobo$10b2o11b2ob2o11b2o2$3bo10b3o17b3o10bo$3b3o9bo19bo9b
+3o$6bo13b3o5b3o13bo$5b2o14bo7bo14b2o3$8bo33bo$8b2o31b2o$8bo33bo$3b2o
+18b2ob2o18b2o$2bobo18bo3bo18bobo$2bo21b3o21bo$b2o7bo15bobo11bo7b2o$10b
+2o15b2o10b2o$10bo9b2o18bo$2o3b2o10b2o2bo10b2o10b2o$obobobo10bob2o10bob
+o10bobob2o$2bobo14bo11bo14bobo$b2obobo10bobo10b2obo10bobobobo$5b2o10b
+2o10bo2b2o10b2o3b2o$10bo18b2o9bo$10b2o10b2o15b2o$b2o7bo11bobo15bo7b2o$
+2bo21b3o21bo$2bobo18bo3bo18bobo$3b2o18b2ob2o18b2o$8bo33bo$8b2o31b2o$8b
+o33bo3$5b2o14bo7bo14b2o$6bo13b3o5b3o13bo$3b3o9bo19bo9b3o$3bo10b3o17b3o
+10bo2$10b2o11b2ob2o11b2o$9bobo11bo3bo11bobo$9bo7b2o5b3o5b2o7bo$8b2o7bo
+15bo7b2o$18b3o3b3o3b3o$20bo2bo2bo3bo$23b2o!

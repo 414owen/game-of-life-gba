@@ -1,0 +1,21 @@
+#N twirlingttetsons2_synth.rle
+#O Martin Grant, 12 October 2013
+#C 40-glider synthesis of twirling T-tetsons 2
+#C https://conwaylife.com/wiki/Twirling_T-tetsons_2
+#C https://conwaylife.com/forums/viewtopic.php?p=9371#p9371
+x = 304, y = 141, rule = B3/S23
+176bo$177bo$175b3o2$180bo$181bo$179b3o$184bo$185b2o$184b2o14$208bo$
+209b2o$208b2o9$216bo$214bobo$215b2o2$265bobo$265b2o$266bo5$235bo$236bo
+13bobo$234b3o14b2o$251bo$257bo$258b2o$257b2o2bo$261bobo$261b2o24b2o3b
+2o$36bo249bo7bo$34bobo252bobo$35b2o250b2o3b2o$42bo197bo15bo$40b2o199b
+2o13bobo$35b3o3b2o197b2o14b2o31b3o$37bo24b3o31b3o167b3o20bobo9b3o$36bo
+24b3o31b3o167b3o21b3o8b3o2$280b3o$59bo7bo213b3o$60bo6bobo25b3o167b3o
+21b3o8b3o$58b3o2b2o2b2o27b3o27b6o134b3o20bobo9b3o$63bobo59bo5bo157b3o$
+63bo67bo4bo144b3o$125bo4bo3bo3bo141b3o$17bobo107b2o10bo$18b2o114bo4bo$
+18bo116b5o$13b2o15b2o3b2o14b2o3b2o27b2o3b2o163b2o3b2o28b2o3b2o$bo13bo
+16bobo18bobo31bobo167bobo32bobo$bobo8bo7b2o7bo7bo12bo7bo25bo7bo134b2o
+20b2o3bo7bo26bo7bo$b2o10b2o4b2o9b2o3b2o14b2o3b2o20b2o5b2o3b2o136b2o18b
+o2bo3b2o3b2o28b2o3b2o$21bo55bobo147bo21b2o$79bo$2o3bo11b2o62b2o$b2ob2o
+12b2o61bobo$o3bobo10bo63bo17$206b3o$208bo$207bo4b3o$214bo$213bo2$203b
+2o$202bobo$204bo12$197b3o$199bo$198bo10$182bo$182b2o3b2o$181bobo4b2o$
+187bo5$180b3o$182bo$181bo!

@@ -1,0 +1,5 @@
+#N long3hookwithtail.rle
+#C https://conwaylife.com/wiki/Long%5E3_hook_with_tail
+#C https://www.conwaylife.com/patterns/long3hookwithtail.rle
+x = 5, y = 8, rule = B3/S23
+bo$b3o$4bo$3bo$2bo$bo$o$2o!

@@ -1,0 +1,5 @@
+#N bunnies10aoriginal.rle
+#C https://conwaylife.com/wiki/Bunnies_10a
+#C https://www.conwaylife.com/patterns/bunnies10aoriginal.rle
+x = 8, y = 5, rule = B3/S23
+2bo$ob2obo$6bo$o4b2o$7bo!

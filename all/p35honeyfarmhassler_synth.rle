@@ -1,0 +1,15 @@
+#N p35honeyfarmhassler_synth.rle
+#O Jeremy Tan, 17 March 2019
+#C 19-glider synthesis of p35 honey farm hassler
+#C https://conwaylife.com/wiki/P35_honey_farm_hassler
+#C https://conwaylife.com/forums/viewtopic.php?p=73339#p73339
+x = 128, y = 43, rule = B3/S23
+80bo$80bobo$80b2o$7bo$8bo3bo31b2o32b2o$6b3ob2o31bo2bo30bo2bo$11b2o30bo
+2bo30bo2bo$44b2o32b2o$20bo$19bo49bobo$19b3o48b2o$70bo$17bo$18b2o34b2o
+32b2o34b2o$17b2o34bobo31bobo25bo7bobo$20b2o32bo14bo18bo24b3o4bo3bo$20b
+obo47b2o6bo33bo7bo$20bo48b2o7bobo31b2o$78b2o11bo25b2o$90bo25bo$90b3o
+24b3o6b2o$104b2o4b2obo4bob2o4b2o$67b3o34b2o6b3o$69bo45bo$68bo11b2o31b
+2o$79bobo7b2o27b2o$6bo74bo6b2o21bo7bo$b2ob2o31bo33bo18bo16bo3bo4b3o$ob
+o2b2o29bobo31bobo33bobo7bo$2bo33b2o32b2o34b2o2$89bo$88b2o$88bobo2$46b
+2o32b2o$13b2o30bo2bo30bo2bo$14b2ob3o25bo2bo30bo2bo$13bo3bo28b2o32b2o$
+18bo$78b2o$77bobo$79bo!

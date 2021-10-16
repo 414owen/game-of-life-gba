@@ -1,0 +1,15 @@
+#N p856glidergun.rle
+#O David Buckingham, 1991
+#C https://conwaylife.com/wiki/Period-856_glider_gun
+#C https://www.conwaylife.com/patterns/p856glidergun.rle
+x = 105, y = 105, rule = B3/S23
+41b2o$45bo$40b2o2bobo$39bo2b3obobo$40b6o2bo$41b2ob2o$38bo2b6o$38bobob
+3o2bo$40bobo2b2o$41bo$44b2o8$82bo$80b3o$79bo$17b2o60b2o$18bo$18bobo$
+19b2o8b2o$29b2o3$26b3o24b2o$28bo24b2o$26b3o8$98bo2bo$97bo$95b2o$92bo6b
+2obo$95bo3bo2bo$57b2o36b3obo3bo$46b2o9b2o33bo11bo$42b4o4b2o41bo3bob3o$
+42b3ob2o2b2o42bo2bo3bo$47bo9b3o34bob2o6bo$58b2o40b2o$27b2o26b2o42bo$
+27b2o26b3o37bo2bo$56bobo$44b2o11b2o$44b2o$74b2o$74b2o$bob2ob2o36b3o$2o
+b2o2b2o36b2o8b2o$o41b2o7b4o4b2o$7b2o33b3o6b3ob2o2b2o$2o5b2o34bobo10bo$
+2o42b2o$8bo$2o2b2ob2o$b2ob2obo11$48b2o$48b2o4$82b2o$82bobo$84bo$22b2o
+60b2o$23bo$20b3o$20bo8$59b4o$55b2obo4bo$54bo3bo4bo$54bo4b2o$54bo2bo4b
+2o$54bo2bo3bo2bo$55b2o4bo2bo$58b2o4bo$55bo4bo3bo$55bo4bob2o$56b4o!

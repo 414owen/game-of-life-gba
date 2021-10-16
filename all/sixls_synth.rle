@@ -1,0 +1,13 @@
+#N sixls_synth.rle
+#O Jeremy Tan and Mark Niemiec, 31 March 2019
+#C 18-glider synthesis of six L's
+#C https://www.conwaylife.com/forums/viewtopic.php?p=74258#p74258
+#C https://conwaylife.com/wiki/Six_Ls
+#C https://www.conwaylife.com/patterns/sixls_synth.rle
+x = 126, y = 61, rule = B3/S23
+69bo$67bobo$68boo7$92bo11bo$91bo10boo$74bo16b3o9boo$75boo22bo$74boo22b
+o$98b3o8$21bo$21bobo$21boo$19bo$17bobo29boo38boo$18boo28bobbo36bobbo
+27booboo$49boo38boobboo7b3o15bobobo$93bobo6bo17bobobo$60bo9bo22bo9bo
+14boo4boo$61bo6bobo48bobobo$33boo24b3o7boobboo44bobobo$4boo26bobbo36bo
+bbo44booboo$4bobo26boo38boo$4bo$boo$obo$bbo8$63b3o$65bo22boo$64bo22boo
+$59boo9b3o16bo$60boo10bo$59bo11bo7$94boo$94bobo$94bo!

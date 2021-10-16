@@ -1,0 +1,8 @@
+#N 22p2_synth.rle
+#O Bob Shemyakin, 18 May 2016
+#C 5-glider synthesis of 22P2
+#C https://conwaylife.com/wiki/22P2
+#C https://conwaylife.com/forums/viewtopic.php?p=31110#p31110
+x = 61, y = 19, rule = B3/S23
+2bo$obo$b2o$14bo$12b2o$13b2o3$54b2obo$53bobob3o$bo51bo6bo$2b2o50b5obo$
+b2o56bo$56bo$56b2o$b2o$2b2o5b2o$bo6b2o$10bo!

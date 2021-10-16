@@ -1,0 +1,16 @@
+#N hectic_synth.rle
+#O Martin Grant, 12 October 2013
+#C 26-glider synthesis of hectic
+#C https://www.conwaylife.com/wiki/Hectic
+#C https://conwaylife.com/forums/viewtopic.php?p=9371#p9371
+x = 169, y = 73, rule = B3/S23
+85bo$84bo$84b3o$58bo$59bo$57b3o8$28bo$29b2o$28b2o38bobo$68b2o$69bo82b
+2o$152b2o$71bo$70bo$70b3o$103bo49bo$69bo31b2o49bobo$67bobo32b2o47bo3bo
+$68b2o82b3o$150b2o3b2o$47bo$48b2o$43bo3b2o18bo74bo$44bo23bo73bobo$42b
+3o21b3o74bobo$130b2o11bo2bo$2bo11bobo65bobo45b2o11bobo4b2o$bo12b2o57bo
+8b2o58bobo4b2o$b3o11bo56bobo8bo58bo8bo$61b2o9b2o$bo11b3o35bo8bobo84bo
+8bo$b2o12bo35b2o8bo86b2o4bobo$obo11bo35bobo94b2o4bobo11b2o$152bo2bo11b
+2o$66b3o21b3o60bobo$66bo23bo63bobo$67bo18b2o3bo64bo$85b2o$87bo$142b2o
+3b2o$65b2o77b3o$31b2o32bobo75bo3bo$32b2o31bo78bobo$31bo113bo$62b3o$64b
+o$63bo$145b2o$65bo79b2o$65b2o$64bobo38b2o$104b2o$106bo8$75b3o$75bo$76b
+o$48b3o$50bo$49bo!

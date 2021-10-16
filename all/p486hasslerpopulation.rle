@@ -1,0 +1,10 @@
+#N p486hasslerpopulation.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/P486_R-pentomino_hassler
+#C https://www.conwaylife.com/patterns/p486hasslerpopulation.rle
+x = 62, y = 57, rule = B3/S23
+15b2o28b2o$15b2o28b2o17$5bo50bo$3b3o50b3o$2bo3b2o46b2o3bo$bob2o3bo27bo
+16bo3b2obo$bobob3o27b2o16b2o3bobo$2obo2bo27b2o17b3o2bob2o$3bo50bobobo$
+3bobo29bo18bobobo$2b2ob2o48b2ob2o4$2b2ob2o48b2ob2o$3bobobo18bo29bobo$
+3bobobo50bo$2obo2b3o17b2o27bo2bob2o$bobo3b2o16b2o27b3obobo$bob2o3bo16b
+o27bo3b2obo$2bo3b2o46b2o3bo$3b3o50b3o$5bo50bo17$15b2o28b2o$15b2o28b2o!

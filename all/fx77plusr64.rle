@@ -1,0 +1,7 @@
+#N fx77plusr64.rle
+#C https://conwaylife.com/wiki/Fx77
+#C https://www.conwaylife.com/patterns/fx77plusr64.rle
+x = 48, y = 30, rule = B3/S23
+37b2o$17bo20bo$17b3o18b3o$20bo$19b2o2$o$3o$3bo$2b2o11b2o11bo$15b2o9b3o
+$26bo$26bo4$bo44b2o$bobo42b2o$b3o36b2o$3bo36b2o3$42b2o$35b2o5b2o$35b2o
+4$14b2o$14b2o!

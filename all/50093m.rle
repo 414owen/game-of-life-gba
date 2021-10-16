@@ -1,0 +1,8 @@
+#N 50093m.rle
+#O Rob Liston, 2021
+#C https://conwaylife.com/wiki/50093M
+#C https://www.conwaylife.com/patterns/50093m.rle
+x = 16, y = 16, rule = B3/S23
+3bo5bob2obo$5bo2bo2b2ob2o$2b3o2bobo3bo$bobo3bob4o2bo$3bobobob7o$2b2ob
+2ob2ob2obo$b4o6b2o$3ob4ob2o3b2o$4ob2o2bo$bobob2o2bo$2o2b4o3b4o$2b2obob
+o3bo3bo$bo4bobob2obo$b4ob2o2b2o3bo$2b3o4bo2bobo$2obo4b2ob3o!

@@ -1,0 +1,6 @@
+#N cyclicpredecessor.rle
+#C https://conwaylife.com/wiki/Cyclic
+#C https://www.conwaylife.com/patterns/cyclicpredecessor.rle
+x = 10, y = 10, rule = B3/S23
+4b2o$3bo2bo$3bobo$b2obo3bo$o2b2o2bobo$obo2b2o2bo$bo3bob2o$4bobo$3bo2bo
+$4b2o!

@@ -1,0 +1,5 @@
+#N twolongshillelaghs.rle
+#C https://conwaylife.com/wiki/Long_shillelagh
+#C https://www.conwaylife.com/patterns/twolongshillelaghs.rle
+x = 6, y = 6, rule = B3/S23
+2o2b2o$o2bobo$b2o$3b2o$obo2bo$2o2b2o!

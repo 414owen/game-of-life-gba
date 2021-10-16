@@ -1,0 +1,6 @@
+#N perkinsgtoh.rle
+#C https://conwaylife.com/wiki/Glider-to-Herschel_converter
+#C https://www.conwaylife.com/patterns/perkinsgtoh.rle
+x = 24, y = 14, rule = B3/S23
+10bo9bo$10bobo5b2o$10b2o7b2o3$21bo$21bo$3bob2o3b2o9b3o$b3ob2o3b2o11bo$
+o$b3ob2o$3bobo$3bobo$4bo!

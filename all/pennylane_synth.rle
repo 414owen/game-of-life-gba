@@ -1,0 +1,27 @@
+#N pennylane_synth.rle
+#O Martin Grant, 10 February 2016
+#O gmc_nxtman, 28 July 2017
+#O Bob Shemyakin, 29 July 2017
+#C 27-glider synthesis of penny lane
+#C https://conwaylife.com/wiki/Penny_lane
+#C https://conwaylife.com/forums/viewtopic.php?p=27293#p27293
+#C https://conwaylife.com/forums/viewtopic.php?p=47358#p47358
+#C https://conwaylife.com/forums/viewtopic.php?p=47362#p47362
+x = 379, y = 32, rule = B3/S23
+207bo$205bobo$206b2o3$80bo$81bo3bo30b2o30b2o$79b3ob2o30bo2bo24bo3bo2bo
+144bo$84b2o29bo2bo22bobo3bo2bo142b2o$116b2o24b2o4b2o144b2o37bo4bobo4bo
+$331bobo2bobobobo2bobo$332b2o3b2ob2o3b2o$225bo64bo$17bo161bo31bo14bo
+16bo31bo14bobo14bo31bo$16bo29bo31bo11bobo17bo31bo31bo3bobo25bo3bobo11b
+3o11bo3bobo25bo3bobo13b2o10bo3bobo3bo21bo3bobo3bo22b2o5b2o$16b3o26bobo
+29bobo10b2o17bobo29bobo29bobo3bo25bobo3bo25bobo3bo3b2o20bobo3bo3b2o5b
+3o12bobo3bo3bobo19bobo3bo3bobo21bo7bo$11bo33bobo29bobo11bo17bobo29bobo
+29bobo29bobo29bobo7bo21bobo7bo6bo14bobo7bobo19bobo7bobo18b2obo7bob2o$
+9bobo32b2obobo26b2obobo26b2obob2o25b2obob2o8bo16b2obob5o22b2obob5o9b3o
+10b2obob5obo20b2obob5obo7bo12b2obob5obob2o17b2obob5obob2o17b2obob5obob
+2o$10b2ob2o33b2o30b2o5bobo22bo2bo28bo2bo7bobo18bo5bo25bo5bo10bo14bo5bo
+25bo5bo25bo5bo25bo5bo25bo2bo2bo$13bobo71b2o24b2o30b2o8b2o20b5o27b5o10b
+o16b5o27b5o27b5o27b5o27b5o$13bo74bo202b2o$152b3o24bo31bo31bo31bo14b2o
+15bo31bo31bo$b2o83b2o64bo25bobo29bobo29bobo29bobo15bo13bobo29bobo29bob
+o$obo82b2o66bo25bo31bo31bo31bo31bo31bo31bo$2bo84bo3$116b2o24b2o4b2o$
+84b2o29bo2bo22bobo3bo2bo152b2o$79b3ob2o30bo2bo24bo3bo2bo152bobo$81bo3b
+o30b2o30b2o153bo$80bo!

@@ -1,0 +1,8 @@
+#N longintegral_synth.rle
+#O Simon Ekstrom, 30 July 2017
+#C 4-glider synthesis of long integral
+#C https://conwaylife.com/wiki/Long_integral
+#C https://conwaylife.com/forums/viewtopic.php?p=47449#p47449
+x = 32, y = 15, rule = B3/S23
+8bobo$8b2o$9bo$bo$2bo$3o$30b2o$29bobo$b3o25bo$3bo26bo$2bo25bobo$28b2o$
+19bo$18b2o$18bobo!

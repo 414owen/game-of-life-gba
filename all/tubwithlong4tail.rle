@@ -1,0 +1,5 @@
+#N tubwithlong4tail.rle
+#C https://conwaylife.com/wiki/Tub_with_long%5E4_tail
+#C https://www.conwaylife.com/patterns/tubwithlong4tail.rle
+x = 5, y = 9, rule = B3/S23
+2bo$bobo$2bobo$4bo$3bo$2bo$bo$o$2o!

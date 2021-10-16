@@ -1,0 +1,5 @@
+#N transtripoleontable.rle
+#C https://conwaylife.com/wiki/Trans-tripole_on_table
+#C https://www.conwaylife.com/patterns/transtripoleontable.rle
+x = 8, y = 9, rule = B3/S23
+6b2o$7bo$4bobo2$2bobo$2b2o2$4o$o2bo!

@@ -1,0 +1,6 @@
+#N fx119fast.rle
+#C https://conwaylife.com/wiki/Fx119
+#C https://www.conwaylife.com/patterns/Fx119fast.rle
+x = 25, y = 34, rule = B3/S23
+2o$bo13b2o$bobo11b2o$2b2o4$22b2o$22b2o2$2bo$2bobo$2b3o$4bo12$11b2o11bo
+$6b2o3b2o9b3o$6b2o14bo$22bo2$5b2o$6bo4b2o$3b3o5b2o$3bo!

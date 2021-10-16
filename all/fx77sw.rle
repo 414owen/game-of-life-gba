@@ -1,0 +1,7 @@
+#N fx77sw.rle
+#C https://conwaylife.com/wiki/Fx77
+#C https://www.conwaylife.com/patterns/fx77sw.rle
+x = 29, y = 21, rule = B3/S23
+o$3o$3bo$2b2o11b2o11bo$15b2o9b3o$26bo$26bo4$bo$bobo17b2ob2o$b3o18bobo$
+3bo18bobo$21b2obob2o$18b2o2bobobobo$18b2obo2bo2b2o$21bob2o$18b2obobo$
+12b2o4bo2bobo$12b2o6b2ob2o!

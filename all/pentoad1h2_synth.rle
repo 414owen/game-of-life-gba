@@ -1,0 +1,15 @@
+#N pentoad1h2_synth.rle
+#O Mark Niemiec, 29 August 2013
+#C 19-glider synthesis of pentoad 1H2
+#C https://conwaylife.com/wiki/Pentoad_1H2
+#C https://conwaylife.com/forums/viewtopic.php?p=8907#p8907
+x = 107, y = 63, rule = B3/S23
+30boo28boo28boo$31bo29bo29bo$oo29bobo27bobo27bobo$boo29boo28boo28boo$o
+3boo$4bobo$4bo$80boo21bo$74bobo3bobo19bobo$75boo3bo22bobo$75bo28bobo$
+105boo$74boo$73bobo$75bo18$72bobo$72boo$73bo$64bobo$65boo$65bo$86bo$
+70bo13boo$oo28boo28boo8bobo12boo3boo$bo29bo29bo8boo6bobo10bo$bobo27bob
+o27bobo14boo11boboo$bboo28boo28boo15bo12bo3bo$57bo39bo$55bobo39bo$56b
+oo22boo13bo$13bo29bo29bo5boo14bo$12bobo24bobbobo24bobbobo6bo14bo3bo$
+13bobo23bo3bobo23bo3bobo24bobboo$14bobo22bo4bobo13boo7bo4bobo20bobbobb
+oo$15boo28boo6boo6boo12boo21boo$5boo45bobo5bo$4bobo47bo$6bo$8b3o60boo$
+8bo62bobo$9bo61bo5b3o$77bo$78bo$70bo$70boo$69bobo!

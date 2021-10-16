@@ -1,0 +1,13 @@
+#N twirlingttetsons2stable.rle
+#C https://conwaylife.com/wiki/Twirling_T-tetsons_2
+#C https://www.conwaylife.com/patterns/twirlingttetsons2stable.rle
+x = 40, y = 40, rule = B3/S23
+22b2o$21bo2bo$18bo2b2o2bo$18b3o2b2o$22bo2b3o$20b2obo4bo$19bobobob2o2b
+ob2o$6bo12bo4bo2b3obo$6b3o5bob2obo5bo5bo$9bo4b2obobobo4b2ob2o$6b2ob3o
+8bobo4bobo$5bobo4bo8bo5bobo$4bo2bob3o16bo$4bobo2bo$2bobobobo21b2o$bob
+o3bo22bo$o2bob2o24bo$obobo5bo4bo5bo8b2o$b2o2b2o2bobo2b2o5b2o13b2o$3bo
+bo4bo4bo5bo8b4o2bo$3bo2b4o19bo4bobo$2b2o24bobo2b2o2b2o$8b2o19bo5bobob
+o$8bo24b2obo2bo$9bo22bo3bobo$8b2o21bobobobo$30bo2bobo$11bo16b3obo2bo$
+10bobo4bo9bo4bobo$10bobo4bobo8b3ob2o$9b2ob2o3b2obobob2o4bo$8bo5bo5bob
+2obo5b3o$8bob3o2bo4bo12bo$7b2obo2b2obobobo$11bo4bob2o$12b3o2bo$15b2o2b
+3o$14bo2b2o2bo$15bo2bo$16b2o!

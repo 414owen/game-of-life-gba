@@ -1,0 +1,7 @@
+#N blockedp4-1original.rle
+#C https://conwaylife.com/wiki/Blocked_p4-1
+#C https://www.conwaylife.com/patterns/blockedp4-1original.rle
+x = 23, y = 14, rule = B3/S23
+11bo$4bo3bo5bo3bo$3bobo11bobo$3bobo11bobo$2obobob9obobob2o$2obo15bob2o
+$3bo15bo$3bobo4bobo4bobo$4bobob3ob3obobo$2bobob2o7b2obobo$2b2o5b2ob2o
+5b2o$10bobo$10bobo$11bo!

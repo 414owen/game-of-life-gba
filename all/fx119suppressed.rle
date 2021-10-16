@@ -1,0 +1,7 @@
+#N fx119suppressed.rle
+#C https://conwaylife.com/wiki/Fx119
+#C https://www.conwaylife.com/patterns/Fx119suppressed.rle
+x = 27, y = 38, rule = B3/S23
+20bo$18b3o$17bo$17b2o$2o19b2o$bo19b2o$bobo$2b2o$23bo$22bobo$23bo$24b3o
+$26bo2$2bo$2bobo$2b3o$4bo18b2o$23b2o11$11b2o11bo$6b2o3b2o9b3o$6b2o14bo
+$22bo2$5b2o$6bo4b2o$3b3o5b2o$3bo!

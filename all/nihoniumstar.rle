@@ -1,0 +1,9 @@
+#N nihoniumstar.rle
+#C https://conwaylife.com/wiki/Nihonium
+#C https://www.conwaylife.com/patterns/nihoniumstar.rle
+x = 58, y = 37, rule = B3/S23
+42b2o$42b2o5b2o$49b2o$13b2o$14bo$13bo33b2o$13b2o32b2o$53b2o$2o51b2o$bo
+$bob2o$2bo$14b2o$4bobo8bo$5bo7b3o$6bo46bo$3b4o45bobo$2bo49bobo$2b2ob2o
+44b2ob2o$3bobo49bo$3bobo45b4o$4bo38bo7bo$42b2o7b2o$41bo2bo7bo$42b2o$
+54b2o$54bobo$56bo$3b2o51b2o$3b2o$9b2o32b2o$9b2o33bo$43bo$43b2o$7b2o$7b
+2o5b2o$14b2o!

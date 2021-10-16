@@ -1,0 +1,23 @@
+#N 14p2.4_synth.rle
+#C 30-glider synthesis of 14P2.4
+#C https://www.conwaylife.com/wiki/14P2.3
+#C https://www.conwaylife.com/patterns/14p2.4_synth.rle
+x = 421, y = 54, rule = B3/S23
+357bo$358b2o$357b2o2$384bo7bobo$355bo27bo8b2o4bo$353bobo27b3o7bo4bobo$
+354b2o42b2o8$188bo$187bo$129bo57b3o45bo$125bo2bo56bo47bobo57bo$65bobo
+58bob3o55bo47b2o55bobo$66b2o56b3o57b3o28b2o28b2o28b2o15b2o11b2o28b2o
+38b2o38bo$66bo148b2o18bo9b2o18b2o8b2o18b2o8b2o28b2o38b2o38bo$72bo24b2o
+28b2o106b2o27bo2bo26bo2bo28b2o38b2o45bo2bo$9bo61bo25bobo27bobo28b2o28b
+2o28b2o14bobo11b2o14bo2bo10b2o14bo2bo10b2o15bobo10b2o25bobo10b2o38bo$
+8bo62b3o24bobo27bobo27bobo27bobo27bobo27bobo14b2o11bobo14b2o11bobo14b
+2o11bobo24b2o11bobo32b2o3bobo$8b3o64b3o21bobo27bobo27bobo27bobo27bobo
+27bobo27bobo27bobo27bobo37bobo37bo$37bo29bo7bo21bobobo25bobobo25bobobo
+25bobobo25bobobo25bobobo25bobobo25bobobo25bobobo35bobobo33bobobo$7bo
+27b3o27b3o8bo18b3ob2o24b3ob2o24b3ob2o24b3ob2o24b3ob2o24b3ob2o24b3ob2o
+24b3ob2o24b3ob2o34b3ob2o36bo$6b2o26bo29bo29bo29bo29bo29bo29bo29bo29bo
+29bo29bo39bo$6bobo24bobo27bobo27bobo27bobo27bobo27bobo27bobo27bobo27bo
+bo27bobo27bobo37bobo$2o31b2o28b2o28b2o28b2o28b2o28b2o28b2o28b2o28b2o
+28b2o28b2o38b2o$b2o$o393b2o$393b2o$4b3o388bo$6bo$5bo353b2o$358bobo40b
+2o$353bo6bo40bobo$353b2o46bo$352bobo$396b2o$365bo29b2o$366bo24b2o4bo$
+364b3o24bobo$351b3o37bo$353bo3b2o$352bo5b2o11bo$357bo14b2o$371b2o2$
+369b2o$368bobo$370bo!

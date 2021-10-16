@@ -1,0 +1,8 @@
+#N twelveloop_synth.rle
+#O Bob Shemyakin, 15 March 2015
+#C 4-glider synthesis of twelve loop
+#C https://conwaylife.com/wiki/Twelve_loop
+#C https://conwaylife.com/forums/viewtopic.php?p=18013#p18013
+x = 36, y = 20, rule = B3/S23
+4bobo$5b2o$5bo$32bobo$31bob2o$31bo$32b3o$14bo20bo$12b2o20b2o$9bo3b2o$
+8b2o$8bobo6$b2o$obo$2bo!

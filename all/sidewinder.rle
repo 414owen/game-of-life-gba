@@ -1,0 +1,6 @@
+#N sidewinder.rle
+#O Jason Summers, 2006
+#C https://conwaylife.com/wiki/Sidewinder
+#C https://www.conwaylife.com/patterns/sidewinder.rle
+x = 18, y = 12, rule = B3/S23
+3o11b3o$o2bo10bo2bo$o6b3o4bo$o5bo2bo4bo$bobo2b2obo5bobo4$7bo$8bo$6bo2bo$6bobo!

@@ -1,0 +1,8 @@
+#N weekenderp21addremovepuffer.rle
+#C https://conwaylife.com/wiki/Doo-dah
+#C https://www.conwaylife.com/patterns/weekenderp21addremovepuffer.rle
+x = 38, y = 29, rule = B3/S23
+14bo12bo$13bobo10bobo$12bo3bo8bo3bo$13bo2bo8bo2bo$13bobo4b2o4bobo$14b
+3o3b2o3b3o$17bo6bo$16bo2b4o2bo$20b2o$17b3o2b3o5$16bobo4bobo$15bo3bo2bo
+3bo$16bob2o2b2obo10bo$17bob4obo10b2o$35bobo$18bo4bo$18bo4bo$12b3o4b4o
+4b3o2$3o$2bo10bobo$bo12b2o12bo2$27b2o$28bo!

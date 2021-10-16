@@ -1,0 +1,8 @@
+#N 66p13.rle
+#O Bullet51, 2019
+#C https://conwaylife.com/wiki/66P13
+#C https://www.conwaylife.com/patterns/66p13.rle
+x = 20, y = 17, rule = B3/S23
+5bo$3b5o$2bo5bo$2bo2b3o10b2o$b2obo13bo$o3b2o9b2obo$bobo2bo10bo$2ob2ob
+2o5bo$7bo4bo$2ob2ob2o5bobo$bobo2bo$o3b2o$b2obo$2bo2b3o$2bo5bo$3b5o$5bo
+!

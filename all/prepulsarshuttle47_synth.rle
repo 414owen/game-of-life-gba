@@ -1,0 +1,29 @@
+#N prepulsarshuttle47_synth.rle
+#O Martin Grant, 7 October 2013
+#O Matthias Merzenich, 11 October 2013
+#C 52-glider synthesis of pre-pulsar shuttle 47
+#C https://conwaylife.com/wiki/Pre-pulsar_shuttle_47
+#C https://conwaylife.com/forums/viewtopic.php?p=9330#p9330
+#C https://conwaylife.com/forums/viewtopic.php?p=9365#p9365
+x = 278, y = 87, rule = B3/S23
+168bobo$169b2o69bo$169bo69bo$239b3o4$232bobo$208bo23b2o$207bo25bo$207b
+3o$212bo$73bo137bo$71b2o138b3o$72b2o119bo$182bo9bo$99bo83b2o7b3o$28bob
+o27bo7bo30b2o83b2o$29b2o28b2o3bobo31b2o124bo$29bo28b2o5b2o109bo42bo2b
+2o$177b2o13bo10bo13b2o4b2o$176b2o15b2o6b2o15b2o$192b2o8b2o$137bo$136bo
+$92bobo8bo32b3o$92b2o8bo31bo$93bo8b3o30bo$133b3o61b2o51bo24bo$197b2o
+51b3o20b3o$bo251bo18bo$2bo249b2o18b2o$3o$4bo250bo14bo$3bo251bo14bo$3b
+3o58b2o68b2o61b2o56bo6b2o6bo$64b2o9bo11bo46b2o61b2o27b2o34b2o$76b2o8bo
+39b3o12b3o45b3o12b3o19bobo$75b2o9b3o32bo26bo35bo26bo14bo22bo7b2o8b2o7b
+o$120bobo4bobo10bobo4bobo33bobo4bobo10bobo4bobo35bobo8bo6bo8bobo$121bo
+8b2o6b2o8bo35bo8b2o6b2o8bo37bo10bo4bo10bo$129bo10bo51bo10bo53bobo6bobo
+$258bo8bo2$258bo8bo$129bo10bo51bo10bo53bobo6bobo$121bo8b2o6b2o8bo35bo
+8b2o6b2o8bo37bo10bo4bo10bo$120bobo4bobo10bobo4bobo33bobo4bobo10bobo4bo
+bo35bobo8bo6bo8bobo$41b3o9b2o66bo26bo20bo14bo26bo37bo7b2o8b2o7bo$43bo
+8b2o72b3o12b3o23bobo19b3o12b3o$42bo11bo9b2o68b2o32b2o27b2o63b2o$2b3o
+59b2o68b2o61b2o56bo6b2o6bo$4bo250bo14bo$3bo251bo14bo$5b3o$5bo246b2o18b
+2o$6bo246bo18bo$197b2o51b3o20b3o$134b3o60b2o51bo24bo$25b3o8bo97bo$27bo
+8b2o97bo$26bo8bobo93b3o$133bo$132bo$192b2o8b2o$176b2o15b2o6b2o15b2o$
+171b2o4b2o13bo10bo13b2o$63b2o5b2o28bo71b2o2bo42bo$30b2o31bobo3b2o28b2o
+70bo$31b2o30bo7bo27bobo110b2o$30bo170b3o7b2o$203bo9bo$56b2o144bo$57b2o
+123b3o$56bo127bo$183bo$186b3o$162bo25bo$162b2o23bo$161bobo4$154b3o$
+156bo69bo$155bo69b2o$225bobo!

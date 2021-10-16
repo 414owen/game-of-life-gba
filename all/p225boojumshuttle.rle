@@ -1,0 +1,10 @@
+#N p225boojumshuttle.rle
+#C https://conwaylife.com/wiki/Boojum_reflector
+#C https://www.conwaylife.com/patterns/p225boojumshuttle.rle
+x = 73, y = 51, rule = B3/S23
+14bo$13bobo$14bo3$8b2o$8b2o23b2o$2o31bo$bo29bobo$bobo27b2o$2b2o4b2o$8b
+2o2$42b2o$2o40bo$o39bobo$2bob2o34b2o$b2ob2o$22b2o$b2ob2o16b2o18b2o$2b
+obo37b2o$2bobo25bo$3bo25b2o$29bobo4$41bobo$42b2o25bo$42bo25bobo$29b2o
+37bobo$29b2o18b2o16b2ob2o$49b2o$67b2ob2o$31b2o34b2obo$30bobo39bo$30bo
+40b2o$29b2o2$63b2o$63b2o4b2o$40b2o27bobo$39bobo29bo$39bo31b2o$38b2o23b
+2o$63b2o3$58bo$57bobo$58bo!

@@ -1,0 +1,7 @@
+#N tetradecathlon.rle
+#C https://conwaylife.com/wiki/34P14_shuttle
+#C https://www.conwaylife.com/patterns/tetradecathlon.rle
+x = 40, y = 15, rule = B3/S23
+b2o5b2o20b2o5b2o$b2o5b2o20b2o5b2o2$17b6o$bo7bo6bo6bo6bo7bo$3o5b3o4bo8b
+o4b3o5b3o$o9bo5bo6bo5bo9bo$b3o3b3o7b6o7b3o3b3o2$4bobo26bobo4$b2o5b2o
+20b2o5b2o$b2o5b2o20b2o5b2o!

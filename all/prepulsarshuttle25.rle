@@ -1,0 +1,7 @@
+#C A period-25 pre-pulsar shuttle
+#C https://conwaylife.com/wiki/Pre-pulsar_shuttle
+x = 25, y = 23, rule = B3/S23
+18bo$b2o13b3o$o2bo2b2o7bo$b2o2bobo7b2o$3b2o$3bo$2obo8b3o$o2bob2o5bobo
+3b2o$2b2ob2o5b3o3b2o3$20b2o$2b2ob2o5b3o4bob3o$o2bob2o5bobo4bo4bo$2obo
+8b3o3b2ob3o$3bo13bo2b2o$3b2o12b2o$b2o2bobo9bo$o2bo2b2o8bo4bo$b2o13b4ob
+o$20bo$18bo$18b2o!

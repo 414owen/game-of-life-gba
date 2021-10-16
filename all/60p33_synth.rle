@@ -1,0 +1,13 @@
+#N 60p33_synth.rle
+#O Matthias Merzenich, 9 September 2013
+#C 16-glider synthesis of Jason's p33
+#C https://conwaylife.com/wiki/Jason%27s_p33
+#C https://conwaylife.com/forums/viewtopic.php?f=2&t=1155&p=8908#p8966
+x = 156, y = 36, rule = B3/S23
+88bobo$88b2o$89bo$2bo$bo82bo$b3o81b2o$52b2o30b2o6b2o33bo4b2o$bo49bobo
+27b2o8bobo32bobo2bobo$b2o49bo27bobo9bo12bo21bo4bo$obo79bo21bo$104b3o$
+86bo24bo$87b2o21bo$86b2o22b3o25b2o$134b2obo2bo$133bobo5b5o$133bo3bo5bo
+2bo$133bo3b2o8bo$134bo8b2o3bo$135bo2bo5bo3bo$136b5o5bobo$141bo2bob2o$
+89b3o22b2o26b2o$91bo21b2o$90bo24bo$95b3o$19bobo75bo21bo$19b2o48bo26bo
+12bo9bobo27bo4bo$20bo47bobo37bobo8b2o27bobo2bobo$68b2o38b2o6b2o30b2o4b
+o$18b3o94b2o$20bo96bo$19bo$112bo$112b2o$111bobo!

@@ -1,0 +1,7 @@
+#N 44p10.rle
+#O Matthias Merzenich, 2010
+#C https://conwaylife.com/wiki/44P10
+#C https://www.conwaylife.com/patterns/44p10.rle
+x = 14, y = 14, rule = B3/S23
+12bo$3o7bobo$5bo4bobo$b2obob2o$4bo4b2o$6bo4bo$3bo4bobo$3bobo4bo$2bo4bo
+$3b2o4bo$6b2obob2o$bobo4bo$bobo7b3o$bo!

@@ -1,0 +1,8 @@
+#N 49768m.rle
+#O Rob Liston, 2020
+#C https://conwaylife.com/wiki/49768M
+#C https://www.conwaylife.com/patterns/49768m.rle
+x = 16, y = 16, rule = B3/S23
+b6o2bo2b2obo$2obobo2b2o2bo$5bo5bo2b2o$bo2bob3o2b5o$2o2b6o4bo$o3bob5obo
+bo$2ob2o3bo4bobo$3bo5bobob3o$5obob2obobobo$o8b2ob2obo$bo2bo4bo3bobo$2o
+3b2o4bo2bo$ob2o6bo2bobo$5bobo4b2obo$3ob3o8bo$obobo3b3ob3o!

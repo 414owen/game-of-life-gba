@@ -1,0 +1,11 @@
+#N 34p13_synth.rle
+#O 2718281828, 18 December 2017
+#C 14-glider synthesis of Beluchenko's p13 (34P13)
+#C https://conwaylife.com/wiki/Beluchenko%27s_p13
+#C https://conwaylife.com/forums/viewtopic.php?p=53820#p53820
+x = 64, y = 33, rule = B3/S23
+20bobo$20b2o$21bo$9bobo$10b2o$10bo2$2bo5bo$obo6bo43bo$b2o4b3o43b3o$17b
+o38bo$18b2o33bo$3bo13b2o9bo23bo3bo$4bo22bo25bobo$2b3o22b3o23b2o$19b2o
+32b2o4bobo$7b2o9bobo27b2o8bo3bo$8b2o10bo27b2o6b2o4bo$7bo48b3obob2o$59b
+o3$54b2o$15bo7b2o5b3o21b2o$15b2o6bobo4bo$14bobo6bo7bo3$18b2o$18bobo$
+18bo4b3o$23bo$24bo!

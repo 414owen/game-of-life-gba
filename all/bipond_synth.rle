@@ -1,0 +1,8 @@
+#N bipond_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 3-glider synthesis of bi-pond
+#C https://conwaylife.com/wiki/Bi-pond
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 41, y = 16, rule = B3/S23
+11bo$10bo$10b3o3$35b2o$34bo2bo$34bo2bo$35b2ob2o$37bo2bo$37bo2bo$38b2o$
+obo$b2o5b2o$bo5b2o$9bo!

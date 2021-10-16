@@ -1,0 +1,5 @@
+#N boatwithcistail.rle
+#C https://conwaylife.com/wiki/Boat_with_cis-tail
+#C https://conwaylife.com/patterns/boatwithcistail.rle
+x = 7, y = 5, rule = B3/S23
+2o$o4b2o$bo2bobo$2bo2bo$3b2o!

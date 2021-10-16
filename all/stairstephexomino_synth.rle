@@ -1,0 +1,5 @@
+#N stairstephexomino_synth.rle
+#C Glider synthesis of stairstep hexomino.
+#C https://www.conwaylife.com/wiki/Stairstep_hexomino
+x = 7, y = 11, rule = B3/S23
+4bobo$4b2o$bo3bo$2bo$3o4$2b3o$4bo$3bo!

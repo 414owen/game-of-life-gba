@@ -1,0 +1,10 @@
+#N koksgalaxy_synth.rle
+#O Chris Cain, 31 May 2016
+#C 11-glider synthesis of Kok's galaxy
+#C https://conwaylife.com/wiki/Kok%27s_galaxy
+#C https://conwaylife.com/forums/viewtopic.php?p=31635#p31635
+x = 74, y = 43, rule = B3/S23
+48bo$47bo$47b3o$22bo$23b2o$22b2o6$6bo$4bobo$5b2o$32bo$2bo27b2o$obo28b
+2o$b2o25bo36b6ob2o$23bo2bobo36b6ob2o$23b2o2b2o43b2o$22bobo40b2o5b2o$
+65b2o5b2o$65b2o5b2o$65b2o$65b2ob6o$54b2o9b2ob6o$54bobo$54bo2$50b2o$50b
+obo$50bo6$33b2o$32b2o$34bo$7b3o$9bo$8bo!

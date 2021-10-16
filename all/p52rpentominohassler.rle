@@ -1,0 +1,11 @@
+#N p52rpentominohassler.rle
+#O Noam Elkies, 1996
+#C https://conwaylife.com/wiki/P52_R-pentomino_hassler
+#C https://www.conwaylife.com/patterns/p52rpentominohassler.rle
+x = 33, y = 36, rule = B3/S23
+24bo$23bobo$24bo2$22b5o$22bo4bo$3b2o20bo2bo$3bobo11bo7b2obo2bo$5b3o8bo
+bo3bo5bobobo$4bo3bob2o5bo3bobo4bo2bo$4b2obo5bo7bo2bo2b2o$7bo5bo8b2o$4b
+2obo5bo$4bo3bob2o$5b3o$3bobo11b3o$3b2o12bobo$19bo2$29b2o$28bobo$26b3o$
+25bo3bo$21bo2bo2b3o$10b2o9b2obo$5b2o2bo2bo8bo2bo2b3o$2bo2bo4bobo3bo8bo
+3bo$bobobo5bo3bobo8b3o$2bo2bob2o7bo11bobo$5bo2bo20b2o$6bo4bo$7b5o2$9bo
+$8bobo$9bo!

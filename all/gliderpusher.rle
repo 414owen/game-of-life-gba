@@ -1,0 +1,6 @@
+#N gliderpusher.rle
+#C https://conwaylife.com/wiki/Glider_pusher
+#C https://www.conwaylife.com/patterns/gliderpusher.rle
+x = 25, y = 20, rule = B3/S23
+15bo$13b3o$12bo$12b2o6$7b2obob2o$7bo5bo$8bo3bo$bo7b3o$2bo$3o3$17bo4bo$
+15b2ob4ob2o$17bo4bo!

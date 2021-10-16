@@ -1,0 +1,5 @@
+#N triloaf2.rle
+#C https://conwaylife.com/wiki/Tri-loaf_2
+#C https://www.conwaylife.com/patterns/triloaf2.rle
+x = 10, y = 10, rule = B3/S23
+bo$obo$o2bo$b2obo$3bobo$3bo2bo$4b2obo$6bobo$6bo2bo$7b2o!

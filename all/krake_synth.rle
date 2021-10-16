@@ -1,0 +1,8 @@
+#N krake_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of krake
+#C https://conwaylife.com/wiki/Krake
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 32, y = 14, rule = B3/S23
+8bo$6bobo$7b2o3$3o4b3o$2bo4bo6b2o$bo6bo5bobo$14bo$25b2o3b2o$25bobobobo
+$27bobo$27bobo$28bo!

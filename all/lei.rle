@@ -1,0 +1,5 @@
+#N lei.rle
+#C https://conwaylife.com/wiki/Lei
+#C https://www.conwaylife.com/patterns/lei.rle
+x = 7, y = 6, rule = B3/S23
+4bo$2bobobo$o5bo$o5bo$obobo$2bo!

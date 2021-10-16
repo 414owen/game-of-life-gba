@@ -1,0 +1,8 @@
+#N 52p84.rle
+#O Jason Summers, 2007
+#C https://conwaylife.com/wiki/52P84
+#C https://www.conwaylife.com/patterns/52p84.rle
+x = 28, y = 28, rule = B3/S23
+23bo2bo$23bo$22bo4bo$21bobo2b2o$19b2obo3$19bo2bo$21b2o$16bo$13b2o$12bo
+$9b2obo6b2o$8bo9bo$6b2o6bob2o$14bo$12b2o$10bo2$4bo2bo$4bo$3bo4bo$2bobo
+2b2o$2obo3$o2bo$2b2o!

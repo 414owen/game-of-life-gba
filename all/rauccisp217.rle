@@ -1,0 +1,15 @@
+#N rauccisp217.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/Raucci%27s_p217
+#C https://www.conwaylife.com/patterns/rauccisp217.rle
+x = 74, y = 74, rule = B3/S23
+38b2obo2bob2o$31b2o4bo2bo4bo2bo4b2o$31b2o5bobo4bobo5b2o$39bo6bo6$39bo
+6bo$31b2o5bobo4bobo5b2o$31b2o4bo2bo4bo2bo4b2o$38b2obo2bob2o7$b2o7b2o$b
+2o7b2o4$27b2o$bo9bo14bo2bo$obo7bobo14bo2bo17bo$o2bo5bo2bo14bo2bo15b2ob
+o$b2o7b2o16b3o14bo3bo$o11bo32bo2bo$45b3o$62b2o7b2o$o11bo49b2o7b2o$b2o
+7b2o$o2bo5bo2bo$obo7bobo$bo9bo$62bo9bo$61bobo7bobo$61bo2bo5bo2bo$62b2o
+7b2o$b2o7b2o49bo11bo$b2o7b2o$26b3o$25bo2bo32bo11bo$24bo3bo14b3o16b2o7b
+2o$24bob2o15bo2bo14bo2bo5bo2bo$25bo17bo2bo14bobo7bobo$44bo2bo14bo9bo$
+45b2o4$62b2o7b2o$62b2o7b2o7$26b2obo2bob2o$19b2o4bo2bo4bo2bo4b2o$19b2o
+5bobo4bobo5b2o$27bo6bo6$27bo6bo$19b2o5bobo4bobo5b2o$19b2o4bo2bo4bo2bo
+4b2o$26b2obo2bob2o!

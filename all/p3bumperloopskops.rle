@@ -1,0 +1,23 @@
+#N p3bumperloopskops.rle
+#C https://conwaylife.com/wiki/P57_bumper_loop
+#C https://www.conwaylife.com/patterns/p3bumperloopskops.rle
+x = 208, y = 80, rule = B3/S23
+174bo$162bo9b3o$162bo8bo$158bob2obo7b2o$158bo$157bo3bo5bo$157b2o2bo3b
+2o$156bo4bo$156b2obo5bobo$166b2o$154b2o$155bo$95bo56b3o$83bo9b3o56bo$
+83bo8bo$31bo47bob2obo7b2o$19bo9b3o47bo$19bo8bo49bo3bo5bo$15bob2obo7b2o
+48b2o2bo3b2o$15bo61bo4bo$14bo3bo5bo52b2obo5bobo$14b2o2bo3b2o63b2o$13bo
+4bo56b2o$13b2obo5bobo51bo$23b2o48b3o$11b2o23b2o35bo29b2o89b2o$12bo24bo
+66bo90bo$9b3o25bob2o63bob2o87bob2o$9bo28bo3bo62bo3bo86bo3bo$43bo66bo
+90bo$40b2o3bo61b2o3bo85b2o3bo$42b2o65b2o89b2o$2o40b2ob2o14b2o46b2ob2o
+14b2o70b2ob2o$bo40b2o18bo46b2o18bo70b2o$bobo39bo3bo14bobo45bo3bo14bobo
+69bo3bo$2b2o41bobo15b2o47bobo15b2o71bobo$47bo66bo90bo2$43bo66bo90bo$8b
+2o30bob2o25b2o36bob2o25b2o60bob2o$6b2obo30b2o25b2obo36b2o25b2obo60b2o$
+6bo60bo66bo2$2bo60bo66bo$2bobo41b2o15bobo47b2o15bobo71b2o$2bo3bo39bobo
+14bo3bo45bobo14bo3bo69bobo$6b2o40bo18b2o46bo18b2o70bo$3b2ob2o40b2o14b
+2ob2o46b2o14b2ob2o70b2o$6b2o59b2o65b2o$4bo3b2o55bo3b2o61bo3b2o$6bo60bo
+66bo$7bo3bo28bo27bo3bo62bo3bo$9b2obo25b3o29b2obo63b2obo$12bo24bo35bo
+66bo$12b2o23b2o34b2o29bo35b2o$25b2o75b3o$25bobo5bob2o64bo$31bo4bo64b2o
+$26b2o3bo2b2o53b2o$25bo5bo3bo53bobo5bob2o$34bo60bo4bo$20b2o7bob2obo55b
+2o3bo2b2o$21bo8bo58bo5bo3bo$18b3o9bo67bo$18bo65b2o7bob2obo$85bo8bo$82b
+3o9bo88bo$82bo98b3o$180bo$180b2o$168b2o$168bobo5bob2o$174bo4bo$169b2o
+3bo2b2o$168bo5bo3bo$177bo$163b2o7bob2obo$164bo8bo$161b3o9bo$161bo!

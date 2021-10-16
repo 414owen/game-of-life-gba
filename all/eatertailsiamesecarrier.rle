@@ -1,0 +1,6 @@
+#N Eater tail siamese carrier
+#O Unknown
+#C https://conwaylife.com/wiki/Eater_tail_siamese_carrier
+#C https://conwaylife.com/patterns/eatertailsiamesecarrier.rle
+x = 4, y = 7, rule = B3/S23
+2b2o$bobo$bo$2o$o$2bo$b2o!

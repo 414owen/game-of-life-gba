@@ -1,0 +1,6 @@
+#N l122p2.rle
+#C https://conwaylife.com/wiki/L122
+#C https://www.conwaylife.com/patterns/l122p2.rle
+x = 17, y = 41, rule = B3/S23
+11b2o$11bo$9b3o15$2o$obo6b2o$2bo6b2o$2b2o2$4o$o2bo6$7bo$7bobo$7b3o5b2o
+$9bo5b2o5$3b2o3b2o$5bobo$2bo7bo$3b2o3b2o!

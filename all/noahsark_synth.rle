@@ -1,0 +1,7 @@
+#N noahsark_synth
+#O Ian07
+#C Glider synthesis of Noah's ark.
+#C https://www.conwaylife.com/wiki/Noah%27s_ark
+x = 23, y = 23, rule = B3/S23
+9bobo$10b2o$10bo6bo$16bo$16b3o$20b2o$20bobo$20bo2$o$b2o$2o5$3b2o$2bobo
+$4bo2$5b3o$5bo$6bo!

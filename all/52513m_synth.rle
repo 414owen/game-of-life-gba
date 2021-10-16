@@ -1,0 +1,9 @@
+#N 52513m_synth.rle
+#C Glider synthesis of 52513M.
+#C https://conwaylife.com/wiki/52513M
+x = 120, y = 46, rule = B3/S23
+117bobo$117b2o$118bo$112bo$107bobo2bobo$108b2o2b2o$108bo7$52bo$51bo$
+51b3o$48bo57b3o$49b2o$48b2o54bo5bo$104bo5bo$104bo5bo2$106b3o4$99bo$
+100bo$b2o4bo43b2o45b3o$obo2b2o43bo2bo55b2o$2bo3b2o42bo2bo54bo2bo$51b2o
+55bo2bo$109b2o$5b3o46b2o$5bo48b2o56b2o$6bo105b2o2$95b2o$94bobo$96bo4$
+97bo$97b2o$96bobo!

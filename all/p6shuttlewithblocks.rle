@@ -1,0 +1,6 @@
+#N p6shuttlewithblocks.rle
+#C https://conwaylife.com/wiki/P6_shuttle
+#C https://www.conwaylife.com/patterns/p6shuttlewithblocks.rle
+x = 17, y = 17, rule = B3/S23
+5bobo$b2ob2o$b2o6bo2$7b3o$2o7bobo$2o8b2o$10bo$3b2o8b2o$2b2o9bobo$4b2ob
+o7bo$5bo9b2o$5bo3bo$9bo$8bo$9b3o$11bo!

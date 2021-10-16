@@ -1,0 +1,5 @@
+#N long3shillelagh.rle
+#C https://conwaylife.com/wiki/Long%5E3_shillelagh
+#C https://www.conwaylife.com/patterns/long3shillelagh.rle
+x = 5, y = 8, rule = B3/S23
+3b2o$4bo$3bo$2bo$bo$o$obo$b2o!

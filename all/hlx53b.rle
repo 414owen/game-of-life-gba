@@ -1,0 +1,6 @@
+#N hlx53b.rle
+#C https://conwaylife.com/wiki/Lx73
+#C https://www.conwaylife.com/patterns/hlx53b.rle
+x = 24, y = 20, rule = B3/S23
+2o$bo20b2o$bobo18bo$2b2o16bobo$20b2o6$2bo$2bobo$2b3o$4bo2$14b2o$14b2o
+2b2o$18bobo$20bo$20b2o!

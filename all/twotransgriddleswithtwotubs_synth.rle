@@ -1,0 +1,10 @@
+#N twotransgriddleswithtwotubs_synth.rle
+#O Bob Shemyakin, 11 September 2016
+#C 9-glider synthesis of two trans griddles with two tubs
+#C https://conwaylife.com/wiki/Two_trans_griddles_with_two_tubs
+#C https://conwaylife.com/forums/viewtopic.php?p=35523#p35523
+x = 63, y = 30, rule = B3/S23
+2bo$obo$b2o6$36bo$34bobo$35b2o2$38bobo$38b2o$39bo19bo$58bobo$39b2o3b3o
+12bobo$33bo4bo2bo2bo11b2obo$34bo2bo2bo4bo13bob2o$32b3o3b2o17bobo$58bob
+o$39bo19bo$39b2o$14bo23bobo$15bo$13b3o26b2o$42bobo$14bo27bo$14b2o$13bo
+bo!

@@ -1,0 +1,6 @@
+#N statorlessp6.rle
+#O Dean Hickerson, 1989
+#C https://conwaylife.com/wiki/Statorless_p6
+#C https://www.conwaylife.com/patterns/statorlessp6.rle
+x = 21, y = 6, rule = B3/S23
+9b3o$bo7bob3o2bobo$o4b5obo2bob4o$b4obo2bob5o4bo$2bobo2b3obo7bo$9b3o!

@@ -1,0 +1,6 @@
+#N 20p4.rle
+#O Dean Hickerson, 1992
+#C https://conwaylife.com/wiki/20P4
+#C https://www.conwaylife.com/patterns/20p4.rle
+x = 8, y = 11, rule = B3/S23
+4bo$2b2obo$2o$bob2o$2bo2$5bo$3b2obo$6b2o$2bob2o$3bo!

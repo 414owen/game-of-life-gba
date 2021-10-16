@@ -1,0 +1,5 @@
+#N bipoletieeaterhead.rle
+#C https://conwaylife.com/wiki/Bipole_tie_eater_head
+#C https://www.conwaylife.com/patterns/bipoletieeaterhead.rle
+x = 9, y = 9, rule = B3/S23
+2o$o$bobo$4bo$3b2o$5b2o$5bobo$7bo$7b2o!

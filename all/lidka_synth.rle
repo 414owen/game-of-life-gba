@@ -1,0 +1,6 @@
+#N lidka_synth.rle
+#C Glider synthesis of Lidka.
+#C https://conwaylife.com/wiki/Lidka
+x = 72, y = 23, rule = B3/S23
+57bo$56bobo$bo55bo$bobo$b2o3$obo$b2o$bo2$3bo66bo$3bobo63bo$3b2o64b3o$
+65b3o$65bo$66bo4$69bo$68b2o$68bobo!

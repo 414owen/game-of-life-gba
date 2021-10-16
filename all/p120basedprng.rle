@@ -1,0 +1,18 @@
+#N p120basedprng.rle
+#O Dean Hickerson, 1992
+#C https://conwaylife.com/wiki/P120-based_PRNG
+#C https://www.conwaylife.com/patterns/p120basedprng.rle
+x = 139, y = 126, rule = B3/S23
+23bo$21bobo$11b2o6b2o$10bo3bo4b2o12b2o$9bo5bo3b2o12b2o$9bo3bob2o4bobo$
+9bo5bo7bo$10bo3bo$11b2o6$11b2o$2b3o5bobo$bo3bo6bo$o5bo$o5bo2$6bo$5b2o$
+5b2o$3bo2b2o$4bobo$4b2o3$2b2o3b2o$2b2o3b2o2$4b3o$4b3o$5bo6$5b2o$5b2o9$
+100b2o$100b2o6$118b2o$118b2o2$119bo$98b2o3b2o13bobo$118bobo$99bo3bo15b
+o$100b3o$100b3o$116b2obob2o$116bo5bo$117bo3bo$118b3o2$99bo5bo$98b3o5bo
+$98b3o3b3o2$96b2o3b2o$96b2o3b2o14bo$116bo$116b3o4$101b2o$101bo17b5o$
+102b3o13bob3obo$104bo14bo3bo$120b3o$121bo4$102bo17b2o$101bo18b2o$101b
+3o2$79b2o$79bobo$80b3o$81b2o$78b2o$78b3o$91b3o$91bo$79b2o11bo$79b2o2$
+88bo$82b2obobobo$82bob2ob2o10b2o$93b2o4bobo$94b2o3bo$93bo4$118b2o$86bo
+19b3o2bo5bo3bo$86b2o14bo3bo9bo5bo$74bobo8bobo12bobo4bo8bo3bo2bo$74bo3b
+o19b2o16bo$64b2o12bo10b2o7b2o17bo3bo3bo$64b2o8bo4bo7bo2bo7b2o18b2o3b2o
+bo$78bo7bo7b2o4bobo23bo$74bo3bo7bo6bo2bo5bo23b2o7b2o$74bobo9bo7b2o39bo
+bo$87bo2bo46bo$89b2o46b2o!

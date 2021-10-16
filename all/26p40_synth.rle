@@ -1,0 +1,11 @@
+#N 26p40_synth.rle
+#O Chris Cain, 9 April 2016
+#C 10-glider synthesis of Beluchenko's p40 (26P40)
+#C https://conwaylife.com/wiki/Beluchenko's_p40
+#C https://conwaylife.com/forums/viewtopic.php?p=29782#p29782
+x = 113, y = 30, rule = B3/S23
+69bo$67bobo$68b2o$86bo$86bobo$bo84b2o$2b2o$b2o$36b2o28b2o28b2o8b2o$36b
+2o28b2o28b2o7bo$108bo$bo102b2obo$2bo101b2o$3o20bo12b2o28b2o$4b3o15bo
+12bo2bo12b2o12bo2bo12b2o$6bo15b3o11b2o12bo2bo12b2o12bo2bo$5bo20b3o22b
+2o28b2o$26bo76b2o$27bo73bob2o$100bo$51b2o28b2o20bo7b2o$51b2o28b2o18b2o
+8b2o$26b2o$25b2o$27bo33b2o$60bobo$62bo$79b2o$79bobo$79bo!

@@ -1,0 +1,12 @@
+#N 70p2h1v0.1conversions.rle
+#C https://conwaylife.com/wiki/70P2H1V0.1
+#C https://www.conwaylife.com/patterns/70p2h1v0.1conversions.rle
+x = 86, y = 69, rule = B3/S23
+26bo$25bo$25b3o8$7bobo4bo$8b2o4bobo59bobo$o7bo5b2o61b2o$b2o74bo$2o69bo
+$72b2o11bo$71b2o10b2o$84b2o6$85bo$33bo49b2o$30b4o46b4obo$30b2o48b2o$
+28bo49bo$28b6o44b6o$25bobo47bobo$24b6obobo40b6obobo$23b2o5b2obo39b2o5b
+2obo$22b2o4b2o42b2o4b2o$23b2o4b5o39b2o4b5o2$23b2o4b5o39b2o4b5o$22b2o4b
+2o42b2o4b2o$23b2o5b2obo39b2o5b2obo$24b6obobo40b6obobo$25bobo47bobo$28b
+6o44b6o$28bo49bo$30b2o48b2o$30b4o46b4obo$33bo49b2o$85bo6$84b2o$71b2o
+10b2o$72b2o11bo$2o69bo$b2o74bo$o7bo5b2o61b2o$8b2o4bobo59bobo$7bobo4bo
+8$25b3o$25bo$26bo!

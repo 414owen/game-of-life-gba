@@ -1,0 +1,8 @@
+#N 22p4.3on56p27.rle
+#C https://conwaylife.com/wiki/22P4.3_on_56P27
+#C https://www.conwaylife.com/patterns/22p4.3on56p27.rle
+x = 34, y = 30, rule = B3/S23
+19b2o$19b2o$2b2o$2bobo$6b2o9bo$3bo2bo8bob2o$6b2o6bo2bo$bobobo2bo8bo$3b
+2o2b2o5b3o$ob2o$bo23bobo$25bo2bo$25bo$4b2o20b4o$4b2o22bo$9bo22b2o$8b4o
+20b2o$12bo$9bo2bo$10bobo2$21b3o$20bo$20bo2bo$19b2obo$20bo3$17b2o$17b2o
+!

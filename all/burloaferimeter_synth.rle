@@ -1,0 +1,17 @@
+#N burloaferimeter_synth.rle
+#O Matti Ward, 17 February 2018
+#C 23-glider synthesis of burloaferimeter
+#C https://conwaylife.com/wiki/Burloaferimeter
+#C https://conwaylife.com/forums/viewtopic.php?p=56583#p56583
+x = 221, y = 28, rule = B3/S23
+160bo$160bobo26bo$160b2o26bo$158bo29b3o$36bo119bobo$36bobo118b2o24bo$
+32bo3b2o146bo4bo$33b2o29b2o28b2o5bobo55bo22b3o3bo$32b2o29bobo23bo3bobo
+5b2o54b2o29b3o$obo60bo26bo2bo8bo27bobo25b2o$b2o59b2o24b3ob2o36b2o54b2o
+4bo4bo17b2o$bo129bo53bobo4bobo2bobo15b2o$7bobo115bo29bo29bo6b2o3b2o$7b
+2o51bo62b3o6b2o19b3o3b2o22b3o3b2o22b4o$8bo52b2o29bo29bo9bobo17bo7bo21b
+o7bo21bo4bob2o$37b2o21b2o5b2o22bobo3b2o22bobo3b2o3bo18bobo3b3o21bobo3b
+3o21bobo3bob2o$37bo29bo24bo4bo24bo4bo24bo4bo24bo4bo5b2o17bo2bobo$5bo
+28b2obo26b2obo25b3obo25b3obo25b3obo25b3obo5bobo17b3obo$4bo29bobo23bo3b
+obo29bo29bo29bo29bo6bo22bo$4b3o28bo24b2o3bo29bo29bo29bo29bo29bo$59bobo
+33b2o28b2o28b2o28b2o28b2o$2b3o62bobo$4bo62b2o$3bo64bo2$69b2o$68bobo$
+70bo!

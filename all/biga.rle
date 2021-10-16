@@ -1,0 +1,6 @@
+#N biga.rle
+#O Hartmut Holzwart
+#C https://conwaylife.com/wiki/Big_A
+#C https://www.conwaylife.com/patterns/biga.rle
+x = 9, y = 15, rule = B3/S23
+4o$o3bo$o$bo2bo2$5b4o$4bo2bo$4bo2bo$4bo2bo$5b4o2$bo2bo$o$o3bo$4o!

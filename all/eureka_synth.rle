@@ -1,0 +1,13 @@
+#N eureka_synth.rle
+#O Luka Okanishi, 21 December 2017
+#C 12-glider synthesis of Eureka
+#C https://conwaylife.com/wiki/Eureka
+#C https://conwaylife.com/forums/viewtopic.php?p=53945#p53945
+x = 64, y = 117, rule = B3/S23
+47bo14bo$46bobo12bobo$47bo14bo$13bo2bo$11bobo2bobo$12b2o2b2o6$2o26b2o$
+b2o24b2o$o28bo37$7bo14bo24bo14bo$6bobo12bobo22bobo12bobo$7bo14bo24bo
+14bo6$47bo14bo$46bobo12bobo$47bo14bo$12b2o2b2o$11bobo2bobo$13bo2bo6$2o
+26b2o$b2o24b2o$o28bo23$20bo$18b2o$19b2o2$12bo$13b2o$7bo4b2o8bo24bo14bo
+$6bobo12bobo22bobo4bo7bobo$7bo14bo24bo3b2ob2o6bo$53bo4$53bo$7bo14bo24b
+o3b2ob2o6bo$6bobo12bobo22bobo4bo7bobo$7bo4b2o8bo24bo14bo$13b2o$12bo2$
+19b2o$18b2o$20bo!

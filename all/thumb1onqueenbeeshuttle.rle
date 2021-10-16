@@ -1,0 +1,7 @@
+#N thumb1onqueenbeeshuttle.rle
+#C https://conwaylife.com/wiki/Thumb_1_on_queen_bee_shuttle
+#C https://www.conwaylife.com/patterns/thumb1onqueenbeeshuttle.rle
+x = 25, y = 17, rule = B3/S23
+12bobo$10bo3bo$3b2o5bo12b2o$3b2o4bo4bo8b2o$10bo$10bo3bo$12bobo2$4bo3b
+2o$2o7bo$o3bob2obob2o$b3o2b2obob2o$7bobo$3b3obobo$2bo3bobo$2b2o2bo$5b
+2o!

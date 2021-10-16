@@ -1,0 +1,9 @@
+#N twocisgriddleswtwotubs_synth.rle
+#C 10-glider synthesis of two cis griddles with two tubs
+#C https://www.conwaylife.com/wiki/Two_cis_griddles_with_two_tubs
+#C https://www.conwaylife.com/patterns/twocisgriddleswtwotubs_synth.rle
+x = 108, y = 26, rule = B3/S23
+21b2o20bo17bo11bo29bo$20b2o21bobo16bo10bobo27bobo$18bo3bo18bo4bo13b3o
+8bo4bo24bo4bo$16bobo23b4obo17b2o5b4obo22bob4obo$17b2o22bo4bo17b2o5bo4b
+o24bo4bo$43bobo20bo6bobo27bobo$43bo17b3o9bo29bo$16b3o44bo$18bo43bo$17b
+o3$3o19bo$2bo18b2o$bo19bobo$15bo$15b2o$14bobo6$42b2o$41b2o$43bo!

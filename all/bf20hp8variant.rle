@@ -1,0 +1,6 @@
+#N bf20hp8variant.rle
+#C https://conwaylife.com/wiki/BF20H
+#C https://www.conwaylife.com/patterns/bf20hp8variant.rle
+x = 17, y = 20, rule = B3/S23
+14bo$6b2o6bo$7b2o5b3o$6b2o8bo$6bo5$12b2o$8b2o2b2o$7bobo$8bo2$3b3o4b2o$
+3b3o4bo$3b3o5b3o$3o10bo$3o$3o!

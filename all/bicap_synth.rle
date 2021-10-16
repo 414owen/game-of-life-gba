@@ -1,0 +1,8 @@
+#N bicap_synth.rle
+#O Bob Shemyakin, 28 June 2014
+#C 4-glider synthesis of bi-cap
+#C https://conwaylife.com/wiki/Bi-cap
+#C https://conwaylife.com/forums/viewtopic.php?p=12406#p12406
+x = 32, y = 17, rule = B3/S23
+9bo$8bo$8b3o4$2bo$obo5b3o$b2o5bo17b2ob2o$9bo15bobobobo$25bobobobo$26b
+2ob2o3$8b2o$8bobo$8bo!

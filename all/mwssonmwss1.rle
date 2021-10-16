@@ -1,0 +1,5 @@
+#N mwssonmwss1.rle
+#C https://conwaylife.com/wiki/MWSS_on_MWSS_1
+#C https://www.conwaylife.com/patterns/mwssonmwss1.rle
+x = 6, y = 9, rule = B3/S23
+b2o$2ob3o$b5o$2b3o2$2b3o$b5o$2ob3o$b2o!

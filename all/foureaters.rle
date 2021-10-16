@@ -1,0 +1,6 @@
+#N foureaters.rle
+#O Dean Hickerson, 2007
+#C https://conwaylife.com/wiki/Four_eaters
+#C https://www.conwaylife.com/patterns/foureaters.rle
+x = 15, y = 15, rule = B3/S23
+3bo7bo$b3o7b3o$o13bo$2o11b2o8$2o11b2o$o13bo$b3o7b3o$3bo7bo!

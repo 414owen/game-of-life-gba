@@ -1,0 +1,8 @@
+#N quadpole_synth.rle
+#O Bob Shemyakin, 18 May 2016
+#C 5-glider synthesis of quadpole
+#C https://conwaylife.com/wiki/Quadpole
+#C https://conwaylife.com/forums/viewtopic.php?p=31110#p31110
+x = 33, y = 17, rule = B3/S23
+bo$2bo8bo$3o7bo$10b3o$26b2o$26bobo2$28bobo2$2b2o26bobo$bobo6b3o18b2o$
+3bo6bo$11bo2$8b2o$7bobo$9bo!

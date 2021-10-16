@@ -1,0 +1,7 @@
+#N 47575m_synth.rle
+#C Glider synthesis of 47575M.
+#C https://conwaylife.com/wiki/47575M
+x = 157, y = 25, rule = B3/S23
+152bo$152bo$152bo2$148b3o3b3o2$138bo13bo$138bo13bo$72bobo63bo13bo$72b
+2o$2bo70bo$3bo54bo16b2o$b3o54bo16bobo60bo$58bo16bo57b2o2b2o$132bobo2bo
+bo$134bo$143b2o$o142b2o$b2o$2o2$63b2o71b3o$3o60b2o71bo$2bo134bo$bo!

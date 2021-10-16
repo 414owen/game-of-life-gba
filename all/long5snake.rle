@@ -1,0 +1,5 @@
+#N long5snake.rle
+#C https://conwaylife.com/wiki/Long%5E5_snake
+#C https://www.conwaylife.com/patterns/long5snake.rle
+x = 7, y = 9, rule = B3/S23
+5b2o$6bo$5bo$4bo$3bo$2bo$bo$o$2o!

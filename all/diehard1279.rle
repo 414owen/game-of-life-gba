@@ -1,0 +1,7 @@
+#N diehard1279.rle
+#C https://conwaylife.com/wiki/Die_hard
+#C https://www.conwaylife.com/patterns/diehard1279.rle
+x = 16, y = 16, rule = B3/S23
+3b4o2bobob2o$obo3b4o5bo$bo4bobo2bob3o$2o2b3o3b2o2b2o$b2o7bobobo$obo9bo
+b2o$6b3o2b2o2bo$b4o2b2o2b2obo$bobobo3bobo2b2o$o7b2o4bo$ob2o3bo6b2o$o3b
+4o4b2o$3o3bob5o$3b2o6b2o2bo$3b2ob5o2b3o$obob4obo4b2o!

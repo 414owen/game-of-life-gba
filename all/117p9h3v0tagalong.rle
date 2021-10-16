@@ -1,0 +1,9 @@
+#N 117p9h3v0tagalong.rle
+#C https://conwaylife.com/wiki/117P9H3V0
+#C https://www.conwaylife.com/patterns/117p9h3v0tagalong.rle
+x = 17, y = 39, rule = B3/S23
+8bo$7bobo$6bo3bo$7b3o2$5b2o3b2o$2b2o3bobo3b2o$2b2o3bobo3b2o$2o5bobo5b
+2o$4b2obobob2o$o6bobo6bo$3b2o2bobo2b2o$bo2bobo3bobo2bo$b2o11b2o$b2o11b
+2o$4bo7bo$4b3o3b3o$6bo3bo$3b2obo3bob2o$5b2o3b2o$5bobobobo2$5bo2bo2bo$
+6b2ob2o$5b2o3b2o2$4bo2b3o2bo$3b11o$3b2obo3bob2o2$7b3o3$7b3o$6bo3bo3$6b
+o3bo$7b3o!

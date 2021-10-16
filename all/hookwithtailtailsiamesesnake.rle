@@ -1,0 +1,5 @@
+#N hookwithtailtailsiamesesnake.rle
+#C https://conwaylife.com/wiki/Hook-with-tail_tail_siamese_snake
+#C https://conwaylife.com/patterns/hookwithtailtailsiamesesnake.rle
+x = 7, y = 5, rule = B3/S23
+ob2o$2ob3o$6bo$5bo$5b2o!

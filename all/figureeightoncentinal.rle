@@ -1,0 +1,8 @@
+#N figureeightoncentinal.rle
+#C https://conwaylife.com/wiki/Figure_eight_on_centinal
+#C https://www.conwaylife.com/patterns/figureeightoncentinal.rle
+x = 52, y = 25, rule = B3/S23
+2o48b2o$bo48bo$bobo21b2o21bobo$2b2o8bo12b2o12b2o7b2o$11b2o26bobo$10b2o
+29bo$11b2o2b2o22b3o4$11b2o2b2o22b3o$10b2o29bo$11b2o26bobo$2b2o8bo12b2o
+12b2o7b2o$bobo21b2o21bobo$bo48bo$2o48b2o3$23b2o$21bob2o$20bo$23bo$19b
+2obo$19b2o!

@@ -1,0 +1,8 @@
+#N longclawwithtail_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of long claw with tail
+#C https://conwaylife.com/wiki/Long_claw_with_tail
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 31, y = 13, rule = B3/S23
+9bo$8bo$8b3o3$29b2o$25b2o2bo$6bo17bo2bobo$4b2o18b2o2bo$5b2o$obo8b2o$b
+2o7b2o$bo10bo!

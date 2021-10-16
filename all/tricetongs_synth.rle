@@ -1,0 +1,10 @@
+#N tricetongs_synth.rle
+#O 2718281828, 17 October 2018
+#C 10-glider synthesis of trice tongs
+#C https://conwaylife.com/wiki/Trice_tongs
+#C https://conwaylife.com/forums/viewtopic.php?p=64809#p64809
+x = 129, y = 139, rule = B3/S23
+o$b2o$2o21$3bo$4b2o$3b2o28$24bo$25b2o$24b2o10$110bo$63bo45bo$61bobo45b
+3o$62b2o18$126bo$124b3o$123bo3b2o$123b3obo$74bo49b2obo$75bo46bo2b2o$
+73b3o46b2o5$102bo$102bobo$102b2o7$100bo$99bo$99b3o$95bobo$96b2o$96bo
+25$73b3o$75bo$74bo!

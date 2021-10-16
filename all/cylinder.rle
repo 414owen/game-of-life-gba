@@ -1,0 +1,5 @@
+#N cylinder.rle
+#C https://conwaylife.com/wiki/Cylinder
+#C https://www.conwaylife.com/patterns/cylinder.rle
+x = 3, y = 3, rule = B3/S23:T0,7
+b2o$obo$2bo!

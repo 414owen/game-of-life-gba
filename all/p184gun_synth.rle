@@ -1,0 +1,12 @@
+#N Period-184 glider gun synthesis
+#O Jeremy Tan, June 11, 2019
+#C 15-glider synthesis of period-184 glider gun.
+#C https://www.conwaylife.com/forums/viewtopic.php?t=&p=77478#p77478
+#C www.conwaylife.com/wiki/Period-184_glider_gun
+x = 268, y = 38, rule = B3/S23
+175bo$174bo$174b3o82bo$259bobo$254b2o3b2o$253bo2bo$174b2o77bo2bo$173b
+2o79b2o$175bo2$228bobo$229b2o34bo$229bo35bobo$251bo13b2o$237bobo10b2o$
+237b2o11bobo7bo$232bobo3bo19b2o$233b2o24b2o$233bo3$259b3o$259bo$260bo
+2$3bo$3bobo251bo$3b2o251b2o$222b2o32bobo$70b2o69b2o80bo$b2o68bo12bo57b
+o77b3o$2o66b3o13bobo52b3o78bo$2bo65bo15b2o53bo93b2o$152b2o80bo$153bo
+77b3o$82b2o66b3o78bo$81b2o67bo$83bo!

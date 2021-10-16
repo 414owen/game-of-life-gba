@@ -1,0 +1,8 @@
+#N Eureka
+#O David Buckingham
+#C A period-30 pre-pulsar shuttle
+#C https://conwaylife.com/wiki/Eureka
+#C https://conwaylife.com/wiki/Pre-pulsar_shuttle
+x = 18, y = 11, rule = B3/S23
+bo14bo$obo6b3o3bobo$bo7bobo4bo$9b3o4$9b3o$bo7bobo4bo$obo6b3o3bobo$bo
+14bo!

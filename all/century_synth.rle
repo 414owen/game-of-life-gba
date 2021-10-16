@@ -1,0 +1,5 @@
+#N century_synth.rle
+#C Glider synthesis of a century.
+#C https://conwaylife.com/wiki/Century
+x = 7, y = 12, rule = B3/S23
+4bobo$5b2o$5bo2$3bo$4bo$2b3o3$bo$b2o$obo!

@@ -1,0 +1,8 @@
+#N symmetricscorpion_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of symmetric scorpion
+#C https://conwaylife.com/wiki/Symmetric_scorpion
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 30, y = 11, rule = B3/S23
+2bo2bobo19b2o$obo2b2o19bo2bo$b2o3bo19bob2o$25b2o$26bob2o$26bo2bo$27b2o
+2$3o6bo$2bo5b2o$bo6bobo!

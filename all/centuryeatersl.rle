@@ -1,0 +1,8 @@
+#N centuryeatersl.rle
+#O Ivan Fomichev, 2013
+#C https://conwaylife.com/wiki/Century_eater
+#C https://www.conwaylife.com/patterns/centuryeatersl.rle
+#N Century eater
+#C https://conwaylife.com/wiki/Century_eater
+x = 8, y = 7, rule = B3/S23
+3bob2o$3b2obo2$b5o$o2bo2bo$2o3bobo$6b2o!

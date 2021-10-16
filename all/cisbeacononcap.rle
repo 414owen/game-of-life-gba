@@ -1,0 +1,5 @@
+#N cisbeacononcap.rle
+#C https://conwaylife.com/wiki/Cis-beacon_on_cap
+#C https://www.conwaylife.com/patterns/cisbeacononcap.rle
+x = 4, y = 8, rule = B3/S23
+2b2o$3bo$o$2o2$4o$o2bo$b2o!

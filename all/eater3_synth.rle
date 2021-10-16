@@ -1,0 +1,16 @@
+#N eater3_synth.rle
+#O Bullet51 and Mark Niemiec, 2 July 2016
+#C 18-glider synthesis of eater3 variant
+#C https://conwaylife.com/forums/viewtopic.php?p=32625#p32625
+#C https://conwaylife.com/wiki/Eater_3
+#C https://conwaylife.com/patterns/eater3_synth.rle
+x = 158, y = 50, rule = B3/S23
+100bo$98boo$99boo7$78bo$77bo$77b3o$71bo$72bo$70b3o$4bo73bo35boo18boo
+18boo$3bo75boo32bobbo16bobbo16bobbo$3b3o72boobbobo29b3o17b3o17b3o$bo
+80boo$bbo62bo17bo28b5o15b5o15b5o$3o28boo30bobo5boo38bo4bo14bo4bo14bo4b
+o$31boo31boo5boo37bobbo16bobbo16bobbo$12bobo92bobboboo13bobboboo13bobb
+oboo$13boo29bo39bo21bobobo15bobobo6bo8bobobo5bo$13bo29bobo37bobo20bobo
+bo15bobobo5bo9bobobo4bobo$44boo38boo21booboo15booboo4b3o8booboobbobbo$
+13b3o45boo92boo$13bo46bobo3bobo66boo$14bo47bo4boo65bobo$67bo68bo$$3bo
+64boo$4booboo26bo33boo4bo$3boobbobo24bobo31bo5bobo$7bo27boo38boo13$52b
+o$52boo$51bobo!

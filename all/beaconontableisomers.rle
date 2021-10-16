@@ -1,0 +1,5 @@
+#N beaconontableisomers.rle
+#C https://conwaylife.com/wiki/Isomer
+#C https://www.conwaylife.com/patterns/beaconontableisomers.rle
+x = 15, y = 7, rule = B3/S23
+2b2o9b2o$3bo10bo$o10bo$2o9b2o2$4o5b4o$o2bo5bo2bo!

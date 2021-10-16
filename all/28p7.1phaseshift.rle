@@ -1,0 +1,15 @@
+#N 28p7.1phaseshift.rle
+#C https://conwaylife.com/wiki/28P7.1
+#C https://www.conwaylife.com/patterns/28p7.1phaseshift.rle
+x = 81, y = 52, rule = B3/S23
+10bo$9bob2o$2b2o9bo33b2o7bo2bo4bo2bo$2bo6bo2bobo32bo6b3o2b6o2b3o$7bo3b
+o2bo37bo3bo2bo4bo2bo$6obo4b2o31b6obo$o44bo$b2ob2o3b2o35b2ob2o3b2o$2bob
+o4bobo35bobo4bobo$2bobo6bo35bobo6bo$3bo7b2o35bo7b2o11$61bo7bo$60bobo5b
+obo$61bo7bo4$54bobo17bobo$57bo15bo$56bo4bo7bo4bo$52bo7bo2bo3bo2bo7bo$
+51bob2o6b3o3b3o6b2obo$51bo9b3o3b3o9bo$24bobo2b2o19b2o27b2o$9b2o12bo3bo
+b3o4b2o$9b2o13bo6b2o3b2o19b2o13b2o$25b5obo25b2o13b2o$28b3o$9bobo3bobo
+32b2o27b2o$11bo3bo12b3o20bo9b3o3b3o9bo$7bo11bo5b5obo19bob2o6b3o3b3o6b
+2obo$6bo3bo5bo3bo3bo6b2o3b2o14bo7bo2bo3bo2bo7bo$7bo11bo3bo3bob3o4b2o
+18bo4bo7bo4bo$2b2o7bo3bo8bobo2b2o16b2o8bo15bo$2bo6bobo3bobo29bo6bobo
+17bobo$7bo44bo$6obo37b6obo$o44bo$b2ob2o3b2o35b2ob2o3b2o5bo7bo$2bobo4bo
+bo35bobo4bobo3bobo5bobo$2bobo6bo35bobo6bo4bo7bo$3bo7b2o35bo7b2o!

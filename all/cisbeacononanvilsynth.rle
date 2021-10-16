@@ -1,0 +1,20 @@
+#N cisbeacononanvil_synth.rle
+#O Mark Niemiec, 5 June 2013
+#C 22-glider synthesis of cis-beacon on anvil
+#C https://conwaylife.com/wiki/Cis-beacon_on_anvil
+#C https://conwaylife.com/forums/viewtopic.php?p=8649#p8649
+x = 139, y = 117, rule = B3/S23
+6bo$7b2o$6b2o108bo$115bo$115b3o$113bo$114bo$112b3o18b2o$133b2o2$15bobo
+$16b2o37b2o18b2o18b2o18b2o18b2o$16bo36b3obo15b3obo15b3obo15b3obo15b3ob
+o$52bo4bo14bo4bo14bo4bo14bo4bo14bo4bo$35bo17b4o16b4o16b4o16b4o16b4o$
+34bo$34b3o12bo3b2o14bo3b2o18b2o18b2o18b2o$32bo15bobo2b2o13bobo2b2o18b
+2o18b2o18b2o$31b2o15bobo17bobo$31bobo15bo19bo$66b2o$65bobo$67bo7$7b2o$
+6bobo$8bo4$41b2o$41bobo$41bo16$5bobo$6b2o$6bo$o$b2o23bo$2o24bobo$26b2o
+8$13b2o$13b2o3$15b2o38bob2o36bob2o19bo16bob2o$13b3obo13bo4bo16b3obo35b
+3obo20bobo12b3obo$12bo4bo14b2obo16bo4bo34bo4bo20b2o12bo4bo$13b4o14b2o
+2b3o15b4o18b2o16b4o18b2o16b4o$75b2o38b2o$13b2o38b2o38b2o38b2o$13b2o38b
+2o38b2o38b2o7$26b2o$25b2o$27bo15$75bob2o16bob2o16bob2o16bob2o$73b3obo
+15b3obo15b3obo15b3obo$72bo4bo14bo4bo14bo4bo14bo4bo$73b4o16b4o16b4o16b
+4o2$73b2o18b2o18b2o18b2o$73b2o17bobo17bobo18bo$92b2o18b2o22bo$119b2o
+14b2o$71b2o2b3o41bobo$72b2obo31b3o4b2o3bo$71bo4bo32bo5b2o$108bo5bo$72b
+2o$72bobo$72bo!

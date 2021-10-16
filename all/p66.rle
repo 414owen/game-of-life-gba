@@ -1,0 +1,10 @@
+#N p66.rle
+#C https://conwaylife.com/wiki/P50_glider_shuttle
+#C https://conwaylife.com/patterns/p66.rle
+x = 35, y = 35, rule = B3/S23
+22b2o$22b2o$10bo$9bobo$10bo11b3o$17b2o2bob2o$8b5o4b2o2b2o$7bo4bo8b2o$
+6bo2bo$3bo2bob2o$2bobobo5bo17b4o$3bo2bo4bobo15bo4bo$6b2o2bo2bo14bobo3b
+o$11b2o7bo6bobo3bo$19b2o6bo$19bobo5bo$27bo2bo$5b2o21b2o$5b2o$14b2o$13b
+2o$5b3o7bo6b2o$2o2bob2o13bo2bo2b2o$2o2b2o15bobo4bo2bo$4b2o16bo5bobobo$
+25b2obo2bo$25bo2bo$13b4o5bo4bo$12bo4bo4b5o$11bobo3bo$10bobo3bo7bo$10bo
+12bobo$10bo13bo$10bo2bo$11b2o!

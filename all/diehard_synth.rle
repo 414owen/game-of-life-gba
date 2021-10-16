@@ -1,0 +1,7 @@
+#C diehard synth (almost) pointed out by GUYTU6J
+#C https://www.conwaylife.com/forums/viewtopic.php?p=89250#p89250
+#C The synthesis is not quite perfect, since its minimum population is 9 not 7.
+#C The synthesis converges at T=56 with the diehard's T=6,
+#C  with a near match three ticks before that.
+x = 7, y = 11, rule = B3/S23
+bo$2bo$3o$5bo$5b2o$4bobo3$b3o$3bo$2bo!

@@ -1,0 +1,5 @@
+#N long4snake.rle
+#C https://conwaylife.com/wiki/Long%5E4_snake
+#C https://www.conwaylife.com/patterns/long4snake.rle
+x = 8, y = 6, rule = B3/S23
+2o$obo$3bo$4bo$5bobo$6b2o!

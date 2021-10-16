@@ -1,0 +1,8 @@
+#N 80p6.rle
+#O Karel Suhajda, 2004
+#C https://conwaylife.com/wiki/80P6
+#C https://www.conwaylife.com/patterns/80p6.rle
+x = 16, y = 21, rule = B3/S23
+6b2o$4bo4bo2$3bo6bo$b3obob2ob3o$o4bo3bo3bo$b5o2b2ob3o$6bo$3b2o5bob4o$
+3bo7b2o2bo$bobo3b3o$b2o4b6o$6b3o4bo$12bobo$9b2obo2bo$7bo3bo2b2o$5b2o$
+6b2o$b2obobo$bob2obobo$7b2o!

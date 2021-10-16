@@ -1,0 +1,5 @@
+#N transbeacononcap.rle
+#C https://conwaylife.com/wiki/Trans-beacon_on_cap
+#C https://www.conwaylife.com/patterns/transbeacononcap.rle
+x = 6, y = 8, rule = B3/S23
+2o$o$3bo$2b2o2$2b4o$2bo2bo$3b2o!

@@ -1,0 +1,7 @@
+#N p6thumbonbeluchenkosp13.rle
+#C https://conwaylife.com/wiki/P6_thumb_on_Beluchenko%27s_p13
+#C https://www.conwaylife.com/patterns/p6thumbonbeluchenkosp13.rle
+x = 25, y = 17, rule = B3/S23
+9b2o$9b2o2$4bo2bo$bo6bo$o7bo$bob2o3bo6b2o$5b3o7b2o$10b3o6bo$9bo3bo5b3o
+$9bo7b2o3bo$9bo6bo3b2obo$10bo2bo3b3obobo$10bo7bo2bob2o$21bo$10bobo6bob
+o$11bo6b2ob2o!

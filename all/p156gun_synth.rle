@@ -1,0 +1,9 @@
+#N p156gun_synth
+#O Oscar Cunningham, June 3, 2019
+#C Glider synthesis of period-156 glider gun.
+#C https://www.conwaylife.com/forums/viewtopic.php?p=77052#p77052
+x = 74, y = 80, rule = B3/S23
+66bobo$66b2o$67bo14$39bo11bobo$39bobo9b2o$39b2o11bo3$54b3o$54bo$55bo7$
+51bo$49b2o$50b2o4$23bo$24bo$22b3o46b3o$bo69bo$2bo69bo$3o46b3o$49bo$50b
+o4$22b2o$23b2o$22bo7$18bo$19bo$17b3o3$21bo11b2o$21b2o9bobo$20bobo11bo
+14$6bo$6b2o$5bobo!

@@ -1,0 +1,9 @@
+#N l122.rle
+#O Aidan F. Pierce, 2020
+#C https://conwaylife.com/wiki/L122
+#C https://www.conwaylife.com/patterns/l122.rle
+x = 21, y = 51, rule = B3/S23
+13b2o$13bo$11b3o15$2b2o$2bobo6b2o$4bo6b2o$4b2o2$4b2o$2bo2bo$2b2o5$9bo$
+9bobo$9b3o5b2o$11bo5b2o5$8bo7b2o$7bobo7bo$7bobo7bob2o$8bo7b2o2bo$2b2o
+9bo4b2o$bobo9b5o$bo9b2o4bo$2o10bo2b2o$12bobo$7bo2bobobo$7b4ob2o$11bo$
+9bobo$9b2o!

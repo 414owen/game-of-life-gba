@@ -1,0 +1,10 @@
+#N 128p10.2.rle
+#O Nicolay Beluchenko, 2009
+#C https://conwaylife.com/wiki/128P10.2
+#C https://www.conwaylife.com/patterns/128p10.2.rle
+x = 35, y = 35, rule = B3/S23
+13b2o5b2o$13b2o5b2o4$14b2o3b2o$13bo2bobo2bo$12bo3bobo3bo$16bobo$13b3o
+3b3o3$7bo4b2o7b2o4bo$2o4bo2bo2b2o7b2o2bo2bo4b2o$2o3bo3bo15bo3bo3b2o$5b
+o3bo15bo3bo$6b3o17b3o2$6b3o17b3o$5bo3bo15bo3bo$2o3bo3bo15bo3bo3b2o$2o
+4bo2bo2b2o7b2o2bo2bo4b2o$7bo4b2o7b2o4bo3$13b3o3b3o$16bobo$12bo3bobo3bo
+$13bo2bobo2bo$14b2o3b2o4$13b2o5b2o$13b2o5b2o!

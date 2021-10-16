@@ -1,0 +1,19 @@
+#N p40bheptominoshuttle_synth.rle
+#O Martin Grant, 12 October 2013
+#C 29-glider synthesis of p40 B-heptomino shuttle
+#C https://conwaylife.com/wiki/P40_B-heptomino_shuttle
+#C https://conwaylife.com/forums/viewtopic.php?p=9371#p9371
+x = 169, y = 47, rule = B3/S23
+115bo$115bobo$86bo28b2o$87bo$85b3o$111bo$109bobo$110b2o18bo$129bo$129b
+3o$84bobo$85b2o$85bo25bobo$111b2o$112bo$130bobo$130b2o$113bobo15bo12b
+2o20b2o$114b2o27bo2bo19b2o$96bo17bo28bo$14bo79bobo46bo$13bo81b2o46bob
+2o20b2o$13b3o86bobo9bo30b2o18bob2o$103b2o9bobo48bo$103bo10b2o49bo$34bo
+bo22bobo82b2o13b2o4bo2bo$35b2o22b2o83b2o12bo2bo4b2o$bo10bo22bo24bo97bo
+2bo$2b2o6b2o145b2ob2o$b2o8b2o27bo14bo102b2o$38b2o16b2o74bo$39b2o14b2o
+12bo35bo10bo14b2o17bo10bo$42b2o8b2o14bobo33bobo8bobo13bobo15bobo8bobo$
+31b2o9bobo6bobo9b2o4bo24b2o9bo4b2o4bo33bo4b2o4bo$29bo4bo7bo10bo7bo4bo
+26bobo12bo4bo39bo4bo$29bo4bo26bo4bo17bo10bo12bo4bo39bo4bo$3bobo2bobo
+18bo4bo26bo4bo17b2o22bo4bo13b2o24bo4bo$4b2o2b2o20bo2bo28bo2bo17bobo23b
+o2bo14bobo24bo2bo$4bo4bo18bobo2bobo24bobo2bobo39bobo2bobo12bo24bobo2bo
+bo$28b2o4b2o24b2o4b2o39b2o4b2o37b2o4b2o2$88b2o$87bobo$89bo$3o8b3o$2bo
+8bo$bo10bo!

@@ -1,0 +1,7 @@
+#N pentadecathlonon56p27.rle
+#C https://conwaylife.com/wiki/Pentadecathlon_on_56P27
+#C https://www.conwaylife.com/patterns/pentadecathlonon56p27.rle
+x = 35, y = 30, rule = B3/S23
+15b2o$15b2o5$13b3o$13bobo$15bo$9b2o9bo$10b2o7b2o$19bo2$2o20b2o$2o4b3o
+14bo$6bo14b3o4b2o$6b2o20b2o2$10bo$9b2o7b2o$9bo9b2o$14bo$14bobo$14b3o
+10bo4bo$25b2ob4ob2o$27bo4bo3$13b2o$13b2o!

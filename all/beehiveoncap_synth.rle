@@ -1,0 +1,8 @@
+#N beehiveoncap_synth.rle
+#O Matthias Merzenich, 22 June 2014
+#C 4-glider synthesis of beehive on cap
+#C https://conwaylife.com/wiki/Beehive_on_cap
+#C https://conwaylife.com/forums/viewtopic.php?p=12346#p12346
+x = 26, y = 14, rule = B3/S23
+2bobo$2b2o6bo$3bo6bobo$10b2o$24bo$2b2o16b2obobo$bobo15bobobobo$3bo15bo
+bo2bo$20b2o3$b2o$obo$2bo!

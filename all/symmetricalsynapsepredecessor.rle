@@ -1,0 +1,6 @@
+#N symmetricalsynapsepredecessor.rle
+#C https://conwaylife.com/wiki/Symmetrical_synapse
+#C https://www.conwaylife.com/patterns/symmetricalsynapsepredecessor.rle
+x = 29, y = 7, rule = B3/S23
+24b3o$7b3o$b2o3bo3bo11bo5bo$o2bobo5bo10bo5bo$b2o3bo3bo11bo5bo$7b3o$24b
+3o!

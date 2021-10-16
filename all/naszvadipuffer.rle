@@ -1,0 +1,12 @@
+#N naszvadipuffer.rle
+#C https://conwaylife.com/wiki/C/5_diagonal
+#C https://www.conwaylife.com/patterns/naszvadipuffer.rle
+x = 63, y = 63, rule = B3/S23
+55bo5bo$54bo7bo$57b4obo$53bo2bo3b2o$53bo2bo2b3o$53bo4bo$54bob3o$54b2ob
+2o$50b3o4b2o$50b3o$48b2o$48b2o$48b2o$43b3o$41bo4b2o$40bo6bo$43b2obo$
+42bo3b3o$42bo2b4o$42bobo$42b3o$40bo2b2o$41b2o12$49bo5bo$48bo7bo$51b4ob
+o$47bo2bo3b2o$47bo2bo2b3o$47bo4bo$15bo5bo26bob3o$14bo7bo25b2ob2o$17b4o
+bo21b3o4b2o$13bo2bo3b2o9bo12b3o$13bo2bo2b3o7bobo10b2o$13bo4bo11b2o10b
+2o$14bob3o23b2o$14b2ob2o18b3o$10b3o4b2o16bo4b2o$10b3o21bo6bo$8b2o27b2o
+bo$8b2o26bo3b3o$8b2o26bo2b4o$3b3o30bobo$bo4b2o28b3o$o6bo26bo2b2o$3b2ob
+o28b2o$2bo3b3o$2bo2b4o$2bobo$2b3o$o2b2o$b2o!

@@ -1,0 +1,5 @@
+#N verylongboatsplitter.rle
+#C https://conwaylife.com/wiki/Very_long_boat
+#C https://www.conwaylife.com/patterns/verylongboatsplitter.rle
+x = 8, y = 13, rule = B3/S23
+o$b2o$2o$6b2o$6b2o4$3b2o$2bobo$bobo$obo$bo!

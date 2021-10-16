@@ -1,0 +1,20 @@
+#N highwayrobber.rle
+#O Louis-Francois Handfield, 25 May 2020
+#C https://conwaylife.com/wiki/Highway_robber
+#C https://conwaylife.com/patterns/highwayrobber.rle
+#C https://www.conwaylife.com/forums/viewtopic.php?p=97701#p97701
+x = 249, y = 291, rule = B3/S23
+o$b2o$2o10$13bo$11bobo$12b2o202$166b2o$166b2o12b2obob2o$173bob2obo2bo
+b2o2bo$173b2obob2obo4bobo30bo$181b5obo32b2o$177b2obo4bo33b2o$177b2obo
+bo3bo15b2o$181bobo3bo15bo$182bo3b2o15bob2o$201bobobo$197b2o2b2o2bo$197b
+2o6b3o$208bo$174b2o31b2o$174b2o$159b2o71bo$158bo2bo68bobo$157bob2o70b
+2o$157bo$156b2o$151b2o18b2o$152bo18bo$150bo21b3o$150b5o14b3o2bo10b2o$
+155bo13bo2bo11bobo$152b3o12bobo2b2o10bo$151bo15b2o14b2o$151b4o$149b2o
+3bo3b2o79bo$148bo2b3o4b2o78bobo$148b2obo85bo2bo$151bo45b2o39b2o$151b2o
+44b2o$203b2o$204bo$159b2o40b3o$160bo40bo$157b3o$157bo70b2o$228b2o15b2o
+$245bo$246b3o$238b2o8bo$238bo$239b3o$192bo48bo$190b3o$189bo$189b2o10b
+2o$201bo$178b2o19bobo$179bo19b2o10bo$179bobo29b3o$180b2o32bo$213b2o$228b
+2o$228bo$180b2o43b2obo$179bobo42bo2bo$179bo45b2o$178b2o4b2o24b2o$183b
+obo24b2o$183bo$182b2o2$197b2o3bo$197bo3bobo$198bo3bobo$199bo3bobob2o$
+197bob4o2bob2o$196bobo3bobo$196bobo2bo2b2ob2o$197bo3b2o2bobo$205bobo10b
+2o$206bo11b2o!

@@ -1,0 +1,7 @@
+#N justyna_synth.rle
+#C Glider synthesis of Justyna.
+#C https://conwaylife.com/wiki/Justyna
+x = 55, y = 41, rule = B3/S23
+4$19bo$20b2o$19b2o9$7bo$5bobo5bo11b2o3b3o$6b2o6b2o8b2o4bo$3b2o8b2o11bo
+4bo$2bobo$4bo23b2o$28bobo$28bo$24b3o$26bo$25bo5$13bo$13b2o$12bobo23b2o
+$20b3o15bobo$22bo15bo$21bo!

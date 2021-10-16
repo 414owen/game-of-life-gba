@@ -1,0 +1,20 @@
+#N tnosedp6_synth.rle
+#O Martin Grant, Michael Simkin, Mark Niemiec, 20 July 2016
+#C 32-glider synthesis of T-nosed p6
+#C https://conwaylife.com/wiki/T-nosed_p6
+#C https://conwaylife.com/forums/viewtopic.php?p=33411#p33411
+x = 287, y = 125, rule = B3/S23
+242bo$241bo$241b3o21$181bo$179bobo$180b2o5$167bo62bo$168b2o58b2o$167b
+2o60b2o11bo$240b2o$241b2o$207bo$195bo12b2o$193bobo11b2o$194b2o6$103bo
+81bo$101bobo38b2o42bo25b2o$102b2ob3o33bo2bo39b3o24bo2bo$105bo36bobo35b
+3o29bobo$106bo36bo38bo30bo$bo42bo39bo39bo56bo12bo$2bo40bobo37bobo37bob
+o67bobo$3ob2o37bo2bo36bo2bo36bo2bo66bo2bo$4bobo37b2o38b2o38b2o68b2o$4b
+o4$184b2o90b2o3b2o$185b2o67bo21bobobobo$184bo4b2o63bobo20bo3bo$188bobo
+63b2o$190bo81bo3b2o3b2o3bo$272bobob2o3b2obobo$228bo43bo3b2o3b2o3bo$
+163b2o63bobo$162bobo63b2o4bo42bo3bo$164bo67b2o42bobobobo$233b2o41b2o3b
+2o4$34bo$32bobo38b2o38b2o38b2o68b2o$33b2ob3o33bo2bo36bo2bo36bo2bo66bo
+2bo$36bo36bobo37bobo37bobo67bobo$37bo36bo39bo39bo69bo12bo$92bo42bo69bo
+30bo$93bo40bobo67bobo29b3o$91b3ob2o37bo2bo66bo2bo24b3o$95bobo37b2o68b
+2o25bo$95bo137bo6$223b2o$210b2o11bobo$209b2o12bo$211bo$176b2o$177b2o$
+176bo11b2o60b2o$189b2o58b2o$188bo62bo5$237b2o$237bobo$237bo21$175b3o$
+177bo$176bo!

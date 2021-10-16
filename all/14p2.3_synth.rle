@@ -1,0 +1,9 @@
+#N 14p2.3_synth.rle
+#C 8-glider synthesis of 14P2.3
+#C https://www.conwaylife.com/wiki/14P2.3
+#C https://www.conwaylife.com/patterns/14p2.3_synth.rle
+x = 116, y = 20, rule = B3/S23
+34bo$35b2o17bo$29bo4b2o18bobo25bo$27bobo24b2o24bobo$28b2o5bo45b2o$35b
+2o$34bobo26bo19bo$63bo19bo$63bo19bo4$35b2o36b3o17b3o17b3o$obo31bobo32b
+2o18b2o18b2o$b2o19bo13bo5bo26bobob2o14bobob2o14bobob2o$bo19bobo17bobo$
+22b2o18b2o27bobo17bobo17bobo$b3o66bo19bo19bo$bo68b2o18b2o18b2o$2bo!

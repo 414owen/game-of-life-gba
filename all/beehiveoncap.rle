@@ -1,0 +1,5 @@
+#N beehiveoncap.rle
+#C https://conwaylife.com/wiki/Beehive_on_cap
+#C https://www.conwaylife.com/patterns/beehiveoncap.rle
+x = 5, y = 7, rule = B3/S23
+b2o$o2bo$4o2$2b2o$bo2bo$2b2o!

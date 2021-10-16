@@ -1,0 +1,7 @@
+#N thunderbird_synth.rle
+#O Martin Grant, 5 July 2015
+#C 3-glider synthesis of thunderbird
+#C https://conwaylife.com/wiki/Thunderbird
+#C https://conwaylife.com/forums/viewtopic.php?p=20994#p20994
+x = 24, y = 8, rule = B3/S23
+bo$bobo$b2o2$o18bo$b2obo14bob3o$2o2bobo12bo$4b2o!

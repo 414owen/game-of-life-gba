@@ -1,0 +1,19 @@
+#N blinkersbitpole_synth.rle
+#O Goldtiger997, 6 October 2017
+#C 37-glider synthesis of blinkers bit pole
+#C https://conwaylife.com/wiki/Blinkers_bit_pole
+#C https://conwaylife.com/forums/viewtopic.php?p=50198#p50198
+x = 257, y = 30, rule = B3/S23
+19bo$17bobo221bo$18b2o7bo211b2o$27bobo4bo149bo55b2o$27b2o4bo148bobo32b
+o$33b3o50bo3bo92b2o3bo29b2o13bo$87bobo35bo62bobo26b2o3bobo6b2o$85b3ob
+3o33bobo60b2o32b2o8b2o$37b2o86b2o96bo$27bo8b2o145bo3bo$26bo11bo19bo29b
+o27bobo65bo3b2o26bo$26b3o28bobo27bobo27b2o10b2o35b2o14b3o2b2o7b2o16bob
+o10b2o$56bobo3b2o22bobo28bo10bobo17bo16bobo27bobo13b2o2b2o9bobo21b2o$
+24b2o30bo5b2o22bo41bo20b2o14bo29bo14bobo8bo4bo23bobob3o$23bobo5b2o19bo
+b2obo24bob2obo19bobo14bob2obo18b2o11bob2obo24bob2obo15bo7bobob2obo$3o
+22bo5b2o19b2obobo6b2o16b2obobo20b2o2b2o10b2obobo31b2obobo24b2obobo23bo
+b2obobo5b2o15bo2bobo$2bo53bo7bobo19bo21bo2bobo14bo30b2o4bo23b2o4bo22b
+2obo4bo5b2o17bo4bo$bo62bo48bo44bobo27bobo27bo2bo12bo16bo3b2o$3b3o153bo
+27bobo22bo6b2o$3bo183b2o23b2o$4bo112b3o91bobo$119bo63bo5b2o33b2o$118bo
+64b2o4bobo31bobo$125b3o54bobo4bo35bo4b2o$125bo26bo77bobo$126bo24b2o77b
+o$147bo3bobo$148b2o73b2o$147b2o73bobo$224bo!

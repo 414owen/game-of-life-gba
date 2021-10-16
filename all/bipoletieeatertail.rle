@@ -1,0 +1,5 @@
+#N bipoletieeatertail.rle
+#C https://conwaylife.com/wiki/Bipole_tie_eater_tail
+#C https://www.conwaylife.com/patterns/bipoletieeatertail.rle
+x = 7, y = 9, rule = B3/S23
+3b2o$3bobo$5bo$5b2o$3b2o$2bobo2$obo$2o!

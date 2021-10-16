@@ -1,0 +1,10 @@
+#N heavyweightvolcanoeppstein.rle
+#C https://conwaylife.com/wiki/Heavyweight_volcano
+#C https://www.conwaylife.com/patterns/heavyweightvolcanoeppstein.rle
+#O David Eppstein, 2003
+x = 25, y = 22, rule = B3/S23
+8bo10b2o$7bobo9bo$7bobo4b2o4bo$3b2ob2obobo2bo2b3obob2o$3bo4bob2o3b2o4b
+obo$5b2obo3b3o2bo2b2obo$4b2obobobo3b3o2bobo$9bo2b2obo4b2o$2bob2ob4o5b
+4o$5b2o6b2obo2bo$o3bobo7bo$o3bobo7bo$5b2o6b2obo2bo$2bob2ob4o5b4o$9bo2b
+2obo4b2o$4b2obobobo3b3o2bobo$5b2obo3b3o2bo2b2obo$3bo4bob2o3b2o4bobo$3b
+2ob2obobo2bo2b3obob2o$7bobo4b2o4bo$7bobo9bo$8bo10b2o!

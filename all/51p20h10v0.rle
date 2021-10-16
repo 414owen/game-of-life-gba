@@ -1,0 +1,6 @@
+#N 51p20h10v0.rle
+#C https://conwaylife.com/wiki/51P20H10V0
+#C https://www.conwaylife.com/patterns/51p20h10v0.rle
+x = 10, y = 18, rule = B3/S23
+6b2o$4bo4bo$3bo$3bo5bo$3b6o4$b2o$2ob7o$b8o$2b6o2$6b2o$4bo4bo$3bo$3bo5b
+o$3b6o!

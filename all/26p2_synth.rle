@@ -1,0 +1,31 @@
+#N 26p2_synth.rle
+#O Mark Niemiec, 5 June 2013
+#C 41-glider synthesis of 26P2
+#C Despite it containing at most 22 cells, the name has stuck
+#C https://conwaylife.com/wiki/26P2
+#C https://conwaylife.com/forums/viewtopic.php?p=8649#p8649
+x = 162, y = 83, rule = B3/S23
+96bobo$96b2o$93bo3bo$87bobob2o$67bo12b2o6b2o2b2o6b2o18b2o18b2o18b2o$
+53bo12bo12bobo6bo10bobo17bobo17bobo17bobo$54bo11b3o6b2o2bo15b2o2bo14bo
+bo2bo14bobo2bo14bobo2bo$52b3o7b3o10bobob2o14bobob2o13b2obob2o13b2obob
+2o13b2obob2o$48b3o11bo14bo19bo19bo19bo19bo$50bo12bo11bobo17bobo16b2obo
+16b2obo16b2obo$49bo25b2o18b2o17bobo17bobo17bobo$88bo26bo19bo19bo$65b3o
+20b2o2b2o$65bo21bobob2o22bo19bo$66bo26bo20bobo17bobo$96b3o15b2o18b2o$
+96bo40b3o$97bo39bo$138bo6$60bo$59bo$20bo38b3o78bo$19bo17bo19bo83bo$19b
+3o2bobo9bobo17bobo80b3o$10bo5bo7b2o10bobo17bobo84bo$11bo5b2o6bo11bo3b
+2o14bo3b2o38bobo39bobo3bo$9b3o4b2o23b2o18b2o39b2o39b2o3bo$102bo45b3o$
+104bo$20b2o81bo$19bobo81b3o$6b3o5bobo2bo14bob2ob2o13bob2ob2o13bob2ob2o
+13bob2ob2o13bob2ob2o13bob2ob2o13bob2o$8bo5b2obob2o13b2obob2o13b2obob2o
+13b2obob2o13b2obob2o13b2obobobo12b2obobobo12b2obo$7bo9bo19bo19bo19bo
+19bo6bo12bo2bo16bo2bo16bob2o$14b2obo16b2obo16b2obo16b2obo16b2obo5b2o9b
+2obo16b2obo16b2obob2o$14bobo17bobo17bobo17bobo17bobo6bobo8bobo17bobo
+17bobo$15bo19bo19bo19bo19bo19bo19bo19bo4$145b2o$145bobo$145bo2$134b2o$
+135b2o$134bo$bo$2bo$3o$4bo$3bo$3b3o2$51bo$bobo45bobo$2b2o46b2o$2bo2$
+61bo80bobo$25b2o18b2o13bo14b2o18b2o18b2o18b2o5b2o11b2o$4bob2o16bo2bo
+16bo2bo12b3o11bo2bo16bo2bo16bo2bo16bo2bo5bo10bo2bo$4b2obo16b2obo16b2ob
+o26b2obo16b2obo16b2obo16b2obo16b2obo$7bob2o16bob2o16bob2o5bo20bob2obo
+14bob2obo14bob2obo14bob2obo14bob2o$4b2obob2o13b2obob2o13b2obob2o6b2o
+15b2obobob2o11b2obobob2o11b2obobob2o11b2obobob2o11b2obo2bo$4bobo17bobo
+17bobo9b2o16bobo17bobo17bo2bo16bo2bo16bo2bo$5bo19bo19bo6b3o20bo19bo19b
+o2bo16bo2bo5b2o9bo2bo$54bo61b2o18b2o5b2o11b2o$53bo43b2o46bo$97bobo2b2o
+$97bo3b2ob2o$93b3o6b4o$95bo7b2o$94bo2$99bo$98b2o$98bobo!

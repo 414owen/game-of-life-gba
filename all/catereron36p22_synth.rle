@@ -1,0 +1,22 @@
+#N catereron36p22_synth.rle
+#O Mark Niemiec, 6 December 2017
+#O 2718281828, 7 December 2017
+#C 20-glider synthesis of caterer on Jason's p22 (36P22)
+#C https://conwaylife.com/wiki/Caterer_on_Jason%27s_p22
+#C https://conwaylife.com/forums/viewtopic.php?p=53443#p53443
+#C https://conwaylife.com/forums/viewtopic.php?p=53462#p53462
+x = 153, y = 70, rule = B3/S23
+obo$b2o$bo3$16bo$14bobo$15b2o$3b3o$5bo21bo19bo19bo39bo39bo$4bo6bo4b3o
+6bo3b4o12bo3b4o12bo3b4o32bo3b4o32bo3b4o$10b2o4bo8bo3bo15bo3bo15bo3bo
+35bo3bo35bo3bo$5bo4bobo4bo7bo19bo19bo39bo14b2o23bo$5b2o21bo19bo19bo39b
+o12bo26bo$4bobo19b2o18b2o18b2o12b2o24b2o13bobo22b2o$81b2o39b2o$80bo3b
+2o$9b2o73bobo$8b2o53b2o19bo18b2o38b2o$10bo52bobo37bobo37bobo$41b3o21bo
+39bo39bo$43bo21b2o38b2o38b2o$42bo$46b2o$42bo2b2o$42b2o3bo$41bobo3$47b
+2o$47bobo$47bo15$85bo$86b2o$85b2o$27bo39bo39bo39bo$25bo3b4o32bo3b4o21b
+o10bo3b4o32bo3b4o$25bo3bo35bo3bo22bobo10bo3bo35bo3bo$2o23bo14b2o23bo
+14b2o11b2o10bo14b2o23bo$bo26bo12bo26bo12bo26bo12bo26bo$bobo22b2o13bobo
+3b2o17b2o13bobo3b2o17b2o13bobo13b3o6b2o$2b2o38b2o3b2o33b2o3b2o33b2o3bo
+8bo3bo$14bo111bob2o6bo4bo$15bo109bo4bo6b2obo$13b3o7b2o33b2o3b2o33b2o3b
+2o21bo3bo8bo3b2o$23bobo32b2o3bobo32b2o3bobo21b3o13bobo$25bo39bo39bo39b
+o$11b3o11b2o38b2o25b2o11b2o38b2o$11bo80bobo$12bo79bo2$100b2o$99b2o$2b
+2o97bo$3b2o$2bo!

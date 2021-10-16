@@ -1,0 +1,8 @@
+#C backrake2_synth.rle
+#C 17-glider synthesis of Backrake 2
+#C https://conwaylife.com/wiki/Backrake_2
+x = 65, y = 95, rule = B3/S23
+57bo$56bo$bo54b3o$2bo$3o61bo$62b2o$63b2o34$10bo$11b2o$10b2o$50bo$49b2o
+$49bobo3$4b3o$6bo50bo$5bo50b2o$56bobo$62b3o$62bo$63bo$17b3o$19bo$18bo
+5$39b3o$39bo$40bo2$14b2o$15b2o$14bo6$35bo$33bobo$34b2o8bobo$44b2o$45bo
+5$23bo10bo$24b2o8b2o$23b2o8bobo4$23b3o$25bo$24bo$26b3o$26bo$27bo!

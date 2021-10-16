@@ -1,0 +1,6 @@
+#N fx77parallelglider.rle
+#C https://conwaylife.com/wiki/Fx77
+#C https://www.conwaylife.com/patterns/fx77parallelglider.rle
+x = 29, y = 23, rule = B3/S23
+o$3o$3bo$2b2o11b2o11bo$15b2o9b3o$26bo$26bo4$bo$bobo$b3o$3bo6$11b2o6b2o
+$10bo2bo5b2o$10bo2bo$11b2o!

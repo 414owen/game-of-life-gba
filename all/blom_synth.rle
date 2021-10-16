@@ -1,0 +1,5 @@
+#N blom_synth.rle
+#C Glider synthesis of blom.
+#C https://conwaylife.com/wiki/Blom
+x = 13, y = 7, rule = B3/S23
+bobo$b2o8b2o$2bo7b2o$6b2o4bo$b2o2bobo$obo4bo$2bo!

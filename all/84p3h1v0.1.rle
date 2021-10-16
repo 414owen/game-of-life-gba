@@ -1,0 +1,8 @@
+#N 84p3h1v0.1.rle
+#O Dean Hickerson, 1989
+#C https://conwaylife.com/wiki/84P3H1V0.1
+#C https://www.conwaylife.com/patterns/84p3h1v0.1.rle
+x = 41, y = 8, rule = B3/S23
+7bo6bo11bo6bo$5b5o3b2ob3o3b3ob2o3b5o$b3obo6bo6bobo6bo6bob3o$o8bob3o3bo
+bobobo3b3obo8bo$bo2bo5bob3o2b3ob3o2b3obo5bo2bo$5bo10b2o5b2o10bo$3b2o
+11bo7bo11b2o$14bobo7bobo!

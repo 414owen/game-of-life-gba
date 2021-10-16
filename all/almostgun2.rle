@@ -1,0 +1,6 @@
+#N almostgun2.rle
+#C https://conwaylife.com/wiki/P30_gun
+#C https://www.conwaylife.com/patterns/almostgun2.rle
+x = 24, y = 24, rule = B3/S23
+8bo$6b3o$5bo$5b2o6$2o3b2o$2o3b2o$b5o$2bobo$22b2o$2b3o17bo$11bobo6bobo$
+9bo3bo6b2o$9bo$8bo4bo$9bo$bo7bo3bo$bobo7bobo$obo$2bo!

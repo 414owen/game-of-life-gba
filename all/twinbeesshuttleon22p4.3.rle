@@ -1,0 +1,6 @@
+#N twinbeesshuttleon22p4.3.rle
+#C https://conwaylife.com/wiki/Twin_bees_shuttle_on_22P4.3
+#C https://www.conwaylife.com/patterns/twinbeesshuttleon22p4.3.rle
+x = 41, y = 14, rule = B3/S23
+17b2o$2o15bobo7b2o$2o17bo7b2o$17b3o2$34b2o$34bobo$17b3o18b2o$2o17bo15bo2bo$2o
+15bobo18b2o$17b2o14bobobo2bo$35b2o2b2o$32bob2o$33bo!

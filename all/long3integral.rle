@@ -1,0 +1,5 @@
+#N long3integral.rle
+#C https://conwaylife.com/wiki/Long%5E3_integral
+#C https://www.conwaylife.com/patterns/long3integral.rle
+x = 4, y = 8, rule = B3/S23
+b2o$bobo$3bo$2bo$bo$o$obo$b2o!

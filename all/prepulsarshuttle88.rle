@@ -1,0 +1,15 @@
+#C A period-88 pre-pulsar shuttle
+#C https://conwaylife.com/wiki/Pre-pulsar_shuttle
+x = 30, y = 63, rule = B3/S23
+15bo3b2o$14bobo2bo$14bobo3bo$12b2obob3obo$13bo3bo3bo$13bob2ob3ob2o$12b
+2ob2obo3bo$11bo2bob4o2bo$12bobo4b2ob2o$13bobo3bo2bo$14bo3bobo2bo$10b2o
+9b2o$10bobo5b2o$12bo4b2ob3o$12b2o2b2o5bo$15b3o3b2obo$10b5ob2o4bobo2bo$
+7bobo5bo2bob3o2b3o$7b2obo2bo5b2o2b2o$10bobob3o3bobo2b3o$10bo2b3o3bo3bo
+4bo$2o2b2ob2obo3bo4bob2ob2o2bo$o2bobobobo10bobobobob2o$bobo3bo14bo3bo$
+2ob2o2b2o12b2o2b2o2$12b2o$12b2o4b3o$11bobo4bobo$18b3o4$18b3o$11bobo4bo
+bo$12b2o4b3o$12b2o2$2ob2o2b2o12b2o2b2o$bobo3bo14bo3bo$o2bobobobo10bobo
+bobob2o$2o2b2ob2obo3bo4bob2ob2o2bo$10bo2b3o3bo3bo4bo$10bobob3o3bobo2b
+3o$7b2obo2bo5b2o2b2o$7bobo5bo2bob3o2b3o$10b5ob2o4bobo2bo$15b3o3b2obo$
+12b2o2b2o5bo$12bo4b2ob3o$10bobo5b2o$10b2o9b2o$14bo3bobo2bo$13bobo3bo2b
+o$12bobo4b2ob2o$11bo2bob4o2bo$12b2ob2obo3bo$13bob2ob3ob2o$13bo3bo3bo$
+12b2obob3obo$14bobo3bo$14bobo2bo$15bo3b2o!

@@ -1,0 +1,6 @@
+#N 27p4h1v1.rle
+#O Jason Summers, 2000
+#C https://conwaylife.com/wiki/27P4H1V1
+#C https://www.conwaylife.com/patterns/27p4h1v1.rle
+x = 12, y = 12, rule = B3/S23
+7b3o$7bo$8bo$10b2o$9b2o2$8bo$3o5bo2bo$o7bo$bo2b5obo$3bo$4b2o!

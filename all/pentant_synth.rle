@@ -1,0 +1,22 @@
+#N pentant_synth.rle
+#O Martin Grant, 18 October 2015
+#O Mark Niemiec, 25 October 2015
+#C 29-glider synthesis of pentant
+#C https://conwaylife.com/wiki/Pentant
+#C https://conwaylife.com/forums/viewtopic.php?f=2&p=23919#p23919
+#C https://conwaylife.com/forums/viewtopic.php?f=2&p=24148#p24148
+x = 252, y = 39, rule = B3/S23
+209bo$207bobo$208boo$$89bobo$90boo$90bo$171bo43bo$169bobo41bobo$170boo
+42boo$$140bo85bo$139bo35bobo46boo$96boo41b3o29bo3boo48boo$92boobbobo
+73boobbo$47bo43bobobbo39bobo32boo$7bo37bobo45bo43boo37bo53bo$8bo37boo
+84bo4bo37bo16boo18boo15bo12boo$6b3o124boo6bo33b3o15bo19bo15b3o11bo$
+132boo7bobo49bobo17bobo27bobo$9bobo129boo51boo18boo28boo4boo$9boo33boo
+71bo19bo22bo19bo19bo19bo6boo22bo$10bo16boo16boo10boo18boo18boo17bobo
+17bobo19b3o17b3o17b3o17b3o6bobo17b4o$bo25bo16bo12bo19bo19bo19bo19bo19b
+o19bo19bo19bo9bo19bo$bbobbo6bo15b3o27b3o13bo3b3o13bo3b3o13bo3b3o13bo3b
+3o13bo3b3o13bo3b3o13bo3b3o13bo3b3o23bo3b3o$3obbobo3bo13b3obbo16boo6b3o
+bbo13b4obbo13b4obbo13b4obbo13b4obbo13b4obbo13b4obbo13b4obbo13b4obbo23b
+4obbo$5boo4b3o10bobbo18bobo5bobbo19bo19bo19bo19bo19bo19bo19bo19bo29bo$
+25boo21bo6boo19bo19bo19bo19bo19bo19bo19bo19bo29bo$76boo18boo18boo18boo
+18boo18boo18boo18boo28boo$13boo$12boo$14bo$47boo10boo$46bobo6boobbobo$
+48bo7boobo$55bo$64b3o$64bo$65bo!

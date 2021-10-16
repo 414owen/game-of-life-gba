@@ -1,0 +1,5 @@
+#N angel.rle
+#C https://conwaylife.com/wiki/Angel
+#C https://www.conwaylife.com/patterns/angel.rle
+x = 5, y = 4, rule = B3/S23
+2bo$2ob2o$bobo$2bo!

@@ -1,0 +1,10 @@
+#N p486hasslerboundingbox.rle
+#C https://conwaylife.com/wiki/P486_R-pentomino_hassler
+#C https://www.conwaylife.com/patterns/p486hasslerboundingbox.rle
+x = 62, y = 53, rule = B3/S23
+9b2o40b2o$10bo40bo$10bobo36bobo$11b2o36b2o13$5bo50bo$3b3o50b3o$2bo3b2o
+46b2o3bo$bob2o3bo26b2o16bo3b2obo$bobo3b2o25bo2bo16b3obobo$2obo2b3o24b
+2ob2o17bo2bob2o$3bobobo27bo22bo$3bobobo48bobo$2b2ob2o48b2ob2o4$2b2ob2o
+48b2ob2o$3bobo48bobobo$3bo22bo27bobobo$2obo2bo17b2ob2o24b3o2bob2o$bobo
+b3o16bo2bo25b2o3bobo$bob2o3bo16b2o26bo3b2obo$2bo3b2o46b2o3bo$3b3o50b3o
+$5bo50bo13$11b2o36b2o$10bobo36bobo$10bo40bo$9b2o40b2o!

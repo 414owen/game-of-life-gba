@@ -1,0 +1,13 @@
+#N 28p6_synth.rle
+#O yootaa, 22 December 2017
+#O Luka Okanishi, 25 December 2017
+#C 14-glider synthesis of Jason's p6 (28P6)
+#C https://conwaylife.com/wiki/Jason%27s_p6
+#C https://conwaylife.com/forums/viewtopic.php?p=54037#p54037
+#C https://conwaylife.com/forums/viewtopic.php?p=54188#p54188
+x = 65, y = 35, rule = B3/S23
+20bo20bo$21b2o17bo$20b2o18b3o$obo4bo$b2o5bo$bo4b3o7bo$17b2o$16b2o2$58b
+2ob2o$18bo40bo$19bo39b3o2bo$17b3o35bo4bobobo$55b3o3b2o$57b2o3b3o$55bob
+obo4bo$13bo41bo2b3o$13b2o45bo$12bobo42b2ob2o3$o$b2o26bobo$2o27b2o$30bo
+$20b2o21bo$13bo7b2o19b2o$9bob2o7bo21bobo$7bobo2b2o$8b2o3$47bo$46b2o$
+46bobo!

@@ -1,0 +1,6 @@
+#N beacononlonghookisomers.rle
+#C https://conwaylife.com/wiki/Isomer
+#C https://www.conwaylife.com/patterns/beacononlonghookisomers.rle
+x = 16, y = 19, rule = B3/S23
+3b2o9b2o$4bo10bo$bo10bo$b2o9b2o2$b4o5b4o$o3bo4bo3bo$2o7b2o4$3b2o9b2o$
+4bo10bo$bo10bo$b2o9b2o2$b4o5b4o$bo3bo4bo3bo$4b2o7b2o!

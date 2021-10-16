@@ -1,0 +1,9 @@
+#N cisorthoparatrans.rle
+#C https://conwaylife.com/wiki/Isomer
+#C https://www.conwaylife.com/patterns/cisorthoparatrans.rle
+#C Cis, ortho, para, and trans carrier on tables, respectively.
+#C taken from the thread for basic questions.
+#C https://www.conwaylife.com/forums/viewtopic.php?p=34966#p34966
+x = 25, y = 7, rule = B3/S23
+b2o3b2o$2bo3bo9b2ob2o$o7bo5bo2bobo2bo$2o5b2o5b2o5b2o2$4o3b4o3b4o3b4o$o
+2bo3bo2bo3bo2bo3bo2bo!

@@ -1,0 +1,8 @@
+#N long3boat_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of long^3 boat
+#C https://conwaylife.com/wiki/Long^3_boat
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 32, y = 20, rule = B3/S23
+8bobo$8b2o$9bo5$2bo2bobo$obo2b2o$b2o3bo23b2o$29bobo$28bobo$27bobo$26bo
+bo$27bo3$6b3o$6bo$7bo!

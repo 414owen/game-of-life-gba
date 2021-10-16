@@ -1,0 +1,8 @@
+#N 40514m_synth.rle
+#C Glider synthesis of 40514M.
+#C https://conwaylife.com/wiki/40514M
+x = 313, y = 54, rule = B3/S23
+312bo$203bo108bo$197bobob2o109bo$198b2o2b2o$198bo12$85bo$79bobob2o$80b
+2o2b2o$80bo4$235b3o2$126b3o7$bo$2b2o$b2o2$bo$b2o$obo32b3o$86b3o4$238bo
+$38bo199bo$38b2o2b2o50bo34bo108bo$37bobob2o51bo34bo$43bo50bo34bo4$244b
+3o5b3o2b2o$254bob2o$135b3o115bo4bo!

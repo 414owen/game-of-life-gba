@@ -1,0 +1,11 @@
+#N smallerp50gun.rle
+#C https://conwaylife.com/wiki/Period-50_glider_gun
+#C https://www.conwaylife.com/patterns/smallerp50gun.rle
+x = 56, y = 33, rule = B3/S23
+23b2o6b2o$6bo16b2o6b2o16bo$5bobo40bobo$5bobo40bobo$ob2obob2o38b2obob2o
+bo$2obobo3bo36bo3bobob2o$5bob2o38b2obo$4bo3bo38bo3bo$4b4o40b4o$7bo40bo
+$4b4o6b2o24b2o6b4o$3bo10b2o24b2o10bo$4b6o36b6o$9bo14b2o4b2o14bo$6b4o
+13bobo4bobo13b4o$6bo3bo11b2o8b2o11bo3bo$7bob2o12bobo4bobo12b2obo$2b2ob
+obo3bo12b2o4b2o12bo3bobob2o$2bob2obob2o34b2obob2obo$7bobo4b2o24b2o4bob
+o$7bobo4b2o24b2o4bobo$8bo10b2o26bo$19bo$15b2o3bo$15bo2bobo$17b2o2b2o$
+18bo3bo$16bo4bo$16b2o3b2o4bo$26bobo$27bo10bo$39b2o$38b2o!

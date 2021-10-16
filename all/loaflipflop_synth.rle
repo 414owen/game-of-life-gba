@@ -1,0 +1,27 @@
+#N loaflipflop_synth.rle
+#O Mark Niemiec, 6 December 2017
+#C 20-glider syntheses of loaflipflop
+#C https://conwaylife.com/wiki/Loaflipflop
+#C https://conwaylife.com/forums/viewtopic.php?p=53443#p53443
+x = 174, y = 131, rule = B3/S23
+56bo$55b3o3$55b3o$12bo$10bobo42bobo$11boo7boo33bobo$19boo$21bo33b3o$6b
+o$7bo$5b3o47b3o$56bo$17b3o$17bo23bobboboobobbo$18bo21boobbo4bobboo$14b
+oo25bobboboobobbo$14bobo$8bo5bo$7boo$7bobo19$16bo39bo39bo59bo$15b3o37b
+3o37b3o57b3o3$15b3o37b3o37b3o57b3o$$15bobo37bobo37bobo57bobo$15bobo37b
+obo37bobo57bobo$$15b3o37b3o37b3o57b3o3$15b3o37b3o37b3o57b3o$16bo39bo
+39bo59bo$$bobboboobobbo28bobboboobobbo28bobboboobobbo48bobboboobobbo$
+oobbo4bobboo7bo18boobbo4bobboo4bo21boobbo4bobboo4bo41boobbo4bobboo4bo$
+bobboboobobbo7bo20bobboboobobbo4bobo21bobboboobobbo4bobo41bobboboobobb
+o4bobo$17boob3o33bobbo36bobbo56bobbo$16bobo38boo38boo58boo$18bo4$158bo
+$158bo$158bo$$94boo$93bobo$95bo$97b3o$97bo$98bo7$16bo39bo39bo59bo$15b
+3o37b3o37b3o57b3o3$15b3o37b3o37b3o57b3o$$15bobo37bobo37bobo57bobo$15bo
+bo37bobo37bobo57bobo$$15b3o37b3o37b3o57b3o3$15b3o37b3o37b3o57b3o$16bo
+39bo39bo59bo$29bo$bobboboobobbo15bo12bobboboobobbo28bobboboobobbo30bo
+17bobboboobobbo15boo$oobbo4bobboo4bo9b3o9boobbo4bobboo4bo21boobbo4bobb
+oo4bo22boo17boobbo4bobboo3boo7bo4bo$bobboboobobbo4bobo21bobboboobobbo
+4bobo21bobboboobobbo4bobo22boo3bo13bobboboobobbo3bobbo5bo6bo$16bobbo
+11boo23bobbo36bobbo26bo29bobo5bo8bo$17boo12bobo23boo5b3o30boo5b3o19b3o
+28bo6bo8bo$31bo132bo8bo$165bo6bo$166bo4bo$119bo48boo$18bo39bo39bo19boo
+38b3o$18bo39bo39bo19bobo36bo3bo$18bo39bo39bo57bo5bo$$155bo7bo$155bo7bo
+$$156bo5bo$58bo39bo58bo3bo$58bo39bo59b3o$58bo39bo15boo$113boo$14boo99b
+o$13bobo$15bo$17b3o$17bo96boo$18bo94boo$115bo6$114boo$113boo$115bo!

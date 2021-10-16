@@ -1,0 +1,14 @@
+#N r64p8variants.rle
+#C https://conwaylife.com/wiki/R64
+#C https://www.conwaylife.com/patterns/r64p8variants.rle
+x = 167, y = 32, rule = B3/S23
+17b3o62bo16b2o61bo$16bo65b3o11bo63b3o$16bo3bo50b2o12bo9bobo2b2o57bo$
+16bo2bobo50bobo9b2o7bobob3o2bo56b2o$18bobo2bo45bo5bo17bo2b6o62b2o$19bo
+3bo45b2o3bo21b2ob2o63bo$23bo71b6o2bo58bobo$20b3o47bobo21bo2b3obobo58b
+2o$71bo23b2o2bobo$100bo$96b2o41b2o$139b2o2$98b4o62b2o$94b2obo4bo60bo2b
+o$33b4o56bo3bo4bo41bo18bo$29b2obo4bo36bo18bo4b2o44bobo16bo$28bo3bo4bo
+36bobo16bo2bo4b2o41b3o16bob2o$28bo4b2o39b3o16bo2bo3bo2bo42bo18b2o$9bo
+18bo2bo4b2o38bo17b2o4bo2bo$9bobo16bo2bo3bo2bo58b2o4bo$9b3o17b2o4bo2bo
+55bo4bo3bo60b2o$11bo20b2o4bo55bo4bob2o61b2o$29bo4bo3bo56b4o38b2o$29bo
+4bob2o29b2o69bo$30b4o34bo66b3o18b3o$65b3o18b3o46bo20bo$2b2o61bo20bo68b
+2o$3bo81b2o$3o18b3o$o20bo$20b2o!

@@ -1,0 +1,11 @@
+#N fox_synth.rle
+#O Goldtiger997, Chris Cain, 6 October 2017
+#C 7-glider syntheses of fox
+#C https://conwaylife.com/wiki/Fox
+#C https://conwaylife.com/forums/viewtopic.php?p=51666#p51666
+#C https://conwaylife.com/forums/viewtopic.php?p=51678#p51678
+x = 79, y = 39, rule = B3/S23
+20bo48bo$20bobo46bobo$20b2o47b2o2$44b3o$48bo$44bo3bo$16b3o27bobo16b3o$
+18bo4bo18b2o2bo14bo5bo4bo$17bo6b2o18bo14bobo4bo6b2o$23b2o3bo31b2o10b2o
+3bo$27bo48bo$27b3o46b3o2$21bobo46bobo$22b2o47b2o$22bo48bo2$21b2o47b2o$
+22b2o47b2o$21bo48bo16$bo$b2o$obo!

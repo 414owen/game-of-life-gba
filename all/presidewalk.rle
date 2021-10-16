@@ -1,0 +1,5 @@
+#N presidewalk.rle
+#C https://conwaylife.com/wiki/Sidewalk
+#C https://www.conwaylife.com/patterns/presidewalk.rle
+x = 7, y = 4, rule = B3/S23
+5b2o$2o2b2o$b2o2b2o$2o!

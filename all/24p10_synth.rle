@@ -1,0 +1,11 @@
+#N 24p10_synth.rle
+#O Martin Grant, 10 November 2018
+#C 15-glider synthesis of 24P10
+#C https://conwaylife.com/wiki/24P10
+#C https://conwaylife.com/forums/viewtopic.php?p=65510#p65510
+x = 112, y = 41, rule = B3/S23
+26bo$27bo26bo$25b3o27bo$53b3o4$64bobo$51bobo10b2o$52b2o11bo$52bo2$46bo
+$45bo$45b3o$43bo$42b2o62b2o$o41bobo61bo2b2o$b2o49bo50bo2b2o3bo$2o6b3o
+41bo50bo3bobobo$4bo3bo43bo3bo43b2o2bobo2b2o$5b2o2bo46bo42bobobo3bo$4b
+2o50bo42bo3b2o2bo$64bobo33b2o2bo$65b2o36b2o$65bo$61b3o$63bo$62bo2$56bo
+$43bo11b2o$43b2o10bobo$42bobo4$53b3o$53bo27b3o$54bo26bo$82bo!

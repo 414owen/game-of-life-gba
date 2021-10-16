@@ -1,0 +1,5 @@
+#N mangowithblockondock.rle
+#C https://conwaylife.com/wiki/Mango_with_block_on_dock
+#C https://www.conwaylife.com/patterns/mangowithblockondock.rle
+x = 8, y = 9, rule = B3/S23
+bo$obo$o2bo$bobo2b2o$2bo4bo$3b4o2$3b2o$3b2o!

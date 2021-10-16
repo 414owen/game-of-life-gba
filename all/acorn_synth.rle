@@ -1,0 +1,5 @@
+#N acorn_synth.rle
+#C Glider synthesis of an acorn.
+#C https://conwaylife.com/wiki/Acorn
+x = 10, y = 9, rule = B3/S23
+bo$2bo$3o2$9bo$7b2o$2b3o3b2o$4bo$3bo!

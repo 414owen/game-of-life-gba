@@ -1,0 +1,23 @@
+#N p60bheptominohassler_synth.rle
+#O Matti Ward, 10 March 2018
+#C 28-glider synthesis of p56 B-heptomino hassler
+#C https://conwaylife.com/wiki/P60_B-heptomino_hassler
+#C https://conwaylife.com/forums/viewtopic.php?p=57642#p57642
+x = 351, y = 57, rule = B3/S23
+32bo$31bo$31b3o3$92b2o62b2o48b2o12b2o48b2o12b2o48b2o12b2o$36bo55b2o62b
+2o48b2o12b2o48b2o12b2o48b2o12b2o$34b2o170b2o62b2o62b2o$35b2o169bo63bo
+63bo$31b2o59b3o61b3o46bobo12b3o46bobo12b3o46bobo12b3o$30b2o55b2o2bob2o
+56b2o2bob2o47bobob3o2b2o2bob2o41bo5bobob3o2b2o2bob2o47bobob3o2b2o2bob
+2o$32bo45bo8b2o2b2o58b2o2b2o50bob4o2b2o2b2o41bobo6bob4o2b2o2b2o50bob4o
+2b2o2b2o$28bo48bo13b2o34bo13bo13b2o51bo10b2o42b2o7bo10b2o51bo10b2o$19b
+2o6b2o48b3o48bo11bobo$18bobo6bobo96b3o11bobo$20bo59b3o58bo$25bo54bo
+259b3o$25b2o54bo57bo199bo2bo$24bobo111b2o199b2obo$138bobo$132b3o$134bo
+$133bo$258bo$259bo$257b3o$123b3o$125bo$124bo107bo$231bo$231b3o$289b3o$
+289bo$290bo$223bo$222bo$222b3o$216bobo$10bobo204b2o115bob2o$10b2o71bo
+133bo116bo2bo$11bo72bo249b3o$16bo65b3o66bo63bo$7bobo6bobo131bobo61bobo
+11b3o$8b2o6b2o67b3o62bobo61bobo11bo$8bo63b2o13bo48b2o13bo48b2o13bo13bo
+34b2o10bo7b2o42b2o10bo$4bo67b2o2b2o8bo49b2o2b2o58b2o2b2o58b2o2b2o2b4ob
+o6bobo41b2o2b2o2b4obo$5b2o63b2obo2b2o56b2obo2b2o56b2obo2b2o56b2obo2b2o
+2b3obobo5bo41b2obo2b2o2b3obobo$4b2o64b3o61b3o61b3o61b3o12bobo46b3o12bo
+bo$2o276bo63bo$b2o274b2o62b2o$o70b2o62b2o62b2o62b2o12b2o48b2o12b2o$71b
+2o62b2o62b2o62b2o12b2o48b2o12b2o3$3b3o$5bo$4bo!

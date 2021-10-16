@@ -1,0 +1,8 @@
+#N bandersnatch.rle
+#O Martin Grant, 2020
+#C https://conwaylife.com/wiki/Bandersnatch
+#C https://www.conwaylife.com/patterns/bandersnatch.rle
+x = 50, y = 46, rule = B3/S23
+o$b2o$2o16$45bo$44bobo$44bobo$43b2ob3o$31b2o16bo$31b2o10b2ob3o$43b2obo
+7$46b2o$37bo8b2o$36bobo$36bo2bo$37b2o$20b2o$19bobo$19bo24b2o$18b2o24b
+2o5$35b2o$35b2o!

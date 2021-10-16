@@ -1,0 +1,9 @@
+#N smallp120hwssgun.rle
+#C https://conwaylife.com/wiki/Kok%27s_galaxy
+#C https://www.conwaylife.com/patterns/smallp120hwssgun.rle
+x = 72, y = 56, rule = B3/S23
+4bob2o$4b2obo3$64b2obo$14b2o48bob2o$13b2o$15bo$2o5b2o$2o5b2o47b2o$57b
+2o$4b2o50bo$4b2o57b2o5b2o$63b2o5b2o2$66b2o$66b2o$22bo3bo$21bo4b2o$20b
+2o5b2o2b2o$21b2o4bo3b2o$22bo22bo3bo$44b2o4bo$39b2o2b2o5b2o$39b2o3bo4b
+2o$49bo11$32bo$33b2o$32b2o2$39bo$37b2o$38b2o5$24bo2bobo$22b2obob3o$23b
+o6bo$22b2o5bo$35b2o$23bo5b2o3bobo$22bo6bo5bo$23b3obob2o$23bobo2bo!

@@ -1,0 +1,5 @@
+#N angel_synth.rle
+#C https://conwaylife.com/wiki/Angel
+#C https://www.conwaylife.com/patterns/angel_synth.rle
+x = 46, y = 15, rule = B3/S23
+41bo$9bo30bo$8bo31b3o$8b3o7$43b2o$43bobo$b2o40bo$obo$2bo!

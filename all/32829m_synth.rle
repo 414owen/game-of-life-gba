@@ -1,0 +1,7 @@
+#N 32829m_synth.rle
+#C Glider synthesis of 32829M.
+#C https://conwaylife.com/wiki/32829M
+x = 147, y = 35, rule = B3/S23
+85bo$79bobob2o$80b2o2b2o$80bo$123b3o12$bo$2b2o$b2o2$bo$b2o$obo32b3o$
+86b3o$126bo$126bo$126bo2$38bo$38b2o2b2o50bo$37bobob2o51bo$43bo50bo$
+132b3o5b3o2b2o$142bob2o$141bo4bo!

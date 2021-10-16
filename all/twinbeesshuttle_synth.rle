@@ -1,0 +1,14 @@
+#N twinbeesshuttle_synth.rle
+#O Martin Grant, 6 January 2015
+#C 7-glider syntheses of cis- and trans-twin bees shuttle
+#C https://conwaylife.com/wiki/Twin_bees_shuttle
+#C https://conwaylife.com/forums/viewtopic.php?p=15718#p15718
+x = 111, y = 79, rule = B3/S23
+32bo$30b2o$31b2o53b2o2bobo$42b2o35b2o4b3obo3bo12b2o$26bo15b2o35b2o3b2o
+6bo13b2o$27b2o2bo53bob5o$26b2o2bo55b3o$30b3o66bobo3bobo$86b3o12bo3bo$
+85bob5o5bo11bo$84b2o6bo3bo3bo5bo3bo$85b3obo3bo3bo11bo$86b2o2bobo8bo3bo
+$99bobo3bobo8$2o$b2o$o3$58b2o$57b2o$59bo13$59bo$57b2o$58b2o12$32bo$30b
+2o67bobo3bobo$31b2o53b2o2bobo8bo3bo$79b2o4b3obo3bo3bo11bo$26bo52b2o3b
+2o6bo3bo3bo5bo3bo$27b2o2bo53bob5o5bo11bo$26b2o2bo55b3o12bo3bo$30b3o66b
+obo3bobo$86b3o$85bob5o$42b2o40b2o6bo13b2o$42b2o41b3obo3bo12b2o$86b2o2b
+obo9$2o$b2o$o!

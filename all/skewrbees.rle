@@ -1,0 +1,6 @@
+#N Skew R-bees
+#O Unknown
+#C https://conwaylife.com/wiki/Skew_R-bees
+#C https://conwaylife.com/patterns/skewrbees.rle
+x = 7, y = 6, rule = B3/S23
+bo$obo$obo2bo$b2obobo$4bobo$4b2o!

@@ -1,0 +1,25 @@
+#N cross2_synth.rle
+#C https://conwaylife.com/wiki/Cross_2
+#C https://www.conwaylife.com/patterns/cross2_synth.rle
+#N Cross2_synth
+#O "GUYTU6J", February 10, 2020
+#C Glider synthesis of cross 2, a period-3 oscillator
+#C www.conwaylife.com/forums/viewtopic.php?t=&amp;p=89254#p89254
+#C www.conwaylife.com/wiki/index.php?title=Cross_2
+x = 202, y = 39, rule = B3/S23
+89bo$88bo$88b3o$74bo$14bo60bo$12b2o59b3o$13b2o145bo$80bo18bo59bo$80bob
+o16bobo57b3o$13bo61bobo2b2o13bo3b2o$14bo2bobo56b2o15b2o21b2o15b2o21b2o
+15b2o$12b3o2b2o57bo17b2o20bobo13bobo21bobo13bobo$18bo98b2o13b2o23b2o
+13b2o$45bo39bo35b4ob4o31b4ob4o6b2o13b4ob4o$44bobo21bo15bobo8b3o23bo2bo
+bo2bo31bo2bobo2bo6bobo12bo2bobo2bo$6bo38bo20bobo16bo9bo23b3o2b3o2b3o
+27b3o2b3o2b3o4bo12b3o2b3o2b3o$7b2o14bo5bo37b2o27bo22bo11bo27bo11bo17bo
+11bo$6b2o15bobo2b2o89bo11bo27bo11bo17bo11bo$23b2o3bobo9bo9bo29bo9bo28b
+3o7b3o27b3o7b3o17b3o7b3o$39bobo7bobo27bobo7bobo29bo7bo31bo7bo21bo7bo$o
+bo3b2o32bo9bo29bo9bo28b3o7b3o27b3o7b3o17b3o7b3o$b2o2bobo15b2o94bo11bo
+27bo11bo17bo11bo$bo5bo14b2o50bo27b2o15bo11bo27bo11bo17bo11bo$24bo20bo
+29bo9bo16bobo14b3o2b3o2b3o22bo4b3o2b3o2b3o17b3o2b3o2b3o$44bobo26b3o8bo
+bo15bo18bo2bobo2bo22bobo6bo2bobo2bo21bo2bobo2bo$45bo39bo35b4ob4o23b2o
+6b4ob4o21b4ob4o$12bo104b2o13b2o23b2o13b2o$12b2o2b3o56b2o17bo21bobo13bo
+bo21bobo13bobo$11bobo2bo59b2o15b2o21b2o15b2o21b2o15b2o$17bo52b2o3bo13b
+2o2bobo$69bobo16bobo78b3o$71bo18bo80bo$16b2o152bo$17b2o76b3o$16bo78bo$
+96bo$80b3o$82bo$81bo!

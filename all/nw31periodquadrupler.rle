@@ -1,0 +1,7 @@
+#N nw31periodquadrupler.rle
+#C Period multiplier example based on NW31
+#C https://conwaylife.com/wiki/Period_multiplier
+#C https://conwaylife.com/patterns/nw31periodquadrupler.rle
+x = 44, y = 29, rule = B3/S23
+19bo$19b3o$22bo$11b2o8b2o$12bo$12bobo$b2o10b2o$2bo$bo$b2o3$42b2o$42b2o
+2$o3b2o$2o2b2o$b2o$2o9$32b2o$32b2o!

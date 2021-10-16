@@ -1,0 +1,5 @@
+#N symmetricalsynapse.rle
+#C https://conwaylife.com/wiki/Symmetrical_synapse
+#C https://www.conwaylife.com/patterns/symmetricalsynapse.rle
+x = 9, y = 9, rule = B3/S23
+bobobobo$ob2ob2obo$o7bo$b7o2$b7o$o7bo$ob2ob2obo$bobobobo!

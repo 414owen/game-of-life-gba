@@ -1,0 +1,5 @@
+#N capandtable.rle
+#C https://conwaylife.com/wiki/Cap_and_table
+#C https://www.conwaylife.com/patterns/capandtable.rle
+x = 4, y = 6, rule = B3/S23
+b2o$o2bo$4o2$4o$o2bo!

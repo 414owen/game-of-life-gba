@@ -1,0 +1,8 @@
+#N verylongshillelagh_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of very long shillelagh
+#C https://conwaylife.com/wiki/Very_long_shillelagh
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 32, y = 12, rule = B3/S23
+11bobo$11b2o$12bo$obo$b2o$bo2$30b2o$25b2o2bobo$13bo3b2o6bo2bo$13b2o2bo
+bo6b2o$12bobo2bo!

@@ -1,0 +1,12 @@
+#N 23p2_synth.rle
+#O Mark Niemiec, 9 May 2013
+#C 10-glider synthesis of 23P2
+#C Despite it containing at most 19 cells, the name has stuck
+#C https://conwaylife.com/wiki/23P2
+#C https://conwaylife.com/forums/viewtopic.php?p=8649#p8649
+x = 104, y = 34, rule = B3/S23
+79bo$78bo$78b3o3$72bo$73b2o$72b2o$2bo$bo68bo$b3o66b2o$22b2o18b2o18b2o
+5bobo10b2o18b2o$bo19bobo17bobo17bobo17bobo13bo2bo2bo$b2o19bo19bo19bo
+19bo14b6o$obo$60bo19bo18b2o$59bobo17bobo18bo$39b2o3bo13bobo17bobo16bo$
+40b2obo13bobo17bobo17b2o$39bo3b3o12bo19bo3$44b2o$43b2o$45bo4$90b2o$89b
+2o$91bo$69b2o$70b2o$69bo!

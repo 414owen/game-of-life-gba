@@ -1,0 +1,5 @@
+#N iheptomino.rle
+#C https://conwaylife.com/wiki/I-heptomino
+#C https://www.conwaylife.com/patterns/iheptomino.rle
+x = 4, y = 4, rule = B3/S23
+2o$bo$b2o$2b2o!

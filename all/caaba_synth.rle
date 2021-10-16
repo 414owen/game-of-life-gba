@@ -1,0 +1,13 @@
+#N caaba_synth.rle
+#O Martin Grant, 25 June 2015
+#O Jeremy Tan, 19 March 2019
+#C 9-glider synthesis of caaba
+#C https://conwaylife.com/wiki/Xp2_caabaiczw32
+#C https://conwaylife.com/forums/viewtopic.php?p=20721#p20721
+#C https://conwaylife.com/forums/viewtopic.php?p=73418#p73418
+x = 110, y = 43, rule = B3/S23
+65bo$65bobo$bo63b2o$2bo$3o79bo$82bobo$82b2o3$78b3o2$76bo5bo$29bo8bo37b
+o5bo$30b2o4b2o38bo5bo$29b2o6b2o$78b3o$31bo18bo$31b2o7bo8bobo$30bobo7bo
+8bobo$40bo9bo2$16bo19b3o3b3o$17b2o72b2o13b2o$16b2o22bo50bobo12bobo$40b
+o47b2obobo9b2obobo$40bo47bo2bob2o8bo2bob2o$15b2o74bobo12bobo$16b2o72bo
+2bo11bo2bo$15bo75b2o13b2o12$62b2o$62bobo$62bo!

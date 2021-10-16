@@ -1,0 +1,6 @@
+#N Claw
+#O Unknown
+#C https://conwaylife.com/wiki/Claw
+#C https://conwaylife.com/patterns/claw.rle
+x = 4, y = 3, rule = B3/S23
+2b2o$o2bo$b2o!

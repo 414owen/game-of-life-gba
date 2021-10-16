@@ -1,0 +1,8 @@
+#N shortkeys_synth.rle
+#O Bob Shemyakin, 12 July 2014
+#C 6-glider synthesis of short keys
+#C https://conwaylife.com/wiki/Short_keys
+#C https://conwaylife.com/forums/viewtopic.php?p=12616#p12600
+x = 37, y = 8, rule = B3/S23
+3bo14bo$4bo12bo$2b3o12b3o6bo8bo$25bob3o2b3obo$26bo2bo2bo2bo$bo4b3o4b3o
+4bo8bo2bo$b2o5bo4bo5b2o$obo4bo6bo4bobo!

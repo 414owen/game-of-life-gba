@@ -1,0 +1,6 @@
+#N 62p3.1.rle
+#C https://conwaylife.com/wiki/62P3.1
+#C https://www.conwaylife.com/patterns/62p3.1.rle
+x = 10, y = 18, rule = B3/S23
+4b2o$3bo2bo$o2b2obo$3o3bobo$4b2o$3o2b2o2bo$o3b3obo$b2obo$2bo3bo$2bo3bo
+$b2obo$o3b3obo$3o2b2o2bo$4b2o$3o3bobo$o2b2obo$3bo2bo$4b2o!

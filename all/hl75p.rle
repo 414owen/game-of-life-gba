@@ -1,0 +1,6 @@
+#N hl75p.rle
+#C https://conwaylife.com/wiki/HL75P
+#C https://www.conwaylife.com/patterns/hl75p.rle
+x = 28, y = 26, rule = B3/S23
+14b2o$6bo7b2o$6b3o$9bo$8b2o2$2o$bo$bobo$2b2o$25b2o$27bo$25b2o4$2bo$2bo
+bo$2b3o$4bo2$14b2o$14b2o2b2o$18bobo$20bo$20b2o!

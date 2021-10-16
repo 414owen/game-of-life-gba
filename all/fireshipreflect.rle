@@ -1,0 +1,6 @@
+#N fireshipreflect.rle
+#C https://conwaylife.com/wiki/Fireship
+#C https://www.conwaylife.com/patterns/fireshipreflect.rle
+x = 15, y = 24, rule = B3/S23
+9b2o$9b2o$8bo2bo$8b4o$7bob2obo$8bo2bo2$7b2o2b2o$6bo6bo2$7bo4bo$8bo2bo$
+9b2o2$6b2o4b2o$5bo2bo2bo2bo$6b2o4b2o$7bo4bo4$2o$b2o$o!

@@ -1,0 +1,7 @@
+#N 50095m.rle
+#C https://conwaylife.com/wiki/50093M
+#C https://www.conwaylife.com/patterns/50095m.rle
+x = 16, y = 16, rule = B3/S23
+ob4o3bobobo$2bo6bobo2b2o$bo4b2o2bo3bo$3b2ob2obobo2bo$o5b2o5b2o$2b3o3b
+4ob3o$b2ob2o2bo$ob2o2bobob4obo$o2bobo3bob3o$2o2b2ob2o3b2o$obobo4b2obob
+2o$2b2ob2ob3o2bo$ob3o3b2o4bo$o5bo3bo3bo$b3o4b3ob2obo$2o2bobo5bobo!

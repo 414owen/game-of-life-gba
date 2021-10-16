@@ -1,0 +1,9 @@
+#N iwona_synth.rle
+#C Glider synthesis of Iwona.
+#C https://conwaylife.com/wiki/Iwona
+x = 140, y = 27, rule = B3/S23
+91bo$89b2o$90b2o$130bo$91bo38bo$90b2o38bo$90bobo$37bobo$38b2o$38bo78b
+2o$116bo2bo$37b2o38b2o37bo2bo$36bobo37bo2bo37b2o17bo$38bo37bo2bo55bo$
+43b2o32b2o56b3o$43b2o$4bo$2bobo117b2o14bo$3b2o117b2o8b3o2b2o$82b2o48bo
+4bobo$36b2o44b2o49bo$b2o33b2o$obo3bo$2bo3bobo106b2o$6b2o107b2o$75b2o$
+75b2o!

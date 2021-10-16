@@ -1,0 +1,7 @@
+#N 48p9onrattlesnake.rle
+#C https://conwaylife.com/wiki/48P9_on_rattlesnake
+#C https://www.conwaylife.com/patterns/48p9onrattlesnake.rle
+x = 25, y = 24, rule = B3/S23
+9b2o$9bobo$9b3o$2o$bo7b2o$bobo4b4o$2b2o3bo3bo$6bo$6bo2bo$6bo$2b2o3bo3b
+o$bobo4b4o7b2o$bo7b2o8bo$2o18bo$9b3o7b2o$9bobo$9b2o6b4o$18bo2bo$19b2ob
+o$13bo5bo2bo$11b3o5b3ob2o$10bo10bobo$10b2o9bobo$22bo!

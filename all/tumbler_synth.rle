@@ -1,0 +1,13 @@
+#N tumbler_synth.rle
+#O Bob Shemyakin, 16 August 2014
+#O Tanner Jacobi, 4 November 2014
+#C 6-glider syntheses of tumbler
+#C The second synthesis is based on a Catagolue soup
+#C https://conwaylife.com/wiki/Tumbler
+#C https://conwaylife.com/forums/viewtopic.php?p=12917#p12917
+#C https://conwaylife.com/forums/viewtopic.php?p=14107#p14107
+x = 75, y = 23, rule = B3/S23
+37bobo$5bo32b2o$3bobo32bo$4b2o3$57bo$obo22b2o17bo12bobo$b2o4bobo17bo
+14bobo12b2o13b2o$bo5b2o14b2obo16b2o24b2o2b2o$8bo14bobo44b3o$42bo$8bo
+14bobo16b2o26b3o$bo5b2o14b2obo14bobo25b2o2b2o$b2o4bobo17bo44b2o$obo22b
+2o3$58b2o$4b2o52bobo$3bobo32bo19bo$5bo32b2o$37bobo!

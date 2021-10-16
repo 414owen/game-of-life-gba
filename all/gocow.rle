@@ -1,0 +1,6 @@
+#N gocow.rle
+#C https://conwaylife.com/wiki/Gocow
+#C https://www.conwaylife.com/patterns/gocow.rle
+x = 16, y = 10, rule = B3/S23
+7b3o$6bo2bo$2bo6bo4bo$b3o5bo3b3o$2obo5bo2b2obo$3o6bo2b3o$3o6bo2b3o$3o6bo2b3o$
+b2o6bo3b2o$6bo2bo!

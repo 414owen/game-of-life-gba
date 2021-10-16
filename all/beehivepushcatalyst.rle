@@ -1,0 +1,7 @@
+#N beehivepushcatalyst.rle
+#O Tanner Jacobi, 2020
+#C https://conwaylife.com/wiki/Beehive_push_catalyst
+#C https://www.conwaylife.com/patterns/beehivepushcatalyst.rle
+x = 17, y = 12, rule = B3/S23
+6b2ob2o$7bobo$2b2obo5bob2o$bobob2o3b2obobo$o6bobo6bo$7o3b7o2$2b3o7b3o$
+bo2bo3bo3bo2bo$b2o4bobo4b2o$7bobo$8bo!

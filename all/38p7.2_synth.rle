@@ -1,0 +1,12 @@
+#N 38p72_synth.rle
+#O Goldtiger997, 12 February 2018
+#C 14-glider synthesis of 38P7.2
+#C https://conwaylife.com/wiki/38P7.2
+#C https://conwaylife.com/forums/viewtopic.php?p=56409#p56409
+x = 113, y = 39, rule = B3/S23
+50bo$51b2o$50b2o24bo$76bobo$76b2o2$79bobo$79b2o2b3o$53bo26bo2bo$54b2o
+28bo$53b2o$102b2o5b2o$101bo2bo3bo2bo2$104bo3bo$2bo99bo7bo$obo26bobo70b
+2o5b2o$b2o3bo20bobobobo56bo14bobo$4b2o17b2o3b2ob2o47b2ob2o3b2o11bo2b2o
+b2o2bo$5b2o16bobo49b2o3b2ob2o4b2o9bobo2bobo2bobo$25bo49bobo22bo2bobobo
+bo2bo$25b2o50bo26bo3bo$77b2o7$47bo$47b2o29b3o$46bobo29bo$79bo2$61bo$
+61b2o$48bo11bobo$48b2o$47bobo!

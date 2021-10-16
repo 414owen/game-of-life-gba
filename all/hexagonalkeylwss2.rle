@@ -1,0 +1,5 @@
+#N hexagonalkeylwss2.rle
+#C https://conwaylife.com/wiki/Hexagonal_key
+#C https://www.conwaylife.com/patterns/hexagonalkeylwss2.rle
+x = 14, y = 11, rule = B3/S23
+10bobo$10b2o$11bo2$10b2o$10bo$12bo$5b2ob4obo$5b2obo2bobo$2o10bo$2o!

@@ -1,0 +1,16 @@
+#N diuresis_synth.rle
+#O Martin Grant, 12 October 2013
+#C 20-glider synthesis of original diuresis
+#C https://conwaylife.com/wiki/Diuresis
+#C https://conwaylife.com/forums/viewtopic.php?p=9371#p9371
+x = 144, y = 58, rule = B3/S23
+56bo$57b2o$50bo5b2o$51bo$49b3o4$69bo$69bobo$69b2o16bo$bo84bo$o85b3o$3o
+$7bobo57bo$7b2o28bobo2bobo21bo37bobo2bobo20bobo2bobo$8bo24b2obo2bo2bo
+2bob2o17b3o31b2obo2bo2bo2bob2o5bo6b2obo2bo2bo2bob2o$37bobo2bobo59bobo
+2bobo7b2ob2o8bobo2bobo$118bob4o$2o59bo4bo50bo2bo2b2o$b2o59b2obo52b2o2b
+3o$o60b2o2b3o51b2o2b2o$121bobo$121b2o4$121b2o$121bobo$bo59b2o2b3o51b2o
+2b2o$o61b2obo13b2o37b2o2b3o$3o58bo4bo12bobo35bo2bo2b2o$7bobo69bo38bob
+4o$7b2o28bobo2bobo59bobo2bobo7b2ob2o8bobo2bobo$8bo24b2obo2bo2bo2bob2o
+17b3o31b2obo2bo2bo2bob2o5bo6b2obo2bo2bo2bob2o$37bobo2bobo21bo37bobo2bo
+bo20bobo2bobo$67bo$2o$b2o$o$69b2o$69bobo$69bo11$42b2o$41bobo$43bo5bo$
+49b2o$48bobo!

@@ -1,0 +1,16 @@
+#N 24p2_synth.rle
+#O Mark Niemiec, 5 June 2013
+#C 15-glider synthesis of 26P2
+#C Despite it containing at most 20 cells, the name has stuck
+#C https://conwaylife.com/wiki/24P2
+#C https://conwaylife.com/forums/viewtopic.php?p=8649#p8649
+x = 161, y = 29, rule = B3/S23
+10bo$8bobo$9b2o3bobo115bo$4bobo7b2o115bo$5b2o8bo115b3o5bobo$5bo133b2o$
+140bo$16bo$14b2o6bo109b2o7b2o$3bo11b2o3b2o70bo40b2o5b2o$4bo16b2o70bo
+38bo9bo12b2o$2b3o31b2o18b2o18b2o13b3o2b2o18b2o18b2o17bobo$35bobo17bobo
+17bobo17bobo19bo19bo19bo$34bo2bob2o13bo2bob2o13bo2bob2o13bo2bob2o16bob
+2o16bob2o16bob2o$34b2obo2bo13b2obo2bo13b2obo2bo13b2obo2bo13b2obo2bo13b
+2obo2bo13b2obo2bo$obo32bobo17bobo17bobo17bobo17bobo17bobo17bobo$b2o2bo
+bo27bo2bo16bo2bo16bo2bo16bo2bo16bo2bo16bo2bo16bo2bo$bo3b2o29b2o18b2o
+18b2o18b2o18b2o18b2o18b2o$6bo$18b2o$17b2o$19bo2$34b2o18b2o$33bo2bo16bo
+2bo$34b2o18b2o$57b3o$57bo$58bo!

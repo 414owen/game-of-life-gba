@@ -1,0 +1,9 @@
+#N p9dominosparkers.rle
+#C https://conwaylife.com/wiki/Snacker
+#C https://www.conwaylife.com/patterns/p9dominosparkers.rle
+x = 45, y = 19, rule = B3/S23
+32b2o2$28b2o6b2o$8b2o21b4o$24bo2bobo6bobo2bo$4b2o6b2o10b4obobo2bobob4o
+$7b4o17b2ob4ob2o$3bobo6bobo6b2o3bo3bo4bo3bo3b2o$b3obobo2bobob3o4bobobo
+b2o2b4o2b2obobobo$o3b2ob4ob2o3bo5bobo3b2o4b2o3bobo$b2o3bo4bo3b2o4bobob
+ob2o2b4o2b2obobobo$3b2o2bo2bo2b2o6b2o3bo3bo4bo3bo3b2o$3bob2o4b2obo13b
+2ob4ob2o$24b4obobo2bobob4o$24bo2bobo6bobo2bo$31b4o$28b2o6b2o2$32b2o!

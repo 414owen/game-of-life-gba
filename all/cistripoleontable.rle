@@ -1,0 +1,5 @@
+#N cistripoleontable.rle
+#C https://conwaylife.com/wiki/Cis-tripole_on_table
+#C https://www.conwaylife.com/patterns/cistripoleontable.rle
+x = 6, y = 9, rule = B3/S23
+4b2o$5bo$2bobo2$obo$2o2$4o$o2bo!

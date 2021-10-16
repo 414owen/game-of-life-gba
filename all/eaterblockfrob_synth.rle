@@ -1,0 +1,10 @@
+#N eaterblockfrob_synth.rle
+#O Mark Niemiec, 28 June 2017
+#C 8-glider synthesis of eater/block frob
+#C https://conwaylife.com/wiki/Eater/block_frob
+#C https://conwaylife.com/forums/viewtopic.php?p=45409#p45409
+x = 78, y = 20, rule = B3/S23
+44bo$38bo3boo$38bobobboo$38boo$$37bo$38bo8bo6bo$36b3o7bo7bobo$46b3o5b
+oo12boo$68bobo$70bo$70bobo$3bo67bobo$bbo70bobboo$bb3o65bobbobboo$20boo
+18boo28bo$bo19bo19bo29bo$oo16b3o17b3o10boo15b3o$obo15bo19bo12bobo14bo$
+51bo!

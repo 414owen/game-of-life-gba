@@ -1,0 +1,5 @@
+#N long7ship.rle
+#C https://conwaylife.com/wiki/Long%5E7_ship
+#C https://www.conwaylife.com/patterns/long7ship.rle
+x = 10, y = 10, rule = B3/S23
+2o$obo$bobo$2bobo$3bobo$4bobo$5bobo$6bobo$7bobo$8b2o!

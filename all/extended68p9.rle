@@ -1,0 +1,8 @@
+#N extended68p9.rle
+#C https://conwaylife.com/wiki/68P9
+#C https://www.conwaylife.com/patterns/extended68p9.rle
+x = 40, y = 17, rule = B3/S23
+b2o34b2o$obo34bobo$3o34b3o2$b2o34b2o$4o32b4o$o3bo6b2o6b2o6b2o6bo3bo$5b
+o4bo2bo4bo2bo4bo2bo4bo$2bo2bo3bo4bo2bo4bo2bo4bo3bo2bo$5bo4bo2bo4bo2bo
+4bo2bo4bo$o3bo6b2o6b2o6b2o6bo3bo$4o32b4o$b2o34b2o2$3o34b3o$obo34bobo$b
+2o34b2o!

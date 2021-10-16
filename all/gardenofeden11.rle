@@ -1,0 +1,7 @@
+#N gardenofeden11.rle
+#O Steven Eker, 2017
+#C https://conwaylife.com/wiki/Garden_of_Eden_11
+#C https://www.conwaylife.com/patterns/gardenofeden11.rle
+x = 11, y = 9, rule = B3/S23
+2b2ob3obo$bo2bobobo$ob3o2b3o$bobobo2bobo$b3o2b2o2bo$2o3b2o2bo$obobob3o
+$o2bobo2bo$b3o2b4o!

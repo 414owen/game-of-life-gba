@@ -1,0 +1,15 @@
+#N harbor_synth.rle
+#O yootaa, 22 December 2017
+#C 23-glider synthesis of harbor
+#C https://conwaylife.com/wiki/Harbor
+#C https://conwaylife.com/forums/viewtopic.php?p=54037#p54037
+x = 124, y = 67, rule = B3/S23
+80bo$80bobo$80b2o7$58bo$59b2o$58b2o2$74bo$65bo8bobo$64bo9b2o$33bo24bob
+o3b3o$34bo24b2o$32b3o24bo4$46bo$47bo$45b3o$112b2o3b2o$82bo4bobo22bobob
+obo$61b3o3b3o10b2o5b2o24bo3bo$6bo74b2o5bo$4b2o53bo4bobo4bo40b2o3b2o$bo
+3b2o52bo4bobo4bo35b2o2bobo3bobo2b2o$2bo56bo4bobo4bo35bobob2o5b2obobo$
+3o45bo12b3o3b3o12b2o24bo13bo$4b2o40bobo33bobo$3b2o42b2o12b3o3b3o12bo
+25bo13bo$5bo53bo4bobo4bo35bobob2o5b2obobo$59bo4bobo4bo35b2o2bobo3bobo
+2b2o$59bo4bobo4bo40b2o3b2o$42bo5b2o$42b2o5b2o10b3o3b3o43bo3bo$41bobo4b
+o63bobobobo$112b2o3b2o$83b3o$83bo$84bo4$71bo24b3o$70b2o24bo$64b3o3bobo
+24bo$55b2o9bo$54bobo8bo$56bo2$71b2o$70b2o$72bo7$49b2o$48bobo$50bo!

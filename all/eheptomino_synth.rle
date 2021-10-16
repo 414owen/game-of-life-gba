@@ -1,0 +1,5 @@
+#N eheptomino_synth.rle
+#C https://conwaylife.com/wiki/E-heptomino
+#C https://www.conwaylife.com/patterns/eheptomino_synth.rle
+x = 11, y = 8, rule = B3/S23
+8bo$9bo$7b3o$2o$b2o$o7b2o$9b2o$8bo!

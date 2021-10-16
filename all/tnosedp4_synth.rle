@@ -1,0 +1,25 @@
+#N tnosedp4_synth.rle
+#O Martin Grant, 5 July 2015
+#C 56-glider synthesis of T-nosed p4
+#C https://conwaylife.com/wiki/T-nosed_p4
+#C https://conwaylife.com/forums/viewtopic.php?p=20994#p20994
+x = 295, y = 59, rule = B3/S23
+207bo$208bo$206b3o2$221bo$222bo20bo$220b3o20bobo$227bo15b2o$225bobo$
+226b2o2$242bo$241bo$10bo17bo212b3o$2bo5bobo16bo$obo6b2o16b3o$b2o210bo
+4bo$69bobo55bo28bo57bob2o$44bobo18bo3b2o56bobo24b2o56b3o2b2o$45b2o19b
+2o2bo56b2o26b2o$45bo3bo15b2o56bobo$50b2obobo68b2o28bo$43bo5b2o2b2o17bo
+8bo9b2o11bo10b2o7bo16b2o10b2o20b2o40bo11b2o$42bobo9bo16bobo5b2o10bobo
+6bo2bo11bobo23bobo9bobo19bobo7b2o31b2o9bobo7b2o43b2o7b2o$43bo2b2o24bo
+2bobo2b2o10bo2bobobobob3o10bo2bobob2o17bo2bobob2o25bo2bobobo2bo30b2o
+11bo2bobobo2bo43bo2b2ob2o2bo$44b2obo25b2ob2o15b2ob2ob2o16b2ob2ob2o18b
+2ob3obo26b2ob3ob2o45b2ob3ob2o45b2obobob2o$45bo28bo19bo23bo25bo13bobo
+17bo5bo47bo5bo47bobobobo$45bobo26bob2o16bob2ob2o17bob2ob2o19bob3obo3b
+2o2b2o18bob3obo4bo42bob3obo47bo5bo$46b2o27bobo2b2o13bobobobob3o13bobob
+2o20bobob2o3bobo2bo19bobobo5bobo41bobobo49bo3bo$16b2o4bobo29bo24b2o19b
+o2bo50bo34b2o97b3o$15bobo4b2o25b2o2b2o26bo22bo19bo36b2o23b2o51b2o$5bo
+11bo5bo26b2obobo68b2o29bo5bobo22bobo50b2o48bo$5b2o38bo3bo73bobo23b2o3b
+3o4bo24bo101b3o$4bobo16b2o20b2o80b2o19bobo3bob2o$24b2o18bobo80bobo20bo
+4b3o$23bo103bo27b2o102b2o$258b2ob2o$259b4o$260b2o$220b3o19b2o$222bo11b
+2o6bobo$180b2o39bo11bobo6bo$181b2ob3o46b2o13b2o$180bo3bo62b2o$185bo63b
+o2$183b2o$182bobo$184bo49b2o$229bo3bobo$229b2o4bo14b3o$228bobo19bo$
+251bo$240b2o$240bobo$240bo$222b2o$223b2o$222bo!

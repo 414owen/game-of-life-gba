@@ -1,0 +1,5 @@
+#N blockoncap.rle
+#C https://conwaylife.com/wiki/Block_on_cap
+#C https://www.conwaylife.com/patterns/blockoncap.rle
+x = 4, y = 6, rule = B3/S23
+b2o$o2bo$4o2$2o$2o!

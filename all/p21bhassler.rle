@@ -1,0 +1,14 @@
+#N p21bhassler.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/P21_B-heptomino_hassler
+#C https://www.conwaylife.com/patterns/p21bhassler.rle
+#C p21 B-heptomino hassler and pi factory
+#C found by hotdogPi (David Raucci) on August 1st, 2021 except for
+#C   boat stabilization at bottom, which was found by Kazyan
+#C   (Tanner Jacobi) on August 1st, 2021
+x = 38, y = 28, rule = B3/S23
+16bo2bo2bo$16b7o2$16b7o$16bo2bo2bo3$26b2o5b2o$26b2o5b2o$19bo$18b3o$17b
+o2b2o4b3o3b3o$17bo3bo2bo4bobo4bo$19bobo7bobo$23bo3bobobobo3bo$16b2ob2o
+3bo2bobobobo2bo$4b2o3b2o7bo6b3obobob3o$2b3obobob3o6bo7b2o3b2o$bo2bobo
+bobo2bo3b2ob2o$o3bobobobo3bo$6bobo7bobo$bo4bobo4bo2bo3bo$3b3o3b3o4b2o
+2bo$17b3o$18bo$3b2o5b2o10bo$3b2o5b2o9bobo$22b2o!

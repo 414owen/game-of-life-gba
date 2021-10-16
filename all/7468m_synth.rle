@@ -1,0 +1,5 @@
+#N 7468m_synth.rle
+#C Glider synthesis of 7468M.
+#C https://conwaylife.com/wiki/7468M
+x = 12, y = 23, rule = B3/S23
+bo$2bo$3o3$b3o$3bo$2bo13$9b3o$9bo$10bo!

@@ -1,0 +1,21 @@
+#N 60p312_synth.rle
+#O Mark Niemiec, 28 May 2013
+#C 24-glider synthesis of 60P312
+#C Similar for 64p312 (using loaves w/boat-bits instead of beehives)
+#C Similar for 68p312 (using ponds w/boat-bits instead of beehives)
+#C Similar for 8-barreled P156 gun from 16 gliders (without beehives)
+#C https://conwaylife.com/wiki/60P312
+#C https://conwaylife.com/forums/viewtopic.php?p=9075#p9075
+x = 351, y = 204, rule = B3/S23
+120bo$121b2o$120b2o$277bo$275b2o$276b2o4$275bo$273b2o$274b2o$107bo$
+108b2o$107b2o3$109bo$110b2o$109b2o3$98bobo$99b2o$99bo196bobo$296b2o$
+134bobo160bo$135b2o$135bo5$295bo$293b2o$294b2o3$282bobo$282b2o$283bo
+41$329b2o$329b2o5$38bo288b2o$37bo290bo$37b3o44bo129bo100bo12bo15bo$83b
+obo127bobo98bobo10bo15bobo$34b3o46bobo127bobo98bobo26bobo$34bo49bo129b
+o100bo28bo$35bo6$315bo2bo$315b3o$309b2o38b2o$309b2o38b2o$342b3o$341bo
+2bo6$4bo$5bo49bo129bo129bo28bo$3b3o48bobo127bobo127bobo26bobo$54bobo
+127bobo127bobo15bo10bobo$3o52bo129bo129bo15bo12bo$2bo328bo$bo329b2o5$
+329b2o$329b2o41$116bo$116b2o$115bobo3$104b2o$105b2o$104bo5$264bo$263b
+2o$102bo160bobo$102b2o$101bobo196bo$299b2o$299bobo3$289b2o$288b2o$290b
+o3$291b2o$290b2o$292bo$124b2o$125b2o$124bo4$122b2o$123b2o$122bo$278b2o
+$277b2o$279bo!

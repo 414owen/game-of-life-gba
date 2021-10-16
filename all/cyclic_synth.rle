@@ -1,0 +1,10 @@
+#N cyclic_synth.rle
+#O Goldtiger997, 6 July 2016
+#C 10-glider synthesis of cyclic
+#C https://conwaylife.com/wiki/Cyclic
+#C https://conwaylife.com/forums/viewtopic.php?p=32885#p32885
+x = 60, y = 42, rule = B3/S23
+17bo$15b2o$16b2o$11bobo$12b2o$12bo$25bobo$25b2o$26bo3$3bo$4b2o$3b2o22b
+3o24b2o$27bo25bo2bo$bo26bo24b2obo$b2o48b2obo2b2o$obo47bob2o5bo$50bo5b
+2obo$51b2o2bob2o$53bob2o$40bo12bo2bo$39b2o13b2o$39bobo2$6b2o$7b2o$6bo
+6b2o$13bobo$13bo10$22b2o$21b2o$23bo!

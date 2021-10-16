@@ -1,0 +1,13 @@
+#N loadingdock_synth.rle
+#O Jeremy Tan, 29 March 2019
+#C 14-glider synthesis of loading dock
+#C https://www.conwaylife.com/forums/viewtopic.php?p=74101#p74101
+#C https://conwaylife.com/wiki/Loading_dock
+#C https://www.conwaylife.com/patterns/loadingdock_synth.rle
+x = 83, y = 30, rule = B3/S23
+15bo$13b2o$10bo3b2o14bo15bo$bobo4bobo20bo15bo$2b2o5b2o18b3o13b3o$2bo
+12bo$13b2o18b2o13bo$14b2o17b2o8b2o2bobo$43b2o2bobo$48bo2$47bo30bo$45b
+3o28b3o$b2o41bo3b2o25bo3b2o$obo15bo24bob2o3bo23bob2o3bo$2bo15bobo23bo
+3b2obo23bo3b2obo$18b2o25b2o3bo25b2o3bo$47b3o28b3o$47bo30bo2$46bo$45bob
+o2b2o$5b2o38bobo2b2o8b2o$6b2o38bo13b2o$5bo12bo$10b2o5b2o28b3o12b3o$10b
+obo4bobo27bo14bo$5b2o3bo37bo14bo$6b2o$5bo!

@@ -1,0 +1,8 @@
+#N cisrotatedhook_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of cis-rotated hook
+#C https://conwaylife.com/wiki/Cis-rotated_hook
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 33, y = 15, rule = B3/S23
+13bo$12bo$12b3o3$bo7bobo$b2o7b2o$obo7bo3$11b3o16b2o$11bo14b2o2bo$12bo
+13bobobobo$28bo2b2o$27b2o!

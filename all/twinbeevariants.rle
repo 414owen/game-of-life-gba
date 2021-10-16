@@ -1,0 +1,16 @@
+#N twinbeevariants.rle
+#C https://conwaylife.com/wiki/Twin_bees_shuttle
+#C https://www.conwaylife.com/patterns/twinbeevariants.rle
+x = 81, y = 69, rule = B3/S23
+50bo25bo$49bobo23bobo$49bobo23bobo$2o27b2o16b3ob2o21b2ob3o$bo27bo16bo
+33bo$bobo23bobo17b3ob2o21b2ob3o$2b2o8bo14b2o20bob2o7bo13b2obo$11b2o46b
+2o$10b2o46b2o$11b2o2b2o42b2o2b2o4$11b2o2b2o42b2o2b2o$10b2o46b2o$11b2o
+46b2o$2b2o8bo14b2o31bo$bobo23bobo$bo27bo18b2o27b2o$2o27b2o18bo27bo$46b
+3o29b3o$46bo33bo6$52b2o19b2o$52b2o19b2o2$12bo47bo$11b2o38b2o6b2o13b2o$
+10b2o39b2o5b2o14b2o$4bo6b2o2b2o9bo32b2o2b2o$2b3o21b3o$bo27bo$2b3o21b3o
+$4bo6b2o2b2o9bo32b2o2b2o$10b2o39b2o5b2o14b2o$11b2o38b2o6b2o13b2o$12bo
+47bo2$52b2o19b2o$52b2o19b2o7$7b2o13b2o31b2o13b2o$6bobo13bobo29bobo13bo
+bo$7bo15bo31bo15bo2$12bo47bo$4b2o5b2o12b2o25b2o5b2o12b2o$4b2o4b2o13b2o
+25b2o4b2o13b2o$11b2o2b2o42b2o2b2o4$11b2o2b2o42b2o2b2o$4b2o4b2o13b2o21b
+2o8b2o17b2o$4b2o5b2o12b2o21b2o9b2o16b2o$12bo47bo2$7bo15bo28bo21bo$6bob
+o13bobo26bobo19bobo$7b2o13b2o28b2o19b2o!

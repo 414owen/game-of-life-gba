@@ -1,0 +1,7 @@
+#N fumaroleonrobsp16.rle
+#O JP21, 2020
+#C https://conwaylife.com/wiki/Fumarole_on_Rob%27s_p16
+#C https://www.conwaylife.com/patterns/fumaroleonrobsp16.rle
+x = 17, y = 10, rule = B3/S23
+2o$o2b2o4b3o$b2obo$5bo6b2ob2o$5bo5bobob2o$b2obo5bo$o2b2o5bo4bo$2o8bo4b
+o$10b2o2bo$10b2o!

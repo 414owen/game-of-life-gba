@@ -1,0 +1,13 @@
+#N gliderloop2ec.rle
+#C https://conwaylife.com/wiki/Glider_loop
+#C https://www.conwaylife.com/patterns/gliderloop2ec.rle
+x = 67, y = 128, rule = B3/S23
+12bo$12bo5b3o$11bobo3b2o2bo$12bo3bo5bo$12bo3bo$17bo2b2o$18b2o11b2o$31b
+2o7$b3o35b2o$b3o21bo13b2o$2bo12b2o9b2o$3b2o9bob3o8b2o$4bo9bo3bo10bo$3b
+o11b2obo5b5o$16bo10bo3$b2o$b2o$2bo$2bo$bobo$o$bo2b2o$2bo3bo$4b2o$4bo7$
+6b2o$6b2o$19bo$19b3o$20b2o$20bo$21bo$18b3obo$17bobob2o$18bobo31$46bobo
+$44b2obobo$44bob3o$45bo$46bo$45b2o$45b3o$47bo$59b2o$59b2o7$62bo$61b2o$
+60bo3bo$61b2o2bo$66bo$63bobo$64bo$64bo$64b2o$64b2o3$39bo10bo$38b5o5bob
+2o11bo$37bo10bo3bo9bo$38b2o8b3obo9b2o$39b2o9b2o12bo$26b2o13bo21b3o$26b
+2o35b3o7$34b2o$34b2o11b2o$45b2o2bo$50bo3bo$44bo5bo3bo$45bo2b2o3bobo$
+46b3o5bo$54bo!

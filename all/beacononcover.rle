@@ -1,0 +1,5 @@
+#N beacononcover.rle
+#C https://conwaylife.com/wiki/Beacon_on_cover
+#C https://www.conwaylife.com/patterns/beacononcover.rle
+x = 7, y = 7, rule = B3/S23
+2o$o$3bob2o$2b2obo$5bo$2b3o$2bo!

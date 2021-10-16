@@ -1,0 +1,9 @@
+#N diuresisvariant.rle
+#C https://conwaylife.com/wiki/Diuresis
+#C https://www.conwaylife.com/patterns/diuresisvariant.rle
+x = 29, y = 25, rule = B3/S23
+5b2o16b2o$6bo16bo$6bobo12bobo$7b2o12b2o2$4b2o18b2o$4bobo10b2o4bobo$5bo
+10bobo5bo$2bo13b2o9bo$2b6o8bo5b6o$7bo14bo$4b2o18b2o$4bo20bo$5bo18bo$2b
+3o2bo14bo2b3o$2bo2b3o8bo5b3o3bo$3bo12b2o7b3o$4b2o10bobo5bo$6bo10b2o4bo
+2b2o$4b2o18b2obo$bo2bo20bo$obobo2b2o12b2o2bo$bo2bobobo12bobob2o$4bobo
+16bo2bo$5b2o16b2o!

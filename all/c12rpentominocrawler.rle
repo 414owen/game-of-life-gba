@@ -1,0 +1,6 @@
+#N c12rpentominocrawler.rle
+#C https://conwaylife.com/wiki/C/12_R-pentomino_crawler
+#C https://www.conwaylife.com/patterns/c12rpentominocrawler.rle
+x = 23, y = 27, rule = B3/S23
+3o2$o2$8b3o$3bo$2b3o$4bo6b3o3$14b3o2$3bo$3bo13b3o$3bo$6bo$6bo13b3o$6bo
+$9bo$9bo$9bo$12bo$12bo$12bo$15bo$15bo$15bo!

@@ -1,0 +1,25 @@
+#N infinitegliderhotel5.rle
+#C https://conwaylife.com/wiki/Infinite_glider_hotel
+#C https://www.conwaylife.com/patterns/infinitegliderhotel5.rle
+#C Infinite glider hotel that uses 2-engine Cordership
+x = 176, y = 115, rule = B3/S23
+28bo$14b2o7b2o2bobo$14b3o6b4o3bo$14b2obobo7bo$17b2o10bob2o$29bobo$30bo
+8b2o$39b2o4$2bo$2ob2o$2bo$17b2o$16bo2bo$3b2o11b2ob2o$2bo2bo11bo$b2o3bo
+10b3o26b2o$bo4bo34b2o3b2o$bo3bo36b3o2b2o$2bo2bo36b2o2b3o$3bo2$19bo$15b
+o3bo$16bo2bo$16b2ob2o$17bobo$18bo2$6b2o$6b2o7$14b2o$14b2o14$65b2o$64bo
+bo$58b2o4bo$56bo2bo2b2ob4o$37b2o17b2obobobobo2bo$37b2o20bobobobo$52bo
+6bobob2o$37bo12b3o7bo$36bobo10bo$36bo2bo9b2o22b2o$37bo2bo23b2o7bo$45bo
+18b2o5bobo$37bo2bo3bobo24b2o$37b2o4bo2bo$44b2o11bo$57bobo$57b2o3$61b2o
+$62bo97b2o$59b3o98b2o$22b2o35bo$23bo26b2o$23bobo17b2o4bo2bo71bo$24b2o
+17b2o5bobo69b3o$51bo69bo$121b2o$28b3o11bob2o9b2o111b2o$31bo10bobo10bo
+112b2o$27bo3b2o10bo12b3o$28bo2bo11b2o13bo98bo$29b2o12b2o111bobo$29bo
+13b2o110b2ob2o$62bo42bo50bo2bo$25bo36b3o38b3o50bo3bo$20b3ob2o2b2o35bo
+36bo53bo$20b4o4b2o22bo11b2o11b2o23b2o$24b2o24b3o24b2o9b2o82bo$49bo38bo
+bo36b3o2b2o36bo2bo$49b2o37bo4b2o32b2o2b3o36bo3bo$34b2o57bobo32b2o3b2o
+34bo4bo$35bo57bob2o31b2o26b3o10bo3b2o$35bob2o53bob2o62bo11bo2bo$36bo2b
+o52b3o19b2o39b2ob2o11b2o$37b2o14bo59bo2bo39bo2bo$53b2o59b2o41b2o$52bo
+2bo33b2o82bo$53b2o35bo80b2ob2o$49b2o36b3o6bob2o17b2o54bo$49b2o36bo6b3o
+b2o17bo$61bo3b2o26bo24b3o$60bobo3bo27b3ob2o20bo$59bobo3bo12b2o16bobo
+36b2o$55b2obobo3bo13bobo15bobo36b2o8bo$55b2obo2b4obo13bo16bo10b2o34bob
+o$59bobo3bobo12b2o26bo34b2obo10b2o$55b2ob2o2bo2bobo41b3o36bo7bobob2o$
+56bobo2b2o3bo44bo33bo3b4o6b3o$44b2o10bobo87bobo2b2o7b2o$44b2o11bo89bo!

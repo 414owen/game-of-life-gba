@@ -1,0 +1,8 @@
+#N beehiveondock_synth.rle
+#O Bob Shemyakin, 16 June 2014
+#C 4-glider synthesis of beehive on dock
+#C https://conwaylife.com/wiki/Beehive_on_dock
+#C https://conwaylife.com/forums/viewtopic.php?p=12276#p12276
+x = 32, y = 14, rule = B3/S23
+26bo3b2o$25bobobobo$11bobo11bobobo$11b2o13bo2bo$12bo16bobo$30b2o$9b2o$
+8b2o$10bo3$2o14bo$b2o12b2o$o14bobo!

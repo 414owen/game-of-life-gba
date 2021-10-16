@@ -1,0 +1,16 @@
+#N fireship_synth.rle
+#O Simon Ekstrom, 10 January 2018
+#C 18-glider synthesis of fireship
+#C Repeat time 387 ticks (shown) -- same for either of two variants:
+#C https://www.conwaylife.com/forums/viewtopic.php?p=54918#p54918
+x = 271, y = 275, rule = B3/S23
+266bobo$266b2o$267bo94$170bo$169bo$169b3o35$148b3o$148bo$149bo$103b2o
+7bo$104b2o6b2o$103bo7bobo48bo$161b2o$161bobo3$104bo33b2o$104b2o32bobo
+2b2o$103bobo32bo4bobo$143bo2$124b2o$125b2o$124bo$140b2o$140bobo$140bo$
+124bo$124b2o46bo$123bobo45b2o$171bobo3$168b3o$168bo$169bo$97b3o64b3o$
+99bo64bo$98bo66bo7$98bo$98b2o$97bobo$152b2o8b2o$151b2o9bobo$153bo8bo
+52$246bo$245b2o$245bobo2$6b3o6b2o$8bo5bobo$7bo8bo241b2o$258bobo$258bo
+3$7b2o226b2o$6bobo225b2o4b2o$8bo227bo2b2o$241bo2$27b3o$29bo$28bo$237b
+2o$236b2o$238bo$27b2o$26bobo239b2o$28bo239bobo$268bo2$266bo$265b2o$
+265bobo$bo260bo$b2o258b2o$obo258bobo8$b2o$obo$2bo$248b3o8b2o$248bo9b2o
+$249bo10bo!

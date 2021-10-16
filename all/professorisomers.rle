@@ -1,0 +1,12 @@
+#N professorisomers.rle
+#C https://conwaylife.com/wiki/Professor
+#C https://www.conwaylife.com/patterns/professorisomers.rle
+x = 72, y = 14, rule = B3/S23
+b2o3b2o9b2o3b2o9b2o13b2o14b2o$o2bobo2bo7bo2bobo2bo7bo2bo11bo2bo12bo2bo
+$2obobob2o7b2obobob2o7b2obo2b2o7b2obo2b2o8b2obo2b2o$3bobo13bobo13bobo
+2bo9bobo2bo10bobo2bo$2obobob2o7b2obobo10b2obobob2o9bobob2o7b2obobob2o$
+2obobob2o7b2obobob2o7b2obobo9b2obobo10b2obobo$3bobo13bobob2o10bobob2o
+6b2obobob2o10bobo$3bobo13bobo13bobob2o9bobob2o10bobob2o$2obobob2o7b2ob
+obob2o7b2obobo9b2obobo10b2obobob2o$o2bobo2bo7bo2bobo2bo7bo2bobo9bo2bob
+o10bo2bobo$b2o3b2o9b2o3b2o9b2o2bob2o7b2o2bob2o8b2o2bob2o$37bo2bo11bo2b
+o12bo2bo$38b2o13b2o14b2o!

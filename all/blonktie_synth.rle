@@ -1,0 +1,8 @@
+#N blonktie_synth.rle
+#C https://conwaylife.com/wiki/Blonk-tie
+#C https://www.conwaylife.com/patterns/blonktie_synth.rle
+x = 210, y = 22, rule = B3/S23
+115bo$116bo47bo33bo$114b3o46bo35bo$85bo77b3o31b3o$85bobo67bo51bo$85b2o
+66bobo51bobo$154b2o51b2o5$43bo30b3o$3b2o38bo32bo$3bobo37bo31bo$5bo$5b
+2o75b2obo36b2obo36b2obo36b2obo$82bob2o28b2o6bob2o36bob2o36bob2o$46b2o
+65bobo$45b2o68bo$b2o44bo$obo$2bo!

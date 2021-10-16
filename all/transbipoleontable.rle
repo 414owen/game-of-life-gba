@@ -1,0 +1,5 @@
+#N transbipoleontable.rle
+#C https://conwaylife.com/wiki/Trans-bipole_on_table
+#C https://www.conwaylife.com/patterns/transbipoleontable.rle
+x = 7, y = 8, rule = B3/S23
+2o$obo2$2bobo$3b2o2$3b4o$3bo2bo!

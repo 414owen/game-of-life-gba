@@ -1,0 +1,18 @@
+#N jasonsp36caterers_synth.rle
+#O Matti Ward, 18 March 2018
+#C 28-glider synthesis of Jason's p36 with caterers
+#C https://conwaylife.com/wiki/Jason%27s_p36
+#C https://conwaylife.com/forums/viewtopic.php?f=2&p=58086#p58086
+x = 228, y = 45, rule = B3/S23
+115bo$113b2o$114b2o$159bo49bo$159b3o47b3o$78bo83bo49bo$76b2o37bo45b2o
+48b2o$77b2o34bobo$114b2o$148bo$66bobo47bo32b2o$67b2o45b2o32b2o$67bo10b
+obo34b2o$78b2o41b2o48b2o48b2o$66bo12bo43bo49bo49bo$67bo44bo7bo49bo49bo
+$65b3o16bo27bobo5bo3bo45bo3bo38b3o4bo3bo$16bo45bo20bo28b2o6bo3b4o42bo
+3b4o35bo2bo3bo3b4o$15bo47bo19b3o24bo11bo49bo40bob2o5bo$15b3o43b3o44bob
+o49b2o$109b2o48bo2bo$81b2o77b2o$3bo64bo12bobo$b2o63bobo12bo90b2o$2b2o
+9b2o52b2o54b2o46bo2bo$12b2o109bobo46b2o$bo12bo46bo49bo11bo37bo49bo5b2o
+bo$b2o4b3o46b4o3bo42b4o3bo6b2o34b4o3bo42b4o3bo3bo2bo$obo6bo49bo3bo45bo
+3bo5bobo37bo3bo45bo3bo4b3o$8bo2b3o49bo49bo7bo41bo49bo$11bo48bo13b2o34b
+o49bo49bo$12bo48b2o11bobo34b2o48b2o48b2o$74bo42b2o$9b2o107b2o64b2o$8bo
+bo106bo65b2o$10bo174bo$118b2o$118bobo$118bo52b2o48b2o$171bo49bo$172b3o
+47b3o$174bo49bo$118b2o$119b2o$118bo!

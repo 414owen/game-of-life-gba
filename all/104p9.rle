@@ -1,0 +1,9 @@
+#N 104p9.rle
+#O wwei23, 2020
+#C https://conwaylife.com/wiki/104P9
+#C https://www.conwaylife.com/patterns/104p9.rle
+x = 18, y = 23, rule = B3/S23
+8b2o$6bo4bo$2b2o10b2o$2bo2bo6bo2bo$3b3ob4ob3o$6bo4bo$3b3o6b3o$2bo12bo$
+3b5o2b5o$8b2o$5b2o4b2o$4bobo4bobo$4b2o6b2o3$6b2o2b2o$5bo2b2o2bo$3bobob
+4obobo$b3obobo2bobob3o$o3b2ob4ob2o3bo$b2o3bo4bo3b2o$3b2o2bo2bo2b2o$3bo
+b2o4b2obo!

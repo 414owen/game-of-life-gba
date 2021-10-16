@@ -1,0 +1,9 @@
+#N p132 pi-heptomino hassler
+#O David Buckingham
+#C The first period 132 oscillator to be discovered
+x = 42, y = 44, rule = B3/S23
+20b2o10b2o$19bo2bo8bo2bo$19b3o2b6o2b3o$22b2o6b2o$21bo10bo$21b2obo4bob
+2o$4bo21b2o$4b3o$7bo$6b2o23b2o$31b2o6$26bo$2b2o21b3o12b2o$bobo20bo3bo
+11b2o$bo22b2ob2o$2o3$2o$bo22b2ob2o$bobo20bo3bo11b2o$2b2o21b3o12b2o$26b
+o6$31b2o$6b2o23b2o$7bo$4b3o$4bo21b2o$21b2obo4bob2o$21bo10bo$22b2o6b2o$
+19b3o2b6o2b3o$19bo2bo8bo2bo$20b2o10b2o!

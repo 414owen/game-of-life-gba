@@ -1,0 +1,14 @@
+#N p576rhassler.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/P576_R-pentomino_hassler
+#C https://www.conwaylife.com/patterns/p576rhassler.rle
+x = 65, y = 41, rule = B3/S23
+28b2o5b2o$28b2o5b2o3$4bo3b2o45b2o3bo$2b2obo53bob2o$2b3o55b3o$bo6bo47bo
+6bo$o2bobobobo30bo14bobobobo2bo$b3obob2o25bo4b2o15b2obob3o$33b2o4b3o$b
+3obob2o23bo2bo20b2obob3o$o2bobobobo22bobo20bobobobo2bo$bo6bo24b2o4b3o
+14bo6bo$2b3o34b2o19b3o$2b2obo7b2o25bo9b2o7bob2o$4bo3b2o3b2o35b2o3b2o3b
+o8$4bo3b2o3b2o35b2o3b2o3bo$2b2obo7b2o9bo25b2o7bob2o$2b3o19b2o34b3o$bo
+6bo14b3o4b2o24bo6bo$o2bobobobo20bobo22bobobobo2bo$b3obob2o20bo2bo23b2o
+bob3o$23b3o4b2o$b3obob2o15b2o4bo25b2obob3o$o2bobobobo14bo30bobobobo2bo
+$bo6bo47bo6bo$2b3o55b3o$2b2obo53bob2o$4bo3b2o45b2o3bo3$28b2o5b2o$28b2o
+5b2o!

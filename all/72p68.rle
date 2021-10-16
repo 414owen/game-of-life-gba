@@ -1,0 +1,7 @@
+#N 72p68.rle
+#C https://conwaylife.com/wiki/72P68
+#C https://www.conwaylife.com/patterns/72p68.rle
+x = 22, y = 20, rule = B3/S23
+2bo11bo$2b3o7b3o$5bo5bo$4b2o5b2o2$7b2o$7b2o$6bobo$6b2o$6b2o$13bo$2b2o
+5b2obobo2b2o$3bo5b2obo2bo2bo$3o10bob2obob2o$o8b2ob2o4bo2bo$9bo5b3obo$
+10b3o5bo$13bob3o$10b2obobo$10bobo!

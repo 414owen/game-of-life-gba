@@ -1,0 +1,18 @@
+#N 28p73_synth.rle
+#O Martin Grant, 28 December 2017
+#C 30-glider synthesis of 28P7.3
+#C https://conwaylife.com/wiki/28P7.3
+#C https://conwaylife.com/forums/viewtopic.php?p=54296#p54296
+x = 194, y = 50, rule = B3/S23
+25bo$26b2o$25b2o4$33bobo$33b2o135bo$34bo135bobo$170b2o$31bo$32b2o$31b
+2o$57bobo25bobo26bobo33bobo31bobo$5b2o26bo3b2o18b2obo24b2obo25b2obo32b
+2obo30b2obo$b2o2bobo25b2o3bo2bo18bo2bo24bo2bo25bo2bo18bo13bo2bo30bo2b
+2o$obo2bo5bo20bobo3bobobo14b2obobobo20b2obobobo21b2obobobo18b2o8b2obob
+obo26b2obobobo$2bo6b2o26b2ob2o15bo2bob2o21bo2bobobo21bo2bobobo17b2o9bo
+2bobobo26bo2bo2bo$10b2o46b2o7bobo17b2ob2o24b2ob2o31b2ob2o29bo$67b2o27b
+o14b2o40bo34bo$68bo12bobo11bo14bo2bo37bobo32b3o$82b2o11b3o12bo2bo7bo
+29b2o$56b2o24bo28b2o3b2o2bobo67b2o$8b3o44b2o9b2o24b3o20bobo2bobo67bobo
+$8bo43b2o3bo7b2o14b2o9bo24bo3bo3bo66bo$9bo43b2o12bo12bobo10bo16b3o11b
+2o66b2o$52bo7b2o20bo29bo5bo5bobo$59b2o50bo5b2o$61bo55bobo47b3o$114b2o
+51bo$113bobo26bo17b2o6bo$115bo26b2o15b2o$141bobo17bo$157b2o$156bobo$
+158bo4$172bo$171b2o$171bobo6$176b3o$176bo$177bo!

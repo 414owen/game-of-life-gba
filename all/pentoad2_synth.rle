@@ -1,0 +1,10 @@
+#N pentoad2_synth.rle
+#O Jeremy Tan and Goldtiger997, 1 April 2019
+#C https://conwaylife.com/forums/viewtopic.php?p=74280#p74280
+#C https://conwaylife.com/wiki/Pentoad_2
+#C https://conwaylife.com/patterns/pentoad2_synth.rle
+x = 62, y = 39, rule = B3/S23
+61bo$40bo18b2o$41b2o17b2o$40b2o2$54bo$44bo8bo$45b2o6b3o$44b2o5$15bo$
+14bo39bo$14b3o36bobo$53bobo$17b3o34bo$17bo$bo16bo$2bo$3o42bo$44bobo$3b
+3o38bobo$5bo39bo$4bo5$54b2o$44b3o6b2o$46bo8bo$45bo2$58b2o$38b2o17b2o$
+39b2o18bo$38bo!

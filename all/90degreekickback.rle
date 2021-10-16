@@ -1,0 +1,5 @@
+#N 90degreekickback.rle
+#C https://conwaylife.com/wiki/Kickback
+#C https://www.conwaylife.com/patterns/90degreekickback.rle
+x = 7, y = 12, rule = B3/S23
+5bo$4bo$4b3o7$bo$2o$obo!

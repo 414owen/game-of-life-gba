@@ -1,0 +1,18 @@
+#N twinhat_synth.rle
+#O Simon Ekstrom, 15 August 2017 (4-glider synthesis)
+#C Other syntheses of twin hat from Mark Niemiec's databse.
+#C https://www.conwaylife.com/wiki/Twin_hat
+#C https://www.conwaylife.com/patterns/twinhat_synth.rle
+x = 110, y = 170, rule = B3/S23
+38bo$39b2o$38b2o2$93bo$92bo$92b3o18$57bo$58bo44bo3bo$56b3o43bobobobo$
+102bobobobo$101b2obobob2o$105bo$53b2o$54b2o$53bo10$96bo$95bo$95b3o20$
+81b3o$81bo21bo3bo$72bo9bo19bobobobo$70bobo2bo26bobobobo$71b2o2bobo23b
+2obobob2o$75b2o28bo14$87bo$86b2o$86bobo13$85bo$83bobo$84b2o2$86bo$86bo
+bo$86b2o$103bo3bo$102bobobobo$45b3o14bo5bo13bo5bo13bobobobo$45bo16bo5b
+o13bo5bo12b2obobob2o$46bo15bo5bo13bo5bo16bo2$44b2o$45b2o$44bo3$44b2o$
+45b2o$44bo7$41bo$42bo$40b3o$44bo$44bobo35bobo$44b2o36b2o$83bo$61bo19bo
+$61bo19bo$61bo19bo$24b3o17b3o17b3o17b3o16bo3bo$4bo97bobobobo$5bo16bo5b
+o13bo5bo13bo5bo13bo5bo13bobobobo$3b3o16bo5bo13bo5bo13bo5bo13bo5bo12b2o
+bobob2o$22bo5bo13bo5bo13bo5bo13bo5bo16bo$bo$b2o$obo5$10bo$9b2o66bo$9bo
+bo63bobo$76b2o3$83bobo$83b2o$84bo2$80b3o$82bo$81bo6$84b3o16bo3bo$102bo
+bobobo$82bo5bo13bobobobo$82bo5bo12b2obobob2o$82bo5bo16bo!

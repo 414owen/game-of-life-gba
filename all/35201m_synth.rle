@@ -1,0 +1,11 @@
+#N 35201m_synth.rle
+#C Glider synthesis of 35201M.
+#C https://conwaylife.com/wiki/35201M
+x = 335, y = 30, rule = B3/S23
+221bo$222bo$220b3o93bo$315bobo$217b3o95bobo$219bo86bo9bo$147bobo68bo
+11bo76b2o$76bo70b2o81bo75b2o16bo$74b2o72bo81bo93bo$75b2o64bo154bobo25b
+o$141bobo153b2o6b3o$137bo3b2o154bo9bo$75b3o60bo167bo$75bo60b3o10b2o$
+76bo72b2o84b2o$226b2o7b2o92b2o$226b2o92b2o7b2o$6b2o145b2o165b2o$6bobo
+144b2o84b2o$2bo3bo56b2o174b2o92b2o$2o60bobo18b3o247b2o$b2o60bo19bo54b
+2o$5b2o77bo52bobo84b2o$5bobo130bo84bobo92b2o$5bo48bo169bo92bobo$54bo
+263bo$54bo74bo$129bo$129bo84b3o$308b3o!

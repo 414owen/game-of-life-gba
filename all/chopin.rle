@@ -1,0 +1,5 @@
+#N chopin.rle
+#C https://conwaylife.com/wiki/Chopin
+#C https://www.conwaylife.com/patterns/chopin.rle
+x = 9, y = 7, rule = B3/S23
+b2o3b2o$o2bobo2bo$obo3bobo$bo5bo$4bo$4bo$4bo!

@@ -1,0 +1,8 @@
+#N twogabrielsp138hasslingblock.rle
+#C https://conwaylife.com/wiki/Gabriel%27s_p138
+#C https://www.conwaylife.com/patterns/twogabrielsp138hasslingblock.rle
+x = 46, y = 43, rule = B3/S23
+35b3o$35bo2bo$35bo2bo$37b2o4$26b3o$25bo2bo$25bo$25b3o15b3o$45bo$42bo2b
+o$16b2o24b3o$16b2o3$32b2o$32bo2bo$32bo2bo$33b3o2$10b3o$10bo2bo$10bo2bo
+$12b2o4$b3o$o2bo$o$3o15b3o$20bo$17bo2bo$17b3o4$7b2o$7bo2bo$7bo2bo$8b3o
+!

@@ -1,0 +1,7 @@
+#N 50p92.1.rle
+#O Ivan Fomichev, 2015
+#C https://conwaylife.com/wiki/50P92.1
+#C https://www.conwaylife.com/patterns/50p92.1.rle
+x = 34, y = 32, rule = B3/S23
+25b2o5b2o$25b2o5b2o12$27b2ob2o$26bo5bo2$25bo7bo$25bo2bobo2bo$25b3o3b3o
+3$17b2o$2o15bobo$2o17bo$17b3o4$17b3o$2o17bo$2o15bobo$17b2o!

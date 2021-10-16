@@ -1,0 +1,40 @@
+#N Period-45 glider gun synthesis
+#O Jeremy Tan, January 5, 2020
+#C Syntheses of one-barrelled and four-barrelled versions of the period-45 glider gun.
+#C https://www.conwaylife.com/forums/viewtopic.php?t=&p=86964#p86964
+#C https://www.conwaylife.com/wiki/Period-45_glider_gun
+x = 286, y = 226, rule = B3/S23
+144bo$145b2o19bobo$144b2o20b2o$167bo3$159bobo$159b2o$160bo$138bo$136bo
+bo$132bo4b2o28bobo$13bo108bo10b2o32b2o$14b2o107b2o7b2o34bo$13b2o3bobo
+101b2o16b3o$18b2o122bo27bo$19bo121bo27bo$84bo84b3o$10b2o65b2o3bobo64b
+2o$9bobo58bo6b2o4b2o42bo21b2o15bo$11bo59bo15bo40b2o34bobo$28bo40b3o3b
+4o8bobo37b2o14b2o2b4o14b2o$17b2o10bo45bo2bo8b2o54b2o2bo2bo7b2o$16b2o9b
+3o128b2o18bobo$18bo47b3o109b2o$33bobo32bo110bo$33b2o32bo18b2o70b2o$2bo
+31bo52bo71bo$3b2o19bo62bob2o68bob2o$2b2o6bobo11b2o60b2ob2o67b2ob2o$10b
+2o11bobo6b2o33b2ob2o67b2ob2o$11bo19b2o34b2obo68b2obo$bo31bo36bo71bo$b
+2o67b2o18bo51b2o$obo86bo32bo$17bo71b3o30b2o$6b3o9b2o101bobo18b2o$6bo
+10b2o50b2o8bo2bo59b2o7bo2bo2b2o$7bo60bobo8b4o3b3o46b2o14b4o2b2o14b2o$
+24bo45bo15bo48bobo34b2o$24bobo46b2o4b2o6bo47bo15b2o21bo$24b2o47bobo3b
+2o70b2o$73bo56b3o$16bo115bo27bo$16b2o113bo27bo$15bobo3b2o136b3o16b2o$
+20b2o111bo34b2o7b2o$22bo110b2o32b2o10bo$132bobo28b2o4bo$163bobo$163bo$
+141bo$141b2o$140bobo3$134bo$134b2o20b2o$133bobo19b2o$157bo25$144bo$
+145b2o19bobo$144b2o20b2o$167bo3$159bobo$159b2o$160bo$138bo$136bobo$
+132bo4b2o$122bo10b2o$123b2o7b2o$122b2o16b3o$142bo$141bo2$149b2o$127bo
+21b2o$128b2o42bo$127b2o14b2o2b4o22bo$143b2o2bo2bo7b2o11b3o$158b2o16b2o
+$176bobo$170bo5bo$158b2o9b2o$159bo9bobo$159bob2o$158b2ob2o$139b2ob2o$
+139b2obo$142bo$142b2o$122bo$122b2o$121bobo18b2o$142b2o7bo2bo2b2o$135b
+2o14b4o2b2o14b2o$135bobo34b2o$135bo15b2o21bo$151b2o$130b3o$132bo27bo$
+131bo27bo$159b3o$133bo34b2o$133b2o32b2o$132bobo28b2o4bo$163bobo$163bo$
+141bo$141b2o$140bobo3$134bo$134b2o20b2o$133bobo19b2o$157bo27$145bo$
+144bo$144b3o$254b3o$253bo3bo11bobo$142b2o108bo5bo10b2o$141bobo126bo$
+143bo4bo102bo7bo$146b2o103bo7bo$147b2o$252bo5bo$253bo3bo$254b3o4$149b
+2o108b2o$149b2o86bo21b2o$172bo65b2o40b2o$143b2o2b4o22bo63b2o14b2o2b4o
+17bo4bo$143b2o2bo2bo7b2o11b3o79b2o2bo2bo7b2o7bo6bo$158b2o16b2o90b2o6bo
+8bo$176bobo97bo8bo$170bo5bo99bo8bo$158b2o9b2o97b2o7bo6bo$159bo9bobo97b
+o8bo4bo$159bob2o106bob2o7b2o$158b2ob2o105b2ob2o$139b2ob2o105b2ob2o$
+139b2obo97b2o7b2obo$130bobo9bo95bo4bo8bo$131b2o9b2o93bo6bo7b2o$125bo5b
+o104bo8bo$123bobo110bo8bo$124b2o16b2o92bo8bo6b2o$128b3o11b2o7bo2bo2b2o
+78bo6bo7b2o7bo2bo2b2o$128bo22b4o2b2o79bo4bo17b4o2b2o14b2o$129bo110b2o
+40b2o$151b2o108b2o21bo$151b2o108b2o4$265b3o$264bo3bo$263bo5bo$153b2o$
+154b2o106bo7bo$153bo4bo103bo7bo$158bobo90bo$158b2o91b2o10bo5bo$250bobo
+11bo3bo$265b3o$155b3o$157bo$156bo!

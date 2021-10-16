@@ -1,0 +1,6 @@
+#N 52446m.rle
+#C https://conwaylife.com/wiki/52513M
+#C https://www.conwaylife.com/patterns/52446m.rle
+x = 14, y = 37, rule = B3/S23
+6b2o$7bo$4bobo$4bo10$6bobo$7bo$7bo9$10bo$10b2o$9bo3$12b2o$3bo8bo$3bo$
+3bo2$obo$2b2o$3bo!

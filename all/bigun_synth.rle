@@ -1,0 +1,8 @@
+#N Bi-gun_synth
+#O Ian07
+#C Glider synthesis of bi-gun.
+#C www.conwaylife.com/wiki/index.php?title=Bi-gun
+x = 82, y = 47, rule = B3/S23
+59bobo$59b2o$60bo3$obo$b2o$bo11$47bobo$48b2o$48bo$32b2o$27bo4bobo18bob
+o$27b2o3bo16bo3b2o$26bobo18bobo4bo$48b2o$33bo$32b2o$32bobo11$80bo$79b
+2o$79bobo3$21bo$21b2o$20bobo!

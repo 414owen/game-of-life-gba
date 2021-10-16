@@ -1,0 +1,15 @@
+#N diehard1638.rle
+#C https://conwaylife.com/wiki/Die_hard
+#C https://www.conwaylife.com/patterns/diehard1638.rle
+x = 31, y = 31, rule = B3/S23
+2o2b2obo2b3o2bo3b2obob2o2b3o$o2b3o2bob2ob3o4bobo2bob2obo$4ob2o5b5obobo
+b2obob2o$b3o3b2obobob3ob4obo2b4o$3b3ob2ob4ob8o2b2o2b2o$3ob2o2b2o2bo2bo
+bo2b7ob3o$o4bob2o3b5ob3o2bo4bo$2b2ob2ob2obo7bobo2bob2o2bo$3ob2o2b2obo
+3b13obo$3b3ob3obo3bo3bob3obo$7obo2bo2b4o8b2ob2o$o2b2ob4o2bo2b3o2b4o2bo
+2b2o$2b3obobo3bo5b2o4b5obo$4b2o2bob2ob3obo6bobob2o$2b3obobob2o3bobo2bo
+3bo2b3o$7ob4ob5ob4ob7o$b3o2bo3bo2bobo3b2obobob3o$b2obobo6bob3ob2obo2b
+2o$ob5o4b2o5bo3bobob3o$2o2bo2b4o2b3o2bo2b4ob2o2bo$2ob2o8b4o2bo2bob7o$
+5bob3obo3bo3bob3ob3o$bob13o3bob2o2b2ob3o$o2b2obo2bobo7bob2ob2ob2o$2bo
+4bo2b3ob5o3b2obo4bo$3ob7o2bobo2bo2b2o2b2ob3o$2o2b2o2b8ob4ob2ob3o$b4o2b
+ob4ob3obobob2o3b3o$2b2obob2obobob5o5b2ob4o$ob2obo2bobo4b3ob2obo2b3o2bo
+$3o2b2obob2o3bo2b3o2bob2o2b2o!

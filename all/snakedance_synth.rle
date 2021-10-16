@@ -1,0 +1,12 @@
+#N snakedance_synth.rle
+#O Jeremy Tan, 29 March 2019
+#C 16-glider synthesis of snake dance
+#C https://www.conwaylife.com/forums/viewtopic.php?p=74101#p74101
+#C https://conwaylife.com/wiki/Snake_dance
+#C https://www.conwaylife.com/patterns/snakedance_synth.rle
+x = 69, y = 47, rule = B3/S23
+28bo$26b2o$27b2o5$17bo$17b2o$16bobo7bo$26bobo$26b2o5$26bo10bo$24bobo
+11b2o$obo7bo14b2o10b2o$b2o8bo50bob2o$bo7b3o4b3o43b2obo$18bo46bob2o$17b
+o42b3obo2bo$60bo2bobo2bo$29bo31bo2bob3o$28bo31b2obo$28b3o4b3o7bo17bob
+2o$35bo8b2o17b2obo$8b2o10b2o14bo7bobo$7b2o11bobo$9bo10bo5$19b2o$18bobo
+$20bo7bobo$28b2o$29bo5$18b2o$19b2o$18bo!

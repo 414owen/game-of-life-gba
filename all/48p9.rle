@@ -1,0 +1,6 @@
+#N 48p9.rle
+#C https://conwaylife.com/wiki/68P9
+#C https://www.conwaylife.com/patterns/48p9.rle
+x = 12, y = 17, rule = B3/S23
+b2o$obo$3o$10b2o$b2o7bo$4o4bobo$o3bo3b2o$5bo$2bo2bo$5bo$o3bo3b2o$4o4bobo$b2o
+7bo$10b2o$3o$obo$b2o!

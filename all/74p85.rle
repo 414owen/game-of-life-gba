@@ -1,0 +1,7 @@
+#N 74p85.rle
+#C https://conwaylife.com/wiki/74P85
+#C https://www.conwaylife.com/patterns/74p85.rle
+x = 22, y = 21, rule = B3/S23
+2bo11bo$2b3o7b3o$5bo5bo$4b2o6bo$11bo$7b2o$7b2o2$6b2o$6b2o$3bo9b2o$2bo
+6b2obobo$3bo5b2obo2b2obo$3o10bobob2o$o8b2ob2o5b2o$9bo4bob3o2bo$10b3ob
+o4b2o$12b2o2bobo$16bobo$12b2o3bo$12b2o!

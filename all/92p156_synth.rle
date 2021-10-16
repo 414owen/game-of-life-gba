@@ -1,0 +1,26 @@
+#N 92p156_synth.rle
+#O Mark Niemiec, 28 May 2013
+#C 55-glider synthesis of Jason's p156 (92P156)
+#C https://conwaylife.com/wiki/Jason%27s_p156
+#C https://conwaylife.com/forums/viewtopic.php?p=9075#p9075
+x = 271, y = 266, rule = B3/S23
+181b2o38b2o11bo26b2o$181bo39bo11bo27bo$131b2o46bobo37bobo5bobo3b3o23bo
+bo$130b2o47b2o38b2o6b2o30b2o4bo$127b2o3bo95bo34b3o$126bobo133bo$128bo
+95b2o3b2o31b2o$224bobob2o$224bo5bo15$115bobo71bo5bo$103bobo5b3o2b2o72b
+2obobo$104b2o7bo2bo72b2o3b2o40b2o$104bo7bo124bo$191bo42b3o$159b2o30b2o
+6b2o33bo4b2o$158bobo23b3o3bobo5bobo37bobo$158bo27bo11bo39bo$157b2o26bo
+11b2o38b2o15$107bobo$106bo$106bo$106bo2bo$106b3o37$52bo$53b2o$52b2o3$
+143bo7bo$54bo88bobo4bo$55bo87b2o5b3o$53b3o2$143bobo$41bobo99b2o$42b2o
+5bo94bo$42bo4bobo$48b2o3$68bo$66bobo$67b2o$137bo$137bobo$137b2o$134bo$
+132b2o$133b2o$171bo$171bobo$171b2o4$161bobo$161b2o5bo3bo$162bo3b2o3bo$
+167b2o2b3o7$73bo$74b2o$73b2o4$249b2o$249b2o4$121b2o114b2o22b2o$121bo
+116bo8b2o12bo$119bobo116bobo7bo10bobo$119b2o4bo108bo4b2o7bo10b2o4bo$
+123b3o108b3o10bo15b3o$122bo114bo24bo$122b2o112b2o24b2o6$b4o$o3bo230bo
+2bo$4bo230b3o$o2bo225b2o38b2o$216bo2bo9b2o38b2o$215bo46b3o$215bo3bo41b
+o2bo$215b4o6$96b2o138b2o24b2o$97bo139bo24bo$94b3o137b3o15bo10b3o$94bo
+4b2o133bo4b2o10bo7b2o4bo$98bobo137bobo10bo7bobo$98bo139bo12b2o8bo$97b
+2o138b2o22b2o4$249b2o$249b2o4$145b2o$144b2o$146bo7$46b3o2b2o$48bo3b2o
+3bo$47bo3bo5b2o$56bobo4$47b2o$46bobo$48bo$85b2o$86b2o$85bo$81b2o$80bob
+o$82bo$151b2o$151bobo$151bo3$170b2o$170bobo4bo$75bo94bo5b2o$75b2o99bob
+o$74bobo2$164b3o$67b3o5b2o87bo$69bo4bobo88bo$68bo7bo3$166b2o$165b2o$
+167bo37$111b3o$110bo2bo$113bo$113bo$110bobo!

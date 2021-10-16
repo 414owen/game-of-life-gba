@@ -1,0 +1,5 @@
+#N wswminus3.rle
+#C https://conwaylife.com/w/index.php?title=Block_and_glider
+#C https://conwaylife.com/patterns/wswminus3.rle
+x = 20, y = 21, rule = B3/S23
+17b2o$o16b2o$2o$2bo$b2o7$18b2o$18bo$16bobo$16b2o3$o$2o$2bo$b2o!

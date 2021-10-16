@@ -1,0 +1,9 @@
+#N 90p51.rle
+#O Matthias Merzenich, 2014
+#C https://conwaylife.com/wiki/90P51
+#C https://www.conwaylife.com/patterns/90p51.rle
+x = 25, y = 20, rule = B3/S23
+11b2o5bo$11bo4b2obo$6bob2obo2b2o3bo$6b2obob2o3bo2bob2o$9bo5bo2b2obo2bo
+$o8b2ob2o3bo5b2o$3o10bobob2o$3bo5b2obo2b2o3bo$2bo6b2obobo3b3o$3bo9bo2b
+2o$6b2o6b2o2bo$6b2o9b2o2$7b2o$7b2o$11bo$4b2o6bo$5bo5bo$2b3o7b3o$2bo11b
+o!

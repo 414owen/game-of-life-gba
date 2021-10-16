@@ -1,0 +1,5 @@
+#N tnosedp4smaller.rle
+#C https://conwaylife.com/wiki/T-nosed_p4
+#C https://www.conwaylife.com/patterns/tnosedp4smaller.rle
+x = 10, y = 12, rule = B3/S23
+4b3o2$3bo3bo2$3bo2bo$2bo2b2o$bobobo2bo$bob3o3bo$2bobobobo$3bo$3o$o!

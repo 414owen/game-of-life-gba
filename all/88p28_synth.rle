@@ -1,0 +1,18 @@
+#N 88p28_synth.rle
+#O Matthias Merzenich, 15 September 2013
+#C -glider synthesis of Karel's p28 (88P28)
+#C https://conwaylife.com/wiki/Karel%27s_p28
+#C https://conwaylife.com/forums/viewtopic.php?p=9036#p9036
+x = 114, y = 114, rule = B3/S23
+53bo$25bo25bobo$23bobo26b2o$24b2o12$28bo56bo$29bo54bo$27b3o54b3o$52bo
+8bo$50bobo8bobo$51b2o8b2o3$111bo$110bo$110b3o$56b2o$17bo38b2o38bo$15bo
+bo78bobo$16b2o78b2o7$48b2o14b2o$48b2o14b2o3$47b2o16b2o$47b2o16b2o$51bo
+10bo$50bobo8bobo$50bobo8bobo$51bo10bo$47b2o16b2o$40b2o4bobo16bobo4b2o$
+36b2o2b2o4b2o18b2o4b2o2b2o$36b2o38b2o$19bo23b2o24b2o23bo$20bo21bo2bo
+22bo2bo21bo18bo$18b3o22b2o24b2o22b3o15bo$111b3o3$26b2o58b2o$26b2o58b2o
+3$3o$2bo15b3o22b2o24b2o22b3o$bo18bo21bo2bo22bo2bo21bo$19bo23b2o24b2o
+23bo$36b2o38b2o$36b2o2b2o4b2o18b2o4b2o2b2o$40b2o4bobo16bobo4b2o$47b2o
+16b2o$51bo10bo$50bobo8bobo$50bobo8bobo$51bo10bo$47b2o16b2o$47b2o16b2o
+3$48b2o14b2o$48b2o14b2o7$16b2o78b2o$15bobo78bobo$17bo38b2o38bo$56b2o$b
+3o$3bo$2bo3$51b2o8b2o$50bobo8bobo$52bo8bo$27b3o54b3o$29bo54bo$28bo56bo
+12$88b2o$60b2o26bobo$60bobo25bo$60bo!

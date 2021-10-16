@@ -1,0 +1,10 @@
+#N pentapole_synth.rle
+#O Mark Niemiec, 14 January 2017
+#C 9-glider synthesis of pentapole
+#C https://conwaylife.com/wiki/Pentapole
+#C https://conwaylife.com/forums/viewtopic.php?p=39295#p39295
+x = 67, y = 22, rule = B3/S23
+bo$bobo$boo$$bo$bbo4bo11boo18boo18boo$3o4bobo9bobo17bobo17bobo$7boo$
+21bobo17bobo17bobo$$23bobo17bobo17bobo$3o21boo18boo20bo$bbo5b3o54boo$b
+o6bo42bobo$9bo41boo$52bo$$37b3o12boo$39bo12bobo$38bo9bo3bo$48boo$47bob
+o!

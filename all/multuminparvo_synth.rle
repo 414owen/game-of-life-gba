@@ -1,0 +1,5 @@
+#N multuminparvo_synth.rle
+#C https://conwaylife.com/wiki/Multum_in_parvo
+#C https://www.conwaylife.com/patterns/multuminparvo_synth.rle
+x = 9, y = 10, rule = B3/S23
+3bo$4b2o$3b2o2$7bo$7b2o$6bobo$bo$b2o$obo!

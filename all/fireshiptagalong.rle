@@ -1,0 +1,9 @@
+#N fireshiptagalong.rle
+#C https://conwaylife.com/wiki/Fireship
+#C https://www.conwaylife.com/patterns/fireshiptagalong.rle
+x = 34, y = 23, rule = B3/S23
+4b2o10b2o10b2o$4b2o10b2o10b2o$3bo2bo8bo2bo8bo2bo$3b4o8b4o8b4o$2bob2obo
+6bob2obo6bob2obo$3bo2bo8bo2bo8bo2bo2$2b2o2b2o6b2o2b2o6b2o2b2o$bo6bo4bo
+6bo4bo6bo2$2bo4bo6bo4bo6bo4bo$3bo2bo8bo2bo8bo2bo$4b2o10b2o10b2o2$b2o4b
+2o4b2o4b2o4b2o4b2o$o2bo2bo2bo2bo2bo2bo2bo2bo2bo2bo2bo$b2o4b2o4b2o4b2o
+4b2o4b2o$2bo4bo6bo4bo6bo4bo2$14bo2$17b3o$17bo!

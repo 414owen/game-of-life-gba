@@ -1,0 +1,9 @@
+#N oddtesttubebaby_synth.rle
+#O Goldtiger997, 6 October 2017
+#C 7-glider synthesis of odd test tube baby
+#C https://conwaylife.com/wiki/Odd_test_tube_baby
+#C https://conwaylife.com/forums/viewtopic.php?p=51666#p51666
+x = 45, y = 22, rule = B3/S23
+12bo$10bobo$11b2o10$6bo17bo$4bobo16bo$5b2o16b3o$b2o24b3o7bo$obo11b2o
+11bo8bobo4b2o$2bo11bobo11bo8bobo2bobo$14bo24bo2bo$11b2o26bo2bo$10bobo
+27b2o$12bo!

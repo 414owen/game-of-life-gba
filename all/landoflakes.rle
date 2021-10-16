@@ -1,0 +1,7 @@
+#N landoflakes.rle
+#O Dean Hickerson, 2007
+#C https://conwaylife.com/wiki/Land_of_lakes
+#C https://www.conwaylife.com/patterns/landoflakes.rle
+x = 14, y = 14, rule = B3/S23
+8b2o$7bo2bo$7bo2bo$8b2ob2o$10bo2bo$10bo2bo$11b2o$b2o$o2bo$o2bo$b2ob2o$
+3bo2bo$3bo2bo$4b2o!

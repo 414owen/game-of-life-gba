@@ -1,0 +1,5 @@
+#N wing_synth.rle
+#C https://conwaylife.com/wiki/Wing
+#C https://www.conwaylife.com/patterns/wing_synth.rle
+x = 10, y = 8, rule = B3/S23
+3b3o2b2o$5bob2o$4bo4bo3$b2o$obo$2bo!

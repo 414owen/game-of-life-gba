@@ -1,0 +1,10 @@
+#N heavyweightvolcanosuhajda.rle
+#C https://conwaylife.com/wiki/Heavyweight_volcano
+#C https://www.conwaylife.com/patterns/heavyweightvolcanosuhajda.rle
+#O Karel Suhajda, February 2004
+x = 28, y = 17, rule = B3/S23
+8b2o2b2o$6b3obo2b3o$5bo4b2o4bo$5bob2o3b4o3b2o$4b2obob2o8bobo$9bob5o5b
+3o$2bob2ob2obo5bo3bo3bo$5b2o5b4o5bo2bo$o3bobo2bo3bobo5bo2bob2o$o3bobo
+2b2obob2obo3b2obo2bo$5b2o3b3ob2ob2o2b2ob2o$2bob2ob2ob2o7bo4bo$11bo7bob
+2obo$4b2obobob2o6bobo2b2o$5bob2obo2bo3bobobobo$5bo4bobo4b2o3b2o$4b2o4b
+2o!

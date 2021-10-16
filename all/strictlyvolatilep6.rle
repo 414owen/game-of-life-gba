@@ -1,0 +1,6 @@
+#N strictlyvolatilep6.rle
+#C https://conwaylife.com/wiki/Statorless_p6
+#C https://www.conwaylife.com/patterns/strictlyvolatilep6.rle
+x = 20, y = 20, rule = B3/S23
+10bo$9bobo$8b2o$9bo$8b2o$11bo$8bobo$8bobo$bo3bo6b2obobo$o5b2o7b4o$b4o
+7b2o5bo$2bobob2o6bo3bo$9bobo$9bobo$8bo$10b2o$10bo$10b2o$8bobo$9bo!

@@ -1,0 +1,23 @@
+#N 20enginecordership.rle
+#C https://conwaylife.com/wiki/Switchwave
+#C https://www.conwaylife.com/patterns/20enginecordership.rle
+x = 282, y = 282, rule = B3/S23
+255b3o$255b3o$256bo$257b2o$258bo$257bo14b2o$272b2o3$255b2o$255b2o$256b
+o$256bo15bo$255bobo15b2o5b2o$254bo16bobo6b2o$255bo2b2o11bo$256bo3bo10b
+o$258b2o12b2o$258bo2$266bo3bo$266bo4bo$249bo15b2o4bo$248bobo15bo2bo$
+266bo2bo$248bo2bo15bobo$250b2o20b3o$251bo22bo$273bo4$248b2o$250bo$248b
+2o6$231bobo6bobo$230bo9bobo$231bo2bo6bo$233b3o5$223bo$222bobo2$222bo2b
+o$224b2o$225bo5$222b2o$224bo$222b2o6$205bobo6bobo$204bo9bobo$205bo2bo
+6bo$207b3o5$197bo$196bobo2$196bo2bo$198b2o$199bo5$196b2o$198bo$196b2o
+6$179bobo6bobo$178bo9bobo$179bo2bo6bo$181b3o5$171bo$170bobo2$170bo2bo$
+172b2o$173bo5$170b2o$172bo$170b2o6$153bobo6bobo$152bo9bobo$153bo2bo6bo
+$155b3o5$145bo$144bobo2$144bo2bo$146b2o$147bo5$144b2o$146bo$144b2o6$
+127bobo6bobo$126bo9bobo$127bo2bo6bo$129b3o5$119bo$118bobo2$118bo2bo$
+120b2o$121bo5$118b2o$120bo$118b2o6$101bobo6bobo$100bo9bobo$101bo2bo6bo
+$103b3o5$93bo$92bobo2$92bo2bo$94b2o$95bo5$92b2o$94bo$92b2o6$75bobo6bob
+o$74bo9bobo$75bo2bo6bo$77b3o5$67bo$66bobo2$66bo2bo$68b2o$69bo5$66b2o$
+68bo$66b2o6$49bobo6bobo$48bo9bobo$49bo2bo6bo$51b3o5$41bo$40bobo2$40bo
+2bo$42b2o$43bo5$40b2o$42bo$40b2o6$23bobo6bobo$22bo9bobo$23bo2bo6bo$25b
+3o3$14bo$2o7b2o2bobo$3o6b4o3bo$2obobo7bo$3b2o10bob2o$15bobo$16bo5$22bo
+$20b5o$25bo2$23b3o$20bo$14b3o4b2o$5b2o5bo4bo8bo$5b2o6b2o2bo8bobo$13bo
+12b2o6$13b2o$13b2o!

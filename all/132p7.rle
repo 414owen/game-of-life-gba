@@ -1,0 +1,9 @@
+#N 132p7.rle
+#O Dongook Lee, 2016
+#C https://conwaylife.com/wiki/132P7
+#C https://www.conwaylife.com/patterns/132p7.rle
+x = 18, y = 25, rule = B3/S23
+4bo3b2o3bo$3bobobo2bobobo$3bobo6bobo$b3obo6bob3o$o4bob4obo4bo$b3obob4o
+bob3o$3bo2b2o2b2o2bo$6bo4bo$7bo2bo$8b2o$3bo10bo$b3o10b3o$o5b6o5bo$b3o
+10b3o$3bo10bo$8b2o$7bo2bo$6bo4bo$3bo2b2o2b2o2bo$b3obob4obob3o$o4bob4o
+bo4bo$b3obo6bob3o$3bobo6bobo$3bobobo2bobobo$4bo3b2o3bo!

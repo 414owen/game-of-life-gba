@@ -1,0 +1,8 @@
+#N lx68.rle
+#C https://conwaylife.com/wiki/Lx84
+#C https://www.conwaylife.com/patterns/lx68.rle
+x = 24, y = 48, rule = B3/S23
+11b2o$12bo$12b3o16$13b2o$13b2o2$20bob2o$20b2obo$7bo$8b2o$9b2o$11bo$6b
+5o$9bo4$7b6o$6bo6bo2$5b2o6b2o$4bo4b2o4bo$3b2o10b2o$3b2o10b2o$4b2o8b2o$
+b2o2bo2bo2bo2bo2b2o$3bo4b4o4bo$ob5o6b5obo$o5b8o5bo$b5o2bo2bo2b5o$5bo8b
+o$3bo12bo$3b2o10b2o!

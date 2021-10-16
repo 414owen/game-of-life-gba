@@ -1,0 +1,7 @@
+#N bfx59hinjectorvariants.rle
+#C https://conwaylife.com/wiki/BFx59H_injector
+#C https://www.conwaylife.com/patterns/bfx59hinjectorvariants.rle
+x = 76, y = 52, rule = B3/S23
+12b2o$12b2o6$13b3o54bo$8b3o2bo54b3o$10bo3bo52bo$9bo57b2o10$4b2o56bo$4b
+obo55bobo7b2obo$5bo56b2o8bob2o3$64b2o$64bobo$64bo2$ob2o46bob2o$2obo46b
+2obo2$9b2o48b2o$9b2o48b2o16$9b3o47b3o$11bo49bo$11b2o48b2o!

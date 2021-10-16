@@ -1,0 +1,12 @@
+#N p56bheptominoshuttle_synth.rle
+#O 2718281828, 9 January 2018
+#C 15-glider synthesis of p56 B-heptomino shuttle
+#C https://conwaylife.com/wiki/P56_B-heptomino_shuttle
+#C https://conwaylife.com/forums/viewtopic.php?p=54866#p54866
+x = 104, y = 36, rule = B3/S23
+29bobo$30b2o$30bo5$37bo$16bobo16bobo62b2o$17b2o17b2o62bo2bo$17bo26bo$
+42b2o56bo2bo$43b2o38b2o14bo2bo$o19bo62b2o14bobo$b2o17b2o78bo$2o3bo13bo
+bo13bobo53bo$6b2o28b2o54b2o6b2o$5b2o29bo56b2o5b2o$83bo11bo$34b2o42b2o
+3b2o5b5o$33b2o17b2o24bo2bo11bo$35bo15b2o$53bo3b2o19bo2bo$14b2o40b2o19b
+o2bo14b2o$15b2o41bo18bobo15b2o$14bo63bo$19b2o18b2o$19bobo16b2o38b2o$
+19bo20bo37b2o5$26bo$25b2o$25bobo!

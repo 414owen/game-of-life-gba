@@ -1,0 +1,14 @@
+#N 56p27_synth.rle
+#O 2718281828, 13 November 2017
+#C 20-glider synthesis of 56P27
+#C https://conwaylife.com/wiki/56P27
+#C https://conwaylife.com/forums/viewtopic.php?p=52842#p52842
+x = 75, y = 40, rule = B3/S23
+18bo$19bo$17b3o$21bo$20bo$20b3o37b2o$60b2o$16bo$14bobo$15b2o41bo$57bob
+o$17bo38bo2bo$17bobo34bob2o$17b2o3b2o30b2o6bo$22bobo6bo23b2obo3b3ob2o$
+14bo7bo7bo23b2o4b2ob4o$13bo16b3o21b2o2bo6bob2o$5bo7b3o10b3o8bo15b2o12b
+obo$3bobo20bo10bobo5b2o8bo7bobo4bo$4b2o21bo9b2o6b2o8bo12b2o$b2o9bo21b
+2o14b2o12bo8b2o$obo10bo20bobo12bo4bobo7bo8b2o$2bo8b3o10b3o7bo15bobo12b
+2o$7b3o16bo24b2obo6bo2b2o$9bo7bo7bo27b4ob2o4b2o$8bo6bobo34b2ob3o3bob2o
+$16b2o3b2o34bo6b2o$20bobo39b2obo$22bo37bo2bo$60bobo$23b2o36bo$23bobo$
+23bo$58b2o$17b3o38b2o$19bo$18bo$20b3o$20bo$21bo!

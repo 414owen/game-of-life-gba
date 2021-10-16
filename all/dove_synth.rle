@@ -1,0 +1,5 @@
+#N dove_synth.rle
+#C https://conwaylife.com/wiki/Dove
+#C https://www.conwaylife.com/patterns/dove_synth.rle
+x = 8, y = 11, rule = B3/S23
+6bo$2bo2bo$obo2b3o$b2o5$2b3o$2bo$3bo!

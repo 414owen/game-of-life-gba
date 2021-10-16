@@ -1,0 +1,8 @@
+#N ocellus.rle
+#C https://conwaylife.com/wiki/Ocellus
+#C https://www.conwaylife.com/patterns/ocellus.rle
+x = 31, y = 25, rule = B3/S23
+7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o16bo$9bo15b3o$22bo5bo$
+22b6obo$3b2o22bobo$2bo2b2o15b2o2bo2b2o$2bo4b2o13bobo2b2o$2o3bob2o
+17bobo$bobo23bo$bob6o$2bo5bo$3b3o$5bo19b2o2b2o$25b2o2b2o3$17bo$16b
+obo3b2o$17bo4b2o!

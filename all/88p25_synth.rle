@@ -1,0 +1,23 @@
+#N 88p25_synth.rle
+#O Matti Ward, Matthias Merzenich, 13 February 2018
+#C 36-glider synthesis of 88P25
+#C https://conwaylife.com/wiki/98P25
+#C https://conwaylife.com/forums/viewtopic.php?p=56468#p56468
+#C https://conwaylife.com/forums/viewtopic.php?p=56473#p56473
+x = 235, y = 38, rule = B3/S23
+136bo26bo$137b2o25bo$136b2o24b3o3bobo$91bobo21bo53b2o11bo29bo9bo$92b2o
+3bo16bo54bo10b3o29b3o5b3o$92bo5b2o14b3o62bo35bo3bo$97b2o37bo30b2o3b2o
+5b2o33b2o3b2o$107bobo26bobo9b2o18b2obobo14b2o38b2o$107b2o27b2o7b2o2bo
+17bo5bo11b2o2bo35b2o2bo$108bo36bob2o36bob2o22bobo11bob2o$102bo32bo8bo
+39bo20bo6b2o10bo$100b2o34b2o6bo39bo21b2o4bo11bo$101b2o5bo26b2o8bob2o
+36bob2o16b2o18bob2o$107b2o36b2o2bo35b2o2bo26b3o6b2o2bo$99bo7bobo38b2o
+38b2o26bo11b2o$100bo102bo13bo$98b3o13b3o86b2o$114bo87bobo$115bo$bo21bo
+bo$2bo16bo3b2o207bobo$3o14b2o5bo207b2o$18b2o199bo13bo$7bobo37b2o38b2o
+38b2o38b2o38b2o11bo$8b2o37bo2b2o35bo2b2o35bo2b2o35bo2b2o35bo2b2o6b3o$
+8bo39b2obo36b2obo36b2obo36b2obo36b2obo18b2o$52bo39bo39bo39bo39bo11bo4b
+2o$52bo39bo39bo39bo39bo10b2o6bo$8bo39b2obo7bo28b2obo36b2obo36b2obo36b
+2obo11bobo$8b2o37bo2b2o6bo28bo2b2o35bo2b2o35bo2b2o11bo5bo17bo2b2o$7bob
+o37b2o9b3o26b2o38b2o38b2o14bobob2o18b2o$18b2o76b2o38b2o38b2o5b2o3b2o
+26b2o3b2o$3o14b2o38bo39bo39bo39bo39bo3bo$2bo16bo36b2o36b3o37b3o37b3o
+10bo26b3o5b3o$bo54bobo35bo39bo39bo11b2o26bo9bo$186bobo3b3o$192bo$193bo
+!

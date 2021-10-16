@@ -1,0 +1,9 @@
+#N r49.rle
+#O Entity Valkyrie, 2019
+#C https://conwaylife.com/wiki/R49
+#C https://www.conwaylife.com/patterns/r49.rle
+x = 58, y = 36, rule = B3/S23
+13bo38bo$11b3o36b3o$3b2o5bo31b2o5bo$b3obo4b2o28b3obo4b2o$o4bo33bo4bo$b
+3obob2o31b3obob2o$3bobo2bo33bobo2bo$6b2o37b2o2$44bo$7bo36b3o$7bo36b3o$
+7b3o33bo3bo$9bo5b2obo24b4o7b2obo$15bob2o24bob2o7bob2o2$8b2o37b2o$8b2o
+37b2o16$7b3o36b3o$7bo38bo$6b2o37b2o!

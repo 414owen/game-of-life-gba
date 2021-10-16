@@ -1,0 +1,6 @@
+#N Racetrack
+#O Unknown
+#C https://conwaylife.com/wiki/Racetrack
+#C https://conwaylife.com/patterns/racetrack.rle
+x = 6, y = 4, rule = B3/S23
+3b2o$b3obo$o4bo$b4o!

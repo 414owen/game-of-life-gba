@@ -1,0 +1,6 @@
+#N robsp16.rle
+#O Rob Liston, 2020
+#C https://conwaylife.com/wiki/Rob%27s_p16
+#C https://www.conwaylife.com/patterns/robsp16.rle
+x = 8, y = 9, rule = B3/S23
+5b2o$2bo2b2o$bo4bo$bo4bo$6bo$2obobo$2ob2o2$5b3o!

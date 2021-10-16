@@ -1,0 +1,5 @@
+#C A skewed variant of Eureka
+#C https://conwaylife.com/wiki/Eureka
+x = 19, y = 11, rule = B3/S23
+15bo$6bo7bobo$2o2b2ob2o6bo$2o4bo4$8bo$2bo3b2ob2o6bo$bobo4bo7bobo$2bo
+14bo!

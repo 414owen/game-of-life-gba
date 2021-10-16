@@ -1,0 +1,9 @@
+#N toadflipperandescorter.rle
+#C https://conwaylife.com/wiki/Toad
+#C https://www.conwaylife.com/patterns/toadflipperandescorter.rle
+#C RLE taken from https://www.conwaylife.com/forums/viewtopic.php?p=116324#p116324
+x = 47, y = 10, rule = B3/S23
+2bo15bo10bo15bo$b3o6bo6b3o8b3o6bo6b3o$2obo5b3o4b2obo7b2obo5b3o4b2obo$
+3o5b2o2bo3b3o8b3o5b2o2bo3b3o$3o5bo2bobo2b3o3b3o2b3o5bo2bobo2b3o$b2o2b
+3obo7b2o6bo2b2o2b3obo7b2o$b2o3b2o6b2o12b2o3b2o6b2o$2b2o3bo6bo2bo5b2o4b
+2o3bo6bo2bo$6bo11bo14bo11bo$18bo26bo!

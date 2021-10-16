@@ -1,0 +1,5 @@
+#N blockoncover.rle
+#C https://conwaylife.com/wiki/Block_on_cover
+#C https://www.conwaylife.com/patterns/blockoncover.rle
+x = 5, y = 5, rule = B3/S23
+2ob2o$2obo$3bo$3o$o!

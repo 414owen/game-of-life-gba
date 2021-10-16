@@ -1,0 +1,14 @@
+#N p47 traffic light hassler
+#C A p47 oscillator discovered by Jason summers in May 2003 and
+#C reduced by Nicolay Beluchenko in February 2009
+#C https://conwaylife.com/wiki/P47_pre-pulsar_shuttle
+x = 79, y = 30, rule = B3/S23
+11bo7bo39bo7bo$10bobo5bobo37bobo5bobo$11bo7bo9b2o17b2o9bo7bo$29bo19bo$
+27bobo19bobo$27b2o21b2o$6bo17bo29bo17bo$6bo17bo12bo3bo12bo17bo$6bo17bo
+11bobobobo11bo17bo$2b2o31bo2bobo2bo31b2o$bobo7b3o3b3o15bo7bo15b3o3b3o
+7bobo$bo8bo3bobo3bo14bo2bobo2bo14bo3bobo3bo8bo$2o34bobobobo34b2o$37bo
+3bo$7b2o13b2o31b2o13b2o$7b2o13b2o31b2o13b2o$37bo3bo$2o34bobobobo34b2o$
+bo8bo3bobo3bo14bo2bobo2bo14bo3bobo3bo8bo$bobo7b3o3b3o15bo7bo15b3o3b3o
+7bobo$2b2o31bo2bobo2bo31b2o$6bo17bo11bobobobo11bo17bo$6bo17bo12bo3bo
+12bo17bo$6bo17bo29bo17bo$27b2o21b2o$27bobo19bobo$29bo19bo$11bo7bo9b2o
+17b2o9bo7bo$10bobo5bobo37bobo5bobo$11bo7bo39bo7bo!

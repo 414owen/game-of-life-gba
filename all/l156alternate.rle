@@ -1,0 +1,9 @@
+#N l156alternate.rle
+#C https://conwaylife.com/wiki/HL75P
+#C https://www.conwaylife.com/patterns/l156alternate.rle
+x = 35, y = 55, rule = B3/S23
+20b2o$15b2o2bo2bo$10b2o3bobo2b2o$10bo7b2o$8b3o8bo$16bo2bob2o$15bobobo
+2bo$16b2ob2o2$22bo$20b3o$19bo$19b2o2$10b2o$10b2o17b2o$29bo$31bo$b2o24b
+5o$b2o6bo17bo4b2o$8bobo19b2o2bo$7b2o22bob2o$31bo$30b2o$2b2o13bo$3bo12b
+obo$3o3b2o8bobo$o4bobo$5bo$4b2o3$3b2o$4bo$4bobo$5b2o17b2ob2o$24b2obobo
+$29bo$29b2o4$5bo$5bobo18b2o$5b3o18b2o$7bo6$19b2o$19bo$20b3o$22bo!

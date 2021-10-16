@@ -1,0 +1,9 @@
+#N rauccisp74.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/Raucci%27s_p74
+#C https://www.conwaylife.com/patterns/rauccisp74.rle
+x = 35, y = 35, rule = B3/S23
+9bo15bo$9b3o11b3o$12bo9bo$11b2o9b2o6$2o31b2o$bo31bo$bobo27bobo$2b2o27b
+2o$11b2o9b2o$10b2o11b2o$11b2o9b2o$12bo9bo2$12bo9bo$11b2o9b2o$10b2o11b
+2o$11b2o9b2o$2b2o27b2o$bobo27bobo$bo31bo$2o31b2o6$11b2o9b2o$12bo9bo$9b
+3o11b3o$9bo15bo!

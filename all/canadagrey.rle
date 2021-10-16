@@ -1,0 +1,9 @@
+#N canadagrey.rle
+#C https://conwaylife.com/wiki/Canada_Grey
+#C https://www.conwaylife.com/patterns/canadagrey.rle
+x = 41, y = 28, rule = B3/S23
+16b3o3b3o$15bo2bo3bo2bo$18bo3bo$14bo3bo3bo3bo$14bo3bo3bo3bo$18bo3bo$18bo3bo2$
+16b3o3b3o$17bo5bo$17b7o$16bo7bo$15b11o$14bo11bo$13b15o$12bo15bo$11b19o$10bo
+19bo$3o6b23o6b3o$o2bo4bo23bo4bo2bo$o6b27o6bo$o3bobo11bobobo11bobo3bo$o5b7obo
+11bob7o5bo$o4b2o3bobobo11bobobo3b2o4bo$bo3bo29bo3bo$5bo29bo$3b3o29b3o$4b2o29b
+2o!

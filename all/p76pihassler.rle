@@ -1,0 +1,9 @@
+#N p76pihassler.rle
+#O David Raucci, 2021
+#C https://conwaylife.com/wiki/P76_pi-heptomino_hassler
+#C https://www.conwaylife.com/patterns/p76pihassler.rle
+x = 27, y = 36, rule = B3/S23
+4b2o$4bobo$b2obobo$bobobo$3bo$bo2bo$4bo$o3bo$o3bo6b2ob2o$4bo7bobo$bo2b
+o8bo$3bo$bobobo$b2obobo$4bobo$4b2o5$21b2o$20bobo$20bobob2o$21bobobo$
+23bo$13bo8bo2bo$12bobo7bo$11b2ob2o6bo3bo$22bo3bo$22bo$22bo2bo$23bo$21b
+obobo$20bobob2o$20bobo$21b2o!

@@ -1,0 +1,18 @@
+#N p52pseudo.rle
+#C https://www.conwaylife.com/patterns/p52pseudo.rle
+#C A small pseudo-p52 glider gun based on the B-52 bomber.
+x = 69, y = 68, rule = B3/S23
+b2o8b2o$b2o9bo7bo$12bobo4bobo12b2o$13b2o5bo13b3o$2obo5b2o23b2obo$bobo
+5b2o25bobo$2bo12b3o10b2o5bo2bo$b2o12b3o18b2o$b2o14b2o$b2o9b2o6b3o$11b
+2o3bo3bo$12b2ob2o3bobo13b2o13b2o$13b4o4bo14b2o14b2o$b2o18bo29bo$o2bo$o
+bo25b2o5b2obo$bob2o23b2o6bobo$2b3o13bo18bo$3b2o12bobo16b2o$18bo17b2o$
+28bo7b2o$29bo$27b3o2$38b2o$39b2o5b2o$11b2o5bo2b2o15bo7bo$10bo2bo3bo3b
+2o2b2o17bobo$8bo2bobo3bo7b2o17b2o$12bo5b4o30b2o2bo5b2o$8bob2o36b2o2b2o
+3bo3bo2bo$9bo38b2o7bo3bobo2bo$53b4o5bo$63b2obo$65bo$21b2o13bo$21b2o12b
+obo$35bobo7b2o$33b3ob3o4b2o6b2o$32bo7bo5bo5b2o$32b2o5b2o$15b3o$14bo2bo
+$8bo5bo2bo$7bobo3bo2bo39bo$8bo4bo2b2o6bo31b2o$14bo2b3o3bobo29bob2o7bo$
+15bo3b2o3bo31bo8bobo$16b2o2bo29bo5b2o8bo$17b3o29bobo4bo2bo$8b2o40bo8b
+2o$9bo45bo2bo$6b3o10bo36bo$6bo11bobo44b2o$10b2o6bobo44bo$10b2o7bo46b3o
+$56b2obo8bo$56bo2bo3b2o$57b3o3b2o$23bo$21b2obo$7bo2b2o8bo$6bo3b2o2b2o
+3bobo2bo26bo$6bo7b2o3bo2bo27bob2o$7b4o9b2o32bo8b2o2bo$50bo2bobo3b2o2b
+2o3bo$52bo2bo3b2o7bo$53b2o9b4o!

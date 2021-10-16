@@ -1,0 +1,24 @@
+#N B-52 bomber synthesis
+#O Jeremy Tan, June 11, 2019
+#C 31-glider synthesis of B-52 bomber.
+#C https://www.conwaylife.com/forums/viewtopic.php?t=&p=77478#p77478
+#C www.conwaylife.com/wiki/B-52_bomber
+x = 525, y = 40, rule = B3/S23
+125bo$124bo$120bo3b3o$118bobo$119b2o94bo$124bo89bo$122b2o90b3o$123b2o$
+bo$o126bo$3o123bo$126b3o$96b2o110bobo$2b2o92b2o110b2o$bobo205bo29b3o$
+3bo202bo8b2o22b3obo266bobo$86bo117bobo8b2o23bobobo51b2o212b2o$87b2o
+116b2o34bo2bo41bo8bobo189b2o22bo$86b2o37b2o115b2o10bo32bo6b3o108b2o79b
+obo$124b2o128bobo28b3o6b2o32b3o73bobo19bo58b3o24b2o$126bo127b2o41b2o5b
+2o22b3obo70b3o21bo3bo53b2o24bo2bo4b3o$196b2o91bo6b3o5b2o23bobobo69b2o
+20b3ob2o6b3o48b2o5b2o14bo2bo4b3obo$195bobo90bobo39bo2bo72b2o5b2o15b2o
+5b3obo45b3o5b2o15b2o6bobobo$115b2o80bo90bobo40b2o72b3o5b2o23bobobo78bo
+2bo$11bo103b2o90b2o80bo6b2o141bo2bo57bo21b2o$10bobo71b3o18bo100bo2bo
+86b2o142b2o45b2o9b2o$11bo17bo56bo17bobo99bobobo23b2o9b2o158b2o80b2o10b
+2o$28b2o55bo19bo101bob3o22b2o9bobo83b2o72b2o$28bobo178b3o12bo20bo84bob
+o6bo161bo20b2o$88b2o133bobo14bo55b2o31b3o6bobo99b2o59b2o18bobo$89b2o
+133bo15b2o53bo2bo30b2o7bobo98bobo45b2o11bobo17b3o$88bo150bobo53bobobo
+23b2o7b2o5bo65b2o31b3o45bo2bo30b2o$92b2o202bob3o22b2o6b3o70bo2bo30b2o
+46bobobo23b2o7b2o$92bobo203b3o12bo27b3o60bobobo23b2o7b2o44bob3o22b2o6b
+3o$86b3o3bo219bobo26bo63bob3o22b2o6b3o46b3o12bo$88bo224bo17b2o9bo64b3o
+12bo80bobo$87bo243b2o88bobo80bo17b2o$233b3o186bo17b2o80b2o$235bo204b2o
+$234bo!

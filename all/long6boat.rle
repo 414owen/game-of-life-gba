@@ -1,0 +1,5 @@
+#N long6boat.rle
+#C https://conwaylife.com/wiki/Long%5E6_boat
+#C https://www.conwaylife.com/patterns/long6boat.rle
+x = 9, y = 9, rule = B3/S23
+7bo$6bobo$5bobo$4bobo$3bobo$2bobo$bobo$obo$2o!

@@ -1,0 +1,6 @@
+#N hf95p.rle
+#C https://conwaylife.com/wiki/HF95P
+#C https://www.conwaylife.com/patterns/hf95p.rle
+x = 22, y = 26, rule = B3/S23
+14b2o$6bo7b2o$6b3o$9bo$8b2o2$2o$bo$bobo$2b2o7$2bo$2bobo$2b3o$4bo2$14b
+2o$14b2o2b2o$18bobo$20bo$20b2o!

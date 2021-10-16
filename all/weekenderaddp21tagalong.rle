@@ -1,0 +1,7 @@
+#N weekenderaddp21tagalong.rle
+#C https://conwaylife.com/wiki/Doo-dah
+#C https://www.conwaylife.com/patterns/weekenderaddp21tagalong.rle
+x = 52, y = 29, rule = B3/S23
+2bobo42bobo$3b2o42b2o$3bo44bo10$19bo12bo$18b3o10b3o$17b5o8b5o$17b5o8b
+5o$18bo6b2o6bo$19b3o3b2o3b3o$22bobo2bobo$24bo2bo$22bo6bo$23b6o$23bo4bo
+3$7b2o34b2o$bo6b2o32b2o6bo$b2o4bo36bo4b2o$obo46bobo!

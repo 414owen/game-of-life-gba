@@ -1,0 +1,11 @@
+#N edna_synth.rle
+#C Glider synthesis of Edna.
+#C https://conwaylife.com/wiki/Edna
+x = 328, y = 32, rule = B3/S23
+143bo89bo$142bo88b2o$128bo13b3o57bo29b2o$49bo77bobo9bo61bobo77bo$47bob
+o77bobo10bo60bobo29bo46bobo$48b2o2bobo73bo9b3o61bo11b2o16b2o46bobo$52b
+2o159bo2bo15bobo46bo11b2o16bo$53bo160b2o76bo2bo15bo$293b2o16bo3$131b2o
+72b2o$131b2o72b2o77b2o$284b2o6$45b2o$46b2o$2bo42bo$3bo$b3o$75b2o80b2o
+72b2o$5b3o66bo2bo78bo2bo70bo2bo76b2o10bo$2o5bo67b2o80b2o72b2o76bo2bo8b
+o$b2o3bo63b2o80b2o72b2o82b2o9b3o$o69b2o80b2o72b2o77b2o$305b2o19bo$325b
+2o$325bobo!

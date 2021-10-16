@@ -1,0 +1,10 @@
+#N max183.rle
+#C https://conwaylife.com/wiki/Max
+#C https://www.conwaylife.com/patterns/max183.rle
+x = 27, y = 27, rule = B3/S23
+18bo$17b3o$12b3o4b2o$11bo2b3o2bob2o$10bo3bobo2bobo$10bo4bobobobob2o$
+12bo4bobo3b2o$4obobobobo4bo3bob3o$o3bo4b3ob2o9b2o$o5b2o3bobo$bo2bo4b2o
+3b2o$8b2obobobobobobob4o$bo2bo4b2o2bo2b2o4bo3bo$o5b2o3bobobo3b2o5bo$o
+3bo4b2o2bo2b2o4bo2bo$4obobobobobobob2o$11b2o3b2o4bo2bo$13bobo3b2o5bo$b
+2o9b2ob3o4bo3bo$2b3obo3bo4bobobobob4o$2b2o3bobo4bo$2b2obobobobo4bo$5bo
+bo2bobo3bo$4b2obo2b3o2bo$6b2o4b3o$7b3o$8bo!

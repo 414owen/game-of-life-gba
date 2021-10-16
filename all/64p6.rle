@@ -1,0 +1,6 @@
+#N 64p6.rle
+#C https://conwaylife.com/wiki/80P6
+#C https://www.conwaylife.com/patterns/64p6.rle
+x = 14, y = 16, rule = B3/S23
+6b2o$4bo4bo2$3bo6bo$b3obob2ob3o$o4bo3bo3bo$b5o2b2obobo$6bo2bob2o$3bob
+5o$2bobo5b3o$2bobo3b2o3bo$b2ob2obobob2o$8bo2bo$9bobo$7bobob2o$7b2o!
