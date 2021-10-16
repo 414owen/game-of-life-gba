@@ -8,44 +8,12 @@
 #include <stdint.h>
 
 #include "rules.h"
-
-static char *mk_string(char *start, char *cursor) {
-  int len = cursor - start - 1;
-  char *res = malloc(len);
-  memcpy(res, start, len);
-  res[len] = '\0';
-  return res;
-}
-
-long parse_int(char *s) {
-  bool neg = false;
-  long res = 0;
-  while (*s == '-') {
-    neg = !neg;
-  }
-  while (isdigit(*s)) {
-    res *= 10;
-    res += (*s) - '0';
-    s++;
-  }
-  if (neg) res = -res;
-  return res;
-}
-
-uint8_t parse_rule_bitset(char *s, char *end) {
-  uint8_t res = 0;
-  while (s < end) {
-    int n = *s - '0';
-    res |= 1 << n;
-    s++;
-  }
-  return res;
-}
+#include "rle.h"
 
 uint8_t normal_s = 0;
 uint8_t normal_b = 0;
 
-int read_file(char *fname) {
+char *read_file(char *fname) {
   FILE *f = fopen(fname, "rb");
   if (f == NULL) {
     perror(strerror(errno));
@@ -55,20 +23,14 @@ int read_file(char *fname) {
   long fsize = ftell(f);
   char *string = malloc(fsize + 1);
   rewind(f);
-  fread(string, 1, fsize + 1, f);
+  if (fread(string, 1, fsize, f) != fsize) {
+    perror(strerror(errno));
+    exit(1);
+  }
   fclose(f);
   string[fsize] = '\0';
   return string;
 }
-
-// typedef struct {
-//   char *name;
-//   char *creator;
-//   u8 stay_alive_rules;
-//   u8 birth_rules;
-//   int x;
-//   int y;
-// } rule;
 
 void fprint_rule(FILE *out, rule r) {
   fprintf(out, "  {\n"
@@ -90,10 +52,11 @@ void fprint_rule(FILE *out, rule r) {
 
 void fprint_rules(FILE *out, int rule_amt, rule *rules) {
   fprintf(out, "int rule_amt = %d;\n"
-    "rule rules[] = {\n");
+    "rule rules[] = {\n",
+    rule_amt);
   for (int i = 0; i < rule_amt; i++) {
     fprint_rule(out, rules[i]);
-    fputs(",\n", out)
+    fputs(",\n", out);
   }
   fputs("};\n", out);
 }
@@ -106,13 +69,7 @@ int main(int argc, char **argv) {
   char *string = file;
   printf("Input file: %s\n", string);
 
-  // init normal rules
-  char *ss = "23";
-  char *bs = "3";
-  normal_s = parse_rule_bitset(ss, ss+2);
-  normal_b = parse_rule_bitset(bs, bs+1);
-
-  hash_token t = scan_header(string);
+  header_token t = scan_header(string);
   int header_lines_parsed = 0;
   while (t.type != INVALID) {
     header_lines_parsed++;

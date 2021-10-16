@@ -11,10 +11,15 @@ a.out: main.c $(GBA_LIBS)
 test: a.out
 	mgba -3 a.out
 
-test_rle:
-	re2c misc/rle.r2c -o build/rle.c
-	gcc -g -O0 -o build/rle build/rle.c -Iinclude
-	./build/rle all/worm.rle
+build/rle_header.o: build/rle_header.c
+	gcc -c -o build/rle_header.o build/rle_header.c -Iinclude
+
+build/rle_header.c: misc/rle_header.r2c
+	re2c misc/rle_header.r2c -o build/rle_header.c
+
+test_rle: build/rle_header.o
+	gcc -o build/rle_test build/rle_header.o misc/rle_test.c -Iinclude
+	./build/rle_test all/worm.rle
 
 lib/%.o: src/%.c
 	mkdir -p lib

@@ -1,5 +1,5 @@
-#ifndef include/rle_h_INCLUDED
-#define include/rle_h_INCLUDED
+#ifndef rle_h_INCLUDED
+#define rle_h_INCLUDED
 
 typedef enum {
   NAME,
@@ -23,4 +23,6 @@ typedef struct {
   };
 } header_token;
 
-#endif // include/rle_h_INCLUDED
+header_token scan_header(const char *YYCURSOR);
+
+#endif // rle_h_INCLUDED
