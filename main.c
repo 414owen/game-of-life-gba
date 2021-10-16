@@ -278,9 +278,9 @@ int AgbMain(void) {
         board_ind = (board_ind + num_starters - 1) % num_starters;
         setBoard(get_board(board_ind));
       }
+      vsync();
       display();
       update_tail_frames();
-      vsync();
     }
     update();
   }
