@@ -226,6 +226,7 @@ static full_rule get_board(int i) {
     res.is_rle = true;
     res.r = &rle_rules[i];
   } else {
+    i -= rle_rule_amt;
     res.is_rle = false;
     res.r = &packed_rules[i];
   }
