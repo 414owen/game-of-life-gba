@@ -375,8 +375,8 @@ int main(int argc, char **argv) {
     fputs(dummy_rule, packed_out);
   }
 
-  fprintf(rle_out, "};\n\nconst int rle_rule_amt = %d;\n", rle_amt);
-  fprintf(packed_out, "};\n\nconst int packed_rule_amt = %d;\n", packed_amt);
+  fprintf(rle_out, "};\n\nconst unsigned int rle_rule_amt = %d;\n", rle_amt);
+  fprintf(packed_out, "};\n\nconst unsigned int packed_rule_amt = %d;\n", packed_amt);
 
   printf("successes: %d\n"
     "invalids: %d\n"

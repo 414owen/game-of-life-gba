@@ -3,7 +3,7 @@
 
 #include "rules.h"
 
-rule *packed_rules;
+extern const rule *packed_rules;
 extern const unsigned int packed_rule_amt;
 
 #endif // packed_boards_h_INCLUDED

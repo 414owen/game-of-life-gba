@@ -143,10 +143,14 @@ static void set_board_packed(int width, int height, unsigned char *bits) {
   // boards[0][0][0] = 0;
   // boards[0][0][1] = 0;
   // boards[0][0][2] = 0;
-  set_cell(0,0,0);
-  set_cell(0,1,0);
-  set_cell(0,2,0);
+  // set_cell(0,0,0);
+  // set_cell(0,1,0);
+  // set_cell(0,2,0);
+  // return;
 
+  for (int i = 0; i < width; i++) {
+    set_cell(i,0,0);
+  }
   return;
 
   int start_x = (WIDTH - width) / 2;
@@ -154,7 +158,8 @@ static void set_board_packed(int width, int height, unsigned char *bits) {
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
       int ind = x + y * width;
-      set_cell(start_x + x, start_y + y, ((bits[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
+      // set_cell(start_x + x, start_y + y, ((bits[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
+      set_cell(start_x + x, start_y + y, 0);
     }
   }
 }
@@ -235,7 +240,7 @@ static full_rule get_board(int i) {
     res.r = &rle_rules[i];
   } else {
     res.is_rle = false;
-    res.r = &packed_rules[i - rle_rule_amt];
+    res.r = &packed_rules[0];
   }
   return res;
 }
@@ -266,6 +271,13 @@ int AgbMain(void) {
   pal_bg_mem[0] = RGB15(31, 10, 10);
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
+
+  // full_rule r = get_board(0);
+  rule r = packed_rules[0];
+  for (int i = 0; i < packed_rules[0].width; i++) {
+    set_cell(i,0,0);
+  }
+  swap_boards();
 
   // while (true) {}
   // set_cell(0, 0, 0);
