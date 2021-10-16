@@ -197,7 +197,23 @@ static void set_board_rle(int width, int height, const char *cursor) {
 
 }
 
-static void setBoard(full_rule starter) {
+static full_rule get_board(void) {
+  int i = state.board_ind;
+  full_rule res;
+  if (i < rle_rule_amt) {
+    res.is_rle = true;
+    res.r = &rle_rules[i];
+  } else {
+    i -= rle_rule_amt;
+    res.is_rle = false;
+    res.r = &packed_rules[i];
+  }
+  return res;
+}
+
+static void setBoard(void) {
+  full_rule starter = get_board();
+
   state.board_ind = 0;
   state.other_board_ind = 1;
 
@@ -220,13 +236,13 @@ static void setBoard(full_rule starter) {
 }
 
 // This is the function that will be called by the CPU when an interrupt is triggered
-static void interruptHandler() {
+static void interruptHandler(void) {
 	REG_IF = INT_VBLANK;
 	REG_IFBIOS |= INT_VBLANK;
 }
 
 // This is the function that we wil call to register that we want a VBLANK Interrupt
-static void register_vblank_isr() {
+static void register_vblank_isr(void) {
 	REG_IME = 0x00;
 	REG_INTERRUPT = (fnptr)interruptHandler;
 	REG_DISPSTAT |= DSTAT_VBL_IRQ;
@@ -235,19 +251,6 @@ static void register_vblank_isr() {
 }
 
 extern void halt(void);
-
-static full_rule get_board(int i) {
-  full_rule res;
-  if (i < rle_rule_amt) {
-    res.is_rle = true;
-    res.r = &rle_rules[i];
-  } else {
-    i -= rle_rule_amt;
-    res.is_rle = false;
-    res.r = &packed_rules[i];
-  }
-  return res;
-}
 
 static void vsync(void) {
   register_vblank_isr();
@@ -291,7 +294,6 @@ static void set_pallette_keyframes(int num, COLOR *colors, int *percentages) {
 int AgbMain(void) {
 
   const int num_starters = rle_rule_amt + packed_rule_amt;
-  int board_ind = 0;
 
   // screen entry 0,0 to tile 1
   for (int y = 0; y < HEIGHT; y++) {
@@ -314,7 +316,7 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  setBoard(get_board(board_ind));
+  setBoard();
 
   int delay = 6;
   while (1) {
@@ -323,12 +325,12 @@ int AgbMain(void) {
       if (key_hit(KEY_L)) delay++;
       if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
       if (key_hit(KEY_UP)) {
-        board_ind = (board_ind + 1) % num_starters;
-        setBoard(get_board(board_ind));
+        state.board_ind = (state.board_ind + 1) % num_starters;
+        setBoard();
       }
       if (key_hit(KEY_DOWN)) {
-        board_ind = (board_ind + num_starters - 1) % num_starters;
-        setBoard(get_board(board_ind));
+        state.board_ind = (state.board_ind + num_starters - 1) % num_starters;
+        setBoard();
       }
       vsync();
       display();
