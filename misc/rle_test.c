@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <inttypes.h>
 #include <errno.h>
 #include <stdbool.h>
@@ -38,8 +37,8 @@ void fprint_rule(FILE *out, rule r) {
     "    .creator = \"%s\",\n"
     "    .birth_rules = %" PRIu8 ",\n"
     "    .stay_alive_rules = %" PRIu8 ",\n"
-    "    .x = %ul,\n"
-    "    .y = %ul,\n"
+    "    .x = %d,\n"
+    "    .y = %d,\n"
     "  }",
     r.name,
     r.creator,

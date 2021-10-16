@@ -1,7 +1,9 @@
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+
 #include "rle.h"
 
 static const uint8_t normal_s = 12;
@@ -70,7 +72,7 @@ loop:
       goto ret;
     }
 
-    [#] [Cc] .* [\n] { printf("skipping comment\n"); goto loop; }
+    [#] [Cc] .* [\n] { goto loop; }
 
     [#] [N] osp @name str @ename osp nl {
       token.type = NAME;
