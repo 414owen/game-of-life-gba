@@ -1,4 +1,4 @@
-# Game of Life GBA
+# Conway's Game of Life GBA
 
 ## Setup
 
