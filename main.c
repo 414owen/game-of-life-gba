@@ -45,7 +45,7 @@ typedef int board[HEIGHT][WIDTH];
 typedef struct {
   bool is_rle;
   const rule *r;
-} full_rule;
+} full_pattern;
 
 struct state {
   board boards[2];
@@ -156,7 +156,7 @@ static void update_tail_frames(void) {
   swap_boards();
 }
 
-static void setup_board_packed(int width, int height, const unsigned char *bits) {
+static void setup_pattern_packed(int width, int height, const unsigned char *bits) {
   int start_x = (WIDTH - width) / 2;
   int start_y = (HEIGHT - height) / 2;
   for (int y = 0; y < height; y++) {
@@ -167,7 +167,7 @@ static void setup_board_packed(int width, int height, const unsigned char *bits)
   }
 }
 
-static void setup_board_rle(int width, int height, const char *cursor) {
+static void setup_pattern_rle(int width, int height, const char *cursor) {
   int start_x = (WIDTH - width) / 2;
   int y = (HEIGHT - height) / 2;
   int x = start_x;
@@ -197,9 +197,9 @@ static void setup_board_rle(int width, int height, const char *cursor) {
 
 }
 
-static full_rule get_board(void) {
+static full_pattern get_pattern(void) {
   int i = state.board_ind;
-  full_rule res;
+  full_pattern res;
   if (i < rle_rule_amt) {
     res.is_rle = true;
     res.r = &rle_rules[i];
@@ -211,8 +211,8 @@ static full_rule get_board(void) {
   return res;
 }
 
-static void setup_board(void) {
-  full_rule starter = get_board();
+static void setup_pattern(void) {
+  full_pattern starter = get_pattern();
 
   state.board_ind = 0;
   state.other_board_ind = 1;
@@ -227,9 +227,9 @@ static void setup_board(void) {
   }
 
   if (starter.is_rle) {
-    setup_board_rle(starter.r->width, starter.r->height, starter.r->rle);
+    setup_pattern_rle(starter.r->width, starter.r->height, starter.r->rle);
   } else {
-    setup_board_packed(starter.r->width, starter.r->height, starter.r->packed);
+    setup_pattern_packed(starter.r->width, starter.r->height, starter.r->packed);
   }
 
   swap_boards();
@@ -316,7 +316,7 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  setup_board();
+  setup_pattern();
 
   int delay = 6;
   while (1) {
@@ -326,11 +326,11 @@ int AgbMain(void) {
       if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
       if (key_hit(KEY_UP)) {
         state.board_ind = (state.board_ind + 1) % num_starters;
-        setup_board();
+        setup_pattern();
       }
       if (key_hit(KEY_DOWN)) {
         state.board_ind = (state.board_ind + num_starters - 1) % num_starters;
-        setup_board();
+        setup_pattern();
       }
       vsync();
       display();
