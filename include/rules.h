@@ -11,7 +11,7 @@ typedef struct {
   u8 birth_rules;
   int width;
   int height;
-  char *data;
+  unsigned char *data;
 } rule;
 
 #endif

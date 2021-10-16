@@ -138,7 +138,7 @@ static void update_tail_frames(void) {
   }
 }
 
-static void set_board_packed(int width, int height, char *bits) {
+static void set_board_packed(int width, int height, unsigned char *bits) {
   int start_x = (WIDTH - width) / 2;
   int start_y = (HEIGHT - height) / 2;
   for (int y = 0; y < height; y++) {
@@ -149,7 +149,7 @@ static void set_board_packed(int width, int height, char *bits) {
   }
 }
 
-static void set_board_rle(int width, int height, char *cursor) {
+static void set_board_rle(int width, int height, unsigned char *cursor) {
   int start_x = (WIDTH - width) / 2;
   int y = (HEIGHT - height) / 2;
   int x = start_x;
@@ -219,12 +219,12 @@ extern void halt(void);
 
 static full_rule get_board(int i) {
   full_rule res;
-  if (i >= rle_rule_amt) {
+  if (i < rle_rule_amt) {
     res.is_rle = true;
     res.r = &rle_rules[i];
   } else {
     res.is_rle = false;
-    res.r = &packed_rules[i];
+    res.r = &packed_rules[i - rle_rule_amt];
   }
   return res;
 }
@@ -251,6 +251,12 @@ int AgbMain(void) {
   pal_bg_mem[0] = RGB15(31, 10, 10);
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
+
+  // while (true) {}
+  // set_cell(0, 0, 0);
+  // swap_boards();
+  // display();
+  // return 1;
 
   int delay = 6;
   while (1) {

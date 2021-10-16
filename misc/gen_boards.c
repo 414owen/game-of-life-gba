@@ -284,11 +284,11 @@ int main(int argc, char **argv) {
   rle_out = fopen("gen/boards_rle.c", "w");
   packed_out = fopen("gen/boards_packed.c", "w");
 
-  char *intro = "#include \"rules.h\"\n#include <stddef.h>\n";
+  char *intro = "#include \"rules.h\"\n#include <stddef.h>\n\n";
   fputs(intro, rle_out);
   fputs(intro, packed_out);
-  fputs("rule rle_rules[] = {\n", rle_out);
-  fputs("rule packed_rules[] = {\n", packed_out);
+  fputs("const rule rle_rules[] = {\n", rle_out);
+  fputs("const rule packed_rules[] = {\n", packed_out);
 
   while ((dir = readdir(d)) != NULL) {
     if (dir->d_type != DT_REG) continue;
@@ -302,8 +302,8 @@ int main(int argc, char **argv) {
     free(fname);
   }
 
-  fprintf(rle_out, "};\n\nint rle_rule_amt = %d;\n", rle_amt);
-  fprintf(packed_out, "};\n\nint packed_rule_amt = %d;\n", packed_amt);
+  fprintf(rle_out, "};\n\nconst int rle_rule_amt = %d;\n", rle_amt);
+  fprintf(packed_out, "};\n\nconst int packed_rule_amt = %d;\n", packed_amt);
 
   printf("successes: %d\n"
     "invalids: %d\n"
