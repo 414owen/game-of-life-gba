@@ -69,6 +69,7 @@ hash_token scan_header(const char *YYCURSOR) {
   char *author, *eauthor;
   char *x, *y, *ex, *ey;
   char *s, *b, *es, *eb;
+  char *s2, *b2, *es2, *eb2;
   /*!stags:re2c format = "const char *@@; "; */
   hash_token token;
   token.type = INVALID;
@@ -107,15 +108,20 @@ loop:
       goto ret;
     }
 
-    rule = ( @s [\d]+ @es [/] @b [\d]+ @eb | [B] @b [\d]+ @eb [/] [S] @s [\d]+ @es );
+    rule = ( @s [\d]+ @es [/] @b [\d]+ @eb | [B] @b2 [\d]+ @eb2 [/] [S] @s2 [\d]+ @es2 );
 
     [x] osp [=] osp @x integer @ex  osp [,] osp
     [y] osp [=] osp @y integer @ey osp [,] osp
     'rule' osp [=] osp rule osp nl {
       token.x = parse_int(x);
       token.y = parse_int(y);
-      token.s = parse_int(s);
-      token.b = parse_int(s);
+      if (s != NULL) {
+        token.s = mk_string(s, es);
+        token.s = mk_string(b, eb);
+      } else {
+        token.s = mk_string(s2, es2);
+        token.s = mk_string(b2, eb2);
+      }
       goto ret;
     }
 */
