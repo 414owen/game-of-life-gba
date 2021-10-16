@@ -81,8 +81,7 @@ void fprint_common(FILE *out, rule r) {
     "    .birth_rules = %" PRIu8 ",\n"
     "    .stay_alive_rules = %" PRIu8 ",\n"
     "    .width = %d,\n"
-    "    .height = %d,\n"
-    "    .data = \"",
+    "    .height = %d,\n",
     r.birth_rules,
     r.stay_alive_rules,
     r.width,
@@ -92,7 +91,7 @@ void fprint_common(FILE *out, rule r) {
 
 void fprint_rle(rule r) {
   fprint_common(rle_out, r);
-  fprintf(rle_out, "%s\"\n  },\n", r.data);
+  fprintf(rle_out, "    .rle = \"%s\"\n  },\n", r.rle);
 }
 
 int bitset_bytes(int bools) {
@@ -108,14 +107,19 @@ uint8_t *board_bitset(int width, int height) {
 
 void fprint_packed(rule r) {
   fprint_common(packed_out, r);
+  fprintf(packed_out, "    .packed = packed_data_%d\n  },\n", packed_amt);
+}
 
+void fprint_packed_data(rule r) {
+  int bb = bitset_bytes(r.width * r.height);
+  fprintf(packed_out, "unsigned char packed_data_%d[] = {", packed_amt);
   bool board[20][30];
   memset(board, 0, 20 * 30 * sizeof(bool));
   int x = 0;
   int y = 0;
   int n = 0;
-  for (int i = 0; i < strlen(r.data); i++) {
-    char c = r.data[i];
+  for (int i = 0; i < strlen(r.rle); i++) {
+    char c = r.rle[i];
     if (isdigit(c)) {
       n *= 10;
       n += c - '0';
@@ -146,11 +150,12 @@ void fprint_packed(rule r) {
     }
   }
 
-  for (int i = 0; i < bitset_bytes(r.width * r.height); i++) {
-    fprintf(packed_out, "\\x%x", res[i]);
+  for (int i = 0; i < bb; i++) {
+    if (i % 8 == 0) fputs("\n ", packed_out);
+    fprintf(packed_out, " 0x%02x,", res[i]);
   }
 
-  fprintf(packed_out, "\"\n  },\n");
+  fprintf(packed_out, "\n};\n\n");
   free(res);
 }
 
@@ -190,14 +195,15 @@ void safe_free(void *a) {
 void free_rule(rule r) {
   safe_free(r.creator);
   safe_free(r.name);
+  free(r.rle);
 }
 
-void run_file(char *fname) {
+rule parse_headers(char *fname, bool *success) {
   rule r = {
     .creator = NULL,
     .name = NULL
   };
-  // printf("\rparsing file %s\n", fname);
+
   size_t file_len = 0;
   char *file = read_file(fname, &file_len);
   char *cursor = file;
@@ -210,9 +216,9 @@ void run_file(char *fname) {
 
     if (t.type == INVALID) {
       invalids++;
+      *success = false;
       free_rule(r);
-      free(file);
-      return;
+      return r;
     }
 
     header_lines_parsed++;
@@ -239,43 +245,65 @@ void run_file(char *fname) {
     cursor = t.next;
   } while (t.type != XY_RULE);
 
-  r.data = cursor;
-  get_dims(cursor, &r.width, &r.height);
+  *success = true;
+  r.rle = strdup(cursor);
+  free(file);
+  return r;
+}
 
+void print_packed_data(char *fname) {
+  bool success;
+  rule r = parse_headers(fname, &success);
+  if (!success) return;
+
+  get_dims(r.rle, &r.width, &r.height);
+  if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) return;
+
+  int area = r.width * r.height;
+  int our_rle_bytes = strlen(r.rle) + 1;
+  int our_packed_bytes = bitset_bytes(area);
+  if (our_rle_bytes > our_packed_bytes) {
+    fprint_packed_data(r);
+    packed_amt++;
+  }
+}
+
+void run_file(char *fname) {
+  bool success;
+  rule r = parse_headers(fname, &success);
+  if (!success) return;
+
+  get_dims(r.rle, &r.width, &r.height);
   if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) {
     bad_dims++;
   } else {
     successes++;
     int PTR_SIZE = 4;
-    int our_rle_bytes = PTR_SIZE + strlen(r.data) + 1;
+    int our_rle_bytes = PTR_SIZE + strlen(r.rle) + 1;
     rle_bytes_used += our_rle_bytes;
     int area = r.width * r.height;
-    int our_packed_bytes_used = area / 8 + (area % 8 == 0 ? 0 : 1);
-    packed_bytes_used += PTR_SIZE + our_packed_bytes_used;
-    both_bytes += MIN(our_packed_bytes_used, our_rle_bytes);
+    int our_packed_bytes = PTR_SIZE + area / 8 + (area % 8 == 0 ? 0 : 1);
+    packed_bytes_used += our_packed_bytes;
+    both_bytes += MIN(our_packed_bytes, our_rle_bytes);
 
-    if (our_rle_bytes < our_packed_bytes_used) {
-      rle_amt++;
+    if (our_rle_bytes < our_packed_bytes) {
       fprint_rle(r);
+      rle_amt++;
     } else {
-      packed_amt++;
       fprint_packed(r);
+      packed_amt++;
     }
   }
-  free(file);
   free_rule(r);
 }
+
+char *dummy_rule = "{}";
 
 int main(int argc, char **argv) {
   DIR *d;
   struct dirent *dir;
   char *dir_prefix = "all/";
   size_t dir_len = strlen(dir_prefix);
-  d = opendir(dir_prefix);
-  if (!d) {
-    perror("Coldn't open directory 'all'");
-    exit(1);
-  }
 
   // shitty debug mode
   // rle_out = stdout;
@@ -287,19 +315,61 @@ int main(int argc, char **argv) {
   char *intro = "#include \"rules.h\"\n#include <stddef.h>\n\n";
   fputs(intro, rle_out);
   fputs(intro, packed_out);
-  fputs("const rule rle_rules[] = {\n", rle_out);
-  fputs("const rule packed_rules[] = {\n", packed_out);
 
-  while ((dir = readdir(d)) != NULL) {
-    if (dir->d_type != DT_REG) continue;
-    size_t len = strlen(dir->d_name);
-    char *fname = malloc(len + dir_len + 1);
-    strcpy(fname, dir_prefix);
-    strcpy(fname + dir_len, dir->d_name);
-    fname[len + dir_len] = '\0';
-    puts(fname);
-    run_file(fname);
-    free(fname);
+  {
+    d = opendir(dir_prefix);
+    if (!d) {
+      perror("Coldn't open directory 'all'");
+      exit(1);
+    }
+
+    while ((dir = readdir(d)) != NULL) {
+      if (dir->d_type != DT_REG) continue;
+      size_t len = strlen(dir->d_name);
+      char *fname = malloc(len + dir_len + 1);
+      strcpy(fname, dir_prefix);
+      strcpy(fname + dir_len, dir->d_name);
+      fname[len + dir_len] = '\0';
+      puts(fname);
+      print_packed_data(fname);
+      free(fname);
+    }
+
+    packed_amt = 0;
+    closedir(d);
+  }
+
+  {
+    fputs("const rule rle_rules[] = {\n", rle_out);
+    fputs("const rule packed_rules[] = {\n", packed_out);
+
+    d = opendir(dir_prefix);
+    if (!d) {
+      perror("Coldn't open directory 'all'");
+      exit(1);
+    }
+
+    while ((dir = readdir(d)) != NULL) {
+      if (dir->d_type != DT_REG) continue;
+      size_t len = strlen(dir->d_name);
+      char *fname = malloc(len + dir_len + 1);
+      strcpy(fname, dir_prefix);
+      strcpy(fname + dir_len, dir->d_name);
+      fname[len + dir_len] = '\0';
+      puts(fname);
+      run_file(fname);
+      free(fname);
+    }
+
+    closedir(d);
+  }
+
+  if (rle_amt == 0) {
+    fputs(dummy_rule, rle_out);
+  }
+
+  if (packed_amt == 0) {
+    fputs(dummy_rule, packed_out);
   }
 
   fprintf(rle_out, "};\n\nconst int rle_rule_amt = %d;\n", rle_amt);
@@ -321,6 +391,4 @@ int main(int argc, char **argv) {
 
   fclose(rle_out);
   fclose(packed_out);
-
-  closedir(d);
 }

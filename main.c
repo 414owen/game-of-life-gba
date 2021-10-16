@@ -139,6 +139,13 @@ static void update_tail_frames(void) {
 }
 
 static void set_board_packed(int width, int height, unsigned char *bits) {
+
+  boards[0][0][0] = 0;
+  boards[0][0][1] = 0;
+  boards[0][0][2] = 0;
+
+  return;
+
   int start_x = (WIDTH - width) / 2;
   int start_y = (HEIGHT - height) / 2;
   for (int y = 0; y < height; y++) {
@@ -149,7 +156,8 @@ static void set_board_packed(int width, int height, unsigned char *bits) {
   }
 }
 
-static void set_board_rle(int width, int height, unsigned char *cursor) {
+static void set_board_rle(int width, int height, char *cursor) {
+
   int start_x = (WIDTH - width) / 2;
   int y = (HEIGHT - height) / 2;
   int x = start_x;
@@ -176,6 +184,7 @@ static void set_board_rle(int width, int height, unsigned char *cursor) {
     }
     c = *(++cursor);
   }
+
 }
 
 static void setBoard(full_rule starter) {
@@ -192,12 +201,10 @@ static void setBoard(full_rule starter) {
   }
 
   if (starter.is_rle) {
-    set_board_rle(starter.r->width, starter.r->height, starter.r->data);
+    set_board_rle(starter.r->width, starter.r->height, starter.r->rle);
   } else {
-    set_board_packed(starter.r->width, starter.r->height, starter.r->data);
+    set_board_packed(starter.r->width, starter.r->height, starter.r->packed);
   }
-
-  swap_boards();
 }
 
 // This is the function that will be called by the CPU when an interrupt is triggered
@@ -237,7 +244,11 @@ int AgbMain(void) {
   setBoard(get_board(board_ind));
 
   // screen entry 0,0 to tile 1
-  // se_mat[SCREENBLOCK_NUM][0][0] = 31;
+  for (int y = 0; y < HEIGHT; y++) {
+    for (int x = 0; x < WIDTH; x++) {
+      se_mat[SCREENBLOCK_NUM][y][x] = 31;
+    }
+  }
 
   // create a flat tile for 'on' cells
   for (int i = 0; i <= TAIL_FRAMES; i++) {
@@ -257,6 +268,17 @@ int AgbMain(void) {
   // swap_boards();
   // display();
   // return 1;
+
+  // could be flattened into one loop
+  // for (int n = 0; n < 2; n++) {
+  //   for (int y = 0; y < HEIGHT; y++) {
+  //     for (int x = 0; x < WIDTH; x++) {
+  //       boards[n][y][x] = 0;
+  //     }
+  //   }
+  // }
+
+  // unsigned char *test = { 0x00 };
 
   int delay = 6;
   while (1) {
