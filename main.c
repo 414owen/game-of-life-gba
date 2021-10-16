@@ -140,21 +140,7 @@ static void update_tail_frames(void) {
   swap_boards();
 }
 
-static void set_board_packed(int width, int height, unsigned char *bits) {
-
-  // boards[0][0][0] = 0;
-  // boards[0][0][1] = 0;
-  // boards[0][0][2] = 0;
-  // set_cell(0,0,0);
-  // set_cell(0,1,0);
-  // set_cell(0,2,0);
-  // return;
-
-  // for (int i = 0; i < width; i++) {
-  //   set_cell(i,0,0);
-  // }
-  // return;
-
+static void set_board_packed(int width, int height, const unsigned char *bits) {
   int start_x = (WIDTH - width) / 2;
   int start_y = (HEIGHT - height) / 2;
   for (int y = 0; y < height; y++) {
@@ -165,8 +151,7 @@ static void set_board_packed(int width, int height, unsigned char *bits) {
   }
 }
 
-static void set_board_rle(int width, int height, char *cursor) {
-
+static void set_board_rle(int width, int height, const char *cursor) {
   int start_x = (WIDTH - width) / 2;
   int y = (HEIGHT - height) / 2;
   int x = start_x;
@@ -242,15 +227,20 @@ static full_rule get_board(int i) {
     res.r = &rle_rules[i];
   } else {
     res.is_rle = false;
-    res.r = &packed_rules[0];
+    res.r = &packed_rules[i];
   }
   return res;
 }
 
+static void vsync(void) {
+  register_vblank_isr();
+  halt();
+}
+
 int AgbMain(void) {
 
-  int board_ind = 0;
   const int num_starters = rle_rule_amt + packed_rule_amt;
+  int board_ind = 0;
 
   // screen entry 0,0 to tile 1
   for (int y = 0; y < HEIGHT; y++) {
@@ -290,8 +280,7 @@ int AgbMain(void) {
       }
       display();
       update_tail_frames();
-      register_vblank_isr();
-      halt();
+      vsync();
     }
     update();
   }

@@ -31,7 +31,7 @@ build/scanners/%.o: gen/scanners/%.c
 
 build/gen/%.o: gen/%.c
 	mkdir -p build/gen
-	$(CC) $(CFLAGS) -c -o $@ $^
+	$(CC) $(CFLAGS) -s -c -o $@ $^
 
 build/gen_boards: build/scanners/rle_header.o misc/gen_boards.c
 	# -fsanitize=address -fno-omit-frame-pointer

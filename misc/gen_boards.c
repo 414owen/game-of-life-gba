@@ -174,7 +174,7 @@ void get_dims(char *cursor, int *width, int *height) {
       n += c - '0';
     } else if (c == 'o') {
       x += MAX(1, n);
-      max_width = MAX(max_width, x) + 1;
+      max_width = MAX(max_width, x + 1);
       n = 0;
     } else if (c == 'b') {
       x += MAX(1, n);
