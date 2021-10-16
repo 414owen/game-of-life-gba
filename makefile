@@ -20,7 +20,8 @@ build/%.c: misc/%.r2c
 	re2c $< -o $@
 
 test_rle: build/rle_header.o misc/rle_test.c
-	clang $(WARNS) -fsanitize=address -fno-omit-frame-pointer -g -O0 -o build/rle_test build/*.o misc/rle_test.c -Iinclude
+	# -fsanitize=address -fno-omit-frame-pointer
+	clang $(WARNS) -g -O0 -o build/rle_test build/*.o misc/rle_test.c -Iinclude
 	./build/rle_test all/worm.rle
 
 lib/%.o: src/%.c

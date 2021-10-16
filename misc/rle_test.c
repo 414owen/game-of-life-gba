@@ -182,6 +182,16 @@ void get_dims(char *cursor, int *width, int *height) {
   *height = y + 1;
 }
 
+void safe_free(void *a) {
+  if (a == NULL) return;
+  free(a);
+}
+
+void free_rule(rule r) {
+  safe_free(r.creator);
+  safe_free(r.name);
+}
+
 void run_file(char *fname) {
   rule r = {
     .creator = NULL,
@@ -200,6 +210,8 @@ void run_file(char *fname) {
 
     if (t.type == INVALID) {
       invalids++;
+      free_rule(r);
+      free(file);
       return;
     }
 
@@ -232,26 +244,26 @@ void run_file(char *fname) {
 
   if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) {
     bad_dims++;
-    printf("width: %d, height: %d\n", r.width, r.height);
-    return;
-  }
-
-  successes++;
-  int PTR_SIZE = 4;
-  int our_rle_bytes = PTR_SIZE + strlen(r.data) + 1;
-  rle_bytes_used += our_rle_bytes;
-  int area = r.width * r.height;
-  int our_packed_bytes_used = area / 8 + (area % 8 == 0 ? 0 : 1);
-  packed_bytes_used += PTR_SIZE + our_packed_bytes_used;
-  both_bytes += MIN(our_packed_bytes_used, our_rle_bytes);
-
-  if (our_rle_bytes < our_packed_bytes_used) {
-    rle_amt++;
-    fprint_rle(r);
   } else {
-    packed_amt++;
-    fprint_packed(r);
+    successes++;
+    int PTR_SIZE = 4;
+    int our_rle_bytes = PTR_SIZE + strlen(r.data) + 1;
+    rle_bytes_used += our_rle_bytes;
+    int area = r.width * r.height;
+    int our_packed_bytes_used = area / 8 + (area % 8 == 0 ? 0 : 1);
+    packed_bytes_used += PTR_SIZE + our_packed_bytes_used;
+    both_bytes += MIN(our_packed_bytes_used, our_rle_bytes);
+
+    if (our_rle_bytes < our_packed_bytes_used) {
+      rle_amt++;
+      fprint_rle(r);
+    } else {
+      packed_amt++;
+      fprint_packed(r);
+    }
   }
+  free(file);
+  free_rule(r);
 }
 
 int main(int argc, char **argv) {
@@ -265,8 +277,13 @@ int main(int argc, char **argv) {
     exit(1);
   }
 
+  // shitty debug mode
+  // rle_out = stdout;
+  // packed_out = stdout;
+
   rle_out = fopen("build/boards_rle.c", "w");
   packed_out = fopen("build/boards_packed.c", "w");
+
   char *intro = "#include \"rules.h\"\n\n";
   fputs(intro, rle_out);
   fputs(intro, packed_out);
@@ -298,6 +315,11 @@ int main(int argc, char **argv) {
     100 * packed_bytes_used / MAX(rle_bytes_used, 1)
   );
 
+  fflush(rle_out);
+  fflush(packed_out);
+
+  fclose(rle_out);
+  fclose(packed_out);
 
   closedir(d);
 }

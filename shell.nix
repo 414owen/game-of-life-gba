@@ -11,5 +11,5 @@ in
 
 armPkgs.mkShell {
   buildInputs = [ ]; # your dependencies here
-  nativeBuildInputs = with pkgs; [ mgba gdb re2c clang ];
+  nativeBuildInputs = with pkgs; [ mgba gdb re2c clang valgrind ];
 }
