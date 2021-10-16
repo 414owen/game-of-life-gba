@@ -37,7 +37,7 @@ Or put it on a cartridge, for example the [everdrive](https://krikzz.com/store/h
   * Other amounts for stay-alive / birth rules
   * Other [neighborhood sets](https://www.conwaylife.com/wiki/Larger_than_Life)
 * Rename 'boards' and 'rules' to 'patterns' in the codebase
-* Break up board generation into smaller compilation units
+* Break up ~board~ pattern C data generation into smaller compilation units
 * Settings for
   * Toggling tails
   * Set tail length
