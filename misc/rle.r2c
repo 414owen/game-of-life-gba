@@ -29,9 +29,11 @@ typedef struct {
   union {
     char *name;
     char *author;
-    union {
+    struct {
       unsigned long x;
       unsigned long y;
+      char *s;
+      char *b;
     };
   };
 } hash_token;
@@ -65,7 +67,8 @@ hash_token scan_header(const char *YYCURSOR) {
   // } positions;
   char *name, *ename;
   char *author, *eauthor;
-  char *x, *y, *rule, *ex, *ey, *erule;
+  char *x, *y, *ex, *ey;
+  char *s, *b, *es, *eb;
   /*!stags:re2c format = "const char *@@; "; */
   hash_token token;
   token.type = INVALID;
@@ -104,13 +107,16 @@ loop:
       goto ret;
     }
 
+    rule = ( @s [\d]+ @es [/] @b [\d]+ @eb | [B] @b [\d]+ @eb [/] [S] @s [\d]+ @es );
+
     [x] osp [=] osp @x integer @ex  osp [,] osp
     [y] osp [=] osp @y integer @ey osp [,] osp
-    'rule' osp [=] @rule str @erule osp nl{
+    'rule' osp [=] osp rule osp nl {
       token.x = parse_int(x);
       token.y = parse_int(y);
+      token.s = parse_int(s);
+      token.b = parse_int(s);
       goto ret;
-      // TODO rule
     }
 */
 
