@@ -1,10 +1,11 @@
-# Game of Life
+# Game of Life GBA
 
 ## Setup
 
 ## Building
 
 ```
+$ # one-step to get a full cross-compilation toolchain!
 $ nix-shell
 $ make game.gba
 ```
@@ -29,6 +30,26 @@ Or put it on a cartridge, for example the [everdrive](https://krikzz.com/store/h
 ## Demo
 
 ![demo.gif](demo.gif)
+
+## TODO (things I might pick up on a rainy day)
+
+* Support other rulesets
+  * Other amounts for stay-alive / birth rules
+  * Other [neighborhood sets](https://www.conwaylife.com/wiki/Larger_than_Life)
+* Rename 'boards' and 'rules' to 'patterns' in the codebase
+* Break up board generation into smaller compilation units
+* Settings for
+  * Toggling tails
+  * Set tail length
+  * Set colors
+* Add editor
+* Allow saving edited boards
+* Show what pattern you're on (out of the >900 built-in)
+* Allow you to 'favourite' patterns
+* Menu to quickly browse / find patterns by name / type / size
+* Sort patterns by type (oscillator / spaceship / gun / etc.)
+
+If anyone wants to implement these, PRs are welcome.
 
 ## Credits
 
