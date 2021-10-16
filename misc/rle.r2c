@@ -1,42 +1,13 @@
 #include <ctype.h>
+#include <inttypes.h>
 #include <errno.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 #include "rules.h"
-
-typedef struct {
-	const char* top;	//start of token
-	const char* curr;	//cursor; will be just past token when emitting tokens
-	const char* ptr;	//used by re2c to store position for backtracking
-	const char* pos;	//
-	int line;		//line no in source file
-	int current_token;
-} scanner;
-
-typedef enum {
-  NAME,
-  AUTHOR,
-  XY_RULE,
-  INVALID,
-} hash_token_type;
-
-typedef struct {
-  hash_token_type type;
-  char *next;
-  union {
-    char *name;
-    char *author;
-    struct {
-      unsigned long x;
-      unsigned long y;
-      char *s;
-      char *b;
-    };
-  };
-} hash_token;
 
 static char *mk_string(char *start, char *cursor) {
   int len = cursor - start - 1;
@@ -49,89 +20,30 @@ static char *mk_string(char *start, char *cursor) {
 long parse_int(char *s) {
   bool neg = false;
   long res = 0;
-  while (*s++ == '-') neg = !neg;
+  while (*s == '-') {
+    neg = !neg;
+  }
   while (isdigit(*s)) {
     res *= 10;
-    res += s - '0';
+    res += (*s) - '0';
+    s++;
+  }
+  if (neg) res = -res;
+  return res;
+}
+
+uint8_t parse_rule_bitset(char *s, char *end) {
+  uint8_t res = 0;
+  while (s < end) {
+    int n = *s - '0';
+    res |= 1 << n;
     s++;
   }
   return res;
 }
 
-hash_token scan_header(const char *YYCURSOR) {
-  char *YYMARKER;
-  // union {
-  //   struct { char *name, *ename; };
-  //   struct { char *author, *eauthor; };
-  //   struct { char *x, *y, *rule, *ex, *ey, *erule; };
-  // } positions;
-  char *name, *ename;
-  char *author, *eauthor;
-  char *x, *y, *ex, *ey;
-  char *s, *b, *es, *eb;
-  char *s2, *b2, *es2, *eb2;
-  /*!stags:re2c format = "const char *@@; "; */
-  hash_token token;
-  token.type = INVALID;
-loop:
-/*!re2c
-    re2c:define:YYCTYPE = char;
-    re2c:yyfill:enable  = 0;
-    re2c:flags:tags = 1;
-    re2c:tags:expression = "@@";
-
-    // ignore comments
-    // [#][Cc].*         { goto loop; }
-
-    sp = [ \t];
-    osp = [\t ]*;
-    nl = [\r]?[\n];
-    str = .*;
-    integer = [-]*[0-9]+;
-
-    * {
-      token.type = INVALID;
-      goto ret;
-    }
-
-    [#] [Cc] .* nl { printf("skipping comment\n"); goto loop; }
-
-    [#] [N] osp @name str @ename osp nl {
-      token.type = NAME;
-      token.name = mk_string(name, ename);
-      goto ret;
-    }
-
-    [#] [O] osp @author str @eauthor osp nl {
-      token.type = AUTHOR;
-      token.author = mk_string(author, eauthor);
-      goto ret;
-    }
-
-    rule = ( @s [\d]+ @es [/] @b [\d]+ @eb | [B] @b2 [\d]+ @eb2 [/] [S] @s2 [\d]+ @es2 );
-
-    [x] osp [=] osp @x integer @ex  osp [,] osp
-    [y] osp [=] osp @y integer @ey osp [,] osp
-    'rule' osp [=] osp rule osp nl {
-      token.x = parse_int(x);
-      token.y = parse_int(y);
-      // This is dumb. re2c doesn't allow tag reuse in mutually exclusive branches.
-      // see https://github.com/skvadrik/re2c/blob/423c56ca556de944598f29b59abc43f89b616fb6/src/regexp/ast_to_re.cc#L471
-      if (s != NULL) {
-        token.s = mk_string(s, es);
-        token.s = mk_string(b, eb);
-      } else {
-        token.s = mk_string(s2, es2);
-        token.s = mk_string(b2, eb2);
-      }
-      goto ret;
-    }
-*/
-
-ret:
-  token.next = YYCURSOR;
-  return token;
-}
+uint8_t normal_s = 0;
+uint8_t normal_b = 0;
 
 int read_file(char *fname) {
   FILE *f = fopen(fname, "rb");
@@ -160,18 +72,30 @@ int read_file(char *fname) {
 
 void fprint_rule(FILE *out, rule r) {
   fprintf(out, "  {\n"
-    "    .name = \"%s\"\n"
-    "    .creator = \"%s\"\n",
-  r.name, r.creator);
+    "    .name = \"%s\",\n"
+    "    .creator = \"%s\",\n"
+    "    .birth_rules = %" PRIu8 ",\n"
+    "    .stay_alive_rules = %" PRIu8 ",\n"
+    "    .x = %ul,\n"
+    "    .y = %ul,\n"
+    "  }",
+    r.name,
+    r.creator,
+    r.birth_rules,
+    r.stay_alive_rules,
+    r.x,
+    r.y
+  );
 }
 
-void fprint_rules(FILE *out, int rule_num, rule *rules) {
-  fprintf(out, "int rule_num = %d;\n"
+void fprint_rules(FILE *out, int rule_amt, rule *rules) {
+  fprintf(out, "int rule_amt = %d;\n"
     "rule rules[] = {\n");
-  for (int i = 0; i < rule_num; i++) {
+  for (int i = 0; i < rule_amt; i++) {
     fprint_rule(out, rules[i]);
+    fputs(",\n", out)
   }
-  fprintf(out, "};\n");
+  fputs("};\n", out);
 }
 
 int main(int argc, char **argv) {
@@ -181,6 +105,12 @@ int main(int argc, char **argv) {
   char *file = read_file(fname);
   char *string = file;
   printf("Input file: %s\n", string);
+
+  // init normal rules
+  char *ss = "23";
+  char *bs = "3";
+  normal_s = parse_rule_bitset(ss, ss+2);
+  normal_b = parse_rule_bitset(bs, bs+1);
 
   hash_token t = scan_header(string);
   int header_lines_parsed = 0;
@@ -193,6 +123,13 @@ int main(int argc, char **argv) {
         break;
       case AUTHOR:
         r.creator = t.author;
+        break;
+      case XY_RULE:
+        printf("RULE\n");
+        r.x = t.x;
+        r.y = t.y;
+        r.stay_alive_rules = t.s;
+        r.birth_rules = t.b;
         break;
       case INVALID:
         perror("Coldn't parse file");

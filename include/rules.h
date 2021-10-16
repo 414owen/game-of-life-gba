@@ -6,6 +6,7 @@
 typedef struct {
   char *name;
   char *creator;
+  // list of digits
   u8 stay_alive_rules;
   u8 birth_rules;
   int x;

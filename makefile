@@ -14,7 +14,7 @@ test: a.out
 test_rle:
 	re2c misc/rle.r2c -o build/rle.c
 	gcc -g -O0 -o build/rle build/rle.c -Iinclude
-	./build/rle all/achimsotherp16.rle
+	./build/rle all/worm.rle
 
 lib/%.o: src/%.c
 	mkdir -p lib
