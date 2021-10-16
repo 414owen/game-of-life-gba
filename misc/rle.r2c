@@ -115,6 +115,8 @@ loop:
     'rule' osp [=] osp rule osp nl {
       token.x = parse_int(x);
       token.y = parse_int(y);
+      // This is dumb. re2c doesn't allow tag reuse in mutually exclusive branches.
+      // see https://github.com/skvadrik/re2c/blob/423c56ca556de944598f29b59abc43f89b616fb6/src/regexp/ast_to_re.cc#L471
       if (s != NULL) {
         token.s = mk_string(s, es);
         token.s = mk_string(b, eb);
