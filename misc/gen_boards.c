@@ -54,6 +54,7 @@ FILE *packed_out;
 int successes = 0;
 int invalids = 0;
 int bad_dims = 0;
+int bad_rules = 0;
 
 int rle_amt = 0;
 int packed_amt = 0;
@@ -108,6 +109,10 @@ uint8_t *board_bitset(int width, int height) {
 void fprint_packed(rule r) {
   fprint_common(packed_out, r);
   fprintf(packed_out, "    .packed = packed_data_%d\n  },\n", packed_amt);
+}
+
+bool fits(rule r) {
+  return r.width > 0 && r.width <= 30 && r.height > 0 && r.height <= 20;
 }
 
 void fprint_packed_data(rule r) {
@@ -254,13 +259,17 @@ rule parse_headers(char *fname, bool *success) {
   return r;
 }
 
+bool valid_ruleset(rule r) {
+  return r.stay_alive_rules == 12 && r.birth_rules == 8;
+}
+
 void print_packed_data(char *fname) {
   bool success;
   rule r = parse_headers(fname, &success);
   if (!success) return;
 
   get_dims(r.rle, &r.width, &r.height);
-  if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) return;
+  if (!(fits(r) && valid_ruleset(r))) return;
 
   int area = r.width * r.height;
   int our_rle_bytes = strlen(r.rle) + 1;
@@ -277,25 +286,33 @@ void run_file(char *fname) {
   if (!success) return;
 
   get_dims(r.rle, &r.width, &r.height);
-  if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) {
+  if (!fits(r)) {
     bad_dims++;
-  } else {
-    successes++;
-    int PTR_SIZE = 4;
-    int our_rle_bytes = PTR_SIZE + strlen(r.rle) + 1;
-    rle_bytes_used += our_rle_bytes;
-    int area = r.width * r.height;
-    int our_packed_bytes = PTR_SIZE + area / 8 + (area % 8 == 0 ? 0 : 1);
-    packed_bytes_used += our_packed_bytes;
-    both_bytes += MIN(our_packed_bytes, our_rle_bytes);
+    free_rule(r);
+    return;
+  }
 
-    if (our_rle_bytes < our_packed_bytes) {
-      fprint_rle(r);
-      rle_amt++;
-    } else {
-      fprint_packed(r);
-      packed_amt++;
-    }
+  if (!valid_ruleset(r)) {
+    bad_rules++;
+    free_rule(r);
+    return;
+  }
+
+  successes++;
+  int PTR_SIZE = 4;
+  int our_rle_bytes = PTR_SIZE + strlen(r.rle) + 1;
+  rle_bytes_used += our_rle_bytes;
+  int area = r.width * r.height;
+  int our_packed_bytes = PTR_SIZE + area / 8 + (area % 8 == 0 ? 0 : 1);
+  packed_bytes_used += our_packed_bytes;
+  both_bytes += MIN(our_packed_bytes, our_rle_bytes);
+
+  if (our_rle_bytes < our_packed_bytes) {
+    fprint_rle(r);
+    rle_amt++;
+  } else {
+    fprint_packed(r);
+    packed_amt++;
   }
   free_rule(r);
 }
@@ -383,11 +400,12 @@ int main(int argc, char **argv) {
   printf("successes: %d\n"
     "invalids: %d\n"
     "bad_dims: %d\n"
+    "bad_rules: %d\n"
     "rle_bytes_used: %d\n"
     "packed_bytes_used: %d\n"
     "both_bytes: %d\n\n"
     "packed as percent of rle: %d\n",
-    successes, invalids, bad_dims, rle_bytes_used, packed_bytes_used, both_bytes,
+    successes, invalids, bad_dims, bad_rules, rle_bytes_used, packed_bytes_used, both_bytes,
     100 * packed_bytes_used / MAX(rle_bytes_used, 1)
   );
 
