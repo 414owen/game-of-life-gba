@@ -10,6 +10,7 @@ let
 in
 
 armPkgs.mkShell {
+  C_INCLUDE_PATH = "include";
   buildInputs = [ ]; # your dependencies here
   nativeBuildInputs = with pkgs; [ mgba gdb re2c clang valgrind ];
 }

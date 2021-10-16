@@ -1,8 +1,11 @@
+#include <ctype.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
-#include "boards_compressed.h"
+#include "rle_boards.h"
+#include "packed_boards.h"
+#include "rules.h"
 #include "input.h"
 #include "defs.h"
 
@@ -40,6 +43,11 @@
 typedef int board[HEIGHT][WIDTH];
 static board boards[2];
 
+typedef struct {
+  bool is_rle;
+  rule *r;
+} full_rule;
+
 // Create a 15bit BGR color.
 // TODO test can we use | instead of +?
 static COLOR RGB15(int red, int green, int blue) {
@@ -56,8 +64,8 @@ static TILE8 make_flat_tile(u8 pallette_ind) {
   return res;
 }
 
-int board_ind = 0;
-int other_board_ind = 1;
+static int board_ind = 0;
+static int other_board_ind = 1;
 
 // write to board, read from other
 static void set_cell(int x, int y, int frames_since_alive) {
@@ -130,7 +138,47 @@ static void update_tail_frames(void) {
   }
 }
 
-static void setBoard(const starter *starter) {
+static void set_board_packed(int width, int height, char *bits) {
+  int start_x = (WIDTH - width) / 2;
+  int start_y = (HEIGHT - height) / 2;
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      int ind = x + y * width;
+      set_cell(start_x + x, start_y + y, ((bits[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
+    }
+  }
+}
+
+static void set_board_rle(int width, int height, char *cursor) {
+  int start_x = (WIDTH - width) / 2;
+  int y = (HEIGHT - height) / 2;
+  int x = start_x;
+  int n = 0;
+  char c = *cursor;
+  while (c != '\0') {
+    if (isdigit(c)) {
+      n *= 10;
+      n += c - '0';
+    } else if (c == 'o') {
+      n = MAX(1, n);
+      while (n) {
+        set_cell(x, y, true);
+        x++;
+        n--;
+      }
+    } else if (c == 'b') {
+      x += MAX(1, n);
+      n = 0;
+    } else if (c == '$') {
+      x = start_x;
+      y += MAX(1, n);
+      n = 0;
+    }
+    c = *(++cursor);
+  }
+}
+
+static void setBoard(full_rule starter) {
   board_ind = 0;
   other_board_ind = 1;
 
@@ -142,27 +190,24 @@ static void setBoard(const starter *starter) {
       }
     }
   }
-  int start_x = (WIDTH - starter->width) / 2;
-  int start_y = (HEIGHT - starter->height) / 2;
-  for (int y = 0; y < starter->height; y++) {
-    for (int x = 0; x < starter->width; x++) {
-      int ind = x + y * starter->width;
-      set_cell(start_x + x, start_y + y, ((starter->data[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
-    }
+
+  if (starter.is_rle) {
+    set_board_rle(starter.r->width, starter.r->height, starter.r->data);
+  } else {
+    set_board_packed(starter.r->width, starter.r->height, starter.r->data);
   }
+
   swap_boards();
 }
 
-void interruptHandler();
-
 // This is the function that will be called by the CPU when an interrupt is triggered
-void interruptHandler() {
+static void interruptHandler() {
 	REG_IF = INT_VBLANK;
 	REG_IFBIOS |= INT_VBLANK;
 }
 
 // This is the function that we wil call to register that we want a VBLANK Interrupt
-void register_vblank_isr() {
+static void register_vblank_isr() {
 	REG_IME = 0x00;
 	REG_INTERRUPT = (fnptr)interruptHandler;
 	REG_DISPSTAT |= DSTAT_VBL_IRQ;
@@ -172,11 +217,24 @@ void register_vblank_isr() {
 
 extern void halt(void);
 
+static full_rule get_board(int i) {
+  full_rule res;
+  if (i >= rle_rule_amt) {
+    res.is_rle = true;
+    res.r = &rle_rules[i];
+  } else {
+    res.is_rle = false;
+    res.r = &packed_rules[i];
+  }
+  return res;
+}
+
 int AgbMain(void) {
 
   int board_ind = 0;
+  const int num_starters = rle_rule_amt + packed_rule_amt;
 
-  setBoard(&starters[board_ind]);
+  setBoard(get_board(board_ind));
 
   // screen entry 0,0 to tile 1
   // se_mat[SCREENBLOCK_NUM][0][0] = 31;
@@ -204,11 +262,11 @@ int AgbMain(void) {
       if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
       if (key_hit(KEY_UP)) {
         board_ind = (board_ind + 1) % num_starters;
-        setBoard(&starters[board_ind]);
+        setBoard(get_board(board_ind));
       }
       if (key_hit(KEY_DOWN)) {
         board_ind = (board_ind + num_starters - 1) % num_starters;
-        setBoard(&starters[board_ind]);
+        setBoard(get_board(board_ind));
       }
       display();
       update_tail_frames();

@@ -281,10 +281,10 @@ int main(int argc, char **argv) {
   // rle_out = stdout;
   // packed_out = stdout;
 
-  rle_out = fopen("build/boards_rle.c", "w");
-  packed_out = fopen("build/boards_packed.c", "w");
+  rle_out = fopen("gen/boards_rle.c", "w");
+  packed_out = fopen("gen/boards_packed.c", "w");
 
-  char *intro = "#include \"rules.h\"\n\n";
+  char *intro = "#include \"rules.h\"\n#include <stddef.h>\n";
   fputs(intro, rle_out);
   fputs(intro, packed_out);
   fputs("rule rle_rules[] = {\n", rle_out);
@@ -302,7 +302,8 @@ int main(int argc, char **argv) {
     free(fname);
   }
 
-  fprintf(rle_out, "};\n\nint board_amt = %d;\n", successes);
+  fprintf(rle_out, "};\n\nint rle_rule_amt = %d;\n", rle_amt);
+  fprintf(packed_out, "};\n\nint packed_rule_amt = %d;\n", packed_amt);
 
   printf("successes: %d\n"
     "invalids: %d\n"
