@@ -211,7 +211,7 @@ static full_rule get_board(void) {
   return res;
 }
 
-static void setBoard(void) {
+static void set_board(void) {
   full_rule starter = get_board();
 
   state.board_ind = 0;
@@ -236,7 +236,7 @@ static void setBoard(void) {
 }
 
 // This is the function that will be called by the CPU when an interrupt is triggered
-static void interruptHandler(void) {
+static void interrupt_handler(void) {
 	REG_IF = INT_VBLANK;
 	REG_IFBIOS |= INT_VBLANK;
 }
@@ -244,7 +244,7 @@ static void interruptHandler(void) {
 // This is the function that we wil call to register that we want a VBLANK Interrupt
 static void register_vblank_isr(void) {
 	REG_IME = 0x00;
-	REG_INTERRUPT = (fnptr)interruptHandler;
+	REG_INTERRUPT = (fnptr)interrupt_handler;
 	REG_DISPSTAT |= DSTAT_VBL_IRQ;
 	REG_IE |= INT_VBLANK;
 	REG_IME = 1;
@@ -257,7 +257,7 @@ static void vsync(void) {
   halt();
 }
 
-static COLOR percColor(COLOR c, int perc) {
+static COLOR perc_color(COLOR c, int perc) {
   int rc = r(c);
   int gc = g(c);
   int bc = b(c);
@@ -274,7 +274,7 @@ static void span_pallette(COLOR a, COLOR b, int startPerc, int endPerc) {
   int nFrames = endFrame - startFrame;
   for (int frame = 0; frame < nFrames; frame++) {
     int percB = 100 * frame / nFrames;
-    pal_bg_mem[startFrame + frame] = addCols(percColor(a, 100 - percB), percColor(b, percB));
+    pal_bg_mem[startFrame + frame] = addCols(perc_color(a, 100 - percB), perc_color(b, percB));
   }
 }
 
@@ -316,7 +316,7 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  setBoard();
+  set_board();
 
   int delay = 6;
   while (1) {
@@ -326,11 +326,11 @@ int AgbMain(void) {
       if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
       if (key_hit(KEY_UP)) {
         state.board_ind = (state.board_ind + 1) % num_starters;
-        setBoard();
+        set_board();
       }
       if (key_hit(KEY_DOWN)) {
         state.board_ind = (state.board_ind + num_starters - 1) % num_starters;
-        setBoard();
+        set_board();
       }
       vsync();
       display();
