@@ -41,12 +41,19 @@
 #define DIV4(n) (n >> 2)
 
 typedef int board[HEIGHT][WIDTH];
-static board boards[2];
 
 typedef struct {
   bool is_rle;
   const rule *r;
 } full_rule;
+
+struct state {
+  board boards[2];
+  int board_ind;
+  int other_board_ind;
+};
+
+static struct state state;
 
 // Create a 15bit BGR color.
 // TODO test can we use | instead of +?
@@ -76,16 +83,13 @@ static TILE8 make_flat_tile(u8 pallette_ind) {
   return res;
 }
 
-static int board_ind = 0;
-static int other_board_ind = 1;
-
 // write to board, read from other
 static void set_cell(int x, int y, int frames_since_alive) {
-  boards[other_board_ind][y][x] = frames_since_alive;
+  state.boards[state.other_board_ind][y][x] = frames_since_alive;
 }
 
 static int get_cell(int x, int y) {
-  return boards[board_ind][y][x];
+  return state.boards[state.board_ind][y][x];
 }
 
 static void update_cell(int x, int y) {
@@ -121,9 +125,9 @@ static void update_cell_tail(int x, int y) {
 }
 
 static void swap_boards(void) {
-  int tmp = board_ind;
-  board_ind = other_board_ind;
-  other_board_ind = tmp;
+  int tmp = state.board_ind;
+  state.board_ind = state.other_board_ind;
+  state.other_board_ind = tmp;
 }
 
 static void display(void) {
@@ -194,14 +198,14 @@ static void set_board_rle(int width, int height, const char *cursor) {
 }
 
 static void setBoard(full_rule starter) {
-  board_ind = 0;
-  other_board_ind = 1;
+  state.board_ind = 0;
+  state.other_board_ind = 1;
 
   // could be flattened into one loop
   for (int n = 0; n < 2; n++) {
     for (int y = 0; y < HEIGHT; y++) {
       for (int x = 0; x < WIDTH; x++) {
-        boards[n][y][x] = TAIL_FRAMES;
+        state.boards[n][y][x] = TAIL_FRAMES;
       }
     }
   }
@@ -262,7 +266,6 @@ static COLOR addCols(COLOR a, COLOR b) {
 }
 
 static void span_pallette(COLOR a, COLOR b, int startPerc, int endPerc) {
-  int percRange = endPerc - startPerc;
   int startFrame = startPerc * TAIL_FRAMES / 100;
   int endFrame = endPerc * TAIL_FRAMES / 100;
   int nFrames = endFrame - startFrame;
