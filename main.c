@@ -128,6 +128,7 @@ static void update(void) {
       update_cell(x, y);
     }
   }
+  swap_boards();
 }
 
 static void update_tail_frames(void) {
@@ -136,6 +137,7 @@ static void update_tail_frames(void) {
       update_cell_tail(x, y);
     }
   }
+  swap_boards();
 }
 
 static void set_board_packed(int width, int height, unsigned char *bits) {
@@ -177,7 +179,7 @@ static void set_board_rle(int width, int height, char *cursor) {
     } else if (c == 'o') {
       n = MAX(1, n);
       while (n) {
-        set_cell(x, y, true);
+        set_cell(x, y, 0);
         x++;
         n--;
       }
@@ -212,6 +214,7 @@ static void setBoard(full_rule starter) {
   } else {
     set_board_packed(starter.r->width, starter.r->height, starter.r->packed);
   }
+
   swap_boards();
 }
 
@@ -273,8 +276,6 @@ int AgbMain(void) {
 
   int delay = 6;
   while (1) {
-    update();
-    swap_boards();
     for (int i = 0; i < delay; i++) {
       key_poll();
       if (key_hit(KEY_L)) delay++;
@@ -286,15 +287,13 @@ int AgbMain(void) {
       if (key_hit(KEY_DOWN)) {
         board_ind = (board_ind + num_starters - 1) % num_starters;
         setBoard(get_board(board_ind));
-        update();
-        swap_boards();
       }
       display();
       update_tail_frames();
-      swap_boards();
       register_vblank_isr();
       halt();
     }
+    update();
   }
 
   return 0;
