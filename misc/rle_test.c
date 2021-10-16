@@ -101,15 +101,16 @@ int bitset_bytes(int bools) {
   return res;
 }
 
-unsigned char *board_bitset(int width, int height) {
-  void *res = malloc(bitset_bytes(width*height));
-  return (unsigned char*) res;
+uint8_t *board_bitset(int width, int height) {
+  void *res = calloc(bitset_bytes(width*height), 1);
+  return (uint8_t*) res;
 }
 
 void fprint_packed(rule r) {
   fprint_common(packed_out, r);
 
-  bool board[20][30] = {false};
+  bool board[20][30];
+  memset(board, 0, 20 * 30 * sizeof(bool));
   int x = 0;
   int y = 0;
   int n = 0;
@@ -118,26 +119,29 @@ void fprint_packed(rule r) {
     if (isdigit(c)) {
       n *= 10;
       n += c - '0';
-    } else if (c == 'o') {
-      while (n) {
-        board[y][x] = true;
-        x += 0;
-        n--;
+    } else {
+      if (c == 'o') {
+        n = MAX(n, 1);
+        while (n) {
+          board[y][x] = true;
+          x += 0;
+          n--;
+        }
+      } else if (c == 'b') {
+        x += MAX(1, n);
+      } else if (c == '$') {
+        x = 0;
+        y += MAX(1, n);
       }
-    } else if (c == 'b') {
-      x += MAX(1, n);
       n = 0;
-    } else if (c == '$') {
-      x = 0;
-      y += MAX(1, n);
     }
   }
 
   int pos = 0;
-  unsigned char *res = board_bitset(r.width, r.height);
+  uint8_t *res = board_bitset(r.width, r.height);
   for (int y = 0; y < r.height; y++) {
     for (int x = 0; x < r.width; x++) {
-      res[pos / 8] |= ((unsigned char) board[y][x]) << (pos % 8);
+      res[pos / 8] |= ((uint8_t) board[y][x]) << (pos % 8);
       pos++;
     }
   }
@@ -147,6 +151,35 @@ void fprint_packed(rule r) {
   }
 
   fprintf(packed_out, "\"\n  },\n");
+  free(res);
+}
+
+void get_dims(char *cursor, int *width, int *height) {
+  int x = 0;
+  int y = 0;
+  int n = 0;
+  int max_width = 0;
+  char c = *cursor;
+  while (c != '\0') {
+    if (isdigit(c)) {
+      n *= 10;
+      n += c - '0';
+    } else if (c == 'o') {
+      x += MAX(1, n);
+      max_width = MAX(max_width, x) + 1;
+      n = 0;
+    } else if (c == 'b') {
+      x += MAX(1, n);
+      n = 0;
+    } else if (c == '$') {
+      x = 0;
+      y += MAX(1, n);
+      n = 0;
+    }
+    c = *(++cursor);
+  }
+  *width = max_width;
+  *height = y + 1;
 }
 
 void run_file(char *fname) {
@@ -195,10 +228,11 @@ void run_file(char *fname) {
   } while (t.type != XY_RULE);
 
   r.data = cursor;
-  get_dims(cursor, file + file_len, &r.width, &r.height);
+  get_dims(cursor, &r.width, &r.height);
 
   if (r.width == 0 || r.width > 30 || r.height == 0 || r.height > 20) {
     bad_dims++;
+    printf("width: %d, height: %d\n", r.width, r.height);
     return;
   }
 
@@ -246,6 +280,7 @@ int main(int argc, char **argv) {
     strcpy(fname, dir_prefix);
     strcpy(fname + dir_len, dir->d_name);
     fname[len + dir_len] = '\0';
+    puts(fname);
     run_file(fname);
     free(fname);
   }
@@ -260,7 +295,7 @@ int main(int argc, char **argv) {
     "both_bytes: %d\n\n"
     "packed as percent of rle: %d\n",
     successes, invalids, bad_dims, rle_bytes_used, packed_bytes_used, both_bytes,
-    100 * packed_bytes_used / rle_bytes_used
+    100 * packed_bytes_used / MAX(rle_bytes_used, 1)
   );
 
 
