@@ -120,6 +120,7 @@ void fprint_packed_data(rule r) {
   int n = 0;
   for (int i = 0; i < strlen(r.rle); i++) {
     char c = r.rle[i];
+    // printf("%c\n", c);
     if (isdigit(c)) {
       n *= 10;
       n += c - '0';
@@ -128,7 +129,7 @@ void fprint_packed_data(rule r) {
         n = MAX(n, 1);
         while (n) {
           board[y][x] = true;
-          x += 0;
+          x += 1;
           n--;
         }
       } else if (c == 'b') {
@@ -141,12 +142,14 @@ void fprint_packed_data(rule r) {
     }
   }
 
-  int pos = 0;
   uint8_t *res = board_bitset(r.width, r.height);
   for (int y = 0; y < r.height; y++) {
     for (int x = 0; x < r.width; x++) {
-      res[pos / 8] |= ((uint8_t) board[y][x]) << (pos % 8);
-      pos++;
+      int pos = x + y * r.width;
+      // printf("x: %d, y: %d, on: %d, pos: %d\n", x, y, board[y][x], pos / 8);
+      // printf("before: 0x%02x\n", res[pos / 8]);
+      res[pos / 8] |= ((board[y][x] ? 1 : 0) << (pos % 8));
+      // printf("after: 0x%02x\n", res[pos / 8]);
     }
   }
 

@@ -140,9 +140,12 @@ static void update_tail_frames(void) {
 
 static void set_board_packed(int width, int height, unsigned char *bits) {
 
-  boards[0][0][0] = 0;
-  boards[0][0][1] = 0;
-  boards[0][0][2] = 0;
+  // boards[0][0][0] = 0;
+  // boards[0][0][1] = 0;
+  // boards[0][0][2] = 0;
+  set_cell(0,0,0);
+  set_cell(0,1,0);
+  set_cell(0,2,0);
 
   return;
 
@@ -205,6 +208,7 @@ static void setBoard(full_rule starter) {
   } else {
     set_board_packed(starter.r->width, starter.r->height, starter.r->packed);
   }
+  swap_boards();
 }
 
 // This is the function that will be called by the CPU when an interrupt is triggered
@@ -265,9 +269,6 @@ int AgbMain(void) {
 
   // while (true) {}
   // set_cell(0, 0, 0);
-  // swap_boards();
-  // display();
-  // return 1;
 
   // could be flattened into one loop
   // for (int n = 0; n < 2; n++) {
