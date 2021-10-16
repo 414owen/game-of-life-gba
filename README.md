@@ -26,6 +26,10 @@ Or put it on a cartridge, for example the [everdrive](https://krikzz.com/store/h
 | R       | Speed up simulation    |
 | L       | Slow down simulation   |
 
+## Demo
+
+![demo.gif](demo.gif)
+
 ## Credits
 
 JShorthouse's [Compiling GBA programs on Linux with GCC](https://gist.github.com/JShorthouse/bfe49cdfad126e9163d9cb30fd3bf3c2)
