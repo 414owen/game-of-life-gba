@@ -4,6 +4,8 @@
 
 ## Building
 
+Pre-built binaries are available [here](https://github.com/414owen/game-of-life-gba/releases)
+
 ```
 $ # one-step to get a full cross-compilation toolchain!
 $ nix-shell
