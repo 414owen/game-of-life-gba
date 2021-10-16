@@ -29,7 +29,7 @@ Or put it on a cartridge, for example the [everdrive](https://krikzz.com/store/h
 
 ## Demo
 
-![demo.gif](demo.gif)
+![demo.apng](demo.apng)
 
 ## TODO (things I might pick up on a rainy day)
 
