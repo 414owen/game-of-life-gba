@@ -10,10 +10,10 @@ static const uint8_t normal_s = 12;
 static const uint8_t normal_b = 8;
 
 static char *mk_string(char *start, char *cursor) {
-  int len = cursor - start - 1;
+  int len = cursor - start + 1;
   char *res = malloc(len);
   memcpy(res, start, len);
-  res[len] = '\0';
+  res[len - 1] = '\0';
   return res;
 }
 
@@ -50,8 +50,8 @@ header_token scan_header(const char *YYCURSOR) {
   char *s, *b, *es, *eb;
   /*!stags:re2c format = "const char *@@; "; */
   header_token token;
-  token.type = INVALID;
 loop:
+  token.type = INVALID;
 /*!re2c
     re2c:define:YYCTYPE = char;
     re2c:yyfill:enable  = 0;
@@ -67,7 +67,7 @@ loop:
     str = .*;
     integer = [-]*[0-9]+;
 
-    * {
+    . {
       token.type = INVALID;
       goto ret;
     }

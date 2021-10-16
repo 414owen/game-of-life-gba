@@ -5,18 +5,19 @@
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
 static inline int parse_int(char *s) {
+  if (s == NULL) return 1;
   int res = 0;
   char c = *s;
   while (isdigit(c)) {
     res *= 10;
-    res += c;
+    res += c - '0';
     c = *++s;
   }
   return res;
 }
 
 void get_dims(const char *YYCURSOR, const char *YYLIMIT, int *width, int *height) {
-  int x = 0, y = 0, max_width = 0, max_height = 0;
+  int x = 1, y = 1, max_width = 1, max_height = 1;
   char *YYMARKER;
   char *n, *en;
   /*!stags:re2c format = "const char *@@; "; */
@@ -28,24 +29,33 @@ loop:
     re2c:yyfill:enable  = 0;
     re2c:flags:tags = 1;
     re2c:tags:expression = "@@";
-    re2c:eof = 0;
+
+    osp = [ \t\n\r]*;
 
     // ignore comments
     // [#][Cc].*         { goto loop; }
 
     n = @n [0-9]+ @en;
 
-    n? [b] { x += parse_int(n); goto loop; }
-
-    n? [$] { y += parse_int(n); goto loop; }
-
-    n? [o] {
+    n? [b] osp {
       x += parse_int(n);
+      goto loop;
+    }
+
+    n? [$] osp {
+      y += parse_int(n);
+      x = 0;
       max_height = y;
       goto loop;
     }
 
-    $ {
+    n? [o] osp {
+      x += parse_int(n);
+      max_width = MAX(max_width, x);
+      goto loop;
+    }
+
+    [\!] {
       *width = max_width;
       *height = max_height;
       return;
