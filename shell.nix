@@ -11,5 +11,5 @@ in
 
 armPkgs.mkShell {
   buildInputs = [ ]; # your dependencies here
-  nativeBuildInputs = [ pkgs.mgba pkgs.gcc ];
+  nativeBuildInputs = with pkgs; [ mgba gcc re2c ];
 }

@@ -1,0 +1,194 @@
+#include <ctype.h>
+#include <errno.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "rules.h"
+
+typedef struct {
+	const char* top;	//start of token
+	const char* curr;	//cursor; will be just past token when emitting tokens
+	const char* ptr;	//used by re2c to store position for backtracking
+	const char* pos;	//
+	int line;		//line no in source file
+	int current_token;
+} scanner;
+
+typedef enum {
+  NAME,
+  AUTHOR,
+  XY_RULE,
+  INVALID,
+} hash_token_type;
+
+typedef struct {
+  hash_token_type type;
+  char *next;
+  union {
+    char *name;
+    char *author;
+    union {
+      unsigned long x;
+      unsigned long y;
+    };
+  };
+} hash_token;
+
+static char *mk_string(char *start, char *cursor) {
+  int len = cursor - start - 1;
+  char *res = malloc(len);
+  memcpy(res, start, len);
+  res[len] = '\0';
+  return res;
+}
+
+long parse_int(char *s) {
+  bool neg = false;
+  long res = 0;
+  while (*s++ == '-') neg = !neg;
+  while (isdigit(*s)) {
+    res *= 10;
+    res += s - '0';
+    s++;
+  }
+  return res;
+}
+
+hash_token scan_header(const char *YYCURSOR) {
+  char *YYMARKER;
+  // union {
+  //   struct { char *name, *ename; };
+  //   struct { char *author, *eauthor; };
+  //   struct { char *x, *y, *rule, *ex, *ey, *erule; };
+  // } positions;
+  char *name, *ename;
+  char *author, *eauthor;
+  char *x, *y, *rule, *ex, *ey, *erule;
+  /*!stags:re2c format = "const char *@@; "; */
+  hash_token token;
+  token.type = INVALID;
+loop:
+/*!re2c
+    re2c:define:YYCTYPE = char;
+    re2c:yyfill:enable  = 0;
+    re2c:flags:tags = 1;
+    re2c:tags:expression = "@@";
+
+    // ignore comments
+    // [#][Cc].*         { goto loop; }
+
+    sp = [ \t];
+    osp = [\t ]*;
+    nl = [\r]?[\n];
+    str = .*;
+    integer = [-]*[0-9]+;
+
+    * {
+      token.type = INVALID;
+      goto ret;
+    }
+
+    [#] [Cc] .* nl { printf("skipping comment\n"); goto loop; }
+
+    [#] [N] osp @name str @ename osp nl {
+      token.type = NAME;
+      token.name = mk_string(name, ename);
+      goto ret;
+    }
+
+    [#] [O] osp @author str @eauthor osp nl {
+      token.type = AUTHOR;
+      token.author = mk_string(author, eauthor);
+      goto ret;
+    }
+
+    [x] osp [=] osp @x integer @ex  osp [,] osp
+    [y] osp [=] osp @y integer @ey osp [,] osp
+    'rule' osp [=] @rule str @erule osp nl{
+      token.x = parse_int(x);
+      token.y = parse_int(y);
+      goto ret;
+      // TODO rule
+    }
+*/
+
+ret:
+  token.next = YYCURSOR;
+  return token;
+}
+
+int read_file(char *fname) {
+  FILE *f = fopen(fname, "rb");
+  if (f == NULL) {
+    perror(strerror(errno));
+    exit(1);
+  }
+  fseek(f, 0, SEEK_END);
+  long fsize = ftell(f);
+  char *string = malloc(fsize + 1);
+  rewind(f);
+  fread(string, 1, fsize + 1, f);
+  fclose(f);
+  string[fsize] = '\0';
+  return string;
+}
+
+// typedef struct {
+//   char *name;
+//   char *creator;
+//   u8 stay_alive_rules;
+//   u8 birth_rules;
+//   int x;
+//   int y;
+// } rule;
+
+void fprint_rule(FILE *out, rule r) {
+  fprintf(out, "  {\n"
+    "    .name = \"%s\"\n"
+    "    .creator = \"%s\"\n",
+  r.name, r.creator);
+}
+
+void fprint_rules(FILE *out, int rule_num, rule *rules) {
+  fprintf(out, "int rule_num = %d;\n"
+    "rule rules[] = {\n");
+  for (int i = 0; i < rule_num; i++) {
+    fprint_rule(out, rules[i]);
+  }
+  fprintf(out, "};\n");
+}
+
+int main(int argc, char **argv) {
+  rule r;
+  char *fname = argv[1];
+  printf("parsing file %s\n", fname);
+  char *file = read_file(fname);
+  char *string = file;
+  printf("Input file: %s\n", string);
+
+  hash_token t = scan_header(string);
+  int header_lines_parsed = 0;
+  while (t.type != INVALID) {
+    header_lines_parsed++;
+    printf("parsed header line %d\n", header_lines_parsed);
+    switch (t.type) {
+      case NAME:
+        r.name = t.name;
+        break;
+      case AUTHOR:
+        r.creator = t.author;
+        break;
+      case INVALID:
+        perror("Coldn't parse file");
+        exit(1);
+    }
+    string = t.next;
+    t = scan_header(string);
+  }
+
+  fprint_rule(stdout, r);
+
+  free(file);
+}

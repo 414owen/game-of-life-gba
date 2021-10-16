@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
@@ -9,7 +10,7 @@
 #define HEIGHT 20
 
 // max 255, as we have 256 pallette entries
-#define TAIL_FRAMES 255
+#define TAIL_FRAMES 31
 
 /*
  *  char blocks        screen blocks
@@ -37,7 +38,6 @@
 #define DIV4(n) (n >> 2)
 
 typedef int board[HEIGHT][WIDTH];
-
 static board boards[2];
 
 // Create a 15bit BGR color.
@@ -161,12 +161,6 @@ void interruptHandler() {
 	REG_IFBIOS |= INT_VBLANK;
 }
 
-// This is the declaration for the function we will call to trigger the VBLANK interrupt wait
-void vblank_intr_wait() {
-  // 0x5 is VBlankIntrWait in the function table.
-  asm volatile("swi 0x02");
-}
-
 // This is the function that we wil call to register that we want a VBLANK Interrupt
 void register_vblank_isr() {
 	REG_IME = 0x00;
@@ -185,11 +179,10 @@ int AgbMain(void) {
   setBoard(&starters[board_ind]);
 
   // screen entry 0,0 to tile 1
-  // se_mat[SCREENBLOCK_NUM][19][29] = 31;
+  // se_mat[SCREENBLOCK_NUM][0][0] = 31;
 
   // create a flat tile for 'on' cells
   for (int i = 0; i <= TAIL_FRAMES; i++) {
-    int chan = 31 / 2 - 31 * i / TAIL_FRAMES / 2;
     int r = abs((i + 100 / 2 % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
     int g = abs(((i / 2 + TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;
     int b = abs(((i / TAIL_FRAMES / 3) % TAIL_FRAMES) - TAIL_FRAMES / 2) * 64 / TAIL_FRAMES;

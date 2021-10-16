@@ -11,6 +11,11 @@ a.out: main.c $(GBA_LIBS)
 test: a.out
 	mgba -3 a.out
 
+test_rle:
+	re2c misc/rle.r2c -o build/rle.c
+	gcc -g -O0 -o build/rle build/rle.c -Iinclude
+	./build/rle all/achimsotherp16.rle
+
 lib/%.o: src/%.c
 	mkdir -p lib
 	$(CC) -c -o $@ $< $(CFLAGS)
