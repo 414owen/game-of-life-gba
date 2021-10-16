@@ -25,4 +25,6 @@ typedef struct {
 
 header_token scan_header(const char *YYCURSOR);
 
+void get_dims(const char *YYCURSOR, const char *YYLIMIT, int *width, int *height);
+
 #endif // rle_h_INCLUDED

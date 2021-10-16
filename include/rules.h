@@ -9,8 +9,8 @@ typedef struct {
   // list of digits
   u8 stay_alive_rules;
   u8 birth_rules;
-  int x;
-  int y;
+  int width;
+  int height;
 } rule;
 
 #endif

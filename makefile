@@ -12,14 +12,14 @@ test: a.out
 	mgba -3 a.out
 
 build/%.o: build/%.c
-	gcc -c -o $@ $< -Iinclude -Wno-discarded-qualifiers
+	gcc -c -g -o $@ $< -Iinclude -Wno-discarded-qualifiers
 
 build/%.c: misc/%.r2c
 	mkdir -p build
 	re2c $< -o $@
 
-test_rle: build/rle_header.o
-	gcc -o build/rle_test build/rle_header.o misc/rle_test.c -Iinclude
+test_rle: build/rle_header.o build/rle_board.o
+	gcc -g -o build/rle_test build/*.o misc/rle_test.c -Iinclude
 	./build/rle_test all/worm.rle
 
 lib/%.o: src/%.c
@@ -32,7 +32,7 @@ lib/%.o: src/%.s
 
 src/boards_compressed.c: misc/compress_boards.c
 	mkdir -p build
-	gcc -Wall -O1 -Iinclude misc/compress_boards.c src/boards.c -o build/generate_compressed_builds
+	gcc -Wall -g -Iinclude misc/compress_boards.c src/boards.c -o build/generate_compressed_builds
 	./build/generate_compressed_builds
 
 clean:

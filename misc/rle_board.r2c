@@ -1,1 +1,54 @@
+#include <ctype.h>
+#include <stdlib.h>
 
+#define MAX(x, y) ((x) > (y) ? (x) : (y))
+#define MIN(x, y) ((x) < (y) ? (x) : (y))
+
+static inline int parse_int(char *s) {
+  int res = 0;
+  char c = *s;
+  while (isdigit(c)) {
+    res *= 10;
+    res += c;
+    c = *++s;
+  }
+  return res;
+}
+
+void get_dims(const char *YYCURSOR, const char *YYLIMIT, int *width, int *height) {
+  int x = 0, y = 0, max_width = 0, max_height = 0;
+  char *YYMARKER;
+  char *n, *en;
+  /*!stags:re2c format = "const char *@@; "; */
+loop:
+  n = NULL;
+  en = NULL;
+/*!re2c
+    re2c:define:YYCTYPE = char;
+    re2c:yyfill:enable  = 0;
+    re2c:flags:tags = 1;
+    re2c:tags:expression = "@@";
+    re2c:eof = 0;
+
+    // ignore comments
+    // [#][Cc].*         { goto loop; }
+
+    n = @n [0-9]+ @en;
+
+    n? [b] { x += parse_int(n); goto loop; }
+
+    n? [$] { y += parse_int(n); goto loop; }
+
+    n? [o] {
+      x += parse_int(n);
+      max_height = y;
+      goto loop;
+    }
+
+    $ {
+      *width = max_width;
+      *height = max_height;
+      return;
+    }
+*/
+}
