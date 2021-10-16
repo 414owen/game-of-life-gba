@@ -45,7 +45,7 @@ static board boards[2];
 
 typedef struct {
   bool is_rle;
-  rule *r;
+  const rule *r;
 } full_rule;
 
 // Create a 15bit BGR color.
@@ -148,18 +148,17 @@ static void set_board_packed(int width, int height, unsigned char *bits) {
   // set_cell(0,2,0);
   // return;
 
-  for (int i = 0; i < width; i++) {
-    set_cell(i,0,0);
-  }
-  return;
+  // for (int i = 0; i < width; i++) {
+  //   set_cell(i,0,0);
+  // }
+  // return;
 
   int start_x = (WIDTH - width) / 2;
   int start_y = (HEIGHT - height) / 2;
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
       int ind = x + y * width;
-      // set_cell(start_x + x, start_y + y, ((bits[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
-      set_cell(start_x + x, start_y + y, 0);
+      set_cell(start_x + x, start_y + y, ((bits[ind / 8] & (1 << (ind % 8))) > 0) ? 0 : TAIL_FRAMES);
     }
   }
 }
@@ -250,8 +249,6 @@ int AgbMain(void) {
   int board_ind = 0;
   const int num_starters = rle_rule_amt + packed_rule_amt;
 
-  setBoard(get_board(board_ind));
-
   // screen entry 0,0 to tile 1
   for (int y = 0; y < HEIGHT; y++) {
     for (int x = 0; x < WIDTH; x++) {
@@ -272,26 +269,7 @@ int AgbMain(void) {
   REG_DISPCNT = DCNT_MODE0 | DCNT_BG0;
   REG_BG0CNT |= BG_BASENUM(1) | BG_8BITCOL;
 
-  // full_rule r = get_board(0);
-  rule r = packed_rules[0];
-  for (int i = 0; i < packed_rules[0].width; i++) {
-    set_cell(i,0,0);
-  }
-  swap_boards();
-
-  // while (true) {}
-  // set_cell(0, 0, 0);
-
-  // could be flattened into one loop
-  // for (int n = 0; n < 2; n++) {
-  //   for (int y = 0; y < HEIGHT; y++) {
-  //     for (int x = 0; x < WIDTH; x++) {
-  //       boards[n][y][x] = 0;
-  //     }
-  //   }
-  // }
-
-  // unsigned char *test = { 0x00 };
+  setBoard(get_board(board_ind));
 
   int delay = 6;
   while (1) {
@@ -308,6 +286,8 @@ int AgbMain(void) {
       if (key_hit(KEY_DOWN)) {
         board_ind = (board_ind + num_starters - 1) % num_starters;
         setBoard(get_board(board_ind));
+        update();
+        swap_boards();
       }
       display();
       update_tail_frames();

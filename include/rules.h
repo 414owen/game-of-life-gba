@@ -4,16 +4,16 @@
 #include "defs.h"
 
 typedef struct {
-  char *name;
-  char *creator;
+  const char *name;
+  const char *creator;
   // list of digits
   u8 stay_alive_rules;
   u8 birth_rules;
   int width;
   int height;
   union {
-    char *rle;
-    unsigned char *packed;
+    const char *rle;
+    const unsigned char *packed;
   };
 } rule;
 

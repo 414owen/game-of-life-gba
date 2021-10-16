@@ -112,7 +112,7 @@ void fprint_packed(rule r) {
 
 void fprint_packed_data(rule r) {
   int bb = bitset_bytes(r.width * r.height);
-  fprintf(packed_out, "unsigned char packed_data_%d[] = {", packed_amt);
+  fprintf(packed_out, "const unsigned char packed_data_%d[%d] = {", packed_amt, bb);
   bool board[20][30];
   memset(board, 0, 20 * 30 * sizeof(bool));
   int x = 0;
@@ -342,10 +342,10 @@ int main(int argc, char **argv) {
     closedir(d);
   }
 
-  {
-    fputs("const rule rle_rules[] = {\n", rle_out);
-    fputs("const rule packed_rules[] = {\n", packed_out);
+  fputs("const rule rle_rules_arr[] = {\n", rle_out);
+  fputs("const rule packed_rules_arr[] = {\n", packed_out);
 
+  {
     d = opendir(dir_prefix);
     if (!d) {
       perror("Coldn't open directory 'all'");
@@ -375,8 +375,10 @@ int main(int argc, char **argv) {
     fputs(dummy_rule, packed_out);
   }
 
-  fprintf(rle_out, "};\n\nconst unsigned int rle_rule_amt = %d;\n", rle_amt);
-  fprintf(packed_out, "};\n\nconst unsigned int packed_rule_amt = %d;\n", packed_amt);
+  fprintf(rle_out, "};\n\nconst unsigned int rle_rule_amt = %d;\n\n", rle_amt);
+  fprintf(packed_out, "};\n\nconst unsigned int packed_rule_amt = %d;\n\n", packed_amt);
+  fputs("const rule *rle_rules = &rle_rules_arr[0];\n", rle_out);
+  fputs("const rule *packed_rules = &packed_rules_arr[0];\n", packed_out);
 
   printf("successes: %d\n"
     "invalids: %d\n"

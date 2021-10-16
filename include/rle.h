@@ -1,6 +1,8 @@
 #ifndef rle_h_INCLUDED
 #define rle_h_INCLUDED
 
+#include <stdint.h>
+
 typedef enum {
   NAME,
   AUTHOR,
