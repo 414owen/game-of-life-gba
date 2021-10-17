@@ -4,9 +4,7 @@ CFLAGS := -O2 -Wall -fdiagnostics-show-option -march=armv4t -Wno-switch -Wno-mul
 LDFLAGS = -nostartfiles -Tlnkscript
 DEBUG ?= false
 
-objs := lib/crt0.o lib/font.o lib/input.o lib/halt.o build/gen/boards_packed.o build/gen/boards_rle.o
-
-# build/gen/boards_rle.o build/gen/boards_packed.o
+objs := lib/crt0.o lib/font.o lib/input.o lib/halt.o lib/gen/boards_packed.o lib/gen/boards_rle.o
 
 # for some reason main.c has to be the last argument?
 a.out: $(objs) main.c include/*.h
@@ -25,15 +23,15 @@ gen/scanners/%.c: misc/%.r2c
 	mkdir -p gen/scanners
 	re2c $< -o $@
 
-build/scanners/%.o: gen/scanners/%.c
-	mkdir -p build/scanners
+lib/scanners/%.o: gen/scanners/%.c
+	mkdir -p lib/scanners
 	clang $(WARNS) -c -O1 -g -o $@ $^ -Wno-discarded-qualifiers
 
-build/gen/%.o: gen/%.c
-	mkdir -p build/gen
+lib/gen/%.o: gen/%.c
+	mkdir -p lib/gen
 	$(CC) $(CFLAGS) -s -c -o $@ $^
 
-build/gen_boards: build/scanners/rle_header.o misc/gen_boards.c
+build/gen_boards: lib/scanners/rle_header.o misc/gen_boards.c
 	# -fsanitize=address -fno-omit-frame-pointer
 	clang $(WARNS) -g -O1 -o $@ $^
 
