@@ -3,9 +3,9 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include "rle_boards.h"
-#include "packed_boards.h"
-#include "rules.h"
+#include "rle_patterns.h"
+#include "packed_patterns.h"
+#include "pattern.h"
 #include "input.h"
 #include "defs.h"
 
@@ -44,13 +44,14 @@ typedef int board[HEIGHT][WIDTH];
 
 typedef struct {
   bool is_rle;
-  const rule *r;
+  const pattern *r;
 } full_pattern;
 
 struct state {
   board boards[2];
   int board_ind;
   int other_board_ind;
+  int pattern_ind;
 };
 
 static struct state state;
@@ -198,15 +199,15 @@ static void setup_pattern_rle(int width, int height, const char *cursor) {
 }
 
 static full_pattern get_pattern(void) {
-  int i = state.board_ind;
+  int i = state.pattern_ind;
   full_pattern res;
-  if (i < rle_rule_amt) {
+  if (i < rle_pattern_amt) {
     res.is_rle = true;
-    res.r = &rle_rules[i];
+    res.r = &rle_patterns[i];
   } else {
-    i -= rle_rule_amt;
+    i -= rle_pattern_amt;
     res.is_rle = false;
-    res.r = &packed_rules[i];
+    res.r = &packed_patterns[i];
   }
   return res;
 }
@@ -293,7 +294,10 @@ static void set_pallette_keyframes(int num, COLOR *colors, int *percentages) {
 
 int AgbMain(void) {
 
-  const int num_starters = rle_rule_amt + packed_rule_amt;
+  const int num_starters = rle_pattern_amt + packed_pattern_amt;
+  state.pattern_ind = 0;
+  state.board_ind = 0;
+  state.other_board_ind = 0;
 
   // screen entry 0,0 to tile 1
   for (int y = 0; y < HEIGHT; y++) {
@@ -325,11 +329,11 @@ int AgbMain(void) {
       if (key_hit(KEY_L)) delay++;
       if (key_hit(KEY_R)) delay = MAX(delay - 1, 1);
       if (key_hit(KEY_UP)) {
-        state.board_ind = (state.board_ind + 1) % num_starters;
+        state.pattern_ind = (state.pattern_ind + 1) % num_starters;
         setup_pattern();
       }
       if (key_hit(KEY_DOWN)) {
-        state.board_ind = (state.board_ind + num_starters - 1) % num_starters;
+        state.pattern_ind = (state.pattern_ind + num_starters - 1) % num_starters;
         setup_pattern();
       }
       vsync();

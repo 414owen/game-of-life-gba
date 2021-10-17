@@ -32,7 +32,7 @@ static long parse_int(char *s) {
   return res;
 }
 
-static uint8_t parse_rule_bitset(char *s, char *end) {
+static uint8_t parse_pattern_bitset(char *s, char *end) {
   uint8_t res = 0;
   while (s < end) {
     int n = *s - '0';
@@ -102,8 +102,8 @@ loop:
       token.type = XY_RULE;
       token.x = parse_int(x);
       token.y = parse_int(y);
-      token.s = parse_rule_bitset(s, es);
-      token.b = parse_rule_bitset(b, eb);
+      token.s = parse_pattern_bitset(s, es);
+      token.b = parse_pattern_bitset(b, eb);
       goto ret;
     }
 
@@ -113,8 +113,8 @@ loop:
       token.type = XY_RULE;
       token.x = parse_int(x);
       token.y = parse_int(y);
-      token.s = parse_rule_bitset(s, es);
-      token.b = parse_rule_bitset(b, eb);
+      token.s = parse_pattern_bitset(s, es);
+      token.b = parse_pattern_bitset(b, eb);
       goto ret;
     }
 

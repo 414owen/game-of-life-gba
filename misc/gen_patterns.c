@@ -8,7 +8,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "rules.h"
+#include "pattern.h"
 #include "rle.h"
 
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
@@ -63,36 +63,38 @@ int rle_bytes_used = 0;
 int packed_bytes_used = 0;
 int both_bytes = 0;
 
-void fprint_common(FILE *out, rule r) {
+void fprint_common(FILE *out, pattern p) {
   fputs("  {\n    .name = ", out);
-  if (r.name == NULL) {
+  if (p.name == NULL) {
     fputs("NULL", out);
   } else {
-    fprintf(out, "\"%s\"", r.name);
+    fprintf(out, "\"%s\"", p.name);
   }
   fputs(",\n    .creator = ", out);
 
-  if (r.creator == NULL) {
+  if (p.creator == NULL) {
     fputs("NULL", out);
   } else {
-    fprintf(out, "\"%s\"", r.creator);
+    fprintf(out, "\"%s\"", p.creator);
   }
 
   fprintf(out, ",\n"
-    "    .birth_rules = %" PRIu8 ",\n"
-    "    .stay_alive_rules = %" PRIu8 ",\n"
+    "    .rule = {\n"
+    "      .birth = %" PRIu8 ",\n"
+    "      .stay_alive = %" PRIu8 ",\n"
+    "    },\n"
     "    .width = %d,\n"
     "    .height = %d,\n",
-    r.birth_rules,
-    r.stay_alive_rules,
-    r.width,
-    r.height
+    p.rule.birth,
+    p.rule.stay_alive,
+    p.width,
+    p.height
   );
 }
 
-void fprint_rle(rule r) {
-  fprint_common(rle_out, r);
-  fprintf(rle_out, "    .rle = \"%s\"\n  },\n", r.rle);
+void fprint_rle(pattern p) {
+  fprint_common(rle_out, p);
+  fprintf(rle_out, "    .rle = \"%s\"\n  },\n", p.rle);
 }
 
 int bitset_bytes(int bools) {
@@ -106,25 +108,25 @@ uint8_t *board_bitset(int width, int height) {
   return (uint8_t*) res;
 }
 
-void fprint_packed(rule r) {
-  fprint_common(packed_out, r);
+void fprint_packed(pattern p) {
+  fprint_common(packed_out, p);
   fprintf(packed_out, "    .packed = packed_data_%d\n  },\n", packed_amt);
 }
 
-bool fits(rule r) {
-  return r.width > 0 && r.width <= 30 && r.height > 0 && r.height <= 20;
+bool fits(pattern p) {
+  return p.width > 0 && p.width <= 30 && p.height > 0 && p.height <= 20;
 }
 
-void fprint_packed_data(rule r) {
-  int bb = bitset_bytes(r.width * r.height);
+void fprint_packed_data(pattern p) {
+  int bb = bitset_bytes(p.width * p.height);
   fprintf(packed_out, "const unsigned char packed_data_%d[%d] = {", packed_amt, bb);
   bool board[20][30];
   memset(board, 0, 20 * 30 * sizeof(bool));
   int x = 0;
   int y = 0;
   int n = 0;
-  for (int i = 0; i < strlen(r.rle); i++) {
-    char c = r.rle[i];
+  for (int i = 0; i < strlen(p.rle); i++) {
+    char c = p.rle[i];
     // printf("%c\n", c);
     if (isdigit(c)) {
       n *= 10;
@@ -147,10 +149,10 @@ void fprint_packed_data(rule r) {
     }
   }
 
-  uint8_t *res = board_bitset(r.width, r.height);
-  for (int y = 0; y < r.height; y++) {
-    for (int x = 0; x < r.width; x++) {
-      int pos = x + y * r.width;
+  uint8_t *res = board_bitset(p.width, p.height);
+  for (int y = 0; y < p.height; y++) {
+    for (int x = 0; x < p.width; x++) {
+      int pos = x + y * p.width;
       // printf("x: %d, y: %d, on: %d, pos: %d\n", x, y, board[y][x], pos / 8);
       // printf("before: 0x%02x\n", res[pos / 8]);
       res[pos / 8] |= ((board[y][x] ? 1 : 0) << (pos % 8));
@@ -167,7 +169,7 @@ void fprint_packed_data(rule r) {
   free(res);
 }
 
-void get_dims(char *cursor, int *width, int *height) {
+void get_dims(const char *cursor, int *width, int *height) {
   int x = 0;
   int y = 0;
   int n = 0;
@@ -200,14 +202,14 @@ void safe_free(void *a) {
   free(a);
 }
 
-void free_rule(rule r) {
-  safe_free(r.creator);
-  safe_free(r.name);
-  free(r.rle);
+void free_pattern(pattern p) {
+  safe_free((void*) p.creator);
+  safe_free((void*) p.name);
+  free((void*) p.rle);
 }
 
-rule parse_headers(char *fname, bool *success) {
-  rule r = {
+pattern parse_headers(char *fname, bool *success) {
+  pattern p = {
     .creator = NULL,
     .name = NULL
   };
@@ -225,25 +227,25 @@ rule parse_headers(char *fname, bool *success) {
     if (t.type == INVALID) {
       invalids++;
       *success = false;
-      free_rule(r);
-      return r;
+      free_pattern(p);
+      return p;
     }
 
     header_lines_parsed++;
     switch (t.type) {
       case NAME:
-        if (r.name != NULL) free(r.name);
-        r.name = t.name;
+        if (p.name != NULL) free((void*) p.name);
+        p.name = t.name;
         break;
       case AUTHOR:
-        if (r.creator != NULL) free(r.creator);
-        r.creator = t.author;
+        if (p.creator != NULL) free((void*) p.creator);
+        p.creator = t.author;
         break;
       case XY_RULE:
-        // r.x = t.x;
-        // r.y = t.y;
-        r.stay_alive_rules = t.s;
-        r.birth_rules = t.b;
+        // p.x = t.x;
+        // p.y = t.y;
+        p.rule.stay_alive = t.s;
+        p.rule.birth = t.b;
         break;
       case INVALID:
         // impossible
@@ -254,70 +256,70 @@ rule parse_headers(char *fname, bool *success) {
   } while (t.type != XY_RULE);
 
   *success = true;
-  r.rle = strdup(cursor);
+  p.rle = strdup(cursor);
   free(file);
-  return r;
+  return p;
 }
 
-bool valid_ruleset(rule r) {
-  return r.stay_alive_rules == 12 && r.birth_rules == 8;
+bool valid_ruleset(pattern p) {
+  return p.rule.stay_alive == 12 && p.rule.birth == 8;
 }
 
 void print_packed_data(char *fname) {
   bool success;
-  rule r = parse_headers(fname, &success);
+  pattern p = parse_headers(fname, &success);
   if (!success) return;
 
-  get_dims(r.rle, &r.width, &r.height);
-  if (!(fits(r) && valid_ruleset(r))) return;
+  get_dims(p.rle, &p.width, &p.height);
+  if (!(fits(p) && valid_ruleset(p))) return;
 
-  int area = r.width * r.height;
-  int our_rle_bytes = strlen(r.rle) + 1;
+  int area = p.width * p.height;
+  int our_rle_bytes = strlen(p.rle) + 1;
   int our_packed_bytes = bitset_bytes(area);
   if (our_rle_bytes > our_packed_bytes) {
-    fprint_packed_data(r);
+    fprint_packed_data(p);
     packed_amt++;
   }
 }
 
 void run_file(char *fname) {
   bool success;
-  rule r = parse_headers(fname, &success);
+  pattern p = parse_headers(fname, &success);
   if (!success) return;
 
-  get_dims(r.rle, &r.width, &r.height);
-  if (!fits(r)) {
+  get_dims(p.rle, &p.width, &p.height);
+  if (!fits(p)) {
     bad_dims++;
-    free_rule(r);
+    free_pattern(p);
     return;
   }
 
-  if (!valid_ruleset(r)) {
+  if (!valid_ruleset(p)) {
     bad_rules++;
-    free_rule(r);
+    free_pattern(p);
     return;
   }
 
   successes++;
   int PTR_SIZE = 4;
-  int our_rle_bytes = PTR_SIZE + strlen(r.rle) + 1;
+  int our_rle_bytes = PTR_SIZE + strlen(p.rle) + 1;
   rle_bytes_used += our_rle_bytes;
-  int area = r.width * r.height;
+  int area = p.width * p.height;
   int our_packed_bytes = PTR_SIZE + area / 8 + (area % 8 == 0 ? 0 : 1);
   packed_bytes_used += our_packed_bytes;
   both_bytes += MIN(our_packed_bytes, our_rle_bytes);
 
   if (our_rle_bytes < our_packed_bytes) {
-    fprint_rle(r);
+    fprint_rle(p);
     rle_amt++;
   } else {
-    fprint_packed(r);
+    fprint_packed(p);
     packed_amt++;
   }
-  free_rule(r);
+  free_pattern(p);
 }
 
-char *dummy_rule = "{}";
+char *dummy_pattern = "{}";
 
 int main(int argc, char **argv) {
   DIR *d;
@@ -329,10 +331,10 @@ int main(int argc, char **argv) {
   // rle_out = stdout;
   // packed_out = stdout;
 
-  rle_out = fopen("gen/boards_rle.c", "w");
-  packed_out = fopen("gen/boards_packed.c", "w");
+  rle_out = fopen("gen/patterns_rle.c", "w");
+  packed_out = fopen("gen/patterns_packed.c", "w");
 
-  char *intro = "#include \"rules.h\"\n#include <stddef.h>\n\n";
+  char *intro = "#include \"pattern.h\"\n#include <stddef.h>\n\n";
   fputs(intro, rle_out);
   fputs(intro, packed_out);
 
@@ -350,7 +352,7 @@ int main(int argc, char **argv) {
       strcpy(fname, dir_prefix);
       strcpy(fname + dir_len, dir->d_name);
       fname[len + dir_len] = '\0';
-      puts(fname);
+      // puts(fname);
       print_packed_data(fname);
       free(fname);
     }
@@ -359,8 +361,8 @@ int main(int argc, char **argv) {
     closedir(d);
   }
 
-  fputs("const rule rle_rules_arr[] = {\n", rle_out);
-  fputs("const rule packed_rules_arr[] = {\n", packed_out);
+  fputs("const pattern rle_pattern_arr[] = {\n", rle_out);
+  fputs("const pattern packed_pattern_arr[] = {\n", packed_out);
 
   {
     d = opendir(dir_prefix);
@@ -376,7 +378,7 @@ int main(int argc, char **argv) {
       strcpy(fname, dir_prefix);
       strcpy(fname + dir_len, dir->d_name);
       fname[len + dir_len] = '\0';
-      puts(fname);
+      // puts(fname);
       run_file(fname);
       free(fname);
     }
@@ -385,17 +387,17 @@ int main(int argc, char **argv) {
   }
 
   if (rle_amt == 0) {
-    fputs(dummy_rule, rle_out);
+    fputs(dummy_pattern, rle_out);
   }
 
   if (packed_amt == 0) {
-    fputs(dummy_rule, packed_out);
+    fputs(dummy_pattern, packed_out);
   }
 
-  fprintf(rle_out, "};\n\nconst unsigned int rle_rule_amt = %d;\n\n", rle_amt);
-  fprintf(packed_out, "};\n\nconst unsigned int packed_rule_amt = %d;\n\n", packed_amt);
-  fputs("const rule *rle_rules = &rle_rules_arr[0];\n", rle_out);
-  fputs("const rule *packed_rules = &packed_rules_arr[0];\n", packed_out);
+  fprintf(rle_out, "};\n\nconst unsigned int rle_pattern_amt = %d;\n\n", rle_amt);
+  fprintf(packed_out, "};\n\nconst unsigned int packed_pattern_amt = %d;\n\n", packed_amt);
+  fputs("const pattern *rle_patterns = &rle_pattern_arr[0];\n", rle_out);
+  fputs("const pattern *packed_patterns = &packed_pattern_arr[0];\n", packed_out);
 
   printf("successes: %d\n"
     "invalids: %d\n"
