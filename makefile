@@ -4,7 +4,7 @@ CFLAGS := -O2 -Wall -fdiagnostics-show-option -march=armv4t -Wno-switch -Wno-mul
 LDFLAGS = -nostartfiles -Tlnkscript
 DEBUG ?= false
 
-objs := lib/crt0.o lib/font.o lib/input.o lib/halt.o gen/boards_packed.o gen/boards_rle.o
+objs := lib/crt0.o lib/font.o lib/input.o lib/halt.o build/gen/boards_packed.o build/gen/boards_rle.o
 
 # build/gen/boards_rle.o build/gen/boards_packed.o
 
