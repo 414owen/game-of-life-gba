@@ -1,6 +1,11 @@
-# Conway's Game of Life for Gameboy Advance
 
-## Setup
+<div align="center">
+	<p>
+	   <img src="https://user-images.githubusercontent.com/1714287/169901891-ca8bef18-72fd-46de-89fa-23e61a1613ab.svg" height="150">
+	</p>
+</div>
+
+# Conway's Game of Life for Gameboy Advance
 
 ## Building
 
